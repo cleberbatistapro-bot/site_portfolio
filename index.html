@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cleber Batista — Automação de processos com Python, dados e IA</title>
+  <meta name="description" content="Automatizo processos administrativos com Python, análise de dados e inteligência artificial para reduzir tarefas manuais, simplificar rotinas e gerar resultados." />
+  <meta name="theme-color" content="#0D1117" />
+
+  <!-- Open Graph (apenas informações e assets reais) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Cleber Batista — Automação de processos com Python, dados e IA" />
+  <meta property="og:description" content="Automatizo processos administrativos com Python, análise de dados e inteligência artificial para reduzir tarefas manuais, simplificar rotinas e gerar resultados." />
+  <meta property="og:image" content="assets/img/hero-poster.jpg" />
+
+  <!-- Marca 'js' o quanto antes: evita flash de conteúdo escondido pela reveal. -->
+  <script>document.documentElement.className = 'js';</script>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/hologram.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="#inicio">Cleber&nbsp;Batista</a>
+
+      <nav class="nav" id="nav-principal" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link" aria-current="page">Início</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#tecnologias" class="nav__link">Tecnologias</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--ghost nav__cta">Vamos conversar</a>
+      </nav>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        data-nav-toggle
+        aria-label="Abrir menu"
+        aria-controls="nav-principal"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio" data-hero data-state="idle" aria-labelledby="hero-title">
+
+      <!-- Fundo full-bleed: vídeo + camadas de gradiente (atrás de todo o conteúdo) -->
+      <div class="hero__bg" aria-hidden="true">
+        <video
+          class="hero__video"
+          data-hero-video
+          poster="assets/img/hero-poster.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        >
+          <source src="assets/video/cleber-batista-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__gradients"></div>
+      </div>
+
+      <div class="hero__inner">
+
+        <!-- Coluna de texto -->
+        <div class="hero__content">
+          <p class="hero__eyebrow" data-reveal>Tecnologia que gera eficiência</p>
+
+          <h1 class="hero__title" id="hero-title" data-reveal>
+            Transformo processos em <span class="accent">eficiência.</span>
+          </h1>
+
+          <p class="hero__subtitle" data-reveal>
+            Automatizo processos administrativos com Python, análise de dados e
+            inteligência artificial para reduzir tarefas manuais, simplificar
+            rotinas e gerar resultados.
+          </p>
+
+          <div class="hero__actions" data-reveal>
+            <a href="#projetos" class="btn btn--primary">
+              Ver projetos <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#contato" class="btn btn--outline">Falar comigo</a>
+          </div>
+        </div>
+
+        <!-- Coluna de mídia: apenas os infográficos (o vídeo é full-bleed acima) -->
+        <div class="hero__media">
+          <!-- Camada de dados decorativa (revelada pela sequência). -->
+          <div class="datalayer" aria-hidden="true">
+            <svg class="datalayer__svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+
+              <!-- Origem do pulso: região das mãos / teclado do notebook -->
+              <g class="dl-pulse" transform="translate(300,500)">
+                <circle class="dl-pulse__ring dl-pulse__ring--1" r="10" />
+                <circle class="dl-pulse__ring dl-pulse__ring--2" r="10" />
+                <circle class="dl-pulse__core" r="5" />
+              </g>
+
+              <!-- Linhas de conexão (conduzem o olhar até os painéis) -->
+              <path class="dl-link dl-link--1" d="M300 500 C 300 400, 272 300, 245 210" />
+              <path class="dl-link dl-link--2" d="M300 500 C 280 440, 258 380, 240 322" />
+              <path class="dl-link dl-link--3" d="M300 500 C 322 492, 332 484, 340 478" />
+
+              <!-- ===== FlowPanel (fluxo/automação) — sup. esquerdo ===== -->
+              <g class="dl-panel dl-panel--flow">
+                <rect class="dl-surface" x="36" y="40" width="210" height="168" rx="12" />
+                <text class="dl-cap" x="54" y="70">Fluxo de processo</text>
+                <path class="dl-flowline" d="M155 108 V120" />
+                <path class="dl-flowline" d="M96 132 V120 H186 V132" />
+                <path class="dl-flowline" d="M96 156 V168 H186 V168" />
+                <path class="dl-flowline" d="M155 168 V176" />
+                <rect class="dl-node dl-node--1" x="120" y="84"  width="70" height="24" rx="6" />
+                <rect class="dl-node dl-node--2" x="66"  y="132" width="60" height="24" rx="6" />
+                <rect class="dl-node dl-node--3" x="156" y="132" width="60" height="24" rx="6" />
+                <rect class="dl-node dl-node--4" x="120" y="176" width="70" height="24" rx="6" />
+              </g>
+
+              <!-- ===== AnalyticsPanel (dados) — meio esquerdo ===== -->
+              <g class="dl-panel dl-panel--analytics">
+                <rect class="dl-surface" x="40" y="250" width="196" height="140" rx="12" />
+                <text class="dl-cap" x="58" y="278">Análise de dados</text>
+                <line class="dl-axis" x1="58" y1="366" x2="218" y2="366" />
+                <line class="dl-axis" x1="58" y1="294" x2="58" y2="366" />
+                <path class="dl-spark" d="M62 354 L 96 340 L 126 346 L 158 320 L 190 326 L 216 306" />
+                <circle class="dl-dot dl-dot--1" cx="96"  cy="340" r="3.2" />
+                <circle class="dl-dot dl-dot--2" cx="158" cy="320" r="3.2" />
+                <circle class="dl-dot dl-dot--3" cx="216" cy="306" r="3.2" />
+              </g>
+
+              <!-- ===== EfficiencyPanel (resultado) — inf. direito ===== -->
+              <g class="dl-panel dl-panel--kpi">
+                <rect class="dl-surface" x="318" y="378" width="256" height="188" rx="12" />
+                <text class="dl-cap" x="340" y="408">Eficiência</text>
+
+                <!-- Indicador circular -->
+                <g transform="translate(400,480)">
+                  <circle class="dl-ring-bg" r="46" />
+                  <circle class="dl-ring" r="46" transform="rotate(-90)" />
+                  <text class="dl-ring-val" x="0" y="7">72%</text>
+                </g>
+
+                <!-- Mini barras -->
+                <g class="dl-bars" transform="translate(486,512)">
+                  <rect class="dl-bar dl-bar--1" x="0"  y="-26" width="10" height="26" rx="2" />
+                  <rect class="dl-bar dl-bar--2" x="16" y="-40" width="10" height="40" rx="2" />
+                  <rect class="dl-bar dl-bar--3" x="32" y="-20" width="10" height="20" rx="2" />
+                  <rect class="dl-bar dl-bar--4" x="48" y="-48" width="10" height="48" rx="2" />
+                  <rect class="dl-bar dl-bar--5" x="64" y="-34" width="10" height="34" rx="2" />
+                </g>
+              </g>
+
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/hero.js" defer></script>
+</body>
+</html>

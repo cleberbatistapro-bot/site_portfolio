@@ -1,0 +1,231 @@
+/* =========================================================
+   DATA LAYER — painéis translúcidos + sequência do "Enter"
+   Estados no elemento .hero via [data-state]:
+   idle → triggered → revealing → completed
+   ========================================================= */
+.datalayer {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-datalayer);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.datalayer__svg {
+  width: min(94%, 620px);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 0 10px rgba(0, 231, 209, .22));
+}
+
+/* ---------- Estilo base (aparência) ---------- */
+.datalayer text { fill: var(--teal); font-family: var(--font); }
+.dl-cap { font-size: 15px; font-weight: 600; letter-spacing: .04em; }
+
+.dl-surface {
+  fill: rgba(13, 17, 23, .58);
+  stroke: var(--border-teal);
+  stroke-width: 1;
+}
+.dl-node {
+  fill: var(--teal-soft);
+  stroke: var(--teal);
+  stroke-width: 1.4;
+}
+.dl-flowline, .dl-link, .dl-spark {
+  stroke: var(--teal);
+  fill: none;
+}
+.dl-flowline { stroke-width: 1.4; }
+.dl-link { stroke-width: 1.4; stroke-dasharray: 3 6; opacity: .55; }
+.dl-spark { stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.dl-axis { stroke: rgba(255,255,255,.22); stroke-width: 1; }
+.dl-dot { fill: var(--teal); }
+
+.dl-ring-bg { fill: none; stroke: rgba(0,231,209,.16); stroke-width: 9; }
+.dl-ring { fill: none; stroke: var(--teal); stroke-width: 9; stroke-linecap: round; }
+.dl-ring-val { text-anchor: middle; font-size: 24px; font-weight: 700; }
+.dl-bar { fill: var(--teal); opacity: .8; }
+
+.dl-pulse__core { fill: var(--teal); }
+.dl-pulse__ring { fill: none; stroke: var(--teal); stroke-width: 2; }
+
+/* Constantes de traçado */
+.dl-link       { stroke-dasharray: 600; }
+.dl-flowline   { stroke-dasharray: 600; }
+.dl-spark      { stroke-dasharray: 400; }
+/* Anel 72%: 2π·46 ≈ 289 → offset final 80.9 */
+.dl-ring       { stroke-dasharray: 289; }
+
+/* =========================================================
+   FALLBACK SEM JS — mostra a composição final montada.
+   (Só quando NÃO há a classe .js no <html>.)
+   ========================================================= */
+.no-js .dl-link      { stroke-dashoffset: 0; opacity: .55; }
+.no-js .dl-flowline  { stroke-dashoffset: 0; }
+.no-js .dl-spark     { stroke-dashoffset: 0; }
+.no-js .dl-ring      { stroke-dashoffset: 80.9; transform: rotate(-90deg); transform-origin: center; }
+.no-js .dl-bar       { transform: none; }
+.no-js .dl-pulse     { opacity: 0; }
+
+/* =========================================================
+   COM JS — estados iniciais escondidos (idle/triggered)
+   ========================================================= */
+.js [data-hero] .dl-panel   { opacity: 0; transform: translateY(10px) scale(.98); transform-box: fill-box; transform-origin: center; }
+.js [data-hero] .dl-node    { opacity: 0; }
+.js [data-hero] .dl-bar     { transform: scaleY(0); transform-box: fill-box; transform-origin: bottom; }
+.js [data-hero] .dl-dot     { opacity: 0; }
+.js [data-hero] .dl-link,
+.js [data-hero] .dl-flowline{ stroke-dashoffset: 600; }
+.js [data-hero] .dl-spark   { stroke-dashoffset: 400; }
+.js [data-hero] .dl-ring    { stroke-dashoffset: 289; transform: rotate(-90deg); transform-origin: center; }
+.js [data-hero] .dl-pulse   { opacity: 0; }
+
+/* =========================================================
+   FASE 1 — PULSO (state = triggered)
+   ========================================================= */
+.js [data-state="triggered"] .dl-pulse,
+.js [data-state="revealing"] .dl-pulse,
+.js [data-state="completed"] .dl-pulse { opacity: 1; }
+
+.js [data-state="triggered"] .dl-pulse__core,
+.js [data-state="revealing"] .dl-pulse__core {
+  animation: dlCorePulse .9s ease-out;
+}
+.js [data-state="triggered"] .dl-pulse__ring--1 { animation: dlRing 1s ease-out; }
+.js [data-state="triggered"] .dl-pulse__ring--2 { animation: dlRing 1s ease-out .18s; }
+
+@keyframes dlRing {
+  from { r: 8px; opacity: .7; }
+  to   { r: 60px; opacity: 0; }
+}
+@keyframes dlCorePulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.7); }
+  100% { transform: scale(1); }
+}
+
+/* =========================================================
+   FASES 2–5 — REVELAÇÃO (state = revealing / completed)
+   Linhas → Fluxo → Dados → Eficiência
+   ========================================================= */
+.js [data-state="revealing"] .dl-link,
+.js [data-state="completed"] .dl-link {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset .5s ease;
+}
+
+/* Fase 2 — conexões */
+.js [data-state="revealing"] .dl-link--1 { transition-delay: .05s; }
+.js [data-state="revealing"] .dl-link--2 { transition-delay: .15s; }
+.js [data-state="revealing"] .dl-link--3 { transition-delay: .25s; }
+
+/* Painéis: fluxo → dados → eficiência */
+.js [data-state="revealing"] .dl-panel,
+.js [data-state="completed"] .dl-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.js [data-state="revealing"] .dl-panel--flow      { transition-delay: .35s; }
+.js [data-state="revealing"] .dl-panel--analytics { transition-delay: .75s; }
+.js [data-state="revealing"] .dl-panel--kpi       { transition-delay: 1.05s; }
+
+/* Fase 3 — nós + conectores do fluxo */
+.js [data-state="revealing"] .dl-node,
+.js [data-state="completed"] .dl-node {
+  opacity: 1;
+  transition: opacity .4s ease;
+}
+.js [data-state="revealing"] .dl-node--1 { transition-delay: .5s; }
+.js [data-state="revealing"] .dl-node--2 { transition-delay: .58s; }
+.js [data-state="revealing"] .dl-node--3 { transition-delay: .66s; }
+.js [data-state="revealing"] .dl-node--4 { transition-delay: .74s; }
+
+.js [data-state="revealing"] .dl-flowline,
+.js [data-state="completed"] .dl-flowline {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset .45s ease .55s;
+}
+
+/* Fase 4 — dados (spark + pontos) */
+.js [data-state="revealing"] .dl-spark,
+.js [data-state="completed"] .dl-spark {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset .6s ease .9s;
+}
+.js [data-state="revealing"] .dl-dot,
+.js [data-state="completed"] .dl-dot {
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+.js [data-state="revealing"] .dl-dot--1 { transition-delay: 1.25s; }
+.js [data-state="revealing"] .dl-dot--2 { transition-delay: 1.35s; }
+.js [data-state="revealing"] .dl-dot--3 { transition-delay: 1.45s; }
+
+/* Fase 5 — eficiência (anel + barras) */
+.js [data-state="revealing"] .dl-ring,
+.js [data-state="completed"] .dl-ring {
+  stroke-dashoffset: 80.9;
+  transition: stroke-dashoffset 1s cubic-bezier(.2,.7,.3,1) 1.2s;
+}
+.js [data-state="revealing"] .dl-bar,
+.js [data-state="completed"] .dl-bar {
+  transform: scaleY(1);
+  transition: transform .5s cubic-bezier(.2,.7,.3,1);
+}
+.js [data-state="revealing"] .dl-bar--1 { transition-delay: 1.25s; }
+.js [data-state="revealing"] .dl-bar--2 { transition-delay: 1.33s; }
+.js [data-state="revealing"] .dl-bar--3 { transition-delay: 1.41s; }
+.js [data-state="revealing"] .dl-bar--4 { transition-delay: 1.49s; }
+.js [data-state="revealing"] .dl-bar--5 { transition-delay: 1.57s; }
+
+/* =========================================================
+   FASE 6 — REPOUSO (state = completed): flutuação mínima
+   ========================================================= */
+.js [data-state="completed"] .datalayer__svg {
+  animation: dlFloat 7s ease-in-out infinite;
+}
+@keyframes dlFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* =========================================================
+   MOBILE — simplificação da composição
+   ========================================================= */
+@media (max-width: 900px) {
+  .datalayer__svg { width: min(92%, 420px); }
+  /* Oculta fluxo e análise; mantém só um indicador discreto. */
+  .dl-panel--flow,
+  .dl-panel--analytics,
+  .dl-link--1,
+  .dl-link--3 { display: none; }
+}
+@media (max-width: 560px) {
+  /* Prioriza leitura: remove conexões complexas, mantém KPI mínimo. */
+  .dl-link { display: none; }
+  .dl-pulse { display: none; }
+  .datalayer__svg { width: min(78%, 320px); }
+}
+
+/* =========================================================
+   MOVIMENTO REDUZIDO — sem sequência, composição estática
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .js [data-hero] .dl-panel,
+  .js [data-hero] .dl-node,
+  .js [data-hero] .dl-dot { opacity: 1; transform: none; }
+  .js [data-hero] .dl-bar { transform: none; }
+  .js [data-hero] .dl-link,
+  .js [data-hero] .dl-flowline,
+  .js [data-hero] .dl-spark { stroke-dashoffset: 0; }
+  .js [data-hero] .dl-ring { stroke-dashoffset: 80.9; }
+  .js [data-hero] .dl-pulse { opacity: 0; }
+
+  .datalayer__svg { animation: none !important; }
+  .dl-panel, .dl-node, .dl-bar, .dl-dot,
+  .dl-link, .dl-flowline, .dl-spark, .dl-ring { transition: none !important; }
+  .dl-pulse__core, .dl-pulse__ring { animation: none !important; }
+}
