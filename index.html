@@ -156,14 +156,45 @@
           </div>
 
           <div class="sobre__connector" aria-hidden="true">
-            <svg viewBox="0 0 120 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="sobre__fan" d="M0 34 C 28 34, 32 110, 52 110" />
-              <path class="sobre__fan" d="M0 88 C 30 88, 34 110, 52 110" />
-              <path class="sobre__fan" d="M0 132 C 30 132, 34 110, 52 110" />
-              <path class="sobre__fan" d="M0 186 C 28 186, 32 110, 52 110" />
-              <path class="sobre__wire" d="M94 110 H120" />
-              <circle class="sobre__arrow-ring" cx="74" cy="110" r="20" />
-              <path class="sobre__arrow-mark" d="M67 110 H81 M76 105 L83 110 L76 115" />
+            <svg viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <linearGradient id="sobreLine" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="104" y2="0">
+                  <stop offset="0" stop-color="#00E7D1" stop-opacity="0" />
+                  <stop offset="1" stop-color="#00E7D1" stop-opacity=".85" />
+                </linearGradient>
+              </defs>
+
+              <path id="sb-l1" class="sobre__line" d="M6 30 C 48 30, 60 110, 86 110" />
+              <path id="sb-l2" class="sobre__line" d="M6 74 C 52 74, 62 110, 86 110" />
+              <path id="sb-l3" class="sobre__line" d="M6 146 C 52 146, 62 110, 86 110" />
+              <path id="sb-l4" class="sobre__line" d="M6 190 C 48 190, 60 110, 86 110" />
+              <path class="sobre__line" d="M122 110 H140" />
+
+              <circle class="sobre__node" cx="6" cy="30" r="2" />
+              <circle class="sobre__node" cx="6" cy="74" r="2" />
+              <circle class="sobre__node" cx="6" cy="146" r="2" />
+              <circle class="sobre__node" cx="6" cy="190" r="2" />
+
+              <circle class="sobre__ping" cx="104" cy="110" r="18" />
+              <circle class="sobre__arrow-ring" cx="104" cy="110" r="18" />
+              <path class="sobre__arrow-mark" d="M97 110 H111 M106 105 L113 110 L106 115" />
+
+              <circle class="sobre__pulse" r="2.6">
+                <animateMotion dur="2.8s" begin="0s" repeatCount="indefinite"><mpath xlink:href="#sb-l1" /></animateMotion>
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.8s" begin="0s" repeatCount="indefinite" />
+              </circle>
+              <circle class="sobre__pulse" r="2.6">
+                <animateMotion dur="2.8s" begin=".7s" repeatCount="indefinite"><mpath xlink:href="#sb-l2" /></animateMotion>
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.8s" begin=".7s" repeatCount="indefinite" />
+              </circle>
+              <circle class="sobre__pulse" r="2.6">
+                <animateMotion dur="2.8s" begin="1.4s" repeatCount="indefinite"><mpath xlink:href="#sb-l3" /></animateMotion>
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+              </circle>
+              <circle class="sobre__pulse" r="2.6">
+                <animateMotion dur="2.8s" begin="2.1s" repeatCount="indefinite"><mpath xlink:href="#sb-l4" /></animateMotion>
+                <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.8s" begin="2.1s" repeatCount="indefinite" />
+              </circle>
             </svg>
           </div>
 

@@ -409,9 +409,10 @@ body {
   .hero__content { padding-top: 6.5rem; }
 }
 
-/* Reduz movimento: reveal sem deslocamento/transição */
+/* Movimento reduzido: mantemos as animações essenciais do site (o dono pediu
+   que a experiência com movimento seja preservada — ver decisão do vídeo).
+   Apenas evitamos micro-transições de hover supérfluas. */
 @media (prefers-reduced-motion: reduce) {
-  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
   .skip-link, .btn, .nav, .nav-toggle__bars,
   .nav-toggle__bars::before, .nav-toggle__bars::after { transition: none; }
 }

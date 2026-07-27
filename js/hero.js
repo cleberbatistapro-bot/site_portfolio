@@ -63,8 +63,10 @@
     var items = document.querySelectorAll('[data-reveal]');
     if (!items.length) return;
 
-    // Reduced motion: mostra tudo, sem observar.
-    if (reducedMotion || !('IntersectionObserver' in window)) {
+    // Sem IntersectionObserver: mostra tudo de imediato (fallback).
+    // Obs.: o reveal roda mesmo com prefers-reduced-motion, pois o dono
+    // optou por preservar o movimento do site (mesma decisão do vídeo).
+    if (!('IntersectionObserver' in window)) {
       items.forEach(function (el) { el.classList.add('is-visible'); });
       return;
     }
