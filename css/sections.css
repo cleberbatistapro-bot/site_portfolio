@@ -1,0 +1,177 @@
+/* =========================================================
+   SEÇÕES (dobras após a hero) — base reutilizável
+   ========================================================= */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+/* Cabeçalho centralizado de seção */
+.section-head {
+  max-width: 46rem;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+.section-eyebrow {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--sp-5);
+  padding-bottom: .85rem;
+  position: relative;
+}
+.section-eyebrow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--teal);
+  opacity: .55;
+}
+.section-title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -.01em;
+  margin-bottom: var(--sp-5);
+  text-wrap: balance;
+}
+.section-title .soft { color: var(--text-dim); }
+.section-lead {
+  color: var(--text-dim);
+  font-size: clamp(.98rem, 1.1vw, 1.06rem);
+  line-height: 1.65;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SOBRE — "Entendo o processo antes de pensar na automação"
+   ========================================================= */
+.sobre { background: var(--bg); }
+
+.sobre__cols {
+  display: grid;
+  grid-template-columns: 1fr clamp(72px, 9vw, 132px) 1fr;
+  align-items: center;
+  gap: clamp(.5rem, 1.4vw, 1.1rem);
+}
+.sobre__col {
+  align-self: stretch;
+  background: rgba(255, 255, 255, .02);
+  border: 1px solid var(--border);
+  border-radius: var(--r-panel);
+  padding: clamp(1.4rem, 2.5vw, 2rem);
+}
+.sobre__col--fix {
+  border-color: var(--border-teal);
+  background: var(--teal-soft);
+}
+.sobre__col-title {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: var(--sp-5);
+}
+.sobre__col-title svg { width: 20px; height: 20px; color: var(--teal); flex: none; }
+
+.sobre__list { display: grid; gap: var(--sp-4); }
+.sobre__item {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: .85rem;
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--border);
+}
+.sobre__item:last-child { padding-bottom: 0; border-bottom: 0; }
+.sobre__ico {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--teal-soft);
+  border: 1px solid var(--border-teal);
+}
+.sobre__ico svg { width: 18px; height: 18px; color: var(--teal); }
+.sobre__item h4 { font-size: .98rem; font-weight: 600; color: var(--text); margin-bottom: .18rem; }
+.sobre__item p  { font-size: .9rem; color: var(--text-dim); line-height: 1.5; }
+
+/* Conector: linhas tracejadas animadas convergindo para a seta */
+.sobre__connector { align-self: center; width: 100%; }
+.sobre__connector svg { display: block; width: 100%; height: auto; overflow: visible; }
+.sobre__fan,
+.sobre__wire {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 1.4;
+  stroke-dasharray: 3 6;
+  opacity: .5;
+  animation: sobreDash 2.4s linear infinite;
+}
+.sobre__arrow-ring { fill: var(--bg); stroke: var(--border-teal); stroke-width: 1.4; }
+.sobre__arrow-mark {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@keyframes sobreDash { to { stroke-dashoffset: -18; } }
+
+/* Divisor com chevron (↓) antes da frase de fecho */
+.sobre__divider {
+  position: relative;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+}
+.sobre__chev {
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-teal);
+  background: var(--bg);
+  color: var(--teal);
+}
+.sobre__chev svg { width: 18px; height: 18px; }
+
+.sobre__closing {
+  text-align: center;
+  max-width: 44rem;
+  margin: clamp(1.5rem, 3vw, 2.25rem) auto 0;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--text);
+}
+.sobre__closing .accent { color: var(--teal); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 860px) {
+  .sobre__cols { grid-template-columns: 1fr; }
+  .sobre__connector { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sobre__fan,
+  .sobre__wire { animation: none; }
+}

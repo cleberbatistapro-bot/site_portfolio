@@ -79,11 +79,9 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 
-    // Stagger leve para o conteúdo do hero (em viewport no load).
-    items.forEach(function (el, i) {
-      el.setAttribute('data-reveal-delay', String(i * 90));
-      io.observe(el);
-    });
+    // O stagger vem de data-reveal-delay (ms) definido no HTML por elemento
+    // (padrão 0). Assim cada dobra controla sua própria entrada.
+    items.forEach(function (el) { io.observe(el); });
   })();
 
   /* =======================================================

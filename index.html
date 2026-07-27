@@ -21,11 +21,11 @@
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/hologram.css" />
+  <link rel="stylesheet" href="css/sections.css" />
 </head>
 <body>
 
@@ -71,14 +71,14 @@
         <video
           class="hero__video"
           data-hero-video
-          poster="assets/img/hero-poster.jpg"
+          poster="assets/img/hero-poster-video.jpg"
           autoplay
           muted
           loop
           playsinline
           preload="auto"
         >
-          <source src="assets/video/cleber-batista-hero.mp4" type="video/mp4" />
+          <source src="assets/video/video-hero.mp4" type="video/mp4" />
         </video>
         <div class="hero__gradients"></div>
       </div>
@@ -87,19 +87,19 @@
 
         <!-- Coluna de texto -->
         <div class="hero__content">
-          <p class="hero__eyebrow" data-reveal>Tecnologia que gera eficiência</p>
+          <p class="hero__eyebrow" data-reveal>Analista administrativo &amp; de processos</p>
 
-          <h1 class="hero__title" id="hero-title" data-reveal>
+          <h1 class="hero__title" id="hero-title" data-reveal data-reveal-delay="80">
             Transformo processos em <span class="accent">eficiência.</span>
           </h1>
 
-          <p class="hero__subtitle" data-reveal>
-            Automatizo processos administrativos com Python, análise de dados e
-            inteligência artificial para reduzir tarefas manuais, simplificar
-            rotinas e gerar resultados.
+          <p class="hero__subtitle" data-reveal data-reveal-delay="160">
+            Automatizo rotinas administrativas, de operações e backoffice com
+            Python, análise de dados e inteligência artificial — reduzo tarefas
+            manuais, elimino gargalos e transformo planilhas em sistemas confiáveis.
           </p>
 
-          <div class="hero__actions" data-reveal>
+          <div class="hero__actions" data-reveal data-reveal-delay="240">
             <a href="#projetos" class="btn btn--primary">
               Ver projetos <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
@@ -107,75 +107,104 @@
           </div>
         </div>
 
-        <!-- Coluna de mídia: apenas os infográficos (o vídeo é full-bleed acima) -->
-        <div class="hero__media">
-          <!-- Camada de dados decorativa (revelada pela sequência). -->
-          <div class="datalayer" aria-hidden="true">
-            <svg class="datalayer__svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      </div>
+    </section>
 
-              <!-- Origem do pulso: região das mãos / teclado do notebook -->
-              <g class="dl-pulse" transform="translate(300,500)">
-                <circle class="dl-pulse__ring dl-pulse__ring--1" r="10" />
-                <circle class="dl-pulse__ring dl-pulse__ring--2" r="10" />
-                <circle class="dl-pulse__core" r="5" />
-              </g>
+    <!-- ===================== SOBRE ===================== -->
+    <section class="section sobre" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
 
-              <!-- Linhas de conexão (conduzem o olhar até os painéis) -->
-              <path class="dl-link dl-link--1" d="M300 500 C 300 400, 272 300, 245 210" />
-              <path class="dl-link dl-link--2" d="M300 500 C 280 440, 258 380, 240 322" />
-              <path class="dl-link dl-link--3" d="M300 500 C 322 492, 332 484, 340 478" />
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Processos administrativos + tecnologia</p>
+          <h2 class="section-title" id="sobre-title">
+            Entendo o processo <span class="soft">antes de pensar na automação.</span>
+          </h2>
+          <p class="section-lead">
+            Minha experiência em rotinas administrativas e qualidade me ajuda a reconhecer
+            tarefas repetitivas, dados desorganizados e pontos de retrabalho. A partir disso,
+            aplico Python, inteligência artificial e análise de dados para construir
+            alternativas mais organizadas e confiáveis.
+          </p>
+        </div>
 
-              <!-- ===== FlowPanel (fluxo/automação) — sup. esquerdo ===== -->
-              <g class="dl-panel dl-panel--flow">
-                <rect class="dl-surface" x="36" y="40" width="210" height="168" rx="12" />
-                <text class="dl-cap" x="54" y="70">Fluxo de processo</text>
-                <path class="dl-flowline" d="M155 108 V120" />
-                <path class="dl-flowline" d="M96 132 V120 H186 V132" />
-                <path class="dl-flowline" d="M96 156 V168 H186 V168" />
-                <path class="dl-flowline" d="M155 168 V176" />
-                <rect class="dl-node dl-node--1" x="120" y="84"  width="70" height="24" rx="6" />
-                <rect class="dl-node dl-node--2" x="66"  y="132" width="60" height="24" rx="6" />
-                <rect class="dl-node dl-node--3" x="156" y="132" width="60" height="24" rx="6" />
-                <rect class="dl-node dl-node--4" x="120" y="176" width="70" height="24" rx="6" />
-              </g>
+        <div class="sobre__cols">
 
-              <!-- ===== AnalyticsPanel (dados) — meio esquerdo ===== -->
-              <g class="dl-panel dl-panel--analytics">
-                <rect class="dl-surface" x="40" y="250" width="196" height="140" rx="12" />
-                <text class="dl-cap" x="58" y="278">Análise de dados</text>
-                <line class="dl-axis" x1="58" y1="366" x2="218" y2="366" />
-                <line class="dl-axis" x1="58" y1="294" x2="58" y2="366" />
-                <path class="dl-spark" d="M62 354 L 96 340 L 126 346 L 158 320 L 190 326 L 216 306" />
-                <circle class="dl-dot dl-dot--1" cx="96"  cy="340" r="3.2" />
-                <circle class="dl-dot dl-dot--2" cx="158" cy="320" r="3.2" />
-                <circle class="dl-dot dl-dot--3" cx="216" cy="306" r="3.2" />
-              </g>
+          <!-- Coluna: gargalos -->
+          <div class="sobre__col sobre__col--pain" data-reveal>
+            <h3 class="sobre__col-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5"/><circle cx="12" cy="16.3" r=".6" fill="currentColor" stroke="none"/></svg>
+              Onde normalmente surgem os gargalos
+            </h3>
+            <ul class="sobre__list">
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                <div><h4>Atividades manuais que consomem tempo</h4><p>Processos repetitivos que poderiam ser mais simples e rápidos.</p></div>
+              </li>
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+                <div><h4>Informações distribuídas em diferentes arquivos</h4><p>Dados espalhados que dificultam a localização e a consolidação.</p></div>
+              </li>
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg></span>
+                <div><h4>Processos sujeitos a erros e retrabalho</h4><p>Falhas humanas e falta de padronização geram retrabalho constante.</p></div>
+              </li>
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M6 21v-6"/><path d="M12 21V7"/><path d="M18 21v-9"/></svg></span>
+                <div><h4>Dificuldade para consolidar e visualizar dados</h4><p>Informações importantes sem visibilidade para tomada de decisão.</p></div>
+              </li>
+            </ul>
+          </div>
 
-              <!-- ===== EfficiencyPanel (resultado) — inf. direito ===== -->
-              <g class="dl-panel dl-panel--kpi">
-                <rect class="dl-surface" x="318" y="378" width="256" height="188" rx="12" />
-                <text class="dl-cap" x="340" y="408">Eficiência</text>
-
-                <!-- Indicador circular -->
-                <g transform="translate(400,480)">
-                  <circle class="dl-ring-bg" r="46" />
-                  <circle class="dl-ring" r="46" transform="rotate(-90)" />
-                  <text class="dl-ring-val" x="0" y="7">72%</text>
-                </g>
-
-                <!-- Mini barras -->
-                <g class="dl-bars" transform="translate(486,512)">
-                  <rect class="dl-bar dl-bar--1" x="0"  y="-26" width="10" height="26" rx="2" />
-                  <rect class="dl-bar dl-bar--2" x="16" y="-40" width="10" height="40" rx="2" />
-                  <rect class="dl-bar dl-bar--3" x="32" y="-20" width="10" height="20" rx="2" />
-                  <rect class="dl-bar dl-bar--4" x="48" y="-48" width="10" height="48" rx="2" />
-                  <rect class="dl-bar dl-bar--5" x="64" y="-34" width="10" height="34" rx="2" />
-                </g>
-              </g>
-
+          <div class="sobre__connector" aria-hidden="true">
+            <svg viewBox="0 0 120 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="sobre__fan" d="M0 34 C 28 34, 32 110, 52 110" />
+              <path class="sobre__fan" d="M0 88 C 30 88, 34 110, 52 110" />
+              <path class="sobre__fan" d="M0 132 C 30 132, 34 110, 52 110" />
+              <path class="sobre__fan" d="M0 186 C 28 186, 32 110, 52 110" />
+              <path class="sobre__wire" d="M94 110 H120" />
+              <circle class="sobre__arrow-ring" cx="74" cy="110" r="20" />
+              <path class="sobre__arrow-mark" d="M67 110 H81 M76 105 L83 110 L76 115" />
             </svg>
           </div>
+
+          <!-- Coluna: abordagem -->
+          <div class="sobre__col sobre__col--fix" data-reveal data-reveal-delay="120">
+            <h3 class="sobre__col-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5.5"/></svg>
+              Como eu abordo esses desafios
+            </h3>
+            <ul class="sobre__list">
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+                <div><h4>Compreendo a rotina e o objetivo do processo</h4><p>Analiso o contexto, as regras e o que realmente precisa ser resolvido.</p></div>
+              </li>
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+                <div><h4>Organizo informações antes de automatizar</h4><p>Estruturo os dados e padronizo para garantir consistência e qualidade.</p></div>
+              </li>
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 8l-4 4 4 4"/><path d="M15 8l4 4-4 4"/></svg></span>
+                <div><h4>Desenvolvo ferramentas adequadas ao problema</h4><p>Uso Python, IA e análise de dados para criar soluções práticas.</p></div>
+              </li>
+              <li class="sobre__item">
+                <span class="sobre__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4 3 7 7 8 4-1 7-4 7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                <div><h4>Valido clareza, confiabilidade e facilidade de uso</h4><p>Soluções simples de usar, sustentáveis e que geram eficiência real.</p></div>
+              </li>
+            </ul>
+          </div>
+
         </div>
+
+        <div class="sobre__divider" data-reveal aria-hidden="true">
+          <span class="sobre__chev">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+          </span>
+        </div>
+
+        <p class="sobre__closing" data-reveal>
+          É assim que transformo rotinas manuais em processos mais
+          <span class="accent">organizados, confiáveis e preparados para crescer.</span>
+        </p>
 
       </div>
     </section>

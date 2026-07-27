@@ -1,0 +1,9 @@
+# Sistema operacional / editores
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# Dependências (caso venha a usar Node no futuro)
+node_modules/

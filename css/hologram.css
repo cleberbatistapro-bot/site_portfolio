@@ -8,7 +8,9 @@
   inset: 0;
   z-index: var(--z-datalayer);
   pointer-events: none;
-  display: flex;
+  /* Infográficos SVG desativados: o vídeo atual já traz os infográficos
+     embutidos. Camada mantida no HTML apenas para reativação futura. */
+  display: none;
   align-items: center;
   justify-content: center;
 }

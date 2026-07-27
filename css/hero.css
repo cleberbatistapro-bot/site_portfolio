@@ -15,7 +15,7 @@
   --ink:           #04211E; /* texto sobre botão turquesa */
 
   /* Tipografia */
-  --font: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
   /* Espaçamentos */
   --sp-1: .25rem;  --sp-2: .5rem;   --sp-3: .75rem;  --sp-4: 1rem;
@@ -228,31 +228,29 @@ body {
   z-index: var(--z-content);
 }
 .hero__eyebrow {
-  display: inline-block;
-  font-size: .8rem;
+  display: block;
+  font-size: .82rem;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--teal);
-  border: 1px solid var(--border-teal);
-  border-radius: 999px;
-  padding: .45rem .9rem;
-  margin-bottom: var(--sp-5);
+  margin-bottom: var(--sp-4);
 }
 .hero__title {
-  font-size: clamp(2.5rem, 5.4vw, 4.4rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -.02em;
-  margin-bottom: var(--sp-5);
+  font-size: clamp(1.9rem, 3.1vw, 2.9rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -.01em;
+  margin-bottom: var(--sp-4);
   text-wrap: balance;
 }
 .hero__title .accent { color: var(--teal); }
 .hero__subtitle {
-  max-width: 34rem;
+  max-width: 32rem;
   color: var(--text-dim);
-  font-size: clamp(1rem, 1.3vw, 1.12rem);
-  margin-bottom: var(--sp-7);
+  font-size: clamp(.95rem, 1.05vw, 1.02rem);
+  line-height: 1.6;
+  margin-bottom: var(--sp-6);
 }
 .hero__actions { display: flex; gap: var(--sp-4); flex-wrap: wrap; }
 
@@ -265,7 +263,7 @@ body {
   pointer-events: none;
   /* Fallback estrutural: cor-base + poster caso o vídeo falhe/carregue. */
   background: var(--bg) center / cover no-repeat;
-  background-image: image-set(url("../assets/img/hero-poster.jpg") 1x);
+  background-image: image-set(url("../assets/img/hero-poster-video.jpg") 1x);
 }
 .hero__video {
   position: absolute;
@@ -304,15 +302,18 @@ body {
   z-index: var(--z-gradients);
   pointer-events: none;
   background:
-    /* 1. Gradiente horizontal principal: escurece a esquerda p/ leitura,
-          dissipando de forma contínua até ~82% (sem linha vertical). */
+    /* 1. Gradiente horizontal principal: mantém a coluna de texto totalmente
+          escura (escondendo a parede vazia + o caixilho de vidro que existe
+          DENTRO do vídeo, ~46%) e só revela a cena logo após esse ponto —
+          assim a "divisa" some na sombra, sem linha vertical. */
     linear-gradient(90deg,
-      rgba(13,17,23,0.98) 0%,
-      rgba(13,17,23,0.94) 20%,
-      rgba(13,17,23,0.82) 38%,
-      rgba(13,17,23,0.55) 52%,
-      rgba(13,17,23,0.20) 68%,
-      rgba(13,17,23,0.00) 82%),
+      rgba(13,17,23,0.99) 0%,
+      rgba(13,17,23,0.98) 38%,
+      rgba(13,17,23,0.93) 46%,
+      rgba(13,17,23,0.70) 54%,
+      rgba(13,17,23,0.40) 64%,
+      rgba(13,17,23,0.16) 77%,
+      rgba(13,17,23,0.00) 90%),
     /* 2. Proteção superior do header. */
     linear-gradient(180deg,
       rgba(13,17,23,0.45) 0%,
