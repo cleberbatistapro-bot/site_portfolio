@@ -14,6 +14,12 @@
   --teal-soft:     rgba(0, 231, 209, .10);
   --ink:           #04211E; /* texto sobre botão turquesa */
 
+  /* Tema claro (dobras intercaladas, ex.: Projetos) */
+  --bg-light:      #F4F6F9;
+  --ink-strong:    #0D1117;
+  --ink-soft:      #55606D;
+  --teal-ink:      #0A7A6D; /* turquesa escurecido p/ contraste no claro */
+
   /* Tipografia */
   --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
