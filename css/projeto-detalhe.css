@@ -6,11 +6,10 @@
    Este arquivo só é carregado por projeto-inspecao-digital.html.
    ========================================================= */
 
-/* ---- 0. Fundo branco puro garantido em toda a árvore da página ---- */
+/* ---- 0. Fundo branco puro garantido em toda a árvore clara da página ---- */
 html, body, main,
 .pd-hero,
 .pd-compare,
-.pd-flow-section,
 .pd-tools-section,
 .pd-learn-section,
 .pd-cta {
@@ -28,8 +27,7 @@ html, body, main,
 .pd-head--center .section-eyebrow::after { left: 50%; transform: translateX(-50%); }
 .pd-head--center p { margin-inline: auto; }
 
-/* Divisores discretos entre seções selecionadas (só onde ajuda a leitura) */
-.pd-flow-section,
+/* Divisores discretos entre seções claras selecionadas (só onde ajuda a leitura) */
 .pd-tools-section,
 .pd-learn-section {
   border-top: 1px solid rgba(15, 23, 42, .08);
@@ -37,7 +35,6 @@ html, body, main,
 
 /* Reduz o respiro excessivo nas transições apontadas no briefing */
 .pd-compare { padding-top: 56px; }
-.pd-flow-section { padding-top: 56px; }
 .pd-tools-section { padding-top: 56px; }
 
 /* ---- 1. Hero ---- */
@@ -100,7 +97,16 @@ html, body, main,
 .pd-points--before li svg { color: #b5761f; }
 .pd-points--after li svg { color: var(--teal-ink); }
 
-/* ---- 3. Como funciona ---- */
+/* ---- 3. Como funciona (dobra ESCURA) ---- */
+.pd-flow-section {
+  background: linear-gradient(135deg, #0b141a 0%, #102229 100%);
+  padding-top: 56px;
+}
+.pd-flow-section .section-eyebrow { color: var(--teal); text-align: left; }
+.pd-flow-section .section-eyebrow::after { left: 0; transform: none; background: var(--teal); }
+.pd-flow-section .pd-head h2 { color: var(--text); }
+.pd-flow-section .pd-head p { color: var(--text-dim); }
+
 .pd-flow { position: relative; list-style: none; margin: 0; padding: 0; display: flex; align-items: stretch; gap: .75rem; }
 .pd-flow::before {
   content: '';
@@ -109,22 +115,57 @@ html, body, main,
   right: 2.4rem;
   top: 2.35rem;
   height: 2px;
-  background: rgba(0, 166, 157, .32);
+  background: rgba(0, 231, 209, .35);
   z-index: 0;
 }
 .pd-flow__item { flex: 1; display: flex; align-items: stretch; position: relative; z-index: 1; }
-.pd-flow-card { flex: 1; min-height: 220px; padding: 24px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; }
+.pd-flow-card {
+  flex: 1; min-height: 220px; padding: 24px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: .6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--border-teal);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25), 0 2px 6px rgba(0, 0, 0, .15);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.pd-flow-card:hover {
+  border-color: var(--border-teal);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .32), 0 4px 10px rgba(0, 231, 209, .08);
+  transform: translateY(-3px);
+}
 .pd-flow-card__top { display: flex; align-items: center; gap: .6rem; }
-.pd-flow-card__num { font-size: .72rem; font-weight: 700; color: var(--teal-ink); }
+.pd-flow-card__num { font-size: .72rem; font-weight: 700; color: var(--teal); }
 .pd-flow-card__ico {
   width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center;
-  border-radius: 12px; background: rgba(0, 166, 157, .08); border: 1px solid rgba(0, 166, 157, .30); color: var(--teal-ink);
+  border-radius: 12px; background: var(--teal-soft); border: 1px solid var(--border-teal); color: var(--teal);
 }
 .pd-flow-card__ico svg { width: 19px; height: 19px; }
-.pd-flow-card h3 { font-size: .94rem; font-weight: 700; color: #111827; margin: 0; }
-.pd-flow-card p { font-size: .8rem; color: #4b5563; line-height: 1.45; margin: 0; }
+.pd-flow-card h3 { font-size: .94rem; font-weight: 700; color: var(--text); margin: 0; }
+.pd-flow-card p { font-size: .8rem; color: var(--text-dim); line-height: 1.45; margin: 0; }
 .pd-flow__arrow { flex: none; width: 1.5rem; display: flex; align-items: center; justify-content: center; color: var(--teal); opacity: .9; align-self: center; position: relative; z-index: 1; }
 .pd-flow__arrow svg { width: 18px; height: 18px; }
+
+/* Divisor de fechamento da dobra escura (linha + chevron) */
+.pd-flow-divider {
+  position: relative;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+}
+.pd-flow-divider__chev {
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-teal);
+  background: #0b141a;
+  color: var(--teal);
+}
+.pd-flow-divider__chev svg { width: 18px; height: 18px; }
 
 /* ---- 4. Ferramentas / 6. Aprendizados (grade clara) ---- */
 .pd-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
@@ -218,7 +259,7 @@ html, body, main,
     top: 100%;
     width: 2px;
     height: 1rem;
-    background: rgba(0, 166, 157, .4);
+    background: rgba(0, 231, 209, .4);
   }
   .pd-grid { grid-template-columns: 1fr; }
   .pd-grid--5 { grid-template-columns: 1fr; }
