@@ -100,7 +100,8 @@ html, body, main,
 /* ---- 3. Como funciona (dobra ESCURA) ---- */
 .pd-flow-section {
   background: linear-gradient(135deg, #0b141a 0%, #102229 100%);
-  padding-top: 56px;
+  padding-top: 50px;
+  padding-bottom: 79px;
 }
 .pd-flow-section .section-eyebrow { color: var(--teal); text-align: left; }
 .pd-flow-section .section-eyebrow::after { left: 0; transform: none; background: var(--teal); }
@@ -140,8 +141,8 @@ html, body, main,
   border-radius: 12px; background: var(--teal-soft); border: 1px solid var(--border-teal); color: var(--teal);
 }
 .pd-flow-card__ico svg { width: 19px; height: 19px; }
-.pd-flow-card h3 { font-size: .94rem; font-weight: 700; color: var(--text); margin: 0; }
-.pd-flow-card p { font-size: .8rem; color: var(--text-dim); line-height: 1.45; margin: 0; }
+.pd-flow-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.5; margin: 0; }
+.pd-flow-card p { font-size: .875rem; color: var(--text-dim); line-height: 1.5; margin: 0; }
 .pd-flow__arrow { flex: none; width: 1.5rem; display: flex; align-items: center; justify-content: center; color: var(--teal); opacity: .9; align-self: center; position: relative; z-index: 1; }
 .pd-flow__arrow svg { width: 18px; height: 18px; }
 
@@ -182,7 +183,7 @@ html, body, main,
 .pd-grid--5 .pd-grid-card { min-height: 210px; padding: 24px 20px; }
 
 /* ---- 5. Resultados esperados (dobra ESCURA) ---- */
-.pd-results { background: linear-gradient(135deg, #0b141a 0%, #102229 100%); }
+.pd-results { background: linear-gradient(135deg, #0b141a 0%, #102229 100%); padding-block: 79px; }
 .pd-results .section-eyebrow { color: var(--teal); text-align: left; }
 .pd-results .section-eyebrow::after { left: 0; transform: none; background: var(--teal); }
 .pd-results .pd-head h2 { color: var(--text); }
@@ -205,8 +206,8 @@ html, body, main,
 }
 .pd-result__ico { width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: var(--teal-soft); border: 1px solid var(--border-teal); color: var(--teal); }
 .pd-result__ico svg { width: 20px; height: 20px; }
-.pd-result h3 { font-size: .96rem; font-weight: 600; color: var(--text); margin: 0; }
-.pd-result p { font-size: .85rem; color: var(--text-dim); line-height: 1.5; margin: 0; }
+.pd-result h3 { font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.5; margin: 0; }
+.pd-result p { font-size: .875rem; color: var(--text-dim); line-height: 1.5; margin: 0; }
 
 /* ---- 7. Bloco final ---- */
 .pd-cta { text-align: center; padding: 56px 0 96px; }
@@ -232,16 +233,29 @@ html, body, main,
 .pd-cta p { font-size: .95rem; color: #4b5563; line-height: 1.6; margin: 0 0 1.5rem; }
 .pd-cta__actions { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 .pd-cta__secondary {
-  font-size: .85rem;
-  opacity: .75;
-  color: #111827;
-  border-color: rgba(15, 23, 42, .16);
+  padding-block: calc(.85rem - 1px);
+  padding-inline: 2rem;
+  font-weight: 600;
+  background: #ffffff;
+  color: var(--teal-ink);
+  border: 1px solid var(--teal-ink);
 }
-.pd-cta__secondary:hover { color: var(--teal-ink); border-color: var(--teal-ink); opacity: 1; }
+.pd-cta__secondary:hover {
+  background: var(--teal-ink);
+  color: #ffffff;
+  border-color: var(--teal-ink);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(10, 122, 109, .25);
+}
+.pd-cta__secondary:hover .btn__arrow { transform: translateX(3px); }
+@media (prefers-reduced-motion: reduce) {
+  .pd-cta__secondary:hover { transform: none; }
+}
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 980px) {
   .pd-section { padding-block: 72px; }
+  .pd-flow-section, .pd-results { padding-block: 65px; }
   .pd-hero__grid { grid-template-columns: 1fr; }
   .pd-hero__media { order: -1; }
   .pd-hero__media img { max-height: 380px; margin: 0 auto; }
@@ -259,6 +273,7 @@ html, body, main,
 }
 @media (max-width: 640px) {
   .pd-section { padding-block: 56px; }
+  .pd-flow-section, .pd-results { padding-block: 50px; }
   .pd-cta { padding: 40px 0 64px; }
   .pd-chips { grid-template-columns: 1fr; }
   .pd-flow { flex-direction: column; gap: 1rem; }
