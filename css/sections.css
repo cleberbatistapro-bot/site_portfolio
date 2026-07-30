@@ -739,6 +739,13 @@
 
 .contato__intro .section-head { text-align: left; max-width: 30rem; margin: 0; }
 
+/* Rótulo "Contato profissional": linha presa logo abaixo do texto e
+   alinhada à esquerda (herda o texto centralizado/pseudo-elemento
+   centralizado do .section-eyebrow global — aqui só ajustamos o
+   espaçamento e a posição da linha, sem tocar em outras dobras). */
+.contato .section-eyebrow { padding-bottom: 12px; margin-bottom: 32px; }
+.contato .section-eyebrow::after { left: 0; transform: none; }
+
 /* --- Card de canais de contato (substitui o antigo formulário) --- */
 .contato__card {
   background: rgba(255, 255, 255, .02);
@@ -777,17 +784,23 @@
   transition:
     background-color 180ms ease,
     border-color 180ms ease,
+    color 180ms ease,
     transform 180ms ease,
     box-shadow 180ms ease;
 }
-/* Mesmo destaque em hover e foco por teclado — nenhum canal fica
-   privilegiado em estado normal (ver .contato__channel base acima). */
-.contato__channel:hover,
+/* Mouse: cor + leve elevação. Nenhum canal fica privilegiado em
+   estado normal (ver .contato__channel base acima). */
+.contato__channel:hover {
+  background-color: rgba(0, 231, 209, .14);
+  border-color: rgba(0, 231, 209, .65);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+}
+/* Teclado: mesma cor/borda, sem elevação — evita deslocar o elemento
+   focado de forma abrupta durante a navegação por Tab. */
 .contato__channel:focus-visible {
   background-color: rgba(0, 231, 209, .14);
   border-color: rgba(0, 231, 209, .65);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .16);
 }
 /* Toque: feedback discreto sem depender de hover, sem elevação. */
 .contato__channel:active {
@@ -819,16 +832,16 @@
 }
 .contato__channel-desc { display: block; font-size: .85rem; color: var(--text-dim); line-height: 1.45; margin-bottom: .6rem; }
 .contato__channel-cta { display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; font-weight: 600; color: var(--teal); }
-.contato__channel-cta svg { width: 15px; height: 15px; transition: transform var(--t-fast); }
-.contato__channel:hover .contato__channel-cta svg,
-.contato__channel:focus-visible .contato__channel-cta svg { transform: translateX(3px); }
+.contato__channel-cta svg { width: 15px; height: 15px; transition: transform 180ms ease; }
+.contato__channel:hover .contato__channel-cta svg { transform: translateX(4px); }
 
 @media (prefers-reduced-motion: reduce) {
   .contato__channel,
   .contato__channel-title,
   .contato__channel-cta svg { transition-duration: .01ms; }
   .contato__channel:hover,
-  .contato__channel:focus-visible { transform: none; }
+  .contato__channel:focus-visible { transform: none; box-shadow: none; }
+  .contato__channel:hover .contato__channel-cta svg { transform: none; }
 }
 
 .contato__note {
@@ -843,6 +856,8 @@
 @media (max-width: 900px) {
   .contato__grid { grid-template-columns: 1fr; }
   .contato__intro .section-head { text-align: center; max-width: none; margin: 0 auto var(--sp-6); }
+  /* Rótulo volta a centralizar junto com o texto (empilhado). */
+  .contato .section-eyebrow::after { left: 50%; transform: translateX(-50%); }
 }
 
 
