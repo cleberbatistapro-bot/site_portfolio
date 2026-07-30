@@ -760,6 +760,7 @@
   background: var(--teal-soft);
   border: 1px solid var(--border-teal);
   color: var(--teal);
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 .contato__ico svg { width: 22px; height: 22px; }
 
@@ -769,12 +770,40 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: 10px;
-  transition: transform var(--t-med), border-color var(--t-med), background var(--t-med);
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
-.contato__channel:hover { transform: translateX(4px); border-color: var(--border-teal); }
-.contato__channel--primary { background: var(--teal-soft); border-color: var(--border-teal); }
+/* Mesmo destaque em hover e foco por teclado — nenhum canal fica
+   privilegiado em estado normal (ver .contato__channel base acima). */
+.contato__channel:hover,
+.contato__channel:focus-visible {
+  background-color: rgba(0, 231, 209, .14);
+  border-color: rgba(0, 231, 209, .65);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .16);
+}
+/* Toque: feedback discreto sem depender de hover, sem elevação. */
+.contato__channel:active {
+  background-color: rgba(0, 231, 209, .1);
+  border-color: var(--border-teal);
+}
+.contato__channel:hover .contato__ico,
+.contato__channel:focus-visible .contato__ico {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--ink);
+}
+.contato__channel:hover .contato__channel-title,
+.contato__channel:focus-visible .contato__channel-title {
+  color: var(--teal);
+}
 
 .contato__channel-body { flex: 1; min-width: 0; }
 .contato__channel-title {
@@ -786,21 +815,21 @@
   font-weight: 600;
   color: var(--text);
   margin-bottom: .3rem;
-}
-.contato__badge {
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--ink);
-  background: var(--teal);
-  padding: .18rem .5rem;
-  border-radius: 999px;
+  transition: color 180ms ease;
 }
 .contato__channel-desc { display: block; font-size: .85rem; color: var(--text-dim); line-height: 1.45; margin-bottom: .6rem; }
 .contato__channel-cta { display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; font-weight: 600; color: var(--teal); }
 .contato__channel-cta svg { width: 15px; height: 15px; transition: transform var(--t-fast); }
-.contato__channel:hover .contato__channel-cta svg { transform: translateX(3px); }
+.contato__channel:hover .contato__channel-cta svg,
+.contato__channel:focus-visible .contato__channel-cta svg { transform: translateX(3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .contato__channel,
+  .contato__channel-title,
+  .contato__channel-cta svg { transition-duration: .01ms; }
+  .contato__channel:hover,
+  .contato__channel:focus-visible { transform: none; }
+}
 
 .contato__note {
   font-size: .78rem;
