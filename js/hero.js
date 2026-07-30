@@ -252,4 +252,35 @@
     else if (motionQuery.addListener) motionQuery.addListener(onMotionChange);
   })();
 
+  /* =======================================================
+     4) FORMULÁRIO DE CONTATO — sem backend: monta um mailto:
+     com os dados preenchidos e deixa o cliente de e-mail do
+     visitante concluir o envio.
+     ======================================================= */
+  (function contatoForm() {
+    var form = document.getElementById('contato-form');
+    if (!form) return;
+
+    var DEST = 'contato@cleberbatistapro.com.br';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return; // respeita os required/type nativos
+
+      var nome = form.nome.value.trim();
+      var email = form.email.value.trim();
+      var assunto = form.assunto.value.trim();
+      var mensagem = form.mensagem.value.trim();
+
+      var subject = encodeURIComponent('[Portfólio] ' + assunto);
+      var body = encodeURIComponent(
+        'Nome: ' + nome + '\n' +
+        'E-mail: ' + email + '\n\n' +
+        mensagem
+      );
+
+      window.location.href = 'mailto:' + DEST + '?subject=' + subject + '&body=' + body;
+    });
+  })();
+
 })();

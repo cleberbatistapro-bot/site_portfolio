@@ -97,10 +97,10 @@
     linear-gradient(90deg,
       var(--bg-light) 0%,
       var(--bg-light) 34%,
-      rgba(244,246,249,.75) 46%,
-      rgba(244,246,249,0) 64%),
-    linear-gradient(180deg, var(--bg-light) 0%, rgba(244,246,249,0) 18%),
-    linear-gradient(0deg, var(--bg-light) 0%, rgba(244,246,249,0) 18%);
+      rgba(255,255,255,.75) 46%,
+      rgba(255,255,255,0) 64%),
+    linear-gradient(180deg, var(--bg-light) 0%, rgba(255,255,255,0) 18%),
+    linear-gradient(0deg, var(--bg-light) 0%, rgba(255,255,255,0) 18%);
 }
 
 .proj__top .section-head {
@@ -320,19 +320,14 @@
 .dif__card {
   position: relative;
   z-index: 1;
-  /* Quase opaco + borda um pouco mais visível + sombra: separa claramente o
-     card da imagem de fundo (.dif__waves-img), evitando que se misturem. */
-  background: rgba(13, 17, 23, .93);
+  /* Superfície mais clara que o fundo (var(--surface), não var(--bg)) +
+     borda visível + sombra: cria contraste de COR real, não só opacidade,
+     separando claramente o card da imagem de fundo (.dif__waves-img). */
+  background: rgba(42, 49, 58, .92);
   border: 1px solid rgba(255, 255, 255, .16);
   border-radius: var(--r-panel);
   padding: clamp(1.5rem, 2.5vw, 2rem);
   box-shadow: 0 12px 30px rgba(0, 0, 0, .38);
-  transition: border-color var(--t-med), transform var(--t-med), background var(--t-med), box-shadow var(--t-med);
-}
-.dif__card:hover {
-  border-color: var(--border-teal);
-  background: var(--teal-soft);
-  transform: translateY(-3px);
 }
 .dif__ico {
   width: 2.75rem;
@@ -489,4 +484,391 @@
   .sobre__cols { grid-template-columns: 1fr; }
   .sobre__connector { display: none; }
 }
+
+/* =========================================================
+   MÉTODO DE TRABALHO — dobra CLARA: "Do problema à solução,
+   com processo antes da tecnologia."
+   Componente interativo: tabs verticais no desktop, accordion no
+   mobile. Sem JS (classe .no-js no <html>), tudo permanece visível
+   em fluxo normal — ver comentários ".js" abaixo. Comportamento em
+   js/metodo.js.
+   ========================================================= */
+.metodo { background: var(--bg-light); color: var(--ink-strong); }
+
+.metodo__grid {
+  display: grid;
+  grid-template-columns: minmax(250px, .74fr) minmax(0, 1.42fr);
+  grid-template-rows: auto 1fr;
+  align-items: stretch;
+  column-gap: clamp(1.75rem, 4vw, 3rem);
+  row-gap: clamp(1.5rem, 3vw, 2rem);
+}
+/* Coluna esquerda alinhada ao painel: o rótulo/título ficam no topo
+   (linha 1, auto) e "Tecnologia como apoio" fica na base (linha 2,
+   empurrado para baixo com align-self:end); o card ocupa as duas
+   linhas, então sua altura é quem define a distância entre os dois
+   blocos da esquerda — sem alturas fixas. */
+.metodo__head  { grid-column: 1; grid-row: 1; }
+.metodo__card  { grid-column: 2; grid-row: 1 / 3; }
+.metodo__stack { grid-column: 1; grid-row: 2; align-self: end; }
+
+.metodo .section-eyebrow { color: var(--teal-ink); text-align: left; }
+.metodo .section-eyebrow::after { left: 0; transform: none; background: var(--teal-ink); opacity: .8; }
+.metodo .section-title { color: var(--ink-strong); text-align: left; margin-bottom: calc(var(--sp-5) + .5rem); }
+.metodo .section-title .accent { color: var(--teal-ink); }
+.metodo .section-lead { color: var(--ink-soft); text-align: left; max-width: 32rem; margin: 0; }
+
+/* --- Tecnologia como apoio: lista discreta, fora do card escuro ---
+   margin-bottom "sobe" o bloco (fica mais perto do parágrafo) sem
+   mexer no limite inferior real da coluna, que continua definido
+   pelo align-self:end + altura do card. */
+.metodo__stack { padding-top: 1.25rem; margin-bottom: 20px; border-top: 1px solid rgba(13, 17, 23, .08); }
+.metodo__stack-label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-strong);
+  margin-bottom: .85rem;
+}
+.metodo__stack-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.1rem;
+}
+.metodo__stack-list li { display: flex; align-items: center; gap: .45rem; font-size: .82rem; font-weight: 500; color: var(--ink-soft); }
+.metodo__stack-ico { width: 1.3rem; height: 1.3rem; flex: none; display: grid; place-items: center; color: var(--teal-ink); }
+.metodo__stack-ico img { width: 100%; height: 100%; object-fit: contain; }
+.metodo__stack-ico svg { width: 16px; height: 16px; }
+
+/* --- Card das etapas ("o slide"): só este bloco fica escuro, para
+   diferenciar-se do restante da dobra (que permanece branco). --- */
+.metodo__card {
+  background: rgba(13, 17, 23, .94);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: var(--r-panel);
+  box-shadow: 0 16px 38px rgba(13, 17, 23, .14);
+  padding: clamp(1.1rem, 2.2vw, 1.55rem) clamp(1rem, 2.2vw, 1.55rem) clamp(.9rem, 2vw, 1.4rem);
+  display: grid;
+  grid-template-columns: minmax(215px, 258px) 1fr;
+  gap: clamp(1.1rem, 2.2vw, 1.6rem);
+  align-items: start;
+}
+
+/* ---- Coluna 1: lista de etapas ---- */
+.metodo__steps { display: flex; flex-direction: column; gap: .35rem; }
+.metodo__item { position: relative; }
+.metodo__step {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: .85rem .9rem;
+  cursor: pointer;
+  transition: background var(--t-med), border-color var(--t-med);
+}
+.metodo__item.is-active .metodo__step {
+  background: var(--teal-soft);
+  border-color: var(--border-teal);
+}
+.metodo__step-num {
+  flex: none;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-dim);
+  opacity: .82;
+  padding-top: .3rem;
+}
+.metodo__item.is-active .metodo__step-num { color: var(--teal); opacity: 1; }
+.metodo__step-ico {
+  flex: none;
+  width: 2.15rem;
+  height: 2.15rem;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--teal-soft);
+  color: var(--teal);
+  transition: background var(--t-med), color var(--t-med);
+}
+.metodo__step-ico svg { width: 17px; height: 17px; }
+.metodo__item.is-active .metodo__step-ico { background: var(--teal); color: var(--ink); }
+.metodo__step-body { display: flex; flex-direction: column; gap: .2rem; }
+.metodo__step-title { font-size: .96rem; font-weight: 600; color: var(--text); }
+.metodo__item.is-active .metodo__step-title { color: #fff; }
+.metodo__step-desc { font-size: .82rem; color: var(--text-dim); line-height: 1.4; }
+
+/* Painel inline (accordion mobile): oculto por padrão em telas largas;
+   em telas estreitas, expande/recolhe com transição suave de altura
+   (grid-template-rows 0fr→1fr — sem JS, fica sempre expandido). */
+.metodo__mobile-panel { display: block; }
+.js .metodo__mobile-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .38s ease;
+}
+.js .metodo__item.is-active .metodo__mobile-panel { grid-template-rows: 1fr; }
+.metodo__mobile-inner { overflow: hidden; min-height: 0; }
+.metodo__mobile-media {
+  margin: .75rem .2rem 0;
+  aspect-ratio: 4 / 5;
+  max-width: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--bg-2), var(--bg));
+  border: 1px solid rgba(0, 231, 209, .16);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .28);
+  padding: .9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.metodo__mobile-media img { width: 100%; height: 100%; object-fit: contain; }
+.metodo__mobile-inner p {
+  margin: .85rem .2rem 1rem;
+  font-size: .88rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ---- Coluna 2: estágio (imagem + texto da etapa ativa) ----
+   align-self:stretch + align-content:center: o card é esticado pelo
+   alinhamento com a coluna esquerda (ver .metodo__grid), mas a lista
+   de etapas (coluna 1) não é afetada — só o estágio ocupa o espaço
+   esticado e centraliza o próprio conteúdo nele, reduzindo o vazio
+   que sobrava embaixo da descrição. Mesma altura em toda troca de
+   etapa (não depende de qual imagem está ativa). */
+.metodo__stage { display: block; align-self: stretch; }
+.js .metodo__stage { display: grid; align-content: center; }
+.js .metodo__panel {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .45s ease, transform .45s ease, visibility 0s linear .45s;
+}
+.js .metodo__panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.metodo__panel:not(:first-child) { margin-top: clamp(1.75rem, 3vw, 2.5rem); }
+.js .metodo__panel:not(:first-child) { margin-top: 0; }
+.metodo__panel-media {
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--bg-2), var(--bg));
+  border: 1px solid rgba(0, 231, 209, .16);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .28);
+  padding: clamp(.7rem, 1.7vw, 1.05rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.metodo__panel-media img { width: 100%; height: 100%; object-fit: contain; }
+.metodo__panel-text { margin-top: .85rem; font-size: .95rem; color: var(--text-dim); line-height: 1.65; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 980px) {
+  /* Empilhado: sem exigência de alturas iguais entre as colunas —
+     cada bloco assume a própria altura, em fluxo normal. */
+  .metodo__grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .metodo__head, .metodo__card, .metodo__stack { grid-column: 1; grid-row: auto; align-self: auto; }
+}
+@media (min-width: 641px) {
+  /* Desktop/tablet largo: conteúdo mobile inline nunca aparece — a
+     imagem e o texto da etapa ativa vivem no estágio (coluna 2). */
+  .metodo__mobile-panel { display: none !important; }
+}
+@media (max-width: 640px) {
+  .metodo__card { grid-template-columns: 1fr; }
+  /* especificidade igual a ".js .metodo__stage" para garantir que a
+     regra abaixo vença mesmo com JS ativo (ordem no arquivo não basta
+     quando as especificidades diferem). */
+  .metodo__stage, .js .metodo__stage { display: none; } /* conteúdo passa a viver inline em cada etapa (accordion) */
+  .metodo__stack-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem .6rem; }
+  .metodo__stack-list li { flex-direction: column; text-align: center; gap: .3rem; font-size: .74rem; }
+  .metodo__stack-ico { width: 1.5rem; height: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .metodo__mobile-panel,
+  .js .metodo__panel,
+  .metodo__step,
+  .metodo__step-ico { transition-duration: .01ms; }
+}
+
+/* =========================================================
+   CONTATO — "Pronto para somar eficiência ao seu time?"
+   ========================================================= */
+.contato { background: var(--bg); position: relative; overflow: hidden; }
+
+/* Pontinhos decorativos no canto superior esquerdo (sutil, estático) */
+.contato__dots {
+  position: absolute;
+  top: clamp(1rem, 4vw, 2.5rem);
+  left: clamp(.5rem, 3vw, 2rem);
+  width: 90px;
+  height: 90px;
+  background-image: radial-gradient(rgba(0, 231, 209, .35) 1.3px, transparent 1.3px);
+  background-size: 14px 14px;
+  -webkit-mask-image: radial-gradient(circle at top left, #000 0%, transparent 75%);
+          mask-image: radial-gradient(circle at top left, #000 0%, transparent 75%);
+  pointer-events: none;
+}
+
+.contato__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.contato__intro .section-head { text-align: left; max-width: 30rem; margin: 0 0 var(--sp-7); }
+.contato__intro .section-lead { margin: var(--sp-4) 0 0; max-width: 28rem; }
+
+.contato__list { display: flex; flex-direction: column; }
+.contato__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: transform var(--t-med);
+}
+.contato__list .contato__item:first-child { padding-top: 0; }
+.contato__item:hover { transform: translateX(4px); }
+.contato__ico {
+  width: 3rem;
+  height: 3rem;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--teal-soft);
+  border: 1px solid var(--border-teal);
+  color: var(--teal);
+}
+.contato__ico svg { width: 22px; height: 22px; }
+.contato__item-body { flex: 1; min-width: 0; }
+.contato__item-label {
+  display: block;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: .2rem;
+}
+.contato__item-value { display: block; font-size: 1.02rem; font-weight: 600; color: var(--text); word-break: break-word; }
+.contato__item-sub { display: block; font-size: .82rem; color: var(--teal); margin-top: .15rem; }
+.contato__item-arrow {
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-teal);
+  color: var(--teal);
+  transition: transform var(--t-fast), background var(--t-med);
+}
+.contato__item-arrow svg { width: 16px; height: 16px; }
+.contato__item:hover .contato__item-arrow { background: var(--teal-soft); transform: translateX(3px); }
+
+/* --- Formulário --- */
+.contato__form-card {
+  background: rgba(255, 255, 255, .02);
+  border: 1px solid var(--border);
+  border-radius: var(--r-panel);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+.contato__form-head { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: var(--sp-6); }
+.contato__form-head h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: .2rem; }
+.contato__form-head p { font-size: .88rem; color: var(--text-dim); }
+
+.contato__form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+.contato__field {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .65rem .9rem;
+  background: rgba(255, 255, 255, .015);
+  margin-top: .9rem;
+  transition: border-color var(--t-fast);
+}
+.contato__field:focus-within { border-color: var(--border-teal); }
+.contato__field label {
+  display: block;
+  font-size: .72rem;
+  color: var(--text-dim);
+  margin-bottom: .15rem;
+}
+.contato__field input,
+.contato__field textarea {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: .95rem;
+  outline: none;
+  resize: vertical;
+}
+.contato__field textarea { min-height: 6.5rem; }
+
+.contato__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  margin-top: 1.1rem;
+  font-size: .82rem;
+  color: var(--text-dim);
+}
+.contato__consent input {
+  margin-top: .18rem;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--teal);
+  flex: none;
+}
+
+.contato__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.3rem;
+  border: 0;
+  cursor: pointer;
+}
+.contato__submit svg { width: 17px; height: 17px; }
+
+.contato__note {
+  font-size: .78rem;
+  color: var(--text-dim);
+  margin-top: .8rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contato__grid { grid-template-columns: 1fr; }
+  .contato__intro .section-head { text-align: center; max-width: none; margin: 0 auto var(--sp-6); }
+  .contato__intro .section-lead { margin: var(--sp-4) auto 0; }
+}
+@media (max-width: 520px) {
+  .contato__form-row { grid-template-columns: 1fr; }
+}
+
 

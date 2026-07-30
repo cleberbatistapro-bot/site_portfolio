@@ -15,7 +15,7 @@
   --ink:           #04211E; /* texto sobre botão turquesa */
 
   /* Tema claro (dobras intercaladas, ex.: Projetos) */
-  --bg-light:      #F4F6F9;
+  --bg-light:      #FFFFFF;
   --ink-strong:    #0D1117;
   --ink-soft:      #55606D;
   --teal-ink:      #0A7A6D; /* turquesa escurecido p/ contraste no claro */
@@ -96,6 +96,7 @@ body {
 }
 
 .brand {
+  font-family: var(--font);
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: .01em;
@@ -308,29 +309,27 @@ body {
   z-index: var(--z-gradients);
   pointer-events: none;
   background:
-    /* 1. Gradiente horizontal principal: mantém a coluna de texto totalmente
-          escura (escondendo a parede vazia + o caixilho de vidro que existe
-          DENTRO do vídeo, ~46%) e só revela a cena logo após esse ponto —
-          assim a "divisa" some na sombra, sem linha vertical. */
+    /* 1. Gradiente horizontal: escurece só o suficiente para o texto ficar
+          legível à esquerda, dissipando bem mais cedo (~70%) para o vídeo
+          — incluindo o lado direito, onde a pessoa aparece — ficar visível. */
     linear-gradient(90deg,
-      rgba(13,17,23,0.99) 0%,
-      rgba(13,17,23,0.98) 38%,
-      rgba(13,17,23,0.93) 46%,
-      rgba(13,17,23,0.70) 54%,
-      rgba(13,17,23,0.40) 64%,
-      rgba(13,17,23,0.16) 77%,
-      rgba(13,17,23,0.00) 90%),
+      rgba(13,17,23,0.97) 0%,
+      rgba(13,17,23,0.90) 30%,
+      rgba(13,17,23,0.72) 42%,
+      rgba(13,17,23,0.46) 52%,
+      rgba(13,17,23,0.20) 62%,
+      rgba(13,17,23,0.00) 72%),
     /* 2. Proteção superior do header. */
     linear-gradient(180deg,
-      rgba(13,17,23,0.45) 0%,
+      rgba(13,17,23,0.40) 0%,
       rgba(13,17,23,0.00) 14%),
     /* 3. Gradiente inferior: integra a hero ao fundo da página. */
     linear-gradient(180deg,
       rgba(13,17,23,0.00) 65%,
       rgba(13,17,23,0.22) 82%,
       rgba(13,17,23,0.70) 100%),
-    /* 4. Tratamento escuro geral discreto (estabiliza contraste). */
-    linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10));
+    /* 4. Tratamento escuro geral bem discreto (estabiliza contraste). */
+    linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05));
 }
 
 /* =========================================================
@@ -339,8 +338,8 @@ body {
    ========================================================= */
 .js [data-reveal] {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .55s ease, transform .55s ease;
+  transform: translateY(22px);
+  transition: opacity 1s cubic-bezier(.16,.7,.2,1), transform 1s cubic-bezier(.16,.7,.2,1);
   will-change: opacity, transform;
 }
 .js [data-reveal].is-visible {
