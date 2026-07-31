@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>PROC Fácil | Projetos | Cleber Batista</title>
-  <meta name="description" content="Projeto de automação que consolida informações de diferentes planilhas com busca automatizada entre bases e colunas." />
+  <title>PROC Fácil | Cleber Batista</title>
+  <meta name="description" content="Estudo de caso de uma ferramenta em Python que consolida dados de múltiplas planilhas com base em coluna-chave, reduzindo retrabalho e erros manuais." />
   <meta name="theme-color" content="#0D1117" />
 
   <script>document.documentElement.className = 'js';</script>
@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/projetos-page.css" />
+  <link rel="stylesheet" href="css/projeto-detalhe.css" />
+  <link rel="stylesheet" href="css/projeto-organizador.css" />
+  <link rel="stylesheet" href="css/projeto-procfacil.css" />
 </head>
 <body class="page-projetos">
 
@@ -44,12 +47,372 @@
   </header>
 
   <main id="conteudo">
-    <div class="container pp-placeholder">
-      <p class="pp-placeholder__category">Automação • Dados</p>
-      <h1>PROC Fácil</h1>
-      <p class="pp-placeholder__note">Conteúdo completo em breve.</p>
-      <a href="projetos.html" class="btn btn--outline">← Voltar para projetos</a>
-    </div>
+
+    <!-- ===================== 1. HERO ===================== -->
+    <section class="pd-hero pf-hero" aria-labelledby="pf-title">
+      <div class="container pd-hero__grid pf-hero__grid">
+        <div>
+          <p class="section-eyebrow">Automação • Dados • Consolidação</p>
+          <h1 id="pf-title">PROC Fácil</h1>
+          <p class="pd-hero__lead">Consolidação inteligente de dados entre planilhas com base em coluna-chave comum (PROCV).</p>
+          <p class="pd-hero__note">Ferramenta em Python que cruza informações de múltiplas planilhas e gera um resultado consolidado, reduzindo retrabalho, erros manuais e tempo gasto em tarefas repetitivas.</p>
+
+          <ul class="pd-chips pf-chips">
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.2"/><rect x="14" y="4" width="7" height="7" rx="1.2"/><rect x="8.5" y="14" width="7" height="7" rx="1.2"/><path d="M6.5 11v3M17.5 11v3M6.5 14h4.5M13 14h4.5"/></svg></span>
+              <span class="pd-chip__text">Consolidação automática</span>
+            </li>
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="4.5"/><path d="M11.8 11.8 20 20"/></svg></span>
+              <span class="pd-chip__text">Baseado em coluna-chave</span>
+            </li>
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4 3 7 7 8 4-1 7-4 7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+              <span class="pd-chip__text">Validação de dados</span>
+            </li>
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+              <span class="pd-chip__text">Resultado organizado</span>
+            </li>
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4 3 7 7 8 4-1 7-4 7-8V6z"/></svg></span>
+              <span class="pd-chip__text">Mais segurança e confiabilidade</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-hero__media pf-hero__media">
+          <img src="assets/img/projetos/proc-facil/procfacil-hero-app.webp" width="857" height="335" alt="Tela inicial do PROC Fácil, passo 1 de 3, com a área para selecionar as planilhas e o botão continuar." loading="eager" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. RESUMO DO PROJETO ===================== -->
+    <section class="pd-summary" aria-labelledby="pf-summary-title">
+      <div class="container">
+        <div class="pd-panel pd-summary__panel">
+          <h2 id="pf-summary-title" class="pd-panel__eyebrow">Resumo do projeto</h2>
+          <ul class="pd-summary__grid">
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/></svg></span>
+                <h3>Contexto</h3>
+              </div>
+              <p>Informações estão espalhadas em diferentes planilhas, cada uma com um tipo de dado.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16.2" r=".6" fill="currentColor" stroke="none"/></svg></span>
+                <h3>Problema</h3>
+              </div>
+              <p>Cruzar dados manualmente é lento, sujeito a erros e dificulta a análise integrada.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></span>
+                <h3>Meu papel</h3>
+              </div>
+              <p>Desenvolvi a ferramenta, defini regras, criei a interface e validei todo o fluxo de consolidação.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5-9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
+                <h3>Entregáveis</h3>
+              </div>
+              <p>Aplicação funcional em Python, com interface, regras de união, validações e exportação do resultado consolidado.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"/><path d="M5 4h11l-2.5 3.5L16 11H5"/></svg></span>
+                <h3>Status</h3>
+              </div>
+              <p>Ferramenta funcional e testada em ambiente local com dados reais.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. ANTES x DEPOIS ===================== -->
+    <section class="pd-section pd-compare pf-compare" aria-labelledby="pf-compare-title">
+      <div class="container">
+        <div class="pd-head pd-head--center">
+          <p class="section-eyebrow">Antes e depois</p>
+          <h2 id="pf-compare-title">De planilhas isoladas para um resultado consolidado</h2>
+          <p>Integração rápida, precisa e confiável de informações.</p>
+        </div>
+
+        <div class="pd-compare__grid">
+          <article class="pd-compare-card">
+            <span class="pd-badge pd-badge--before">Antes</span>
+            <h3>Dados separados em planilhas diferentes</h3>
+            <p>Informações do cliente, pagamento e pedido em arquivos diferentes, exigindo cruzamento manual.</p>
+            <button
+              type="button"
+              class="pf-compare-card__media pd-comparison-image-button"
+              aria-label="Ampliar imagem das planilhas antes da consolidação"
+              data-modal-trigger
+              data-src="assets/img/projetos/proc-facil/procfacil-antes-planilhas.webp"
+              data-alt="Planilhas de clientes, pagamentos e pedidos separadas antes da consolidação."
+              data-title="Planilhas antes da consolidação"
+              data-caption="Dados de clientes, pagamentos e pedidos armazenados em arquivos separados antes do cruzamento."
+            >
+              <img src="assets/img/projetos/proc-facil/procfacil-antes-planilhas.webp" width="942" height="527" alt="Planilhas de clientes, pagamentos e pedidos separadas antes da consolidação." loading="lazy" />
+              <span class="pd-comparison-image-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                Ver imagem
+              </span>
+            </button>
+            <ul class="pd-points pd-points--before">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Tempo alto para localizar e cruzar informações</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Risco de erro ao copiar e colar dados</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Dificuldade para identificar inconsistências</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Visão fragmentada e pouco confiável</li>
+            </ul>
+          </article>
+
+          <div class="pd-compare__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+
+          <article class="pd-compare-card">
+            <span class="pd-badge pd-badge--after">Depois</span>
+            <h3>Resultado consolidado e organizado</h3>
+            <p>Informações integradas automaticamente com base na coluna-chave definida.</p>
+            <button
+              type="button"
+              class="pf-compare-card__media pd-comparison-image-button"
+              aria-label="Ampliar imagem do resultado consolidado"
+              data-modal-trigger
+              data-src="assets/img/projetos/proc-facil/procfacil-depois-consolidado.webp"
+              data-alt="Planilha consolidada com dados de clientes, pagamentos e pedidos integrados."
+              data-title="Resultado consolidado"
+              data-caption="Arquivo final gerado após o cruzamento dos dados com base na coluna-chave definida."
+            >
+              <img src="assets/img/projetos/proc-facil/procfacil-depois-consolidado.webp" width="1200" height="649" alt="Planilha consolidada com dados de clientes, pagamentos e pedidos integrados." loading="lazy" />
+              <span class="pd-comparison-image-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                Ver imagem
+              </span>
+            </button>
+            <ul class="pd-points pd-points--after">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Cruzamento automático via coluna-chave (PROCV)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Dados integrados e padronizados</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Menos erros e retrabalho</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Informações prontas para análise e decisão</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="pf-compare-note">
+          <span class="pf-compare-note__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="8" r=".6" fill="currentColor" stroke="none"/></svg></span>
+          Registros sem correspondência são preservados para conferência e análise.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 4. COMO FUNCIONA ===================== -->
+    <section class="pd-section pd-flow-section pf-flow-section" aria-labelledby="pf-flow-title">
+      <div class="container">
+        <div class="pd-head">
+          <p class="section-eyebrow">Como funciona</p>
+          <h2 id="pf-flow-title">Fluxo da consolidação de dados</h2>
+          <p>Processo simples, guiado e eficiente.</p>
+        </div>
+
+        <ol class="pd-flow pf-flow">
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></span>
+                <span class="pd-flow-card__num">01</span>
+              </div>
+              <h3>Selecionar arquivos</h3>
+              <p>Escolha as planilhas que serão cruzadas.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="4.5"/><path d="M11.8 11.8 20 20"/></svg></span>
+                <span class="pd-flow-card__num">02</span>
+              </div>
+              <h3>Definir coluna-chave</h3>
+              <p>Informe a coluna comum que será usada na união (PROCV).</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg></span>
+                <span class="pd-flow-card__num">03</span>
+              </div>
+              <h3>Mapear colunas</h3>
+              <p>Selecione quais colunas entram no resultado final.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+                <span class="pd-flow-card__num">04</span>
+              </div>
+              <h3>Validar e visualizar</h3>
+              <p>Confira as configurações e visualize amostras dos dados.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 8 6 4-6 4V8Z"/><circle cx="12" cy="12" r="9"/></svg></span>
+                <span class="pd-flow-card__num">05</span>
+              </div>
+              <h3>Executar consolidação</h3>
+              <p>A ferramenta cruza os dados e gera o resultado integrado.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+                <span class="pd-flow-card__num">06</span>
+              </div>
+              <h3>Exportar resultado</h3>
+              <p>Gere o arquivo final consolidado (.xlsx ou .csv).</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="pd-flow-divider" aria-hidden="true">
+          <span class="pd-flow-divider__chev">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- ===== Painéis inferiores + encerramento (container único, unido à faixa escura) ===== -->
+      <div class="container">
+        <div class="pf-panels">
+          <div class="pf-panels__grid">
+            <div class="pf-panels__panel">
+              <h2 class="pd-panel__eyebrow">Ferramentas e tecnologias</h2>
+              <ul class="pf-tools__list">
+                <li class="pf-tools__item">
+                  <span class="pf-tools__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2.5 0 4 1 4 3v3H9v1h7c2 0 3 1.5 3 4s-1 4-3 4h-2v-3c0-2-1.5-3-3-3H9c-2 0-3-1.5-3-4s1-4 3-4h3Z"/><circle cx="9.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="14.5" cy="17.5" r=".6" fill="currentColor" stroke="none"/></svg></span>
+                  <div>
+                    <h3>Python</h3>
+                    <p>Lógica e processamento dos dados.</p>
+                  </div>
+                </li>
+                <li class="pf-tools__item">
+                  <span class="pf-tools__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+                  <div>
+                    <h3>Pandas (leitura de planilhas)</h3>
+                    <p>Importação e manipulação das tabelas.</p>
+                  </div>
+                </li>
+                <li class="pf-tools__item">
+                  <span class="pf-tools__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="4.5"/><path d="M11.8 11.8 20 20"/></svg></span>
+                  <div>
+                    <h3>PROCV (lógica de união)</h3>
+                    <p>Cruzamento de dados pela coluna-chave.</p>
+                  </div>
+                </li>
+                <li class="pf-tools__item">
+                  <span class="pf-tools__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg></span>
+                  <div>
+                    <h3>Interface Desktop (Tkinter)</h3>
+                    <p>Interface simples e intuitiva.</p>
+                  </div>
+                </li>
+                <li class="pf-tools__item">
+                  <span class="pf-tools__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4 3 7 7 8 4-1 7-4 7-8V6z"/><path d="M12 9v4"/><circle cx="12" cy="15.5" r=".6" fill="currentColor" stroke="none"/></svg></span>
+                  <div>
+                    <h3>Tratamento de erros e validações</h3>
+                    <p>Confiabilidade no processamento.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pf-panels__panel">
+              <h2 class="pd-panel__eyebrow">Recursos e segurança</h2>
+              <ul class="oa-security__list">
+                <li class="oa-security__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+                  <span>Validação da coluna-chave em todas as planilhas</span>
+                </li>
+                <li class="oa-security__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+                  <span>Indicação de registros não encontrados</span>
+                </li>
+                <li class="oa-security__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+                  <span>Prevenção de duplicidade e inconsistências</span>
+                </li>
+                <li class="oa-security__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+                  <span>Visualização de amostras antes da execução</span>
+                </li>
+                <li class="oa-security__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+                  <span>Exportação do resultado consolidado</span>
+                </li>
+                <li class="oa-security__item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+                  <span>Logs de execução para auditoria</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pf-panels__panel">
+              <h2 class="pd-panel__eyebrow">Benefícios alcançados</h2>
+              <ul class="pf-benefits__list">
+                <li class="pf-benefits__item">
+                  <span class="pf-benefits__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+                  <span>Redução significativa do tempo de consolidação</span>
+                </li>
+                <li class="pf-benefits__item">
+                  <span class="pf-benefits__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.2"/><rect x="14" y="4" width="7" height="7" rx="1.2"/><rect x="8.5" y="14" width="7" height="7" rx="1.2"/></svg></span>
+                  <span>Informações integradas e mais confiáveis</span>
+                </li>
+                <li class="pf-benefits__item">
+                  <span class="pf-benefits__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 13 15.5 9.5M12 5V3"/></svg></span>
+                  <span>Menos erros manuais e retrabalho</span>
+                </li>
+                <li class="pf-benefits__item">
+                  <span class="pf-benefits__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 10 8l4 5 6-9"/></svg></span>
+                  <span>Apoio à análise e tomada de decisão</span>
+                </li>
+                <li class="pf-benefits__item">
+                  <span class="pf-benefits__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4-8 4-8-4 8-4Z"/><path d="m4 12 8 4 8-4"/></svg></span>
+                  <span>Padronização e repetibilidade do processo</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ===================== 5. ENCERRAMENTO ===================== -->
+          <div class="pf-cta">
+            <span class="pf-cta__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.2"/><rect x="14" y="4" width="7" height="7" rx="1.2"/><rect x="8.5" y="14" width="7" height="7" rx="1.2"/><path d="M6.5 11v3M17.5 11v3M6.5 14h4.5M13 14h4.5"/></svg></span>
+            <div class="pf-cta__body">
+              <h2>Informações integradas. Decisões mais rápidas.</h2>
+              <p>Este projeto demonstra minha capacidade de transformar uma tarefa repetitiva e propensa a erros em uma solução automatizada, confiável e pronta para uso no dia a dia.</p>
+            </div>
+            <div class="pf-cta__actions">
+              <a href="projetos.html" class="btn pf-cta__secondary">← Voltar para projetos</a>
+              <a href="projeto-dash-top.html" class="btn pf-cta__primary">Próximo projeto: Dash Top →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -133,6 +496,21 @@
     </div>
   </footer>
 
+  <div class="pd-image-modal" data-image-modal hidden>
+    <div class="pd-image-modal__backdrop" data-modal-backdrop></div>
+    <div class="pd-image-modal__content" role="dialog" aria-modal="true" aria-labelledby="pd-image-modal-title">
+      <div class="pd-image-modal__header">
+        <h2 class="pd-image-modal__title" id="pd-image-modal-title" data-modal-title></h2>
+        <button type="button" class="pd-image-modal__close" data-modal-close aria-label="Fechar imagem ampliada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <img class="pd-image-modal__image" data-modal-image src="" alt="" />
+      <p class="pd-image-modal__caption" data-modal-caption></p>
+    </div>
+  </div>
+
   <script src="js/hero.js" defer></script>
+  <script src="js/image-modal.js" defer></script>
 </body>
 </html>

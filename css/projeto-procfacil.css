@@ -1,0 +1,154 @@
+/* =========================================================
+   PÁGINA "PROC FÁCIL" (projeto-proc-facil.html)
+   Carrega DEPOIS de projeto-detalhe.css e projeto-organizador.css.
+   Reaproveita .pd-panel, .pd-summary, .pd-decisions (herdados),
+   .pd-hero, .pd-compare, .pd-flow-section, e o sistema de modal/lightbox
+   já criado para o Organizador (.pd-comparison-image-button,
+   .pd-comparison-image-hint, .pd-image-modal, .oa-security__list) —
+   por isso este HTML também carrega projeto-organizador.css. Nada
+   neste arquivo usa seletores fora do prefixo "pf-", então nenhuma
+   regra daqui afeta as páginas anteriores.
+   Breakpoints: 992px / 768px / 480px.
+   ========================================================= */
+
+/* ---- Hero ---- */
+.pf-hero__grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+.pf-hero__grid > div:first-child { max-width: 540px; }
+.pf-hero__grid h1 { font-size: clamp(2.75rem, 4vw, 3.75rem); line-height: 1; letter-spacing: -.04em; }
+.pf-hero__grid .pd-hero__lead { font-size: 1.125rem; line-height: 1.55; margin-top: 1.25rem; max-width: 520px; }
+.pf-hero__grid .pd-hero__note { font-size: .9375rem; line-height: 1.6; margin-top: 1.5rem; max-width: 520px; }
+
+.pf-chips { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
+.pf-chips .pd-chip { min-height: 4.5rem; }
+.pf-chips .pd-chip__text { font-size: .6875rem; }
+.pf-hero__media img { max-width: 650px; }
+
+/* ---- Antes x Depois ---- */
+.pf-compare-card__media {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 230px;
+  margin-top: 1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #FFFFFF;
+  cursor: zoom-in;
+  color: inherit;
+  font: inherit;
+}
+.pf-compare-card__media img {
+  width: 100%; height: 100%; display: block;
+  object-fit: cover; object-position: top left;
+  transition: transform .25s ease, filter .25s ease;
+}
+.pf-compare-card__media:hover img { transform: scale(1.015); filter: brightness(.94); }
+.pf-compare-card__media:focus-visible { outline: 2px solid #0A7A6D; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .pf-compare-card__media img { transition: none; }
+  .pf-compare-card__media:hover img { transform: none; }
+}
+
+.pf-compare-note {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  max-width: 620px; margin: 1.5rem auto 0;
+  padding: .75rem 1.25rem;
+  background: #FFFFFF; border: 1px solid rgba(15, 23, 42, .10); border-radius: 999px;
+  font-size: .75rem; line-height: 1.4; color: #55606D; text-align: center;
+}
+.pf-compare-note__ico { flex: none; width: 1rem; height: 1rem; color: #0A7A6D; }
+.pf-compare-note__ico svg { width: 100%; height: 100%; }
+
+/* ---- Como funciona ---- */
+.pf-flow-section { padding-block: 3.5rem 0; }
+.pf-flow-section .pd-flow-card h3 { min-height: 2.1em; }
+
+/* ---- Painéis inferiores + encerramento (bloco único, unido à faixa escura) ---- */
+.pf-panels {
+  margin-top: 1.5rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
+}
+.pf-panels__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+.pf-panels__panel { padding: 1.75rem; min-height: 300px; background: #FFFFFF; }
+.pf-panels__panel:nth-child(2), .pf-panels__panel:nth-child(3) { border-left: 1px solid rgba(15, 23, 42, .10); }
+
+.pf-tools__list { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: .875rem; }
+.pf-tools__item { display: grid; grid-template-columns: 2rem 1fr; gap: .75rem; align-items: start; }
+.pf-tools__ico {
+  width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: rgba(0, 231, 209, .10); border: 1px solid rgba(10, 122, 109, .35); color: #0A7A6D;
+}
+.pf-tools__ico svg { width: 16px; height: 16px; }
+.pf-tools__item h3 { font-size: .75rem; line-height: 1.35; font-weight: 600; color: #0D1117; margin: 0; }
+.pf-tools__item p { font-size: .6875rem; line-height: 1.45; color: #55606D; margin: .2rem 0 0; }
+
+.pf-benefits__list { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 1rem; }
+.pf-benefits__item { display: grid; grid-template-columns: 2rem 1fr; gap: .75rem; align-items: center; font-size: .75rem; line-height: 1.45; color: #55606D; }
+.pf-benefits__ico {
+  width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: rgba(0, 231, 209, .10); border: 1px solid rgba(10, 122, 109, .35); color: #0A7A6D;
+}
+.pf-benefits__ico svg { width: 16px; height: 16px; }
+
+/* ---- Encerramento ---- */
+.pf-cta {
+  display: grid; grid-template-columns: 3rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center;
+  padding: 1.5rem 1.75rem;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(15, 23, 42, .10);
+}
+.pf-cta__ico {
+  width: 3rem; height: 3rem; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 231, 209, .10); border: 1px solid rgba(10, 122, 109, .35); color: #0A7A6D;
+}
+.pf-cta__ico svg { width: 22px; height: 22px; }
+.pf-cta__body h2 { font-size: 1.375rem; line-height: 1.25; font-weight: 600; letter-spacing: -.025em; color: #0D1117; margin: 0; }
+.pf-cta__body p { font-size: .75rem; line-height: 1.5; color: #55606D; margin: .5rem 0 0; max-width: 620px; }
+.pf-cta__actions { display: flex; align-items: center; gap: 1rem; }
+.pf-cta__actions .btn {
+  height: 44px; padding-inline: 1.5rem; border-radius: 8px; font-size: .75rem; font-weight: 600; white-space: nowrap;
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease, transform .25s ease, box-shadow .25s ease;
+}
+.pf-cta__secondary { background: #0A7A6D; color: #FFFFFF; border: 1px solid #0A7A6D; }
+.pf-cta__secondary:hover { background: #08655a; border-color: #08655a; transform: translateY(-1px); }
+.pf-cta__primary { background: #FFFFFF; color: #0A7A6D; border: 1px solid #0A7A6D; }
+.pf-cta__primary:hover { background: rgba(0, 231, 209, .10); transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) {
+  .pf-cta__secondary:hover, .pf-cta__primary:hover { transform: none; }
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 992px) {
+  .pf-hero__grid { gap: 2rem; }
+  .pf-panels__grid { grid-template-columns: 1fr 1fr; }
+  .pf-panels__panel:nth-child(3) { grid-column: 1 / -1; border-left: none; border-top: 1px solid rgba(15, 23, 42, .10); }
+  .pf-cta { grid-template-columns: 3rem 1fr; grid-template-areas: "ico body" "actions actions"; row-gap: 1rem; }
+  .pf-cta__ico { grid-area: ico; }
+  .pf-cta__body { grid-area: body; }
+  .pf-cta__actions { grid-area: actions; }
+}
+@media (max-width: 768px) {
+  .pf-hero__grid { grid-template-columns: 1fr; }
+  .pf-hero__grid > div:first-child { max-width: none; }
+  .pf-hero__grid h1 { font-size: 2.5rem; }
+  .pf-hero__grid .pd-hero__lead, .pf-hero__grid .pd-hero__note { max-width: none; }
+  .pf-hero__media { order: 0; }
+  .pf-hero__media img { max-width: 100%; }
+  .pf-chips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pf-panels__grid { grid-template-columns: 1fr; }
+  .pf-panels__panel:nth-child(2), .pf-panels__panel:nth-child(3) { border-left: none; border-top: 1px solid rgba(15, 23, 42, .10); }
+  .pf-cta { grid-template-columns: 1fr; grid-template-areas: "ico" "body" "actions"; text-align: center; }
+  .pf-cta__ico { margin-inline: auto; }
+  .pf-cta__actions { flex-direction: column; width: 100%; }
+  .pf-cta__actions .btn { width: 100%; white-space: normal; }
+}
+@media (max-width: 480px) {
+  .pf-hero__grid h1 { font-size: 2.25rem; }
+  .pf-chips { grid-template-columns: 1fr; }
+  .pf-compare-card__media { height: auto; aspect-ratio: 4 / 3; }
+}
