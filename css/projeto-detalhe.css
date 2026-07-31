@@ -54,6 +54,19 @@ html, body, main { background-color: #ffffff; }
    restauradas (Ferramentas / Resultados / Aprendizados) — o h2 grande
    original permanece no DOM, oculto visualmente, para a semântica. */
 .pd-panel .section-eyebrow { margin-bottom: 0; }
+
+/* O ::after de .section-eyebrow (sections.css) é centralizado por padrão
+   (left:50%/translateX(-50%)), relativo à largura total do bloco — não
+   ao texto. Nestes três painéis o título é alinhado à esquerda, então o
+   traço precisa do mesmo tratamento left:0 já usado em outras dobras
+   (.pd-head, .pd-hero, .pd-flow-section) desta página. */
+.pd-tools-panel .section-eyebrow::after,
+.pd-results-panel .section-eyebrow::after,
+.pd-learn-panel .section-eyebrow::after {
+  left: 0;
+  transform: none;
+  background: #0A7A6D;
+}
 .pd-panel__lead { font-size: .8125rem; line-height: 1.55; color: #55606D; margin: .5rem 0 1.5rem; }
 
 /* ---- 1. Hero ---- */
