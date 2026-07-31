@@ -81,7 +81,53 @@
       </div>
     </section>
 
-    <!-- ===================== 2. ANTES x DEPOIS ===================== -->
+    <!-- ===================== 2. RESUMO DO PROJETO ===================== -->
+    <section class="pd-summary" aria-labelledby="pd-summary-title">
+      <div class="container">
+        <div class="pd-panel pd-summary__panel">
+          <h2 id="pd-summary-title" class="pd-panel__eyebrow">Resumo do projeto</h2>
+          <ul class="pd-summary__grid">
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/></svg></span>
+                <h3>Contexto</h3>
+              </div>
+              <p>Inspeções dimensionais e visuais realizadas em formulários impressos.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16.2" r=".6" fill="currentColor" stroke="none"/></svg></span>
+                <h3>Problema</h3>
+              </div>
+              <p>Baixa legibilidade, risco de erros, dificuldade de consulta e histórico desorganizado.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></span>
+                <h3>Meu papel</h3>
+              </div>
+              <p>Analisei o processo, levantei requisitos, estruturei o fluxo e criei o protótipo da interface.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5-9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
+                <h3>Entregáveis</h3>
+              </div>
+              <p>Fluxo do processo, wireframes, protótipo de alta fidelidade e documentação da proposta.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"/><path d="M5 4h11l-2.5 3.5L16 11H5"/></svg></span>
+                <h3>Status</h3>
+              </div>
+              <p>Conceito e protótipo entregue para implementação pela equipe de TI.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. ANTES x DEPOIS ===================== -->
     <section class="pd-section pd-compare" aria-labelledby="pd-compare-title">
       <div class="container">
         <div class="pd-head pd-head--center">
@@ -128,7 +174,7 @@
       </div>
     </section>
 
-    <!-- ===================== 3. COMO FUNCIONA ===================== -->
+    <!-- ===================== 4. COMO FUNCIONA ===================== -->
     <section class="pd-section pd-flow-section" aria-labelledby="pd-flow-title">
       <div class="container">
         <div class="pd-head">
@@ -202,124 +248,171 @@
       </div>
     </section>
 
-    <!-- ===================== 4. FERRAMENTAS E MÉTODOS ===================== -->
-    <section class="pd-section pd-tools-section" aria-labelledby="pd-tools-title">
-      <div class="container">
-        <div class="pd-head">
-          <p class="section-eyebrow">Ferramentas e métodos</p>
-          <h2 id="pd-tools-title">Recursos utilizados</h2>
-          <p>Recursos utilizados para compreender o processo e estruturar a proposta da solução.</p>
+    <!-- ===================== 5. DECISÕES DA SOLUÇÃO + COLABORAÇÃO ===================== -->
+    <section class="pd-combo pd-combo--decisions">
+      <div class="container pd-combo__grid">
+        <div class="pd-panel pd-decisions">
+          <h2 class="pd-panel__eyebrow">Decisões da solução</h2>
+          <ul class="pd-decisions__list">
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M10 18.5h4"/></svg></span>
+              <div>
+                <h3>Uso em tablet</h3>
+                <p>Para aproximar o sistema do local de inspeção.</p>
+              </div>
+            </li>
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><path d="m21 21-4.3-4.3"/><path d="M10 7.5v5M7.5 10h5"/></svg></span>
+              <div>
+                <h3>Imagens ampliáveis</h3>
+                <p>Para melhorar a leitura dos pontos de verificação.</p>
+              </div>
+            </li>
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12.5h6M9 17h3.5"/></svg></span>
+              <div>
+                <h3>Processo em etapas</h3>
+                <p>Para reduzir omissões e padronizar o preenchimento.</p>
+              </div>
+            </li>
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+              <div>
+                <h3>Histórico centralizado</h3>
+                <p>Para facilitar consultas e rastreabilidade futura.</p>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <ul class="pd-grid pd-grid--tools">
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="5" height="6" rx="1.2"/><rect x="9.5" y="9" width="5" height="6" rx="1.2"/><rect x="17" y="9" width="5" height="6" rx="1.2"/><path d="M7 12h2.5M14.5 12H17"/></svg></span>
-            <h3>Mapeamento de processo</h3>
-            <p>Análise do fluxo atual e identificação dos pontos de dificuldade.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12.5h6M9 17h3.5"/></svg></span>
-            <h3>Levantamento de requisitos</h3>
-            <p>Organização das necessidades do usuário e das regras do processo.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/><path d="M12.5 13h5.5M12.5 16.5h3.5"/></svg></span>
-            <h3>Wireframes</h3>
-            <p>Estruturação das telas e da navegação.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4-8 4-8-4 8-4Z"/><path d="m4 12 8 4 8-4"/><path d="m4 16 8 4 8-4"/></svg></span>
-            <h3>Prototipação</h3>
-            <p>Construção visual da experiência da solução.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M6.5 7.5 12 12M12 12l6.5 4.5M12 12V6"/></svg></span>
-            <h3>Jornada do usuário</h3>
-            <p>Definição das etapas percorridas pelo inspetor.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.5 11.5 15 16 9"/><circle cx="12" cy="12" r="9"/></svg></span>
-            <h3>Validação do conceito</h3>
-            <p>Apresentação da proposta para as áreas envolvidas.</p>
-          </li>
-        </ul>
+        <div class="pd-panel pd-collab">
+          <h2 class="pd-panel__eyebrow">Colaboração</h2>
+          <p class="pd-collab__text">A proposta foi estruturada para facilitar o entendimento entre a área usuária e a equipe técnica responsável pela implementação.</p>
+          <div class="pd-collab__diagram">
+            <div class="pd-collab__person">
+              <span class="pd-collab__person-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg></span>
+              <p class="pd-collab__label">Área de Qualidade</p>
+            </div>
+            <div class="pd-collab__connector" aria-hidden="true"></div>
+            <div class="pd-collab__doc" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3.5"/></svg></div>
+            <div class="pd-collab__connector" aria-hidden="true"></div>
+            <div class="pd-collab__person">
+              <span class="pd-collab__person-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg></span>
+              <p class="pd-collab__label">Equipe de TI</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== 5. RESULTADOS ESPERADOS ===================== -->
-    <section class="pd-section pd-results" aria-labelledby="pd-results-title">
-      <div class="container">
-        <div class="pd-head">
-          <p class="section-eyebrow">Resultados esperados</p>
-          <h2 id="pd-results-title">Benefícios previstos</h2>
-          <p>Benefícios previstos com a digitalização e padronização do processo.</p>
+    <!-- ===================== 6. FERRAMENTAS E MÉTODOS + RESULTADOS PREVISTOS ===================== -->
+    <section class="pd-combo pd-combo--tools">
+      <div class="container pd-combo__grid">
+        <div class="pd-panel pd-tools-panel">
+          <h2 id="pd-tools-title" class="pd-visually-hidden">Recursos utilizados</h2>
+          <p class="section-eyebrow pd-panel__eyebrow">Ferramentas e métodos</p>
+          <ul class="pd-tools-compact">
+            <li class="pd-tools-compact__item">
+              <span class="pd-tools-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="5" height="6" rx="1.2"/><rect x="9.5" y="9" width="5" height="6" rx="1.2"/><rect x="17" y="9" width="5" height="6" rx="1.2"/><path d="M7 12h2.5M14.5 12H17"/></svg></span>
+              <h3>Mapeamento de processo</h3>
+              <p>Análise do fluxo atual e identificação dos pontos de dificuldade.</p>
+            </li>
+            <li class="pd-tools-compact__item">
+              <span class="pd-tools-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12.5h6M9 17h3.5"/></svg></span>
+              <h3>Levantamento de requisitos</h3>
+              <p>Organização das necessidades do usuário e das regras do processo.</p>
+            </li>
+            <li class="pd-tools-compact__item">
+              <span class="pd-tools-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/><path d="M12.5 13h5.5M12.5 16.5h3.5"/></svg></span>
+              <h3>Wireframes</h3>
+              <p>Estruturação das telas e da navegação.</p>
+            </li>
+            <li class="pd-tools-compact__item">
+              <span class="pd-tools-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4-8 4-8-4 8-4Z"/><path d="m4 12 8 4 8-4"/><path d="m4 16 8 4 8-4"/></svg></span>
+              <h3>Prototipação</h3>
+              <p>Construção visual da experiência da solução.</p>
+            </li>
+            <li class="pd-tools-compact__item">
+              <span class="pd-tools-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M6.5 7.5 12 12M12 12l6.5 4.5M12 12V6"/></svg></span>
+              <h3>Jornada do usuário</h3>
+              <p>Definição das etapas percorridas pelo inspetor.</p>
+            </li>
+            <li class="pd-tools-compact__item">
+              <span class="pd-tools-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.5 11.5 15 16 9"/><circle cx="12" cy="12" r="9"/></svg></span>
+              <h3>Validação do conceito</h3>
+              <p>Apresentação da proposta para as áreas envolvidas.</p>
+            </li>
+          </ul>
         </div>
 
-        <ul class="pd-results__grid">
-          <li class="pd-result">
-            <span class="pd-result__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 13 15.5 9.5M12 5V3"/></svg></span>
-            <h3>Mais agilidade</h3>
-            <p>Consulta e execução mais rápidas, com informações organizadas em um único fluxo.</p>
-          </li>
-          <li class="pd-result">
-            <span class="pd-result__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4 3 7 7 8 4-1 7-4 7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-            <h3>Menos erros</h3>
-            <p>Registros mais legíveis e preenchimento guiado.</p>
-          </li>
-          <li class="pd-result">
-            <span class="pd-result__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
-            <h3>Maior rastreabilidade</h3>
-            <p>Histórico centralizado para facilitar consultas futuras.</p>
-          </li>
-          <li class="pd-result">
-            <span class="pd-result__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 4c-7 0-12 4-12 11 0 1.7.8 3 2.5 3 6.5 0 9.5-5 9.5-12 0-1 0-1.3-.5-2Z"/><path d="M8 18c1.5-3.5 5-7 9-9"/></svg></span>
-            <h3>Menos papel</h3>
-            <p>Redução da dependência de formulários físicos.</p>
-          </li>
-        </ul>
+        <div class="pd-panel pd-results-panel">
+          <h2 id="pd-results-title" class="pd-visually-hidden">Benefícios previstos</h2>
+          <p class="section-eyebrow pd-panel__eyebrow">Resultados esperados</p>
+          <p class="pd-panel__lead">Benefícios previstos com a digitalização e padronização do processo.</p>
+          <ul class="pd-results-compact">
+            <li class="pd-results-compact__item">
+              <span class="pd-results-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 13 15.5 9.5M12 5V3"/></svg></span>
+              <h3>Mais agilidade</h3>
+              <p>Consulta e execução mais rápidas, com informações organizadas em um único fluxo.</p>
+            </li>
+            <li class="pd-results-compact__item">
+              <span class="pd-results-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4 3 7 7 8 4-1 7-4 7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+              <h3>Menos erros</h3>
+              <p>Registros mais legíveis e preenchimento guiado.</p>
+            </li>
+            <li class="pd-results-compact__item">
+              <span class="pd-results-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+              <h3>Maior rastreabilidade</h3>
+              <p>Histórico centralizado para facilitar consultas futuras.</p>
+            </li>
+            <li class="pd-results-compact__item">
+              <span class="pd-results-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 4c-7 0-12 4-12 11 0 1.7.8 3 2.5 3 6.5 0 9.5-5 9.5-12 0-1 0-1.3-.5-2Z"/><path d="M8 18c1.5-3.5 5-7 9-9"/></svg></span>
+              <h3>Menos papel</h3>
+              <p>Redução da dependência de formulários físicos.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== 6. APRENDIZADOS ===================== -->
+    <!-- ===================== 7. APRENDIZADOS ===================== -->
     <section class="pd-section pd-learn-section" aria-labelledby="pd-learn-title">
       <div class="container">
-        <div class="pd-head">
-          <p class="section-eyebrow">Aprendizados</p>
-          <h2 id="pd-learn-title">O que este projeto reforçou</h2>
-          <p>O que este projeto reforçou na minha forma de trabalhar.</p>
+        <div class="pd-panel pd-learn-panel">
+          <h2 id="pd-learn-title" class="pd-visually-hidden">O que este projeto reforçou</h2>
+          <p class="section-eyebrow pd-panel__eyebrow">Aprendizados</p>
+          <ul class="pd-learn-compact">
+            <li class="pd-learn-compact__item">
+              <span class="pd-learn-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+              <h3>Entender antes de propor</h3>
+              <p>Uma boa solução começa pela compreensão do processo real.</p>
+            </li>
+            <li class="pd-learn-compact__item">
+              <span class="pd-learn-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+              <h3>Mapear antes de digitalizar</h3>
+              <p>Digitalizar um processo desorganizado apenas transfere o problema para outra tela.</p>
+            </li>
+            <li class="pd-learn-compact__item">
+              <span class="pd-learn-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+              <h3>Foco no usuário</h3>
+              <p>A solução precisa ser simples para quem executa a rotina.</p>
+            </li>
+            <li class="pd-learn-compact__item">
+              <span class="pd-learn-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+              <h3>Padronização gera confiança</h3>
+              <p>Regras claras melhoram a consistência dos registros.</p>
+            </li>
+            <li class="pd-learn-compact__item">
+              <span class="pd-learn-compact__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+              <h3>Tecnologia como apoio</h3>
+              <p>A ferramenta deve servir ao processo, e não o contrário.</p>
+            </li>
+          </ul>
         </div>
-
-        <ul class="pd-grid pd-grid--5">
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
-            <h3>Entender antes de propor</h3>
-            <p>Uma boa solução começa pela compreensão do processo real.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
-            <h3>Mapear antes de digitalizar</h3>
-            <p>Digitalizar um processo desorganizado apenas transfere o problema para outra tela.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
-            <h3>Foco no usuário</h3>
-            <p>A solução precisa ser simples para quem executa a rotina.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
-            <h3>Padronização gera confiança</h3>
-            <p>Regras claras melhoram a consistência dos registros.</p>
-          </li>
-          <li class="pd-grid-card">
-            <span class="pd-grid-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
-            <h3>Tecnologia como apoio</h3>
-            <p>A ferramenta deve servir ao processo, e não o contrário.</p>
-          </li>
-        </ul>
       </div>
     </section>
 
-    <!-- ===================== 7. BLOCO FINAL ===================== -->
+    <!-- ===================== 8. BLOCO FINAL ===================== -->
     <section class="pd-section pd-cta">
       <div class="container">
         <div class="pd-cta__inner">
