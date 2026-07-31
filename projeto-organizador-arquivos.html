@@ -401,9 +401,22 @@
             </li>
           </ul>
           <p class="oa-result__note">Relatório detalhado e log disponíveis para conferência completa.</p>
-          <div class="oa-result__evidence">
-            <img src="assets/img/projetos/organizador-arquivos/organizador-resultado-tipos.webp" width="771" height="513" alt="Resumo da execução com quantidade de arquivos identificados por extensão." loading="lazy" />
-          </div>
+          <button
+            type="button"
+            class="oa-result__evidence pd-comparison-image-button"
+            aria-label="Ampliar imagem com o resumo da execução e a distribuição dos arquivos por tipo"
+            data-modal-trigger
+            data-src="assets/img/projetos/organizador-arquivos/organizador-resultado-tipos.webp"
+            data-alt="Resumo da execução com 21 arquivos encontrados, 21 movidos com sucesso, nenhum não reconhecido e distribuição por tipo de arquivo."
+            data-title="Distribuição dos arquivos por tipo"
+            data-caption="Resumo da execução com a quantidade de arquivos identificados e organizados por extensão."
+          >
+            <img src="assets/img/projetos/organizador-arquivos/organizador-resultado-tipos.webp" width="771" height="513" alt="Resumo da execução com 21 arquivos encontrados, 21 movidos com sucesso, nenhum não reconhecido e distribuição por tipo de arquivo." loading="lazy" />
+            <span class="pd-comparison-image-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+              Ver imagem
+            </span>
+          </button>
         </div>
 
         <div class="pd-panel oa-learn">

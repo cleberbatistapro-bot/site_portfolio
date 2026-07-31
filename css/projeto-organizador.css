@@ -188,8 +188,42 @@
 .oa-result__value--accent { color: #0A7A6D; }
 .oa-result__desc { font-size: .6875rem; line-height: 1.45; color: #55606D; margin: .75rem 0 0; }
 .oa-result__note { font-size: .6875rem; line-height: 1.45; color: #55606D; text-align: center; margin: 1rem 0 0; }
-.oa-result__evidence { margin-top: 1.5rem; border-radius: 10px; border: 1px solid rgba(15, 23, 42, .10); background: #0D1117; overflow: hidden; }
-.oa-result__evidence img { width: 100%; height: auto; max-height: 320px; object-fit: contain; object-position: top center; display: block; margin-inline: auto; }
+.oa-result__evidence {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, .10);
+  background: #0D1117;
+  overflow: hidden;
+  cursor: zoom-in;
+  color: inherit;
+  font: inherit;
+}
+.oa-result__evidence img {
+  width: 100%; height: auto; max-height: 320px;
+  object-fit: contain; object-position: top center;
+  display: block; margin-inline: auto;
+  transition: transform .25s ease, filter .25s ease;
+}
+.oa-result__evidence:hover img { transform: scale(1.015); filter: brightness(.94); }
+.oa-result__evidence:focus-visible { outline: 2px solid #0A7A6D; outline-offset: 3px; }
+.oa-result__evidence .pd-comparison-image-hint {
+  background: rgba(13, 17, 23, .92);
+  /* O canto inferior direito cobriria a quantidade da última linha
+     (ZIP) da lista "Arquivos por tipo"; o topo só sobrepõe o
+     cabeçalho "Resumo da organização", cujos valores já estão
+     duplicados como texto fora da imagem. */
+  top: .75rem;
+  bottom: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oa-result__evidence img { transition: none; }
+  .oa-result__evidence:hover img { transform: none; }
+}
 
 .oa-learn__list { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: .75rem; }
 .oa-learn__item { display: grid; grid-template-columns: 1rem 1fr; gap: .625rem; align-items: start; font-size: .6875rem; line-height: 1.45; color: #55606D; }
