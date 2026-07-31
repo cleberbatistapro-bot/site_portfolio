@@ -35,8 +35,107 @@
   align-items: center;
   margin-top: 1rem;
 }
-.oa-compare-card__media { border-radius: 8px; overflow: hidden; background: var(--bg); height: 225px; }
-.oa-compare-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.oa-compare-card__media {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 225px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0D1117;
+  cursor: zoom-in;
+  color: inherit;
+  font: inherit;
+}
+.oa-compare-card__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: left center;
+  transition: transform .25s ease, filter .25s ease;
+}
+.oa-compare-card__media:hover img { transform: scale(1.015); filter: brightness(.94); }
+.oa-compare-card__media:focus-visible { outline: 2px solid #0A7A6D; outline-offset: 3px; }
+
+/* Coluna "Nome" (pastas organizadas) precisa continuar visível — nunca
+   centralizar o corte nesta imagem. */
+.oa-compare-card__media--after img { object-position: left center; }
+
+.pd-comparison-image-hint {
+  position: absolute;
+  right: .75rem;
+  bottom: .75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  min-height: 2rem;
+  padding: .375rem .625rem;
+  border-radius: 8px;
+  background: rgba(13, 17, 23, .84);
+  color: #FFFFFF;
+  font-size: .6875rem;
+  line-height: 1;
+  font-weight: 600;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+.pd-comparison-image-hint svg { width: 14px; height: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .oa-compare-card__media img { transition: none; }
+  .oa-compare-card__media:hover img { transform: none; }
+}
+
+/* ---- Modal de ampliação de imagem ---- */
+.pd-image-modal { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+.pd-image-modal[hidden] { display: none; }
+.pd-image-modal__backdrop { position: absolute; inset: 0; background: rgba(13, 17, 23, .88); backdrop-filter: blur(6px); }
+.pd-image-modal__content {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  max-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  background: #1A1F26;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 14px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .45), 0 8px 24px rgba(0, 0, 0, .25);
+  overflow: hidden;
+}
+.pd-image-modal__header {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+.pd-image-modal__title { margin: 0; font-size: 1rem; line-height: 1.3; font-weight: 600; color: #FFFFFF; }
+.pd-image-modal__image { display: block; width: 100%; height: auto; max-height: calc(100vh - 12rem); object-fit: contain; object-position: center; background: #0D1117; }
+.pd-image-modal__caption { margin: 0; padding: .875rem 1.25rem 1rem; font-size: .75rem; line-height: 1.5; color: #C7CCD2; }
+.pd-image-modal__close {
+  width: 2.5rem; height: 2.5rem; flex: 0 0 2.5rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255, 255, 255, .12); border-radius: 8px;
+  background: rgba(255, 255, 255, .06); color: #FFFFFF; cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease, transform .25s ease;
+}
+.pd-image-modal__close svg { width: 18px; height: 18px; }
+.pd-image-modal__close:hover { background: rgba(0, 231, 209, .10); border-color: rgba(0, 231, 209, .5); color: #00E7D1; }
+.pd-image-modal__close:focus-visible { outline: 2px solid #00E7D1; outline-offset: 3px; }
+
+@media (max-width: 991px) {
+  .pd-image-modal { padding: 1.5rem; }
+  .pd-image-modal__content { width: 100%; }
+}
+@media (max-width: 767px) {
+  .pd-image-modal { align-items: center; padding: 1rem; }
+  .pd-image-modal__content { width: 100%; max-height: calc(100vh - 2rem); border-radius: 12px; }
+  .pd-image-modal__image { max-height: calc(100vh - 11rem); }
+  .pd-image-modal__header { padding: .875rem 1rem; }
+  .pd-image-modal__caption { padding: .75rem 1rem 1rem; }
+}
 .oa-compare .pd-points { margin-top: 0; gap: .625rem; }
 
 /* ---- Como funciona: leve ajuste de densidade para 6 etapas ---- */

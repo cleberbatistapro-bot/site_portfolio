@@ -143,9 +143,22 @@
             <h3>Organização manual</h3>
             <p>Arquivos misturados em uma única pasta, exigindo análise e movimentação individual.</p>
             <div class="oa-compare-card__body">
-              <div class="oa-compare-card__media">
+              <button
+                type="button"
+                class="oa-compare-card__media pd-comparison-image-button"
+                aria-label="Ampliar imagem da pasta antes da organização"
+                data-modal-trigger
+                data-src="assets/img/projetos/organizador-arquivos/organizador-antes-pasta.webp"
+                data-alt="Pasta com arquivos de diferentes formatos misturados antes da organização."
+                data-title="Arquivos antes da organização"
+                data-caption="Pasta com arquivos de diferentes formatos e nomes misturados antes da execução da ferramenta."
+              >
                 <img src="assets/img/projetos/organizador-arquivos/organizador-antes-pasta.webp" width="741" height="701" alt="Pasta com arquivos de diferentes formatos misturados antes da organização." loading="lazy" />
-              </div>
+                <span class="pd-comparison-image-hint">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                  Ver imagem
+                </span>
+              </button>
               <ul class="pd-points pd-points--before">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Formatos misturados</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Nomes inconsistentes</li>
@@ -165,9 +178,22 @@
             <h3>Organização automatizada</h3>
             <p>Arquivos classificados e movidos para pastas corretas com base nas regras definidas.</p>
             <div class="oa-compare-card__body">
-              <div class="oa-compare-card__media">
-                <img src="assets/img/projetos/organizador-arquivos/organizador-depois-pastas.webp" width="799" height="355" alt="Pastas criadas automaticamente após a classificação dos arquivos." loading="lazy" />
-              </div>
+              <button
+                type="button"
+                class="oa-compare-card__media oa-compare-card__media--after pd-comparison-image-button"
+                aria-label="Ampliar imagem das pastas após a organização"
+                data-modal-trigger
+                data-src="assets/img/projetos/organizador-arquivos/organizador-depois-pastas.webp"
+                data-alt="Pastas organizadas automaticamente por tipo de arquivo após a execução da ferramenta."
+                data-title="Arquivos após a organização"
+                data-caption="Pastas criadas automaticamente após a classificação e movimentação dos arquivos."
+              >
+                <img src="assets/img/projetos/organizador-arquivos/organizador-depois-pastas.webp" width="799" height="355" alt="Pastas organizadas automaticamente por tipo de arquivo após a execução da ferramenta." loading="lazy" />
+                <span class="pd-comparison-image-hint">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                  Ver imagem
+                </span>
+              </button>
               <ul class="pd-points pd-points--after">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Classificação automática</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Pastas organizadas</li>
@@ -512,6 +538,21 @@
     </div>
   </footer>
 
+  <div class="pd-image-modal" data-image-modal hidden>
+    <div class="pd-image-modal__backdrop" data-modal-backdrop></div>
+    <div class="pd-image-modal__content" role="dialog" aria-modal="true" aria-labelledby="pd-image-modal-title">
+      <div class="pd-image-modal__header">
+        <h2 class="pd-image-modal__title" id="pd-image-modal-title" data-modal-title></h2>
+        <button type="button" class="pd-image-modal__close" data-modal-close aria-label="Fechar imagem ampliada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <img class="pd-image-modal__image" data-modal-image src="" alt="" />
+      <p class="pd-image-modal__caption" data-modal-caption></p>
+    </div>
+  </div>
+
   <script src="js/hero.js" defer></script>
+  <script src="js/image-modal.js" defer></script>
 </body>
 </html>
