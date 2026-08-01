@@ -143,6 +143,22 @@
             <span class="pd-badge pd-badge--before">Antes</span>
             <h3>Controle manual em planilhas</h3>
             <p>Instrumentos, prazos e certificados registrados em planilhas separadas, sem alertas automáticos.</p>
+            <button
+              type="button"
+              class="gc-compare-card__media pd-comparison-image-button"
+              aria-label="Ampliar imagem da planilha de controle de calibração"
+              data-modal-trigger
+              data-src="assets/img/projetos/gestao-calibracao/calibracao-antes-planilha.webp"
+              data-alt="Planilha de controle de calibração com instrumentos, datas de calibração e status vencido, ok e atenção destacados por cor."
+              data-title="Planilha de controle manual"
+              data-caption="Instrumentos, prazos e status de calibração controlados manualmente em planilha, sem alertas automáticos."
+            >
+              <img src="assets/img/projetos/gestao-calibracao/calibracao-antes-planilha.webp" width="1400" height="686" alt="Planilha de controle de calibração com instrumentos, datas de calibração e status vencido, ok e atenção destacados por cor." loading="lazy" />
+              <span class="pd-comparison-image-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                Ver imagem
+              </span>
+            </button>
             <ul class="pd-points pd-points--before">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Risco de instrumento calibrar vencido</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Certificados dispersos em pastas</li>
@@ -159,6 +175,22 @@
             <span class="pd-badge pd-badge--after">Depois</span>
             <h3>Painel único de controle</h3>
             <p>Conceito de painel que centraliza instrumentos, prazos e certificados, com alertas antes do vencimento.</p>
+            <button
+              type="button"
+              class="gc-compare-card__media pd-comparison-image-button"
+              aria-label="Ampliar imagem do painel de controle de calibração"
+              data-modal-trigger
+              data-src="assets/img/projetos/gestao-calibracao/calibracao-depois-sistema.webp"
+              data-alt="Painel de controle de calibração com categorias de instrumentos, instrumentos a vencer, status geral e resumo consolidado."
+              data-title="Painel único de controle"
+              data-caption="Conceito de painel que centraliza instrumentos, prazos e status de calibração, com alertas e visão consolidada."
+            >
+              <img src="assets/img/projetos/gestao-calibracao/calibracao-depois-sistema.webp" width="1400" height="933" alt="Painel de controle de calibração com categorias de instrumentos, instrumentos a vencer, status geral e resumo consolidado." loading="lazy" />
+              <span class="pd-comparison-image-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                Ver imagem
+              </span>
+            </button>
             <ul class="pd-points pd-points--after">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Alertas automáticos de vencimento</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Certificado vinculado a cada instrumento</li>
@@ -482,6 +514,21 @@
     </div>
   </footer>
 
+  <div class="pd-image-modal" data-image-modal hidden>
+    <div class="pd-image-modal__backdrop" data-modal-backdrop></div>
+    <div class="pd-image-modal__content" role="dialog" aria-modal="true" aria-labelledby="pd-image-modal-title">
+      <div class="pd-image-modal__header">
+        <h2 class="pd-image-modal__title" id="pd-image-modal-title" data-modal-title></h2>
+        <button type="button" class="pd-image-modal__close" data-modal-close aria-label="Fechar imagem ampliada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <img class="pd-image-modal__image" data-modal-image src="" alt="" />
+      <p class="pd-image-modal__caption" data-modal-caption></p>
+    </div>
+  </div>
+
   <script src="js/hero.js" defer></script>
+  <script src="js/image-modal.js" defer></script>
 </body>
 </html>

@@ -9,6 +9,37 @@
    Breakpoints: 992px / 768px / 480px (mesmos das demais páginas).
    ========================================================= */
 
+/* ---- Antes x Depois: miniatura ampliável ---- */
+.gc-compare-card__media {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 230px;
+  margin-top: 1rem;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0D1117;
+  cursor: zoom-in;
+  color: inherit;
+  font: inherit;
+}
+.gc-compare-card__media img {
+  width: 100%; height: 100%; display: block;
+  object-fit: cover; object-position: top left;
+  transition: transform .25s ease, filter .25s ease;
+}
+.gc-compare-card__media:hover img { transform: scale(1.015); filter: brightness(.94); }
+.gc-compare-card__media:focus-visible { outline: 2px solid #0A7A6D; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .gc-compare-card__media img { transition: none; }
+  .gc-compare-card__media:hover img { transform: none; }
+}
+@media (max-width: 767px) {
+  .gc-compare-card__media { height: auto; aspect-ratio: 16 / 9; }
+}
+
 /* Painel "Resultados esperados" — mesma estrutura de .pd-decisions,
    com classes próprias porque o HTML já foi escrito com nomes "gc-". */
 .gc-results__list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; }
