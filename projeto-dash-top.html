@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dash Top | Projetos | Cleber Batista</title>
-  <meta name="description" content="Projeto que transforma dados de planilhas em dashboards executivos com indicadores e visualizações claras." />
+  <title>Dash Top | Cleber Batista</title>
+  <meta name="description" content="Estudo de caso de uma ferramenta que transforma planilhas em dashboards executivos automaticamente, com indicadores, filtros e exportação." />
   <meta name="theme-color" content="#0D1117" />
 
   <script>document.documentElement.className = 'js';</script>
@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/projetos-page.css" />
+  <link rel="stylesheet" href="css/projeto-detalhe.css" />
+  <link rel="stylesheet" href="css/projeto-organizador.css" />
+  <link rel="stylesheet" href="css/projeto-dashtop.css" />
 </head>
 <body class="page-projetos">
 
@@ -44,12 +47,390 @@
   </header>
 
   <main id="conteudo">
-    <div class="container pp-placeholder">
-      <p class="pp-placeholder__category">Dados • Visualização</p>
-      <h1>Dash Top</h1>
-      <p class="pp-placeholder__note">Conteúdo completo em breve.</p>
-      <a href="projetos.html" class="btn btn--outline">← Voltar para projetos</a>
-    </div>
+
+    <!-- ===================== 1. HERO ===================== -->
+    <section class="pd-hero dt-hero" aria-labelledby="dt-title">
+      <div class="container pd-hero__grid dt-hero__grid">
+        <div>
+          <p class="section-eyebrow">Dados • Visualização • Automação</p>
+          <h1 id="dt-title">Dash Top</h1>
+          <p class="pd-hero__lead">Ferramenta que transforma planilhas em dashboards executivos automaticamente, com indicadores, filtros e gráficos prontos para análise.</p>
+          <p class="pd-hero__note">Basta enviar a planilha: a ferramenta sugere a categoria, confirma o mapeamento das colunas e gera o dashboard, sem precisar montar gráfico por gráfico.</p>
+
+          <ul class="pd-chips">
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+              <span class="pd-chip__text">Dashboard gerado automaticamente</span>
+            </li>
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+              <span class="pd-chip__text">Sugestão automática de categoria</span>
+            </li>
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 8v6l-4 2v-8L4 5Z"/></svg></span>
+              <span class="pd-chip__text">Filtros por período e categoria</span>
+            </li>
+            <li class="pd-chip">
+              <span class="pd-chip__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
+              <span class="pd-chip__text">Exportação em PDF e planilha</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-hero__media dt-hero__media">
+          <img src="assets/img/projetos/dash-top/dashtop-hero-upload.webp" width="1300" height="336" alt="Tela inicial do Dash Top para envio da planilha, com formatos aceitos e área de arraste de arquivo." loading="eager" fetchpriority="high" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. RESUMO DO PROJETO ===================== -->
+    <section class="pd-summary" aria-labelledby="dt-summary-title">
+      <div class="container">
+        <div class="pd-panel pd-summary__panel">
+          <h2 id="dt-summary-title" class="pd-panel__eyebrow">Resumo do projeto</h2>
+          <ul class="pd-summary__grid">
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/></svg></span>
+                <h3>Contexto</h3>
+              </div>
+              <p>Montar dashboards a partir de planilhas exige tempo e conhecimento de ferramentas de BI nem sempre disponível no dia a dia.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16.2" r=".6" fill="currentColor" stroke="none"/></svg></span>
+                <h3>Problema</h3>
+              </div>
+              <p>Sem um dashboard pronto, as análises ficam presas em planilhas estáticas, dificultando a leitura rápida de indicadores.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></span>
+                <h3>Meu papel</h3>
+              </div>
+              <p>Desenvolvi a ferramenta, defini as regras de sugestão de categoria, criei a interface e os indicadores do dashboard.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5-9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
+                <h3>Entregáveis</h3>
+              </div>
+              <p>Aplicação funcional com upload de planilha, mapeamento de colunas, geração automática de dashboard e exportação de relatórios.</p>
+            </li>
+            <li class="pd-summary__item">
+              <div class="pd-summary__head">
+                <span class="pd-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"/><path d="M5 4h11l-2.5 3.5L16 11H5"/></svg></span>
+                <h3>Status</h3>
+              </div>
+              <p>Ferramenta funcional, testada em ambiente local com planilhas de exemplo.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. ANTES x DEPOIS ===================== -->
+    <section class="pd-section pd-compare dt-compare" aria-labelledby="dt-compare-title">
+      <div class="container">
+        <div class="pd-head pd-head--center">
+          <p class="section-eyebrow">Antes e depois</p>
+          <h2 id="dt-compare-title">De planilha parada a dashboard pronto para análise</h2>
+          <p>Menos tempo montando gráficos, mais tempo interpretando resultados.</p>
+        </div>
+
+        <div class="pd-compare__grid">
+          <article class="pd-compare-card">
+            <span class="pd-badge pd-badge--before">Antes</span>
+            <h3>Planilha sem visualização</h3>
+            <p>Dados de receita, despesa e centros de custo disponíveis apenas em formato de planilha, sem gráficos nem indicadores.</p>
+            <button
+              type="button"
+              class="dt-compare-card__media pd-comparison-image-button"
+              aria-label="Ampliar imagem da tela inicial de envio da planilha"
+              data-modal-trigger
+              data-src="assets/img/projetos/dash-top/dashtop-hero-upload.webp"
+              data-alt="Tela inicial do Dash Top para envio da planilha, com formatos aceitos e área de arraste de arquivo."
+              data-title="Envio da planilha"
+              data-caption="Ponto de partida: os dados existem apenas na planilha, sem indicadores nem gráficos."
+            >
+              <img src="assets/img/projetos/dash-top/dashtop-hero-upload.webp" width="1300" height="336" alt="Tela inicial do Dash Top para envio da planilha, com formatos aceitos e área de arraste de arquivo." loading="lazy" />
+              <span class="pd-comparison-image-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                Ver imagem
+              </span>
+            </button>
+            <ul class="pd-points pd-points--before">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Necessário montar gráficos manualmente</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Sem indicadores automáticos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Difícil comparar períodos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2.5 20h19z"/><path d="M12 10v4"/><circle cx="12" cy="17.2" r=".6" fill="currentColor" stroke="none"/></svg> Análise depende de conhecimento em ferramentas de BI</li>
+            </ul>
+          </article>
+
+          <div class="pd-compare__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+
+          <article class="pd-compare-card">
+            <span class="pd-badge pd-badge--after">Depois</span>
+            <h3>Dashboard executivo automático</h3>
+            <p>Painel gerado automaticamente com indicadores, gráficos e filtros a partir da mesma planilha.</p>
+            <button
+              type="button"
+              class="dt-compare-card__media pd-comparison-image-button"
+              aria-label="Ampliar imagem do dashboard executivo gerado"
+              data-modal-trigger
+              data-src="assets/img/projetos/dash-top/dashtop-depois-dashboard.webp"
+              data-alt="Dashboard financeiro executivo com indicadores de receita, despesa e saldo, gráficos de tendência e composição por tipo de conta."
+              data-title="Dashboard gerado automaticamente"
+              data-caption="Resultado: indicadores, gráficos e filtros gerados automaticamente a partir da planilha enviada."
+            >
+              <img src="assets/img/projetos/dash-top/dashtop-depois-dashboard.webp" width="1400" height="701" alt="Dashboard financeiro executivo com indicadores de receita, despesa e saldo, gráficos de tendência e composição por tipo de conta." loading="lazy" />
+              <span class="pd-comparison-image-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/><path d="M10.5 8v5M8 10.5h5"/></svg>
+                Ver imagem
+              </span>
+            </button>
+            <ul class="pd-points pd-points--after">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Indicadores com variação percentual</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Gráficos de tendência e comparação</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Filtros por período e categoria</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg> Exportação em PDF e planilha</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. COMO FUNCIONA ===================== -->
+    <section class="pd-section pd-flow-section dt-flow-section" aria-labelledby="dt-flow-title">
+      <div class="container">
+        <div class="pd-head">
+          <p class="section-eyebrow">Como funciona</p>
+          <h2 id="dt-flow-title">Fluxo de geração do dashboard</h2>
+          <p>Do envio da planilha ao dashboard pronto, em poucos passos.</p>
+        </div>
+
+        <ol class="pd-flow">
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
+                <span class="pd-flow-card__num">01</span>
+              </div>
+              <h3>Envio da planilha</h3>
+              <p>O usuário envia a planilha nos formatos .xlsx, .xls ou .csv.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+                <span class="pd-flow-card__num">02</span>
+              </div>
+              <h3>Sugestão de categoria</h3>
+              <p>A ferramenta sugere a categoria mais provável com base nas colunas identificadas.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/><path d="M12.5 13h5.5M12.5 16.5h3.5"/></svg></span>
+                <span class="pd-flow-card__num">03</span>
+              </div>
+              <h3>Confirmação do mapeamento</h3>
+              <p>Revisão e confirmação de quais colunas correspondem a cada campo do dashboard.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+                <span class="pd-flow-card__num">04</span>
+              </div>
+              <h3>Geração do dashboard</h3>
+              <p>Indicadores e gráficos são gerados automaticamente a partir dos dados mapeados.</p>
+            </div>
+          </li>
+          <li class="pd-flow__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></li>
+          <li class="pd-flow__item">
+            <div class="pd-flow-card">
+              <div class="pd-flow-card__top">
+                <span class="pd-flow-card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 8v6l-4 2v-8L4 5Z"/></svg></span>
+                <span class="pd-flow-card__num">05</span>
+              </div>
+              <h3>Filtros e exportação</h3>
+              <p>O dashboard pode ser filtrado por período e categoria, e exportado em PDF ou planilha.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="pd-flow-divider" aria-hidden="true">
+          <span class="pd-flow-divider__chev">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. DECISÕES + RECURSOS + FERRAMENTAS ===================== -->
+    <section class="oa-support dt-support">
+      <div class="container oa-support__grid">
+        <div class="pd-panel oa-support__panel">
+          <h2 class="pd-panel__eyebrow">Decisões da solução</h2>
+          <ul class="pd-decisions__list oa-decisions__list">
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg></span>
+              <div>
+                <h3>Sugestão automática de categoria</h3>
+                <p>Para reduzir a configuração manual do dashboard.</p>
+              </div>
+            </li>
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/><path d="M12.5 13h5.5M12.5 16.5h3.5"/></svg></span>
+              <div>
+                <h3>Confirmação do mapeamento</h3>
+                <p>Para garantir que os dados corretos alimentem os indicadores.</p>
+              </div>
+            </li>
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+              <div>
+                <h3>Indicadores com variação percentual</h3>
+                <p>Para facilitar a leitura de tendências entre períodos.</p>
+              </div>
+            </li>
+            <li class="pd-decisions__item">
+              <span class="pd-decisions__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
+              <div>
+                <h3>Exportação em PDF e planilha</h3>
+                <p>Para compartilhar o resultado fora da ferramenta.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-panel oa-support__panel">
+          <h2 class="pd-panel__eyebrow">Recursos do dashboard</h2>
+          <ul class="oa-security__list">
+            <li class="oa-security__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+              <span>Filtros por período (30 dias, 90 dias, este ano ou personalizado)</span>
+            </li>
+            <li class="oa-security__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+              <span>Filtros por centro de custo e tipo de conta</span>
+            </li>
+            <li class="oa-security__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+              <span>Comparação automática com o período anterior</span>
+            </li>
+            <li class="oa-security__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+              <span>Exportação em PDF e em planilha</span>
+            </li>
+            <li class="oa-security__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.3 2.3L16 9.5"/></svg>
+              <span>Tema claro e escuro</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-panel oa-support__panel oa-support__panel--tools">
+          <h2 class="pd-panel__eyebrow">Ferramentas e tecnologias</h2>
+          <ul class="oa-tools__pills">
+            <li class="oa-tools__pill">Python</li>
+            <li class="oa-tools__pill">Pandas (leitura de planilhas)</li>
+            <li class="oa-tools__pill">Geração de gráficos</li>
+            <li class="oa-tools__pill">Interface web</li>
+            <li class="oa-tools__pill">Detecção de categoria por regras</li>
+            <li class="oa-tools__pill">Exportação de relatórios</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. RESULTADOS ESPERADOS + APRENDIZADOS ===================== -->
+    <section class="oa-outcome dt-outcome">
+      <div class="container oa-outcome__grid">
+        <div class="pd-panel">
+          <h2 class="pd-panel__eyebrow">Resultados esperados</h2>
+          <ul class="gc-results__list">
+            <li class="gc-results__item">
+              <span class="gc-results__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+              <div>
+                <h3>Menos tempo montando gráficos</h3>
+                <p>O dashboard é gerado automaticamente a partir da planilha enviada.</p>
+              </div>
+            </li>
+            <li class="gc-results__item">
+              <span class="gc-results__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+              <div>
+                <h3>Leitura mais rápida dos indicadores</h3>
+                <p>Indicadores organizados e com variação percentual visível.</p>
+              </div>
+            </li>
+            <li class="gc-results__item">
+              <span class="gc-results__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16l-6 8v6l-4 2v-8L4 5Z"/></svg></span>
+              <div>
+                <h3>Comparações automáticas entre períodos</h3>
+                <p>Filtros de período com comparação em relação à etapa anterior.</p>
+              </div>
+            </li>
+            <li class="gc-results__item">
+              <span class="gc-results__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
+              <div>
+                <h3>Relatórios prontos para compartilhar</h3>
+                <p>Exportação do dashboard em PDF ou planilha.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-panel">
+          <h2 class="pd-panel__eyebrow">Aprendizados</h2>
+          <ul class="oa-learn__list">
+            <li class="oa-learn__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg>
+              <span>Boas categorias de dados aceleram a análise.</span>
+            </li>
+            <li class="oa-learn__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg>
+              <span>Indicadores com comparação de período geram mais contexto.</span>
+            </li>
+            <li class="oa-learn__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg>
+              <span>Exportação é tão importante quanto a visualização.</span>
+            </li>
+            <li class="oa-learn__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-5.5"/></svg>
+              <span>Interface simples aumenta a adoção da ferramenta.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. ENCERRAMENTO ===================== -->
+    <section class="oa-cta dt-cta">
+      <div class="container">
+        <div class="oa-cta__inner">
+          <span class="oa-cta__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+          <div class="oa-cta__body">
+            <h2>De planilha parada a dashboard pronto para decisão.</h2>
+            <p>Este projeto demonstra minha capacidade de transformar dados brutos em indicadores claros, unindo automação, análise de dados e visualização para apoiar decisões mais rápidas.</p>
+          </div>
+          <div class="oa-cta__actions">
+            <a href="projetos.html" class="btn oa-cta__secondary">← Voltar para projetos</a>
+            <a href="projeto-inspecao-digital.html" class="btn oa-cta__primary">Próximo projeto: Sistema Digital de Inspeção →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -133,6 +514,21 @@
     </div>
   </footer>
 
+  <div class="pd-image-modal" data-image-modal hidden>
+    <div class="pd-image-modal__backdrop" data-modal-backdrop></div>
+    <div class="pd-image-modal__content" role="dialog" aria-modal="true" aria-labelledby="pd-image-modal-title">
+      <div class="pd-image-modal__header">
+        <h2 class="pd-image-modal__title" id="pd-image-modal-title" data-modal-title></h2>
+        <button type="button" class="pd-image-modal__close" data-modal-close aria-label="Fechar imagem ampliada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <img class="pd-image-modal__image" data-modal-image src="" alt="" />
+      <p class="pd-image-modal__caption" data-modal-caption></p>
+    </div>
+  </div>
+
   <script src="js/hero.js" defer></script>
+  <script src="js/image-modal.js" defer></script>
 </body>
 </html>
