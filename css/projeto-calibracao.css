@@ -1,0 +1,31 @@
+/* =========================================================
+   PÁGINA "SISTEMA DE GESTÃO DE CALIBRAÇÃO" (projeto-gestao-calibracao.html)
+   Carrega DEPOIS de projeto-detalhe.css e projeto-organizador.css,
+   reaproveitando .pd-panel, .pd-summary, .pd-decisions, .pd-hero,
+   .pd-compare, .pd-flow-section, .oa-support/.oa-security/.oa-tools,
+   .oa-outcome, .oa-cta e o traço decorativo de .pd-panel__eyebrow já
+   herdado. Só usa seletores com prefixo "gc-", então nada aqui afeta
+   as páginas anteriores.
+   Breakpoints: 992px / 768px / 480px (mesmos das demais páginas).
+   ========================================================= */
+
+/* Painel "Resultados esperados" — mesma estrutura de .pd-decisions,
+   com classes próprias porque o HTML já foi escrito com nomes "gc-". */
+.gc-results__list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; }
+.gc-results__item { display: grid; grid-template-columns: 2.5rem 1fr; column-gap: .875rem; align-items: start; padding-block: .75rem; border-bottom: 1px solid rgba(15, 23, 42, .08); }
+.gc-results__item:last-child { border-bottom: none; }
+.gc-results__ico {
+  width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: rgba(0, 231, 209, .10); border: 1px solid rgba(10, 122, 109, .35); color: #0A7A6D;
+}
+.gc-results__ico svg { width: 20px; height: 20px; }
+.gc-results__item h3 { font-size: .8125rem; line-height: 1.35; font-weight: 600; color: #0D1117; margin: 0; }
+.gc-results__item p { font-size: .75rem; line-height: 1.45; color: #55606D; margin: .25rem 0 0; }
+
+/* Painel "Rastreabilidade e auditoria" tem só 5 itens (vs. 6 no
+   Organizador) — permite altura livre, sem min-height forçado. */
+.gc-support .oa-support__panel { min-height: 0; }
+
+@media (max-width: 992px) {
+  .gc-outcome__grid { grid-template-columns: 1fr; }
+}
