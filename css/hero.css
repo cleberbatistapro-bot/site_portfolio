@@ -172,6 +172,7 @@ body {
    BOTÕES
    ========================================================= */
 .btn {
+  font-family: inherit;
   font-weight: 600;
   font-size: .95rem;
   display: inline-flex;
@@ -181,6 +182,13 @@ body {
   padding: .85rem 1.5rem;
   border-radius: var(--r-btn);
   transition: transform var(--t-fast), box-shadow var(--t-med), background var(--t-med), color var(--t-med), border-color var(--t-med);
+}
+/* Botão presente, porém sem destino real ainda (ex.: currículo antes de
+   existir um arquivo publicado) — visível, sem parecer link morto. */
+.btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 .btn--primary {
   background: var(--teal);
@@ -267,15 +275,20 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--sp-3) var(--sp-7);
+  /* Gap mais enxuto que o padrão do site (sp-7): com os três itens
+     reais (um deles bem mais longo — "Disponível para oportunidades
+     100% remotas") isso é o que permite caber numa linha só a partir
+     de telas desktop maiores, sem quebrar a coluna de 44%. */
+  gap: var(--sp-3) 1.25rem;
   margin-bottom: var(--sp-7);
 }
 .hero__meta-item {
   display: flex;
   align-items: center;
-  gap: .5rem;
-  font-size: .85rem;
+  gap: .4rem;
+  font-size: .8rem;
   color: var(--text-dim);
+  white-space: nowrap;
 }
 .hero__meta-item svg { flex: none; width: 17px; height: 17px; color: var(--teal); }
 
@@ -319,9 +332,14 @@ body {
 }
 .hero__credential {
   display: flex;
-  align-items: flex-start;
+  /* Centralizado (não flex-start): como as 4 descrições têm
+     comprimentos diferentes e a grade estica todo item para a mesma
+     altura, alinhar ao topo deixava sobra de espaço vazio embaixo dos
+     itens mais curtos. Centralizar equilibra visualmente os quatro. */
+  align-items: center;
   gap: .85rem;
-  padding: var(--sp-6);
+  /* Padding vertical reduzido (mantém o horizontal) — faixa menos alta. */
+  padding: var(--sp-5) var(--sp-6);
 }
 .hero__credential:not(:first-child) { border-left: 1px solid var(--border); }
 .hero__credential-ico {
