@@ -1,0 +1,281 @@
+/* =========================================================
+   PROJETOS (showcase) — dobra escura, só no index.html.
+   Carrossel com laptop central, painel lateral com dados reais de
+   cada projeto e tira de miniaturas com progresso. Escopado em
+   "pjs-" para não colidir com nenhuma outra dobra/página.
+   Reaproveita tokens de hero.css (cores, --maxw-hero, --gutter,
+   --r-panel, --r-btn, .btn, .section-eyebrow/title/lead).
+   Breakpoints: 1180px / 900px / 600px (alinhados aos já usados
+   na Hero: 900px é o corte principal do site).
+   ========================================================= */
+
+.pjs {
+  position: relative;
+  background: var(--bg);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  overflow: hidden;
+}
+.pjs__inner {
+  max-width: var(--maxw-hero);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  flex: 1;
+  justify-content: center;
+}
+
+/* --- Bloco principal: intro (esquerda) + laptop (centro) + painel (direita) --- */
+.pjs__top {
+  display: grid;
+  grid-template-columns: minmax(240px, 21%) 1fr minmax(300px, 27%);
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  flex: 1;
+}
+
+/* Coluna esquerda: título e pilares */
+.pjs__intro .section-head,
+.pjs__intro { text-align: left; }
+.pjs__intro .section-title { margin-bottom: var(--sp-4); }
+.pjs__intro .section-lead { margin: 0 0 var(--sp-6); max-width: none; }
+.pjs__pillars { display: flex; flex-direction: column; gap: var(--sp-4); list-style: none; margin: 0; padding: 0; }
+.pjs__pillars li {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+.pjs__pillars svg { flex: none; width: 18px; height: 18px; color: var(--teal); }
+
+/* --- Palco central: setas + "laptop" com a screenshot real --- */
+.pjs__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.75rem, 2vw, 1.5rem);
+  min-width: 0;
+}
+.pjs__arrow {
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(13, 17, 23, .6);
+  border: 1px solid var(--border-teal);
+  color: var(--teal);
+  transition: background-color var(--t-fast), transform var(--t-fast), border-color var(--t-fast);
+}
+.pjs__arrow svg { width: 18px; height: 18px; }
+.pjs__arrow:hover { background: var(--teal-soft); border-color: var(--teal); }
+.pjs__arrow:active { transform: scale(.94); }
+
+.pjs__laptop {
+  position: relative;
+  width: min(52vw, 720px);
+  flex: none;
+}
+.pjs__screen {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px 14px 4px 4px;
+  overflow: hidden;
+  background: #0D1117;
+  border: 10px solid #1c2128;
+  border-bottom-width: 14px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .5), 0 0 0 1px rgba(255, 255, 255, .04);
+}
+.pjs__screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+/* Base do notebook: trapézio discreto sugerindo a dobradiça/teclado. */
+.pjs__laptop-base {
+  width: 108%;
+  margin: 0 -4%;
+  height: 14px;
+  background: linear-gradient(180deg, #2a313a, #1c2128);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, .35);
+}
+
+/* --- Painel lateral: dados reais do projeto ativo --- */
+.pjs__panel {
+  background: rgba(13, 17, 23, .55);
+  border: 1px solid var(--border);
+  border-radius: var(--r-panel);
+  backdrop-filter: blur(8px);
+  padding: clamp(1rem, 1.6vw, 1.4rem);
+}
+.pjs__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border: 1px solid var(--border-teal);
+  border-radius: 999px;
+  padding: .3rem .7rem;
+  margin-bottom: var(--sp-3);
+}
+.pjs__badge svg { width: 13px; height: 13px; }
+.pjs__panel h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.25; margin-bottom: var(--sp-2); }
+.pjs__panel > p { font-size: .81rem; line-height: 1.5; color: var(--text-dim); margin-bottom: var(--sp-4); }
+
+.pjs__checklist { list-style: none; margin: 0 0 var(--sp-4); padding: 0; display: flex; flex-direction: column; gap: .4rem; }
+.pjs__checklist li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: .79rem;
+  color: var(--text-dim);
+}
+.pjs__checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .18rem;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--teal-soft);
+  border: 1px solid var(--border-teal);
+}
+.pjs__checklist li::after {
+  content: "";
+  position: absolute;
+  left: 4.5px; top: .52rem;
+  width: 7px; height: 4px;
+  border-left: 2px solid var(--teal);
+  border-bottom: 2px solid var(--teal);
+  transform: rotate(-45deg);
+}
+
+.pjs__meta { display: flex; flex-direction: column; gap: 0; margin: 0 0 var(--sp-4); border-top: 1px solid var(--border); }
+.pjs__meta-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .45rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pjs__meta-row dt { font-size: .74rem; color: var(--text-dim); }
+.pjs__meta-row dd { font-size: .78rem; font-weight: 600; color: var(--text); text-align: right; }
+
+.pjs__cta { width: 100%; }
+
+/* --- Contador + play/pause --- */
+.pjs__progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-4);
+}
+.pjs__progress-count { font-size: .82rem; font-weight: 600; color: var(--text-dim); letter-spacing: .04em; }
+.pjs__playpause {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-teal);
+  color: var(--teal);
+  background: transparent;
+}
+.pjs__playpause svg { width: 13px; height: 13px; }
+.pjs__playpause:hover { background: var(--teal-soft); }
+
+/* --- Tira de miniaturas --- */
+.pjs__thumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(.6rem, 1.4vw, 1rem);
+}
+.pjs__thumb-btn {
+  width: 100%;
+  text-align: left;
+  background: rgba(13, 17, 23, .5);
+  border: 1px solid var(--border);
+  border-radius: var(--r-panel);
+  overflow: hidden;
+  transition: border-color var(--t-fast), transform var(--t-fast);
+}
+.pjs__thumb-btn:hover { border-color: var(--border-teal); }
+.pjs__thumb-btn.is-active { border-color: var(--teal); box-shadow: 0 0 0 1px var(--teal); }
+.pjs__thumb-top { display: flex; align-items: center; justify-content: space-between; padding: .4rem .6rem 0; }
+.pjs__thumb-num { font-size: .7rem; font-weight: 700; color: var(--text-dim); }
+.pjs__thumb-btn.is-active .pjs__thumb-num { color: var(--teal); }
+.pjs__thumb-progress { width: 34px; height: 3px; border-radius: 2px; background: var(--border); overflow: hidden; }
+.pjs__thumb-progress-bar { display: block; height: 100%; width: 0%; background: var(--teal); }
+.pjs__thumb-progress-bar.is-animating { animation: pjsProgress linear forwards; animation-duration: var(--pjs-interval, 6s); }
+@keyframes pjsProgress { from { width: 0%; } to { width: 100%; } }
+.pjs__thumb-btn img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; display: block; margin-top: .4rem; }
+.pjs__thumb-title { display: block; padding: .4rem .6rem .55rem; font-size: .74rem; font-weight: 600; line-height: 1.25; color: var(--text); }
+
+/* --- Rodapé: "ver todos" + selos --- */
+.pjs__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.pjs__all { flex: none; }
+.pjs__features { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.pjs__features li { display: flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--text-dim); }
+.pjs__features svg { flex: none; width: 16px; height: 16px; color: var(--teal); }
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+@media (max-width: 1180px) {
+  .pjs__top { grid-template-columns: 1fr; }
+  .pjs__intro { order: 1; text-align: center; }
+  .pjs__intro .section-head, .pjs__intro { text-align: center; }
+  .pjs__pillars { align-items: center; }
+  .pjs__stage { order: 2; }
+  .pjs__laptop { width: min(70vw, 640px); }
+  .pjs__panel { order: 3; }
+}
+
+@media (max-width: 900px) {
+  .pjs { min-height: 0; padding: clamp(3rem, 8vw, 4rem) 0; }
+  .pjs__thumbs { grid-template-columns: repeat(3, 1fr); }
+  .pjs__bottom { justify-content: center; text-align: center; }
+  .pjs__features { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .pjs__stage { gap: .5rem; }
+  .pjs__arrow { width: 2.25rem; height: 2.25rem; }
+  .pjs__arrow svg { width: 15px; height: 15px; }
+  .pjs__laptop { width: min(78vw, 420px); }
+  .pjs__thumbs { grid-template-columns: repeat(2, 1fr); }
+  .pjs__meta-row dd { text-align: left; }
+  .pjs__meta-row { flex-direction: column; gap: .15rem; }
+  .pjs__features { flex-direction: column; gap: .75rem; align-items: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Autoplay já fica desligado por padrão nesse caso (ver js/projetos-showcase.js),
+     então a barra de progresso nunca chega a animar — isso só neutraliza a
+     transição caso a classe seja alternada manualmente (play/pause). */
+  .pjs__thumb-progress-bar.is-animating { animation: none; }
+  .pjs__arrow, .pjs__thumb-btn, .pjs__playpause { transition: none; }
+}
