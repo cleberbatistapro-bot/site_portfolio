@@ -817,6 +817,60 @@ html[data-theme="light"] .site-footer-nav>a:hover,html[data-theme="light"] .site
 html[data-theme="light"] .site-footer-bottom { border-top-color:rgba(18,52,54,.16); }
 html[data-theme="light"] .site-footer-bottom p,html[data-theme="light"] .site-footer-bottom p:last-child { color:#6a797c; }
 
+/* Light palette — etiquetas/badges (todas): fundo verde sólido, texto branco */
+html[data-theme="light"] .home-projects-badge,
+html[data-theme="light"] .home-competencies-badge,
+html[data-theme="light"] .home-workflow-badge,
+html[data-theme="light"] .home-contact-badge { color:#fff; border-color:rgba(10,80,74,.35); background:linear-gradient(120deg,#0a8f85,#0f7a76); box-shadow:0 8px 20px rgba(13,90,84,.22); }
+html[data-theme="light"] .home-projects-badge svg,
+html[data-theme="light"] .home-competencies-badge svg,
+html[data-theme="light"] .home-workflow-badge svg,
+html[data-theme="light"] .home-contact-badge svg { color:#fff; }
+html[data-theme="light"] .eyebrow,
+html[data-theme="light"] .home-eyebrow,
+html[data-theme="light"] .contact-eyebrow,
+html[data-theme="light"] .projects-heading>span { color:#0a7d74; }
+
+/* Light palette — painel "Ver projeto detalhado" (home-project-copy), ainda
+   escuro por herdar o tema padrão; sombras dos dois blocos (media + copy)
+   também suavizadas — no claro, a sombra preta forte de 65px de blur lia
+   como um retângulo cinza atrás do card arredondado. */
+html[data-theme="light"] .home-project-media { box-shadow:0 16px 40px rgba(24,70,72,.16); }
+html[data-theme="light"] .home-project-copy { border-color:rgba(20,110,104,.24); background:linear-gradient(145deg,#fff,#eef5f5); box-shadow:0 16px 40px rgba(24,70,72,.14); }
+html[data-theme="light"] .home-project-copy-icon { color:#0a8f85; background:rgba(15,122,118,.10); }
+html[data-theme="light"] .home-project-category { color:#4e8b86; }
+html[data-theme="light"] .home-project-copy h3 { color:#123f40; }
+html[data-theme="light"] .home-project-summary { color:#5d6d70; }
+html[data-theme="light"] .home-project-tags span { color:#3f6265; border-color:rgba(20,110,104,.22); background:#f4f9f9; }
+html[data-theme="light"] .home-project-detail-link { color:#0a7d74; background:linear-gradient(145deg,#fff,#eef5f5) padding-box,conic-gradient(from var(--cta-angle),rgba(32,199,183,.12),rgba(32,199,183,.72),rgba(56,189,248,.82),rgba(91,140,248,.48),rgba(32,199,183,.12)) border-box; }
+
+/* Light palette — textos que ficavam quase brancos (invisíveis no claro) */
+html[data-theme="light"] .home-competencies-copy>strong { color:#1c3336; }
+html[data-theme="light"] .timeline-item>span { border-color:rgba(15,122,118,.30); color:#0a8f85; background:#eef5f5; }
+html[data-theme="light"] .timeline-item h4 { color:#173033; }
+html[data-theme="light"] .timeline-item p { color:#5d6d70; }
+html[data-theme="light"] .quote-bar { border-color:rgba(20,110,104,.22); background:linear-gradient(110deg,#fff,#eef5f5); box-shadow:0 14px 34px rgba(24,70,72,.13),inset 0 1px 0 #fff; }
+html[data-theme="light"] .quote-bar p { color:#3a4f52; }
+
+/* Light palette — ícones dos cards de competência: gradiente verde/azul da
+   marca (sugestão do Cleber) no lugar do preenchimento translúcido escuro,
+   que sobre fundo claro ficava esmaecido/acinzentado. */
+html[data-theme="light"] .competency-icon { border-color:transparent; color:#fff; background:linear-gradient(145deg,#12a89a,#0f7a76); box-shadow:0 10px 24px rgba(15,122,118,.28),inset 0 1px 0 rgba(255,255,255,.25); }
+html[data-theme="light"] .competency-icon svg { filter:none; }
+html[data-theme="light"] .competency-data .competency-icon,
+html[data-theme="light"] .competency-ai .competency-icon { background:linear-gradient(145deg,#2f8fe0,#1f6dc0); box-shadow:0 10px 24px rgba(31,109,192,.28),inset 0 1px 0 rgba(255,255,255,.25); }
+html[data-theme="light"] .competency-data .competency-icon svg,
+html[data-theme="light"] .competency-ai .competency-icon svg { filter:none; }
+
+/* Light palette — ícones de contato: fundo mais opaco/colorido (não só
+   contorno fino) pra ganhar presença visual. */
+html[data-theme="light"] .contact-channel-icon,
+html[data-theme="light"] .home-contact-channel-icon { box-shadow:inset 0 1px 0 #fff; }
+html[data-theme="light"] .contact-channel-icon-linkedin,
+html[data-theme="light"] .home-contact-linkedin .home-contact-channel-icon { color:#0a66c2; background:rgba(10,102,194,.14); box-shadow:0 6px 16px rgba(10,102,194,.18),inset 0 1px 0 #fff; }
+html[data-theme="light"] .contact-channel-icon-whatsapp,
+html[data-theme="light"] .home-contact-whatsapp .home-contact-channel-icon { color:#1fae57; background:rgba(31,174,87,.14); box-shadow:0 6px 16px rgba(31,174,87,.18),inset 0 1px 0 #fff; }
+
 @media (max-width:900px) {
   .navbar-actions{gap:7px}
   .theme-toggle{width:58px;height:32px}
