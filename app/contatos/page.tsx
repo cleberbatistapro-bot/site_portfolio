@@ -1,5 +1,3 @@
-import ThemeToggle from "../theme-toggle";
-
 type ContactIcon = "linkedin" | "email" | "whatsapp" | "info" | "document" | "shield" | "arrow";
 
 const iconPaths: Record<ContactIcon, React.ReactNode> = {
@@ -54,7 +52,7 @@ export default function ContactPage() {
           <a className="site-nav-link" href="/projetos/">Projetos</a>
           <a className="site-nav-link active" href="/contatos/" aria-current="page">Contatos</a>
         </nav>
-        <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button><ThemeToggle/></div>
+        <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button></div>
       </div>
     </header>
 

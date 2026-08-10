@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import ThemeToggle from "../theme-toggle";
 
 type SectionId = "perfil" | "trajetoria" | "trabalho" | "processos" | "tecnologia" | "objetivo";
 type IconName = "user" | "arrow" | "gear" | "process" | "code" | "target" | "briefcase" | "monitor" | "clock" | "pin" | "robot" | "chart" | "refresh" | "folder" | "quote" | "download" | "search" | "organize" | "improve" | "shield" | "message" | "lock" | "value" | "integrated" | "warning" | "database" | "clarity" | "standard" | "check" | "rocket" | "python" | "excel" | "ai";
@@ -241,7 +240,7 @@ export default function Home() {
           <a className="site-nav-link" href="/projetos/">Projetos</a>
           <a className="site-nav-link" href="/contatos/">Contatos</a>
         </nav>
-        <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button><ThemeToggle/></div>
+        <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button></div>
       </div>
     </header>
     <main className="page-container" id="sobre-mim-content">

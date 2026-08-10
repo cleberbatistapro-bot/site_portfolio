@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import ThemeToggle from "../theme-toggle";
 
 type ProjectId = "organizador" | "procfacil" | "inspecao" | "calibracao" | "dashboard";
 type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file" | "github";
@@ -332,7 +331,7 @@ export default function ProjectsPage() {
   const activeProject = projects.find(project => project.id === active)!;
 
   return <div className="about-page projects-page" id="projetos">
-    <header className="site-navbar"><div className="site-navbar-inner"><a className="site-brand" href="/#inicio" aria-label="Cleber Batista — Página inicial">CLEBER BATISTA</a><nav className="site-nav-links" aria-label="Navegação principal"><a className="site-nav-link" href="/#inicio">Página Inicial</a><a className="site-nav-link" href="/sobre-mim/">Sobre Mim</a><a className="site-nav-link active" href="/projetos/" aria-current="page">Projetos</a><a className="site-nav-link" href="/contatos/">Contatos</a></nav><div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button><ThemeToggle/></div></div></header>
+    <header className="site-navbar"><div className="site-navbar-inner"><a className="site-brand" href="/#inicio" aria-label="Cleber Batista — Página inicial">CLEBER BATISTA</a><nav className="site-nav-links" aria-label="Navegação principal"><a className="site-nav-link" href="/#inicio">Página Inicial</a><a className="site-nav-link" href="/sobre-mim/">Sobre Mim</a><a className="site-nav-link active" href="/projetos/" aria-current="page">Projetos</a><a className="site-nav-link" href="/contatos/">Contatos</a></nav><div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button></div></div></header>
     <main className="projects-container">
       <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Soluções desenvolvidas para organizar processos, reduzir tarefas manuais e transformar necessidades operacionais em ferramentas práticas.</p></header>
       <div className="projects-layout">

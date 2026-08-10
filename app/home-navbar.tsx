@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ThemeToggle from "./theme-toggle";
 
 export default function HomeNavbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +21,7 @@ export default function HomeNavbar() {
         <a className="site-nav-link" href="/projetos/">Projetos</a>
         <a className="site-nav-link" href="/contatos/">Contatos</a>
       </nav>
-      <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button><ThemeToggle/></div>
+      <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button></div>
     </div>
   </header>;
 }
