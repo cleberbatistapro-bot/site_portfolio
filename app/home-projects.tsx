@@ -164,17 +164,21 @@ export default function HomeProjects() {
         </div>
 
         <article className="home-project-card" aria-live="polite">
-          <div className={isLeaving ? "home-project-slide is-leaving" : "home-project-slide"}>
-            <div className="home-project-media" role="img" aria-label={`Espaço reservado para a imagem do projeto ${project.label}`}/>
+          <div className="home-project-slide">
+            <div className="home-project-media" role="img" aria-label={`Espaço reservado para a imagem do projeto ${project.label}`}>
+              <div className={isLeaving ? "home-project-media-inner is-leaving" : "home-project-media-inner"}/>
+            </div>
             <div className="home-project-copy">
-              <div className="home-project-copy-heading">
-                <span className="home-project-copy-icon"><ProjectIcon kind={project.kind} size={18}/></span>
-                <div><span className="home-project-category">{project.category}</span><h3>{project.label}</h3></div>
-              </div>
-              <p className="home-project-summary">{project.summary}</p>
-              <div className="home-project-copy-footer">
-                <div className="home-project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-                <a className="home-project-detail-link" href={`/projetos/?projeto=${project.id}`}>Ver projeto detalhado <span aria-hidden="true">→</span></a>
+              <div className={isLeaving ? "home-project-copy-inner is-leaving" : "home-project-copy-inner"}>
+                <div className="home-project-copy-heading">
+                  <span className="home-project-copy-icon"><ProjectIcon kind={project.kind} size={18}/></span>
+                  <div><span className="home-project-category">{project.category}</span><h3>{project.label}</h3></div>
+                </div>
+                <p className="home-project-summary">{project.summary}</p>
+                <div className="home-project-copy-footer">
+                  <div className="home-project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
+                  <a className="home-project-detail-link" href={`/projetos/?projeto=${project.id}`}>Ver projeto detalhado <span aria-hidden="true">→</span></a>
+                </div>
               </div>
             </div>
           </div>
