@@ -22,7 +22,7 @@ export default function HomeContact() {
   return <section id="contato" className="home-contact-section" aria-labelledby="home-contact-title">
     <div className="home-contact-shell">
       <div className="home-contact-copy">
-        <span className="home-contact-badge"><HomeContactIcon name="briefcase" size={15}/>Contato profissional</span>
+        <span className="home-contact-eyebrow">Contato profissional</span>
         <h2 id="home-contact-title">Vamos conversar sobre uma <em>oportunidade?</em></h2>
         <p>Estou disponível para vagas 100% remotas nas áreas administrativa, processos, operações e backoffice, em regime CLT ou PJ.</p>
         <div className="home-contact-status"><i aria-hidden="true"/><span>Disponível para trabalho remoto</span><b>CLT ou PJ</b></div>

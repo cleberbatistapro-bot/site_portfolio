@@ -22,7 +22,7 @@ export default function HomeWorkflow() {
   return <section id="metodo" className="home-workflow-section" aria-labelledby="home-workflow-title">
     <div className="home-workflow-shell">
       <header className="home-workflow-heading">
-        <span className="home-workflow-badge"><WorkflowIcon name="organize"/>Como trabalho</span>
+        <span className="home-workflow-eyebrow">Como trabalho</span>
         <h2 id="home-workflow-title">
           <span>Da análise à entrega: soluções construídas</span>
           <span>com <em>clareza e método.</em></span>

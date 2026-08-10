@@ -40,19 +40,13 @@ export default function HomeCompetencies() {
           <span className="competency-icon"><CompetencyIcon name="automation"/></span>
           <h3>Automação</h3>
           <p>Python aplicado à redução de tarefas manuais e à organização de informações.</p>
-          <div className="competency-code" aria-hidden="true">
-            <span><b>01</b><i/></span><span><b>02</b><i/></span><span><b>03</b><i/></span><span><b>04</b><i/></span><span><b>05</b><i/></span><span><b>06</b><i/></span><span><b>07</b><i/></span><span><b>08</b><i/></span>
-          </div>
+          <div className="competency-tags"><span>Python</span><span>Scripts</span><span>Rotinas</span></div>
         </article>
 
         <article className="competency-card competency-card-small competency-ai">
           <span className="competency-icon"><CompetencyIcon name="ai"/></span>
           <h3>IA aplicada</h3>
           <p>Apoio à produtividade, análise e melhoria de fluxos administrativos.</p>
-          <div className="competency-nodes" aria-hidden="true">
-            <svg viewBox="0 0 220 76" preserveAspectRatio="none"><path d="M8 40 38 66 69 31 102 56 132 20 166 48 210 10M8 40l61-9 33 25 64-8 44-38M38 66l64-10 30-36 78-10M69 31l97 17"/></svg>
-            <i/><i/><i/><i/><i/><i/><i/><i/>
-          </div>
         </article>
       </div>
 
