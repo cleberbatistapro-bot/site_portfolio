@@ -564,7 +564,7 @@ em { color:var(--teal); font-style:normal; }
 .home-workflow-heading>strong { display:flex; align-items:center; justify-content:center; gap:17px; margin-top:27px; color:#dbe2e1; font-size:12px; font-weight:500; }
 .home-workflow-heading>strong i { width:34px; height:2px; display:block; border-radius:2px; background:linear-gradient(90deg,var(--teal),var(--cyan)); }
 .home-workflow-cards { position:relative; width:min(1040px,100%); display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:28px; margin:66px auto 0; }
-.home-workflow-connector { position:absolute; z-index:0; top:50%; right:4%; left:4%; height:1px; background:rgba(255,255,255,.10); }
+.home-workflow-connector { position:absolute; z-index:0; top:50%; right:0; left:0; height:1px; background:rgba(255,255,255,.10); }
 .home-workflow-pulse { position:absolute; top:50%; left:0; width:6px; height:6px; border-radius:50%; background:var(--teal); box-shadow:0 0 10px rgba(32,199,183,.65); opacity:0; transform:translate(-50%,-50%) scale(.4); animation:home-workflow-pulse 3.3s ease-in-out infinite; }
 .home-workflow-pulse:nth-child(1) { left:25%; }
 .home-workflow-pulse:nth-child(2) { left:50%; }
