@@ -41,7 +41,7 @@ next-env.d.ts
 /outputs/
 /work/
 
-# vinext dev/build cache — regenerated per machine. On Windows the local-font
-# cache plugin currently emits an absolute filesystem path (not a URL) into
-# the generated @font-face src, so this must never be committed as-is.
+# vinext dev/build cache — regenerado por máquina. No Windows, o plugin de
+# fontes locais grava um caminho absoluto de sistema de arquivos no
+# @font-face em vez de uma URL relativa, então nunca deve ser versionado.
 /.vinext/

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ThemeToggle from "../theme-toggle";
 
 type SectionId = "perfil" | "trajetoria" | "trabalho" | "processos" | "tecnologia" | "objetivo";
 type IconName = "user" | "arrow" | "gear" | "process" | "code" | "target" | "briefcase" | "monitor" | "clock" | "pin" | "robot" | "chart" | "refresh" | "folder" | "quote" | "download" | "search" | "organize" | "improve" | "shield" | "message" | "lock" | "value" | "integrated" | "warning" | "database" | "clarity" | "standard" | "check" | "rocket" | "python" | "excel" | "ai";
@@ -237,10 +238,10 @@ export default function Home() {
         <nav className="site-nav-links" aria-label="Navegação principal">
           <a className="site-nav-link" href="/#inicio">Página Inicial</a>
           <a className="site-nav-link active" href="/sobre-mim/" aria-current="page">Sobre Mim</a>
-          <a className="site-nav-link" href="/projetos">Projetos</a>
-          <a className="site-nav-link" href="/contatos">Contatos</a>
+          <a className="site-nav-link" href="/projetos/">Projetos</a>
+          <a className="site-nav-link" href="/contatos/">Contatos</a>
         </nav>
-        <button className="navbar-cv-button" type="button">Baixar Currículo</button>
+        <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button><ThemeToggle/></div>
       </div>
     </header>
     <main className="page-container" id="sobre-mim-content">
@@ -250,6 +251,5 @@ export default function Home() {
         <section ref={contentRef} className={`content-card section-${active}`} aria-live="polite"><div className={isSwitching ? "content-transition is-leaving" : "content-transition"}><Content/></div></section>
       </div>
     </main>
-    <footer><p>Todos os direitos reservados. <a href="#privacidade">Política de Privacidade</a> · <a href="#termos">Termos de Uso</a></p><p className="cnpj">CNPJ: 41.975.192/0001-62</p></footer>
   </div>;
 }

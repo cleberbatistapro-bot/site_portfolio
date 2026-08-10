@@ -1,3 +1,9 @@
+import HomeProjects from "./home-projects";
+import HomeCompetencies from "./home-competencies";
+import HomeWorkflow from "./home-workflow";
+import HomeContact from "./home-contact";
+import HomeNavbar from "./home-navbar";
+
 type HomeIconName = "pin" | "monitor" | "briefcase" | "integrated" | "download" | "user" | "chart";
 
 const homeIconPaths: Record<HomeIconName, React.ReactNode> = {
@@ -16,18 +22,7 @@ function HomeIcon({ name, size = 22 }: { name: HomeIconName; size?: number }) {
 
 export default function Home() {
   return <div className="about-page" id="inicio">
-    <header className="site-navbar">
-      <div className="site-navbar-inner">
-        <a className="site-brand" href="#inicio" aria-label="Cleber Batista — Página inicial">CLEBER BATISTA</a>
-        <nav className="site-nav-links" aria-label="Navegação principal">
-          <a className="site-nav-link active" href="#inicio" aria-current="page">Página Inicial</a>
-          <a className="site-nav-link" href="/sobre-mim/">Sobre Mim</a>
-          <a className="site-nav-link" href="/projetos">Projetos</a>
-          <a className="site-nav-link" href="/contatos">Contatos</a>
-        </nav>
-        <button className="navbar-cv-button" type="button">Baixar Currículo</button>
-      </div>
-    </header>
+    <HomeNavbar/>
     <main>
       <section className="home-hero" aria-labelledby="home-hero-title">
         <div className="home-hero-photo">
@@ -48,7 +43,7 @@ export default function Home() {
               <span><HomeIcon name="briefcase" size={17}/>CLT ou PJ</span>
             </div>
             <div className="home-actions">
-              <a className="home-primary-action" href="/projetos"><HomeIcon name="integrated" size={18}/>Ver projetos aplicados <span aria-hidden="true">→</span></a>
+              <a className="home-primary-action" href="/projetos/"><HomeIcon name="integrated" size={18}/>Ver projetos aplicados <span aria-hidden="true">→</span></a>
               <button className="home-secondary-action" type="button"><HomeIcon name="download" size={18}/>Baixar currículo</button>
             </div>
             <a className="home-text-link" href="/sobre-mim/">Conhecer minha trajetória <span aria-hidden="true">→</span></a>
@@ -60,6 +55,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <HomeProjects/>
+      <HomeCompetencies/>
+      <HomeWorkflow/>
+      <HomeContact/>
     </main>
   </div>;
 }
