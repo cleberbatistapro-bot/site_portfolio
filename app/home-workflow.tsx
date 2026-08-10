@@ -11,11 +11,11 @@ function WorkflowIcon({ name }: { name: WorkflowIconName }) {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{workflowIcons[name]}</svg>;
 }
 
-const steps: Array<{ number: string; icon: WorkflowIconName; title: string; description: string; tone: "green" | "blue" }> = [
-  { number: "01", icon: "discover", title: "Entender o problema.", description: "Contexto, rotina e necessidade.", tone: "green" },
-  { number: "02", icon: "organize", title: "Organizar o processo.", description: "Fluxos, critérios e informações.", tone: "blue" },
-  { number: "03", icon: "build", title: "Construir a solução.", description: "Automação, dados e interface.", tone: "green" },
-  { number: "04", icon: "validate", title: "Testar e documentar.", description: "Validação, ajustes e registro.", tone: "blue" },
+const steps: Array<{ number: string; icon: WorkflowIconName; title: string; description: string }> = [
+  { number: "01", icon: "discover", title: "Entender o problema.", description: "Contexto, rotina e necessidade." },
+  { number: "02", icon: "organize", title: "Organizar o processo.", description: "Fluxos, critérios e informações." },
+  { number: "03", icon: "build", title: "Construir a solução.", description: "Automação, dados e interface." },
+  { number: "04", icon: "validate", title: "Testar e documentar.", description: "Validação, ajustes e registro." },
 ];
 
 export default function HomeWorkflow() {
@@ -32,8 +32,12 @@ export default function HomeWorkflow() {
       </header>
 
       <div className="home-workflow-cards" aria-label="Etapas do método de trabalho">
-        <div className="home-workflow-connector" aria-hidden="true"/>
-        {steps.map((step) => <article className={`home-workflow-card workflow-${step.tone}`} key={step.number}>
+        <div className="home-workflow-connector" aria-hidden="true">
+          <i className="home-workflow-pulse" style={{ animationDelay: "0s" }}/>
+          <i className="home-workflow-pulse" style={{ animationDelay: "1.1s" }}/>
+          <i className="home-workflow-pulse" style={{ animationDelay: "2.2s" }}/>
+        </div>
+        {steps.map((step) => <article className="home-workflow-card" key={step.number}>
           <span className="home-workflow-number">{step.number}</span>
           <span className="home-workflow-icon"><WorkflowIcon name={step.icon}/></span>
           <h3>{step.title}</h3>
