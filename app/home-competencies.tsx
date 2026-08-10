@@ -15,28 +15,28 @@ export default function HomeCompetencies() {
   return <section id="competencias" className="home-competencies-section" aria-labelledby="home-competencies-title">
     <div className="home-competencies-shell">
       <div className="home-competencies-grid" aria-label="Competências profissionais">
-        <article className="competency-card competency-card-wide competency-process">
+        <article className="competency-card competency-card-wide competency-process reveal">
           <span className="competency-icon"><CompetencyIcon name="process"/></span>
           <h3>Processos administrativos</h3>
           <p>Mapeamento, padronização e documentação para tornar rotinas mais claras e previsíveis.</p>
           <div className="competency-tags"><span>Fluxos</span><span>Padrões</span><span>Documentação</span></div>
         </article>
 
-        <article className="competency-card competency-card-small competency-data">
+        <article className="competency-card competency-card-small competency-data reveal" style={{ transitionDelay: "90ms" }}>
           <span className="competency-icon"><CompetencyIcon name="data"/></span>
           <h3>Dados e indicadores</h3>
           <p>Excel, tratamento de dados e visualizações que apoiam o acompanhamento e a decisão.</p>
           <div className="competency-tags"><span>Excel</span><span>Indicadores</span></div>
         </article>
 
-        <article className="competency-card competency-card-wide competency-automation">
+        <article className="competency-card competency-card-wide competency-automation reveal" style={{ transitionDelay: "180ms" }}>
           <span className="competency-icon"><CompetencyIcon name="automation"/></span>
           <h3>Automação</h3>
           <p>Python aplicado à redução de tarefas manuais e à organização de informações.</p>
           <div className="competency-tags"><span>Python</span><span>Scripts</span><span>Rotinas</span></div>
         </article>
 
-        <article className="competency-card competency-card-small competency-ai">
+        <article className="competency-card competency-card-small competency-ai reveal" style={{ transitionDelay: "270ms" }}>
           <span className="competency-icon"><CompetencyIcon name="ai"/></span>
           <h3>IA aplicada</h3>
           <p>Apoio à produtividade, análise e melhoria de fluxos administrativos.</p>
@@ -44,7 +44,7 @@ export default function HomeCompetencies() {
         </article>
       </div>
 
-      <div className="home-competencies-copy">
+      <div className="home-competencies-copy reveal">
         <span className="home-competencies-badge"><CompetencyIcon name="process"/>Competências aplicadas</span>
         <h2 id="home-competencies-title">Conhecimento técnico<br/>conectado à <em>realidade<br/>da operação.</em></h2>
         <p>Mais do que dominar ferramentas, aplico métodos e tecnologia para organizar rotinas, estruturar informações e resolver problemas administrativos.</p>

@@ -145,7 +145,7 @@ export default function HomeProjects() {
   return <section className="home-projects-section" aria-labelledby="home-projects-title">
     <div className="home-projects-shell">
       <div className="home-projects-layout">
-        <div className="home-projects-intro">
+        <div className="home-projects-intro reveal">
           <header className="home-projects-heading">
             <span className="home-projects-badge"><ProjectIcon kind="files" size={14}/>Projetos aplicados</span>
             <h2 id="home-projects-title">Soluções criadas<br/>para <em>organizar<br/>processos</em> e informações.</h2>
@@ -163,7 +163,7 @@ export default function HomeProjects() {
           </nav>
         </div>
 
-        <article className="home-project-card" aria-live="polite">
+        <article className="home-project-card reveal" style={{ transitionDelay: "120ms" }} aria-live="polite">
           <div className="home-project-slide">
             <div className="home-project-media" role="img" aria-label={`Espaço reservado para a imagem do projeto ${project.label}`}>
               <div className={isLeaving ? "home-project-media-inner is-leaving" : "home-project-media-inner"}/>

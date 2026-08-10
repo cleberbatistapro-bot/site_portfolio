@@ -3,6 +3,7 @@ import HomeCompetencies from "./home-competencies";
 import HomeWorkflow from "./home-workflow";
 import HomeContact from "./home-contact";
 import HomeNavbar from "./home-navbar";
+import ScrollReveal from "./scroll-reveal";
 
 type HomeIconName = "pin" | "monitor" | "briefcase" | "integrated" | "download" | "user" | "chart";
 
@@ -22,33 +23,34 @@ function HomeIcon({ name, size = 22 }: { name: HomeIconName; size?: number }) {
 
 export default function Home() {
   return <div className="about-page" id="inicio">
+    <ScrollReveal/>
     <HomeNavbar/>
     <main>
       <section className="home-hero" aria-labelledby="home-hero-title">
-        <div className="home-hero-photo">
+        <div className="home-hero-photo reveal">
           <img src="/cleber-hero.webp" alt="Cleber Batista trabalhando em um escritório com notebook"/>
         </div>
         <div className="home-hero-inner">
           <div className="home-hero-copy">
-            <span className="home-eyebrow">Analista Administrativo · Processos · Operações</span>
-            <h1 id="home-hero-title">
+            <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Analista Administrativo · Processos · Operações</span>
+            <h1 id="home-hero-title" className="reveal" style={{ transitionDelay: "130ms" }}>
               <span className="home-title-line">Transformo rotinas administrativas</span>
               <span className="home-title-line">em <em>processos mais organizados</em>,</span>
               <span className="home-title-line">eficientes e <em>orientados por dados.</em></span>
             </h1>
-            <p>Mais de 20 anos de experiência em atendimento, negócios, indústria e qualidade. Uno visão de processos, Excel, Python e IA para reduzir tarefas manuais, organizar informações e apoiar decisões.</p>
-            <div className="home-meta" aria-label="Informações profissionais">
+            <p className="reveal" style={{ transitionDelay: "200ms" }}>Mais de 20 anos de experiência em atendimento, negócios, indústria e qualidade. Uno visão de processos, Excel, Python e IA para reduzir tarefas manuais, organizar informações e apoiar decisões.</p>
+            <div className="home-meta reveal" style={{ transitionDelay: "270ms" }} aria-label="Informações profissionais">
               <span><HomeIcon name="pin" size={17}/>Piracaia — SP</span>
               <span><HomeIcon name="monitor" size={17}/>Disponível para trabalho 100% remoto</span>
               <span><HomeIcon name="briefcase" size={17}/>CLT ou PJ</span>
             </div>
-            <div className="home-actions">
+            <div className="home-actions reveal" style={{ transitionDelay: "330ms" }}>
               <a className="home-primary-action" href="/projetos/"><HomeIcon name="integrated" size={18}/>Ver projetos aplicados <span aria-hidden="true">→</span></a>
               <button className="home-secondary-action" type="button"><HomeIcon name="download" size={18}/>Baixar currículo</button>
             </div>
-            <a className="home-text-link" href="/sobre-mim/">Conhecer minha trajetória <span aria-hidden="true">→</span></a>
+            <a className="home-text-link reveal" style={{ transitionDelay: "390ms" }} href="/sobre-mim/">Conhecer minha trajetória <span aria-hidden="true">→</span></a>
           </div>
-          <div className="home-proof-bar" aria-label="Destaques profissionais">
+          <div className="home-proof-bar reveal" style={{ transitionDelay: "450ms" }} aria-label="Destaques profissionais">
             <article><span className="home-proof-icon"><HomeIcon name="user" size={25}/></span><div><strong>20+ anos de experiência</strong><p>Atendimento, negócios, indústria e qualidade</p></div></article>
             <article><span className="home-proof-icon"><HomeIcon name="chart" size={25}/></span><div><strong>Processos e dados</strong><p>Excel, Python, documentação e análise</p></div></article>
             <article><span className="home-proof-icon"><HomeIcon name="monitor" size={25}/></span><div><strong>Pronto para o trabalho remoto</strong><p>Autonomia, organização e comunicação</p></div></article>

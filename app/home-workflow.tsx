@@ -21,7 +21,7 @@ const steps: Array<{ number: string; icon: WorkflowIconName; title: string; desc
 export default function HomeWorkflow() {
   return <section id="metodo" className="home-workflow-section" aria-labelledby="home-workflow-title">
     <div className="home-workflow-shell">
-      <header className="home-workflow-heading">
+      <header className="home-workflow-heading reveal">
         <span className="home-workflow-eyebrow">Como trabalho</span>
         <h2 id="home-workflow-title">
           <span>Da análise à entrega: soluções construídas</span>
@@ -37,7 +37,7 @@ export default function HomeWorkflow() {
           <i className="home-workflow-pulse" style={{ animationDelay: "1.1s" }}/>
           <i className="home-workflow-pulse" style={{ animationDelay: "2.2s" }}/>
         </div>
-        {steps.map((step) => <article className="home-workflow-card" key={step.number}>
+        {steps.map((step, index) => <article className="home-workflow-card reveal" style={{ transitionDelay: `${index * 90}ms` }} key={step.number}>
           <span className="home-workflow-number">{step.number}</span>
           <span className="home-workflow-icon"><WorkflowIcon name={step.icon}/></span>
           <h3>{step.title}</h3>

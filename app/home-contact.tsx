@@ -21,14 +21,14 @@ const homeChannels = [
 export default function HomeContact() {
   return <section id="contato" className="home-contact-section" aria-labelledby="home-contact-title">
     <div className="home-contact-shell">
-      <div className="home-contact-copy">
+      <div className="home-contact-copy reveal">
         <span className="home-contact-eyebrow">Contato profissional</span>
         <h2 id="home-contact-title">Vamos conversar sobre uma <em>oportunidade?</em></h2>
         <p>Estou disponível para vagas 100% remotas nas áreas administrativa, processos, operações e backoffice, em regime CLT ou PJ.</p>
         <div className="home-contact-status"><i aria-hidden="true"/><span>Disponível para trabalho remoto</span><b>CLT ou PJ</b></div>
       </div>
 
-      <div className="home-contact-panel">
+      <div className="home-contact-panel reveal" style={{ transitionDelay: "120ms" }}>
         <header><h3>Escolha o melhor canal</h3><p>Fale comigo sobre uma oportunidade profissional.</p></header>
         <div className="home-contact-channels">
           {homeChannels.map(channel => <a className={`home-contact-channel home-contact-${channel.icon}`} href={channel.href} key={channel.name} target={channel.icon === "email" ? undefined : "_blank"} rel={channel.icon === "email" ? undefined : "noreferrer"}>
