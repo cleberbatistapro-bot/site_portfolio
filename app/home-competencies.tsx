@@ -20,20 +20,13 @@ export default function HomeCompetencies() {
           <h3>Processos administrativos</h3>
           <p>Mapeamento, padronização e documentação para tornar rotinas mais claras e previsíveis.</p>
           <div className="competency-tags"><span>Fluxos</span><span>Padrões</span><span>Documentação</span></div>
-          <div className="competency-flow" aria-hidden="true">
-            <svg viewBox="0 0 132 166" fill="none"><path d="M66 23v22m0 30v21m0 34v17M82 62h32v52H84"/><path className="flow-arrow" d="m62 40 4 5 4-5m-8 51 4 5 4-5m-8 51 4 5 4-5"/></svg>
-            <i className="flow-start"/><i className="flow-task"/><i className="flow-decision"/><i className="flow-end"/>
-          </div>
         </article>
 
         <article className="competency-card competency-card-small competency-data">
           <span className="competency-icon"><CompetencyIcon name="data"/></span>
           <h3>Dados e indicadores</h3>
           <p>Excel, tratamento de dados e visualizações que apoiam o acompanhamento e a decisão.</p>
-          <div className="competency-chart" aria-hidden="true">
-            <i/><i/><i/><i/><i/><i/><i/>
-            <svg viewBox="0 0 220 86" preserveAspectRatio="none"><polyline points="5,75 38,62 70,48 102,58 135,35 170,27 215,7"/><circle cx="5" cy="75" r="2.2"/><circle cx="38" cy="62" r="2.2"/><circle cx="70" cy="48" r="2.2"/><circle cx="102" cy="58" r="2.2"/><circle cx="135" cy="35" r="2.2"/><circle cx="170" cy="27" r="2.2"/><circle cx="215" cy="7" r="3"/></svg>
-          </div>
+          <div className="competency-tags"><span>Excel</span><span>Indicadores</span></div>
         </article>
 
         <article className="competency-card competency-card-wide competency-automation">
@@ -47,6 +40,7 @@ export default function HomeCompetencies() {
           <span className="competency-icon"><CompetencyIcon name="ai"/></span>
           <h3>IA aplicada</h3>
           <p>Apoio à produtividade, análise e melhoria de fluxos administrativos.</p>
+          <div className="competency-tags"><span>Produtividade</span><span>Análise</span></div>
         </article>
       </div>
 
