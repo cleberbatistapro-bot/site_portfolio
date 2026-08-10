@@ -1,10 +1,10 @@
 type CompetencyIcon = "process" | "data" | "automation" | "ai";
 
 const iconPaths: Record<CompetencyIcon, React.ReactNode> = {
-  process: <><rect x="4" y="3" width="6" height="5" rx="1"/><rect x="14" y="16" width="6" height="5" rx="1"/><rect x="4" y="16" width="6" height="5" rx="1"/><path d="M7 8v4h10v4M7 12v4"/></>,
-  data: <><path d="M4 20V10M10 20V5M16 20v-8M22 20V2"/></>,
-  automation: <><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></>,
-  ai: <><path d="M9 4a3 3 0 0 0-5 2.2A3.5 3.5 0 0 0 5 13v2a3 3 0 0 0 4.5 2.6M15 4a3 3 0 0 1 5 2.2A3.5 3.5 0 0 1 19 13v2a3 3 0 0 1-4.5 2.6M9 4v16M15 4v16M9 8H7M15 8h2M9 13H6M15 13h3M9 17h6"/></>,
+  process: <><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1Z"/><rect x="5" y="4" width="14" height="17" rx="2"/><path d="m8.5 12 2 2 4-4.5M8.5 17h5"/></>,
+  data: <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></>,
+  automation: <><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3.4M12 18.1v3.4M21.5 12h-3.4M5.9 12H2.5M18.6 5.4l-2.4 2.4M7.8 16.2l-2.4 2.4M18.6 18.6l-2.4-2.4M7.8 7.8 5.4 5.4"/></>,
+  ai: <><path d="M12 3a5.5 5.5 0 0 0-3.2 10c.5.35.7.9.7 1.5v.5h5v-.5c0-.6.2-1.15.7-1.5A5.5 5.5 0 0 0 12 3Z"/><path d="M10 18h4M10.7 21h2.6"/></>,
 };
 
 function CompetencyIcon({ name }: { name: CompetencyIcon }) {
