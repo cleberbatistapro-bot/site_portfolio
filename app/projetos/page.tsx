@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 type ProjectId = "organizador" | "procfacil" | "inspecao" | "calibracao" | "dashboard";
-type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file" | "github";
+type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file";
 
 const projects: { id: ProjectId; label: string; icon: IconName }[] = [
   { id: "organizador", label: "Organizador de Arquivos", icon: "folder" },
@@ -32,7 +32,6 @@ const paths: Record<IconName, React.ReactNode> = {
   report: <><path d="M6 3h12v18H6Z"/><path d="M9 8h6M9 12h6M9 16h4"/></>,
   check: <><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></>,
   file: <path d="M6 3h8l4 4v14H6ZM14 3v5h5"/>,
-  github: <><circle cx="12" cy="12" r="9"/><path d="M9 19c-4 1-4-2-5-2M15 21v-3.5c0-1 .1-1.5-.5-2 2.5-.3 5-1.2 5-5.5a4.2 4.2 0 0 0-1.1-3c.1-.3.5-1.5-.1-3 0 0-.9-.3-3.2 1.1a11 11 0 0 0-5.8 0C7 3.7 6.1 4 6.1 4c-.6 1.5-.2 2.7-.1 3a4.2 4.2 0 0 0-1.1 3c0 4.3 2.5 5.2 5 5.5-.5.5-.6 1.2-.5 2V21"/></>,
 };
 
 function Icon({ name, size = 21 }: { name: IconName; size?: number }) {
@@ -118,7 +117,7 @@ function OrganizerCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias utilizadas</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Tecnologia aplicada para resolver um problema operacional real.</h3><p>Este projeto demonstra minha capacidade de observar uma rotina, transformar necessidades em regras claras e desenvolver uma solução prática, segura e testável. É a combinação entre experiência administrativa, visão de processos e tecnologia aplicada que pretendo levar para uma equipe, em uma oportunidade CLT ou PJ.</p><button type="button" aria-disabled="true"><Icon name="github" size={18}/>Código no GitHub em preparação</button></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Tecnologia aplicada para resolver um problema operacional real.</h3><p>Este projeto demonstra minha capacidade de observar uma rotina, transformar necessidades em regras claras e desenvolver uma solução prática, segura e testável. É a combinação entre experiência administrativa, visão de processos e tecnologia aplicada que pretendo levar para uma equipe, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
@@ -179,7 +178,7 @@ function ProcFacilCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias e formatos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados consolidados com regras claras e pendências visíveis.</h3><p>O ProcFácil demonstra minha capacidade de entender uma rotina administrativa baseada em planilhas, transformar o processo em uma sequência lógica e desenvolver uma ferramenta que facilita o trabalho sem eliminar a conferência humana. O resultado combina organização, rastreabilidade e tratamento transparente das exceções — competências relevantes para equipes administrativas, de processos e dados em oportunidades CLT ou PJ.</p><button type="button" aria-disabled="true"><Icon name="github" size={18}/>Código no GitHub em preparação</button></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados consolidados com regras claras e pendências visíveis.</h3><p>O ProcFácil demonstra minha capacidade de entender uma rotina administrativa baseada em planilhas, transformar o processo em uma sequência lógica e desenvolver uma ferramenta que facilita o trabalho sem eliminar a conferência humana. O resultado combina organização, rastreabilidade e tratamento transparente das exceções — competências relevantes para equipes administrativas, de processos e dados em oportunidades CLT ou PJ.</p></div></section>
   </>;
 }
 
@@ -245,7 +244,7 @@ function InspectionCaseStudy() {
       <div className="project-skills-grid"><article><h4>Ferramentas e métodos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Qualidade, processos e tecnologia aplicados ao mesmo problema.</h3><p>Este projeto demonstra minha capacidade de identificar uma oportunidade de melhoria em uma rotina industrial e transformá-la em um fluxo digital claro, organizado e rastreável. A proposta une visão de processo, cuidado com a informação e foco na experiência de quem executa a atividade — competências que posso aplicar em equipes de qualidade, processos, operações ou tecnologia, em oportunidades CLT ou PJ.</p><button type="button" aria-disabled="true"><Icon name="github" size={18}/>Código no GitHub em preparação</button></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Qualidade, processos e tecnologia aplicados ao mesmo problema.</h3><p>Este projeto demonstra minha capacidade de identificar uma oportunidade de melhoria em uma rotina industrial e transformá-la em um fluxo digital claro, organizado e rastreável. A proposta une visão de processo, cuidado com a informação e foco na experiência de quem executa a atividade — competências que posso aplicar em equipes de qualidade, processos, operações ou tecnologia, em oportunidades CLT ou PJ.</p></div></section>
   </>;
 }
 
@@ -316,7 +315,7 @@ function CalibrationCaseStudy() {
       <div className="project-skills-grid"><article><h4>Ferramentas e métodos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Visibilidade e rastreabilidade para apoiar decisões de qualidade.</h3><p>Este projeto demonstra minha capacidade de analisar um controle administrativo crítico, organizar requisitos e transformar informações dispersas em um fluxo de acompanhamento mais claro. A proposta combina visão de processos, qualidade de dados e atenção a prazos — competências aplicáveis a equipes de qualidade, processos, operações ou administração, em oportunidades CLT ou PJ.</p><button type="button" aria-disabled="true"><Icon name="github" size={18}/>Código no GitHub em preparação</button></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Visibilidade e rastreabilidade para apoiar decisões de qualidade.</h3><p>Este projeto demonstra minha capacidade de analisar um controle administrativo crítico, organizar requisitos e transformar informações dispersas em um fluxo de acompanhamento mais claro. A proposta combina visão de processos, qualidade de dados e atenção a prazos — competências aplicáveis a equipes de qualidade, processos, operações ou administração, em oportunidades CLT ou PJ.</p></div></section>
   </>;
 }
 
@@ -386,7 +385,7 @@ function DashboardCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias e recursos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados brutos transformados em uma visão útil para a operação.</h3><p>Este projeto demonstra minha capacidade de compreender uma fonte de dados, estruturar campos e indicadores e apresentar informações de forma clara para quem precisa acompanhar resultados. A solução conecta análise de dados, processos administrativos e apoio à decisão — competências relevantes para equipes de dados, operações, processos ou administração, em oportunidades CLT ou PJ.</p><button type="button" aria-disabled="true"><Icon name="github" size={18}/>Código no GitHub em preparação</button></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados brutos transformados em uma visão útil para a operação.</h3><p>Este projeto demonstra minha capacidade de compreender uma fonte de dados, estruturar campos e indicadores e apresentar informações de forma clara para quem precisa acompanhar resultados. A solução conecta análise de dados, processos administrativos e apoio à decisão — competências relevantes para equipes de dados, operações, processos ou administração, em oportunidades CLT ou PJ.</p></div></section>
   </>;
 }
 

@@ -395,7 +395,6 @@ em { color:var(--teal); font-style:normal; }
 .project-value>.line-icon { color:#21cfbd; }
 .project-value h3 { font-size:23px; }
 .project-value p { max-width:930px; margin:10px 0 0; color:#b7bfc0; font-size:12px; line-height:1.65; }
-.project-value button { min-height:40px; display:inline-flex; align-items:center; gap:8px; margin-top:17px; padding:0 15px; border:1px solid rgba(32,199,183,.42); border-radius:8px; color:#a9b5b4; background:rgba(8,35,36,.28); font-size:11px; cursor:not-allowed; }
 .project-pending { min-height:520px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:var(--teal); }
 .project-pending .project-eyebrow { margin-top:20px; }
 .project-pending p { max-width:620px; margin:15px 0 0; color:#abb4b5; font-size:14px; line-height:1.7; }
