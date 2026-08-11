@@ -9,6 +9,7 @@ type HomeProject = {
   id: ProjectId;
   kind: ProjectKind;
   label: string;
+  image: string;
   category: string;
   summary: string;
   problem: string;
@@ -26,6 +27,7 @@ const homeProjects: HomeProject[] = [
     id: "organizador",
     kind: "files",
     label: "Organizador de Arquivos",
+    image: "/home-projects/organizador.webp",
     category: "Automação de processos",
     summary: "Uma solução para transformar arquivos dispersos em uma estrutura clara, padronizada e fácil de consultar.",
     problem: "Arquivos acumulados, nomes inconsistentes e dificuldade para localizar informações.",
@@ -41,6 +43,7 @@ const homeProjects: HomeProject[] = [
     id: "procfacil",
     kind: "sheets",
     label: "ProcFácil",
+    image: "/home-projects/procfacil.webp",
     category: "Consolidação e qualidade de dados",
     summary: "Planilhas relacionadas reunidas em uma base única, com regras visíveis e pendências preparadas para conferência.",
     problem: "Informações distribuídas em arquivos diferentes exigem buscas, fórmulas e validações manuais.",
@@ -56,6 +59,7 @@ const homeProjects: HomeProject[] = [
     id: "inspecao",
     kind: "checklist",
     label: "Sistema de Inspeção",
+    image: "/home-projects/inspecao.webp",
     category: "Qualidade e rastreabilidade",
     summary: "Um fluxo digital para orientar inspeções, padronizar critérios e manter os registros de qualidade organizados.",
     problem: "Registros dispersos e conferências manuais dificultam a padronização e a consulta do histórico.",
@@ -71,6 +75,7 @@ const homeProjects: HomeProject[] = [
     id: "calibracao",
     kind: "calibration",
     label: "Controle de Calibração",
+    image: "/home-projects/calibracao.webp",
     category: "Controle documental",
     summary: "Instrumentos, prazos e certificados centralizados para favorecer o acompanhamento e a rastreabilidade.",
     problem: "Controles separados aumentam a dificuldade para acompanhar validades, status e documentos.",
@@ -86,6 +91,7 @@ const homeProjects: HomeProject[] = [
     id: "dashboard",
     kind: "analytics",
     label: "Dashboard Operacional",
+    image: "/home-projects/dashboard.webp",
     category: "Análise de dados",
     summary: "Dados administrativos transformados em indicadores visuais para facilitar o acompanhamento da operação.",
     problem: "Planilhas e controles separados tornam padrões, comparações e desvios menos visíveis.",
@@ -165,8 +171,10 @@ export default function HomeProjects() {
 
         <article className="home-project-card reveal" style={{ transitionDelay: "120ms" }} aria-live="polite">
           <div className="home-project-slide">
-            <div className="home-project-media" role="img" aria-label={`Espaço reservado para a imagem do projeto ${project.label}`}>
-              <div className={isLeaving ? "home-project-media-inner is-leaving" : "home-project-media-inner"}/>
+            <div className="home-project-media">
+              <div className={isLeaving ? "home-project-media-inner is-leaving" : "home-project-media-inner"}>
+                <img src={project.image} alt={`Tela ilustrativa do projeto ${project.label}`} loading="lazy"/>
+              </div>
             </div>
             <div className="home-project-copy">
               <div className={isLeaving ? "home-project-copy-inner is-leaving" : "home-project-copy-inner"}>
