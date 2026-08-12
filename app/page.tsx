@@ -38,7 +38,7 @@ export default function Home() {
               <span className="home-title-line">em <em>processos mais organizados</em>, </span>
               <span className="home-title-line">eficientes e <em>orientados por dados.</em></span>
             </h1>
-            <p className="reveal" style={{ transitionDelay: "200ms" }}>Mais de 20 anos de experiência em atendimento, negócios, indústria e qualidade. Uno visão de processos, Excel, Python e IA para reduzir tarefas manuais, organizar informações e apoiar decisões.</p>
+            <p className="reveal" style={{ transitionDelay: "200ms" }}>Mais de 20 anos de experiência em processos, operações, negócios e qualidade. Uno visão de processos, Excel, Python e IA para reduzir tarefas manuais, organizar informações e apoiar decisões.</p>
             <div className="home-meta reveal" style={{ transitionDelay: "270ms" }} aria-label="Informações profissionais">
               <span><HomeIcon name="pin" size={17}/>Piracaia — SP</span>
               <span><HomeIcon name="monitor" size={17}/>Disponível para trabalho 100% remoto</span>
