@@ -52,7 +52,7 @@ export default function ContactPage() {
           <a className="site-nav-link" href="/projetos/">Projetos</a>
           <a className="site-nav-link active" href="/contatos/" aria-current="page">Contatos</a>
         </nav>
-        <div className="navbar-actions"><button className="navbar-cv-button" type="button">Baixar Currículo</button></div>
+        <div className="navbar-actions"><a className="navbar-cv-button" href="/curriculo-cleber-batista.pdf" download>Baixar Currículo</a></div>
       </div>
     </header>
 
