@@ -57,7 +57,6 @@ export default function SiteFooter() {
 
     <div className="site-footer-bottom">
       <p>© 2026 Cleber Batista. Todos os direitos reservados.</p>
-      <p>CNPJ: 41.975.192/0001-62</p>
     </div>
   </footer>;
 }

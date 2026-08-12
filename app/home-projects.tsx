@@ -5,6 +5,14 @@ import { useEffect, useRef, useState } from "react";
 type ProjectId = "organizador" | "procfacil" | "inspecao" | "calibracao" | "dashboard";
 type ProjectKind = "files" | "sheets" | "checklist" | "calibration" | "analytics";
 
+const projectSlugs: Record<ProjectId, string> = {
+  organizador: "organizador-de-arquivos",
+  procfacil: "procfacil",
+  inspecao: "sistema-inspecao-digital",
+  calibracao: "controle-calibracao",
+  dashboard: "dashboard-operacional",
+};
+
 type HomeProject = {
   id: ProjectId;
   kind: ProjectKind;
@@ -185,7 +193,7 @@ export default function HomeProjects() {
                 <p className="home-project-summary">{project.summary}</p>
                 <div className="home-project-copy-footer">
                   <div className="home-project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
-                  <a className="home-project-detail-link" href={`/projetos/?projeto=${project.id}`}>Ver projeto detalhado <span aria-hidden="true">→</span></a>
+                  <a className="home-project-detail-link" href={`/projetos/${projectSlugs[project.id]}/`}>Ver projeto detalhado <span aria-hidden="true">→</span></a>
                 </div>
               </div>
             </div>

@@ -35,7 +35,7 @@ export default function Home() {
             <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Analista Administrativo · Processos · Operações</span>
             <h1 id="home-hero-title" className="reveal" style={{ transitionDelay: "130ms" }}>
               <span className="home-title-line">Transformo rotinas administrativas</span>
-              <span className="home-title-line">em <em>processos mais organizados</em>,</span>
+              <span className="home-title-line">em <em>processos mais organizados</em>, </span>
               <span className="home-title-line">eficientes e <em>orientados por dados.</em></span>
             </h1>
             <p className="reveal" style={{ transitionDelay: "200ms" }}>Mais de 20 anos de experiência em atendimento, negócios, indústria e qualidade. Uno visão de processos, Excel, Python e IA para reduzir tarefas manuais, organizar informações e apoiar decisões.</p>

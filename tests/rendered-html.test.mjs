@@ -45,7 +45,7 @@ test("renders development preview metadata", async () => {
   assert.match(html, /Vamos conversar sobre uma/i);
   assert.match(html, /contato@cleberbatistapro\.com\.br/i);
   assert.match(html, /Processos, dados e tecnologia aplicados/i);
-  assert.match(html, /CNPJ: 41\.975\.192\/0001-62/i);
+  assert.doesNotMatch(html, /CNPJ/i);
 });
 
 test("serves the dedicated about page", async () => {
@@ -87,8 +87,23 @@ test("serves the projects case study page", async () => {
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /<title>Projetos aplicados \| Cleber Batista<\/title>/i);
+  assert.match(html, /<title>Projetos de Automação e Processos \| Cleber Batista<\/title>/i);
   assert.match(html, /Organizador de Arquivos/i);
+});
+
+test("serves a dedicated project case study page with its own title", async () => {
+  const worker = (await import("../dist/server/index.js")).default;
+
+  const response = await worker.fetch(
+    new Request("http://localhost/projetos/organizador-de-arquivos/", { headers: { accept: "text/html" } }),
+    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /<title>Organizador de Arquivos \| Projeto de Automação \| Cleber Batista<\/title>/i);
+  assert.match(html, /rel="canonical" href="https:\/\/cleberbatistapro\.com\.br\/projetos\/organizador-de-arquivos\/"/i);
 });
 
 test("serves the professional contact page", async () => {
