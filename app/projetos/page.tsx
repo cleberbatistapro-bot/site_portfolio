@@ -42,6 +42,13 @@ function ProjectVideo({ src, label }: { src: string; label: string }) {
   return <video className="project-video" src={src} controls autoPlay muted playsInline preload="metadata" aria-label={label} />;
 }
 
+function ProjectImageCompare({ before, after }: { before: { src: string; alt: string }; after: { src: string; alt: string } }) {
+  return <div className="project-image-compare">
+    <figure><img src={before.src} alt={before.alt} loading="lazy" /><figcaption><Icon name="warning" size={15}/>Antes</figcaption></figure>
+    <figure><img src={after.src} alt={after.alt} loading="lazy" /><figcaption><Icon name="check" size={15}/>Depois</figcaption></figure>
+  </div>;
+}
+
 function SummaryCard({ icon, title, children }: { icon: IconName; title: string; children: React.ReactNode }) {
   return <article className="project-summary-card"><span><Icon name={icon}/></span><div><h3>{title}</h3><p>{children}</p></div></article>;
 }
@@ -196,9 +203,10 @@ function InspectionCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto conceitual</span><span><Icon name="clipboard" size={17}/>Processos de qualidade</span><span><Icon name="desktop" size={17}/>Interface para tablet</span></div>
     </header>
 
-    <div className="project-video-placeholder" role="img" aria-label="Espaço reservado para o vídeo de apresentação do Sistema de Inspeção Digital">
-      <span className="project-play"><Icon name="play" size={34}/></span><p>Vídeo em preparação</p><small>A demonstração será inserida após a edição final.</small>
-    </div>
+    <ProjectImageCompare
+      before={{ src: "/project-media/inspecao-antes.png", alt: "Checklist de inspeção em papel, com medições e critérios preenchidos manualmente" }}
+      after={{ src: "/project-media/inspecao-depois.png", alt: "Tela do sistema digital de inspeção mostrando a verificação dimensional guiada" }}
+    />
 
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Registros dispersos e conferências manuais podem dificultar a padronização da inspeção e a consulta posterior das informações.</SummaryCard>
@@ -262,9 +270,10 @@ function CalibrationCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto conceitual</span><span><Icon name="target" size={17}/>Gestão da qualidade</span><span><Icon name="desktop" size={17}/>Interface web</span></div>
     </header>
 
-    <div className="project-video-placeholder" role="img" aria-label="Espaço reservado para o vídeo de apresentação do Controle de Calibração">
-      <span className="project-play"><Icon name="play" size={34}/></span><p>Vídeo em preparação</p><small>A demonstração será inserida após a edição final.</small>
-    </div>
+    <ProjectImageCompare
+      before={{ src: "/project-media/calibracao-antes.png", alt: "Planilha de controle de calibração com status vencido, atenção e ok misturados" }}
+      after={{ src: "/project-media/calibracao-depois.png", alt: "Dashboard do sistema de controle de calibração com indicadores e categorias de instrumentos" }}
+    />
 
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Planilhas extensas e registros separados dificultam acompanhar vencimentos, documentos e o histórico dos instrumentos.</SummaryCard>
