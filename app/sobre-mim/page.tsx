@@ -55,7 +55,7 @@ function Icon({ name, size = 22 }: { name: IconName; size?: number }) {
 }
 
 function CvButton() {
-  return <button className="cv-button" type="button" aria-label="Baixar meu currículo"><Icon name="download" size={18}/><span>Baixar meu currículo</span></button>;
+  return <a className="cv-button" href="/curriculo-cleber-batista.pdf" download aria-label="Baixar meu currículo"><Icon name="download" size={18}/><span>Baixar meu currículo</span></a>;
 }
 
 function QuoteBar({ children, icon = "quote" }: { children: React.ReactNode; icon?: IconName }) {

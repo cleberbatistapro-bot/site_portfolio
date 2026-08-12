@@ -66,7 +66,7 @@ export default function ContactPage() {
 
           <div className="contact-guidance"><Icon name="info" size={25}/><p>Ao entrar em contato, informe o nome da empresa, a vaga e um breve contexto da oportunidade.</p></div>
 
-          <button className="contact-cv-button" type="button"><Icon name="document" size={20}/><span>Acessar currículo</span><Icon name="arrow" size={19}/></button>
+          <a className="contact-cv-button" href="/curriculo-cleber-batista.pdf" download><Icon name="document" size={20}/><span>Acessar currículo</span><Icon name="arrow" size={19}/></a>
         </div>
 
         <section className="contact-panel" aria-labelledby="channels-title">
