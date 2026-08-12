@@ -38,6 +38,10 @@ function Icon({ name, size = 21 }: { name: IconName; size?: number }) {
   return <svg className="line-icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.45" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
 
+function ProjectVideo({ src, label }: { src: string; label: string }) {
+  return <video className="project-video" src={src} controls autoPlay muted playsInline preload="metadata" aria-label={label} />;
+}
+
 function SummaryCard({ icon, title, children }: { icon: IconName; title: string; children: React.ReactNode }) {
   return <article className="project-summary-card"><span><Icon name={icon}/></span><div><h3>{title}</h3><p>{children}</p></div></article>;
 }
@@ -74,9 +78,7 @@ function OrganizerCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
-    <div className="project-video-placeholder" role="img" aria-label="Espaço reservado para o vídeo de apresentação do Organizador de Arquivos">
-      <span className="project-play"><Icon name="play" size={34}/></span><p>Vídeo em preparação</p><small>A demonstração será inserida após a edição final.</small>
-    </div>
+    <ProjectVideo src="/project-videos/organizador.mp4" label="Vídeo de apresentação do Organizador de Arquivos" />
 
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Arquivos de diferentes formatos acumulados na mesma pasta, sem padrão de organização e difíceis de localizar.</SummaryCard>
@@ -135,9 +137,7 @@ function ProcFacilCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
-    <div className="project-video-placeholder" role="img" aria-label="Espaço reservado para o vídeo de apresentação do ProcFácil">
-      <span className="project-play"><Icon name="play" size={34}/></span><p>Vídeo em preparação</p><small>A demonstração será inserida após a edição final.</small>
-    </div>
+    <ProjectVideo src="/project-videos/proc-facil.mp4" label="Vídeo de apresentação do ProcFácil" />
 
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Dados relacionados distribuídos em várias planilhas, exigindo buscas, fórmulas e conferências manuais.</SummaryCard>
@@ -333,9 +333,7 @@ function DashboardCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="chart" size={17}/>Análise operacional</span><span><Icon name="desktop" size={17}/>Aplicação web</span></div>
     </header>
 
-    <div className="project-video-placeholder" role="img" aria-label="Espaço reservado para o vídeo de apresentação do Dashboard Operacional">
-      <span className="project-play"><Icon name="play" size={34}/></span><p>Vídeo em preparação</p><small>A demonstração será inserida após a edição final.</small>
-    </div>
+    <ProjectVideo src="/project-videos/dashboard.mp4" label="Vídeo de apresentação do Dashboard Operacional" />
 
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Dados distribuídos em planilhas e controles separados dificultam acompanhar indicadores e compreender o cenário operacional.</SummaryCard>
