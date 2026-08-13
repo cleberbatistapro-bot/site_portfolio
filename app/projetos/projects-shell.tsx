@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export type ProjectSlug = "organizador-de-arquivos" | "procfacil" | "sistema-inspecao-digital" | "controle-calibracao" | "dashboard-operacional";
 type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file";
@@ -409,7 +409,13 @@ function NavHeader() {
 }
 
 function ProjectsSidebar({ activeSlug }: { activeSlug?: ProjectSlug }) {
-  return <nav className="projects-sidebar" aria-label="Lista de projetos"><strong>Projetos</strong>{projects.map(project => <a key={project.slug} href={`/projetos/${project.slug}/`} aria-current={project.slug === activeSlug ? "page" : undefined} className={project.slug === activeSlug ? "project-nav-item active" : "project-nav-item"}><Icon name={project.icon}/><span>{project.label}</span></a>)}</nav>;
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    navRef.current?.querySelector<HTMLElement>(".active")?.scrollIntoView({ behavior: "auto", inline: "center", block: "nearest" });
+  }, [activeSlug]);
+
+  return <nav ref={navRef} className="projects-sidebar" aria-label="Lista de projetos"><strong>Projetos</strong>{projects.map(project => <a key={project.slug} href={`/projetos/${project.slug}/`} aria-current={project.slug === activeSlug ? "page" : undefined} className={project.slug === activeSlug ? "project-nav-item active" : "project-nav-item"}><Icon name={project.icon}/><span>{project.label}</span></a>)}</nav>;
 }
 
 /** Renders the full case study for a given project, at its own dedicated URL. */

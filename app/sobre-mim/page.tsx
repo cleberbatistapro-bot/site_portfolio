@@ -201,7 +201,16 @@ export default function Home() {
   const [selected, setSelected] = useState<SectionId>("perfil");
   const [isSwitching, setIsSwitching] = useState(false);
   const contentRef = useRef<HTMLElement>(null);
+  const menuRef = useRef<HTMLElement>(null);
   const transitionTimer = useRef<ReturnType<typeof window.setTimeout> | null>(null);
+
+  function centerActiveMenuItem(behavior: ScrollBehavior) {
+    document.querySelector<HTMLElement>(".side-card .active")?.scrollIntoView({ behavior, inline: "center", block: "nearest" });
+  }
+
+  useEffect(() => {
+    centerActiveMenuItem("auto");
+  }, []);
 
   useEffect(() => () => {
     if (transitionTimer.current !== null) window.clearTimeout(transitionTimer.current);
@@ -211,6 +220,7 @@ export default function Home() {
     if (id === selected) return;
 
     setSelected(id);
+    window.setTimeout(() => centerActiveMenuItem("auto"), 0);
 
     if (transitionTimer.current !== null) window.clearTimeout(transitionTimer.current);
 
@@ -245,7 +255,7 @@ export default function Home() {
     <main className="page-container" id="sobre-mim-content">
       <header className="page-heading"><h1>Sobre mim</h1><p>Conheça minha trajetória, minha forma de trabalhar e como posso gerar valor para o seu negócio.</p></header>
       <div className="about-layout">
-        <nav className="side-card" aria-label="Seções Sobre mim">{menu.map(item => <button key={item.id} type="button" aria-current={selected === item.id ? "page" : undefined} className={selected === item.id ? "nav-item active" : "nav-item"} onClick={() => selectSection(item.id)}><Icon name={item.icon} size={19}/><span>{item.label}</span></button>)}</nav>
+        <nav ref={menuRef} className="side-card" aria-label="Seções Sobre mim">{menu.map(item => <button key={item.id} type="button" aria-current={selected === item.id ? "page" : undefined} className={selected === item.id ? "nav-item active" : "nav-item"} onClick={() => selectSection(item.id)}><Icon name={item.icon} size={19}/><span>{item.label}</span></button>)}</nav>
         <section ref={contentRef} className={`content-card section-${active}`} aria-live="polite">{menu.map(item => { const SectionContent = sections[item.id]; const isActive = item.id === active; return <div key={item.id} hidden={!isActive} className={isActive && isSwitching ? "content-transition is-leaving" : "content-transition"}><SectionContent/></div>; })}</section>
       </div>
     </main>
