@@ -457,7 +457,7 @@ a.project-summary-card:focus-visible { outline:2px solid rgba(32,199,183,.72); o
 @media (max-width:1000px) {
   .home-projects-section{padding:72px 0}
   .home-projects-shell{width:calc(100% - 32px)}
-  .home-projects-layout{grid-template-columns:1fr}
+  .home-projects-layout{grid-template-columns:minmax(0,1fr)}
   .home-projects-menu{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));overflow-x:auto;padding:2px 2px 8px}
   .home-projects-menu>strong{grid-column:1/-1}
   .home-projects-menu button{min-width:158px}
@@ -529,7 +529,7 @@ a.project-summary-card:focus-visible { outline:2px solid rgba(32,199,183,.72); o
 }
 @media (max-width:800px) {
   .home-projects-section{padding:62px 0}
-  .home-projects-layout{grid-template-columns:1fr;gap:34px}
+  .home-projects-layout{grid-template-columns:minmax(0,1fr);gap:34px}
   .home-projects-heading{max-width:610px}
   .home-projects-heading h2{white-space:normal}
   .home-projects-heading h2 br{display:none}
