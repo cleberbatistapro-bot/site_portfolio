@@ -46,7 +46,7 @@ export default function HomeCompetencies() {
 
       <div className="home-competencies-copy reveal">
         <span className="home-competencies-badge"><CompetencyIcon name="process"/>Competências aplicadas</span>
-        <h2 id="home-competencies-title">Conhecimento técnico<br/>conectado à <em>realidade<br/>da operação.</em></h2>
+        <h2 id="home-competencies-title">Conhecimento técnico <br/>conectado à <em>realidade <br/>da operação.</em></h2>
         <p>Mais do que dominar ferramentas, aplico métodos e tecnologia para organizar rotinas, estruturar informações e resolver problemas administrativos.</p>
         <strong><i aria-hidden="true"/>Tecnologia com propósito operacional.</strong>
       </div>

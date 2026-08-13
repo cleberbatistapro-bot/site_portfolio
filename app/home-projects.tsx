@@ -162,7 +162,7 @@ export default function HomeProjects() {
         <div className="home-projects-intro reveal">
           <header className="home-projects-heading">
             <span className="home-projects-badge"><ProjectIcon kind="files" size={14}/>Projetos aplicados</span>
-            <h2 id="home-projects-title">Soluções criadas<br/>para <em>organizar<br/>processos</em> e informações.</h2>
+            <h2 id="home-projects-title">Soluções criadas <br/>para <em>organizar <br/>processos</em> e informações.</h2>
             <p>Projetos práticos que conectam processos, dados e tecnologia a desafios reais da rotina operacional.</p>
           </header>
           <nav className="home-projects-menu" aria-label="Projetos em destaque" role="tablist">
