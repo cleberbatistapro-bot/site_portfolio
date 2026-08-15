@@ -38,7 +38,7 @@ export default function Home() {
               <span className="home-title-line">em soluções <em>automatizadas </em></span>
               <span className="home-title-line"><em>e inteligentes.</em></span>
             </h1>
-            <p className="reveal" style={{ transitionDelay: "200ms" }}>Mais de 20 anos de experiência profissional em áreas como atendimento, negócios, indústria e qualidade — hoje unidos a automação, Python e IA aplicada. Encontro a ineficiência, redesenho o fluxo e construo a solução que elimina o trabalho manual e acelera decisões. Cursando graduação em Inteligência Artificial, com conclusão em 2027.</p>
+            <p className="reveal" style={{ transitionDelay: "200ms" }}>Encontro a ineficiência, redesenho o fluxo e construo a solução que elimina o trabalho manual e acelera decisões</p>
             <div className="home-meta reveal" style={{ transitionDelay: "270ms" }} aria-label="Informações profissionais">
               <span><HomeIcon name="pin" size={17}/>Piracaia — SP</span>
               <span><HomeIcon name="monitor" size={17}/>Disponível para trabalho 100% remoto</span>
