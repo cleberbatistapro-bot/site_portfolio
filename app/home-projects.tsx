@@ -37,7 +37,7 @@ const homeProjects: HomeProject[] = [
     label: "Organizador de Arquivos",
     image: "/home-projects/organizador.webp",
     category: "Automação de processos",
-    summary: "Uma solução para transformar arquivos dispersos em uma estrutura clara, padronizada e fácil de consultar.",
+    summary: "Automação que transforma arquivos dispersos em uma estrutura padronizada — sem trabalho manual repetido.",
     problem: "Arquivos acumulados, nomes inconsistentes e dificuldade para localizar informações.",
     solution: "Organização automática por categorias, aplicação de regras e registro das ações realizadas.",
     tags: ["Python", "Processos", "Organização de dados"],
@@ -62,6 +62,22 @@ const homeProjects: HomeProject[] = [
     sourceItems: ["clientes.xlsx", "pedidos.xlsx", "pagamentos.xlsx", "cadastros.csv"],
     resultItems: ["Dados unificados", "Campos relacionados", "Pendências", "Arquivo final"],
     signals: ["Fontes reconhecidas", "Chaves relacionadas", "Prévia disponível"],
+  },
+  {
+    id: "dashboard",
+    kind: "analytics",
+    label: "Dashboard Operacional",
+    image: "/home-projects/dashboard.webp",
+    category: "Análise de dados",
+    summary: "Dados administrativos transformados em indicadores visuais para facilitar o acompanhamento da operação.",
+    problem: "Planilhas e controles separados tornam padrões, comparações e desvios menos visíveis.",
+    solution: "Importação, mapeamento e organização dos dados em uma visão operacional centralizada.",
+    tags: ["Dados", "Indicadores", "Visualização"],
+    sourceTitle: "Dados operacionais",
+    resultTitle: "Indicadores organizados",
+    sourceItems: ["Período", "Categoria", "Valor", "Status"],
+    resultItems: ["Visão geral", "Evolução", "Distribuição", "Detalhamento"],
+    signals: ["Campos mapeados", "Indicadores gerados", "Filtros disponíveis"],
   },
   {
     id: "inspecao",
@@ -94,22 +110,6 @@ const homeProjects: HomeProject[] = [
     sourceItems: ["Paquímetro", "Micrômetro", "Torquímetro", "Multímetro"],
     resultItems: ["Em dia", "Próximo", "Em dia", "Programar"],
     signals: ["Prazos monitorados", "Status atualizado", "Histórico acessível"],
-  },
-  {
-    id: "dashboard",
-    kind: "analytics",
-    label: "Dashboard Operacional",
-    image: "/home-projects/dashboard.webp",
-    category: "Análise de dados",
-    summary: "Dados administrativos transformados em indicadores visuais para facilitar o acompanhamento da operação.",
-    problem: "Planilhas e controles separados tornam padrões, comparações e desvios menos visíveis.",
-    solution: "Importação, mapeamento e organização dos dados em uma visão operacional centralizada.",
-    tags: ["Dados", "Indicadores", "Visualização"],
-    sourceTitle: "Dados operacionais",
-    resultTitle: "Indicadores organizados",
-    sourceItems: ["Período", "Categoria", "Valor", "Status"],
-    resultItems: ["Visão geral", "Evolução", "Distribuição", "Detalhamento"],
-    signals: ["Campos mapeados", "Indicadores gerados", "Filtros disponíveis"],
   },
 ];
 
@@ -162,8 +162,8 @@ export default function HomeProjects() {
         <div className="home-projects-intro reveal">
           <header className="home-projects-heading">
             <span className="home-projects-badge"><ProjectIcon kind="files" size={14}/>Projetos aplicados</span>
-            <h2 id="home-projects-title">Soluções criadas <br/>para <em>organizar <br/>processos</em> e informações.</h2>
-            <p>Projetos práticos que conectam processos, dados e tecnologia a desafios reais da rotina operacional.</p>
+            <h2 id="home-projects-title">Soluções que destravam <br/>processos e <em>automatizam <br/>o trabalho.</em></h2>
+            <p>Projetos reais onde identifiquei o problema, redesenhei o processo e construí a automação.</p>
           </header>
           <nav className="home-projects-menu" aria-label="Projetos em destaque" role="tablist">
             {homeProjects.map((item, index) => <button

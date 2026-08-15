@@ -32,13 +32,13 @@ export default function Home() {
         </div>
         <div className="home-hero-inner">
           <div className="home-hero-copy">
-            <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Analista Administrativo · Processos · Operações</span>
+            <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Processos · Automação · Soluções Operacionais · IA Aplicada</span>
             <h1 id="home-hero-title" className="reveal" style={{ transitionDelay: "130ms" }}>
-              <span className="home-title-line">Transformo rotinas administrativas</span>
-              <span className="home-title-line">em <em>processos mais organizados</em>, </span>
-              <span className="home-title-line">eficientes e <em>orientados por dados.</em></span>
+              <span className="home-title-line">Transformo processos manuais </span>
+              <span className="home-title-line">em soluções <em>automatizadas </em></span>
+              <span className="home-title-line"><em>e inteligentes.</em></span>
             </h1>
-            <p className="reveal" style={{ transitionDelay: "200ms" }}>Mais de 20 anos de experiência em processos, operações, negócios e qualidade. Uno visão de processos, Excel, Python e IA para reduzir tarefas manuais, organizar informações e apoiar decisões.</p>
+            <p className="reveal" style={{ transitionDelay: "200ms" }}>Mais de 20 anos de experiência profissional em áreas como atendimento, negócios, indústria e qualidade — hoje unidos a automação, Python e IA aplicada. Encontro a ineficiência, redesenho o fluxo e construo a solução que elimina o trabalho manual e acelera decisões. Cursando graduação em Inteligência Artificial, com conclusão em 2027.</p>
             <div className="home-meta reveal" style={{ transitionDelay: "270ms" }} aria-label="Informações profissionais">
               <span><HomeIcon name="pin" size={17}/>Piracaia — SP</span>
               <span><HomeIcon name="monitor" size={17}/>Disponível para trabalho 100% remoto</span>
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <div className="home-proof-bar reveal" style={{ transitionDelay: "450ms" }} aria-label="Destaques profissionais">
             <article><span className="home-proof-icon"><HomeIcon name="user" size={25}/></span><div><strong>20+ anos de experiência</strong><p>Atendimento, negócios, indústria e qualidade</p></div></article>
-            <article><span className="home-proof-icon"><HomeIcon name="chart" size={25}/></span><div><strong>Processos e dados</strong><p>Excel, Python, documentação e análise</p></div></article>
+            <article><span className="home-proof-icon"><HomeIcon name="chart" size={25}/></span><div><strong>Automação e dados</strong><p>Python, IA aplicada e análise para eliminar o manual</p></div></article>
             <article><span className="home-proof-icon"><HomeIcon name="monitor" size={25}/></span><div><strong>Pronto para o trabalho remoto</strong><p>Autonomia, organização e comunicação</p></div></article>
           </div>
         </div>

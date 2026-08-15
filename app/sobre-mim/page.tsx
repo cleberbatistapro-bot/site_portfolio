@@ -175,7 +175,7 @@ function TechSection() {
 
 function ObjectiveSection() {
   const contributions: [IconName,string,string][] = [
-    ["process","Processos administrativos","Estruturar rotinas, responsabilidades e fluxos para tornar a operação mais clara e eficiente."],
+    ["process","Processos e fluxos","Estruturar rotinas, responsabilidades e fluxos para tornar a operação mais clara e eficiente."],
     ["integrated","Operações e backoffice","Organizar informações, controles e atividades que sustentam o funcionamento do negócio."],
     ["robot","Automação e dados","Utilizar Python, Excel e Inteligência Artificial para reduzir tarefas repetitivas e transformar dados em informações úteis."],
   ];

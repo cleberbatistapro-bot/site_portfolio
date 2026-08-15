@@ -17,8 +17,8 @@ export default function HomeCompetencies() {
       <div className="home-competencies-grid" aria-label="Competências profissionais">
         <article className="competency-card competency-card-wide competency-process reveal">
           <span className="competency-icon"><CompetencyIcon name="process"/></span>
-          <h3>Processos administrativos</h3>
-          <p>Mapeamento, padronização e documentação para tornar rotinas mais claras e previsíveis.</p>
+          <h3>Processos e fluxos</h3>
+          <p>Mapeamento e redesenho de fluxos para eliminar retrabalho e destravar processos.</p>
           <div className="competency-tags"><span>Fluxos</span><span>Padrões</span><span>Documentação</span></div>
         </article>
 
@@ -47,7 +47,7 @@ export default function HomeCompetencies() {
       <div className="home-competencies-copy reveal">
         <span className="home-competencies-badge"><CompetencyIcon name="process"/>Competências aplicadas</span>
         <h2 id="home-competencies-title">Conhecimento técnico <br/>conectado à <em>realidade <br/>da operação.</em></h2>
-        <p>Mais do que dominar ferramentas, aplico métodos e tecnologia para organizar rotinas, estruturar informações e resolver problemas administrativos.</p>
+        <p>Mais do que dominar ferramentas, aplico método e tecnologia para destravar processos, automatizar rotinas e resolver problemas operacionais.</p>
         <strong><i aria-hidden="true"/>Tecnologia com propósito operacional.</strong>
       </div>
     </div>

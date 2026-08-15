@@ -61,7 +61,7 @@ export default function ContactPage() {
         <div className="contact-copy">
           <span className="contact-eyebrow">Contato profissional</span>
           <h1 id="contact-title">Tem uma oportunidade compatível com meu perfil?</h1>
-          <p>Estou disponível para vagas 100% remotas nas áreas administrativa, processos, operações e backoffice, em regime CLT ou PJ.</p>
+          <p>Estou disponível para vagas 100% remotas em processos, automação, operações e melhoria contínua, em regime CLT ou PJ.</p>
           <p>Tenho interesse em funções que envolvam organização de informações, qualidade, melhoria de rotinas, indicadores ou automação aplicada ao trabalho administrativo.</p>
 
           <div className="contact-guidance"><Icon name="info" size={25}/><p>Ao entrar em contato, informe o nome da empresa, a vaga e um breve contexto da oportunidade.</p></div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
         </section>
       </section>
 
-      <div className="contact-pillars" aria-label="Áreas de atuação"><span>Processos</span><i></i><span>Dados</span><i></i><span>Automação</span></div>
+      <div className="contact-pillars" aria-label="Áreas de atuação"><span>Processos</span><i></i><span>Automação</span><i></i><span>IA Aplicada</span></div>
     </main>
 
   </div>;

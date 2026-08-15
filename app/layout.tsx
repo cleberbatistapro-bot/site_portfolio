@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   ...buildMetadata({
-    title: "Cleber Batista | Analista Administrativo e de Processos",
-    description: "Portfólio profissional de Cleber Batista: experiência administrativa, processos, dados, automação e tecnologia aplicada para operações mais eficientes.",
+    title: "Cleber Batista | Analista de Processos, Automação e IA Aplicada",
+    description: "Identifico ineficiências, redesenho processos e construo automações com Python e IA aplicada. Mais de 20 anos de carreira em diferentes áreas, hoje voltados a resolver problemas e acelerar decisões.",
     path: "/",
   }),
   robots: { index: true, follow: true },
@@ -21,7 +21,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Cleber Batista",
-  jobTitle: "Analista Administrativo e de Processos",
+  jobTitle: "Analista de Processos, Automação e IA Aplicada",
   url: siteUrl,
   address: { "@type": "PostalAddress", addressLocality: "Piracaia", addressRegion: "SP", addressCountry: "BR" },
   sameAs: ["https://www.linkedin.com/in/cleber-silva-batista/"],

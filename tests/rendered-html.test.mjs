@@ -31,7 +31,7 @@ test("renders development preview metadata", async () => {
   );
   const html = await response.text();
   assert.match(html, developmentPreviewMeta);
-  assert.match(html, /Soluções criadas/i);
+  assert.match(html, /Soluções que destravam/i);
   assert.match(html, /organizar/i);
   assert.match(html, /processos/i);
   assert.match(html, /Ver projeto detalhado/i);
@@ -44,7 +44,7 @@ test("renders development preview metadata", async () => {
   assert.match(html, /Testar e documentar/i);
   assert.match(html, /Vamos conversar sobre uma/i);
   assert.match(html, /contato@cleberbatistapro\.com\.br/i);
-  assert.match(html, /Processos, dados e tecnologia aplicados/i);
+  assert.match(html, /Processos, automação e IA aplicados/i);
   assert.doesNotMatch(html, /CNPJ/i);
 });
 

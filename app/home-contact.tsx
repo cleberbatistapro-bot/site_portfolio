@@ -24,7 +24,7 @@ export default function HomeContact() {
       <div className="home-contact-copy reveal">
         <span className="home-contact-eyebrow">Contato profissional</span>
         <h2 id="home-contact-title">Vamos conversar sobre uma <em>oportunidade?</em></h2>
-        <p>Estou disponível para vagas 100% remotas nas áreas administrativa, processos, operações e backoffice, em regime CLT ou PJ.</p>
+        <p>Estou disponível para vagas 100% remotas em processos, automação, operações e melhoria contínua, em regime CLT ou PJ.</p>
         <div className="home-contact-status"><i aria-hidden="true"/><span>Disponível para trabalho remoto</span><b>CLT ou PJ</b></div>
       </div>
 
@@ -40,6 +40,6 @@ export default function HomeContact() {
         <p className="home-contact-note">Ao entrar em contato, informe o nome da empresa, a vaga e um breve contexto da oportunidade.</p>
       </div>
     </div>
-    <div className="home-contact-signature"><span>Processos</span><i/><span>Dados</span><i/><span>Automação</span></div>
+    <div className="home-contact-signature"><span>Processos</span><i/><span>Automação</span><i/><span>IA Aplicada</span></div>
   </section>;
 }

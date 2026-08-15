@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteUrl = "https://cleberbatistapro.com.br";
 export const siteName = "Cleber Batista";
-export const defaultOgImage = { url: "/cleber-hero.webp", width: 2048, height: 1143, alt: "Cleber Batista, Analista Administrativo e de Processos" };
+export const defaultOgImage = { url: "/cleber-hero.webp", width: 2048, height: 1143, alt: "Cleber Batista — Processos, Automação e IA Aplicada" };
 
 /** Builds a consistent Metadata object (title, description, canonical, Open Graph, Twitter Card) for a route. */
 export function buildMetadata({ title, description, path }: { title: string; description: string; path: string }): Metadata {

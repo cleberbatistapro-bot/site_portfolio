@@ -21,7 +21,7 @@ export default function SiteFooter() {
     <div className="site-footer-main">
       <div className="site-footer-brand">
         <a href="/#inicio" className="site-footer-logo">CLEBER BATISTA</a>
-        <p>Processos, dados e tecnologia aplicados à realidade da operação.</p>
+        <p>Processos, automação e IA aplicados a resolver problemas reais.</p>
         <ul className="site-footer-meta">
           <li>Piracaia — SP</li>
           <li>Trabalho remoto</li>
