@@ -74,14 +74,14 @@ function ProfileSection() {
       <aside className="profile-side">
         <div className="portrait" aria-label="Foto profissional de Cleber Batista"><img src="/cleber-perfil.png" alt="Cleber Batista"/></div>
         <div className="facts">
-          <div className="fact"><span><Icon name="briefcase"/></span><p><strong>Atuação</strong>Administrativo · Processos · Automação</p></div>
+          <div className="fact"><span><Icon name="briefcase"/></span><p><strong>Atuação</strong>Processos · Automação · Soluções Operacionais · IA Aplicada</p></div>
           <div className="fact"><span><Icon name="monitor"/></span><p><strong>Modelo de trabalho</strong>Remoto</p></div>
           <div className="fact"><span><Icon name="clock"/></span><p><strong>Experiência profissional</strong>20+ anos</p></div>
           <div className="fact"><span><Icon name="pin"/></span><p><strong>Localização</strong>Piracaia — SP, Brasil</p></div>
         </div>
       </aside>
       <div className="profile-copy">
-        <h3>Transformo processos administrativos em operações mais eficientes com <em>dados, automação e organização.</em></h3>
+        <h3>Transformo processos manuais em soluções <em>automatizadas e inteligentes.</em></h3>
         <p>Sou um profissional com mais de 20 anos de experiência no mercado de trabalho, com uma trajetória construída em diferentes áreas, incluindo operações administrativas, qualidade, empreendedorismo, desenvolvimento de soluções digitais e automação de processos.</p>
         <p>Essa diversidade me deu uma visão ampla de negócio e, principalmente, a capacidade de identificar problemas operacionais, organizar processos e transformar atividades manuais e repetitivas em fluxos mais simples, estruturados e eficientes.</p>
         <p>Hoje, uno minha experiência administrativa ao uso de dados, Python, automação e Inteligência Artificial para reduzir tarefas repetitivas, melhorar a organização das informações e apoiar decisões com mais clareza.</p>
@@ -177,7 +177,7 @@ function ObjectiveSection() {
   const contributions: [IconName,string,string][] = [
     ["process","Processos e fluxos","Estruturar rotinas, responsabilidades e fluxos para tornar a operação mais clara e eficiente."],
     ["integrated","Operações e backoffice","Organizar informações, controles e atividades que sustentam o funcionamento do negócio."],
-    ["robot","Automação e dados","Utilizar Python, Excel e Inteligência Artificial para reduzir tarefas repetitivas e transformar dados em informações úteis."],
+    ["robot","Automação e dados","Utilizar Python e Inteligência Artificial para eliminar tarefas repetitivas e acelerar decisões."],
   ];
   const environment: [IconName,string,string][] = [
     ["shield","Organização","Processos bem definidos e informações confiáveis para decisões melhores."],
@@ -187,7 +187,7 @@ function ObjectiveSection() {
     ["monitor","Tecnologia","Ambiente que valoriza o uso prático da tecnologia para melhorar processos e apoiar resultados."],
   ];
   return <>
-    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco contribuir em operações administrativas mais <em>organizadas, eficientes e orientadas por dados.</em></h3><p className="lead">Meu objetivo é atuar em uma posição remota nas áreas Administrativa, Processos, Operações ou Backoffice, aplicando minha experiência profissional e o uso prático de tecnologia para melhorar a execução das rotinas e a qualidade das informações.</p>
+    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco resolver problemas de processo com <em>automação e IA aplicada.</em></h3><p className="lead">Meu objetivo é atuar em uma posição remota em processos, automação, operações ou melhoria contínua, aplicando tecnologia para eliminar trabalho manual e apoiar decisões.</p>
     <div className="subsection"><h3 className="section-title">Onde posso contribuir</h3><div className="card-grid three contribution-grid">{contributions.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <div className="subsection"><h3 className="section-title">O ambiente em que quero atuar</h3><div className="environment-list">{environment.map(([icon,title,copy]) => <article key={title}><Icon name={icon}/><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <QuoteBar>Quero usar experiência, visão de processos e tecnologia para tornar o trabalho administrativo mais simples, confiável e eficiente.</QuoteBar>
