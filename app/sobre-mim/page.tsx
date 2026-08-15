@@ -162,7 +162,7 @@ function TechSection() {
   const tools = [
     { icon: "python" as IconName, title: "Python", subtitle: "Automação, integração e análise de dados.", items: ["Automação de rotinas repetitivas", "Manipulação e tratamento de dados", "Geração de relatórios e arquivos", "Integração de sistemas e APIs"] },
     { icon: "excel" as IconName, title: "Excel Avançado", subtitle: "Análise, organização e modelagem de dados.", items: ["Fórmulas avançadas e matrizes", "Tabelas dinâmicas e dashboards", "Modelos e controles inteligentes", "Validações e análises robustas"] },
-    { icon: "ai" as IconName, title: "Inteligência Artificial", subtitle: "Apoio à decisão e ganho de eficiência.", items: ["Análise de dados com IA", "Geração de textos e resumos", "Classificação e extração de informações", "IA aplicada a processos administrativos"] },
+    { icon: "ai" as IconName, title: "Inteligência Artificial", subtitle: "Apoio à decisão e ganho de eficiência.", items: ["Análise de dados com IA", "Geração de textos e resumos", "Classificação e extração de informações", "IA aplicada à automação de processos"] },
   ];
   const value = [["gear","Automatizo tarefas repetitivas","Elimino processos manuais e atividades operacionais de baixo valor."],["database","Organizo e transformo dados em informação","Estruturo dados de diferentes fontes para gerar clareza e apoio à decisão."],["target","Gero indicadores que importam","Crio dashboards e relatórios que mostram o que realmente precisa ser acompanhado."]] as [IconName,string,string][];
   return <>
