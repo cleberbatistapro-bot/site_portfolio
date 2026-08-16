@@ -1,3 +1,4 @@
+import HomePrumoFeature from "./home-prumo-feature";
 import HomeProjects from "./home-projects";
 import HomeCompetencies from "./home-competencies";
 import HomeWorkflow from "./home-workflow";
@@ -57,6 +58,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <HomePrumoFeature/>
       <HomeProjects/>
       <HomeCompetencies/>
       <HomeWorkflow/>

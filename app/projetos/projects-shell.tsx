@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export type ProjectSlug = "organizador-de-arquivos" | "procfacil" | "sistema-inspecao-digital" | "controle-calibracao" | "dashboard-operacional";
-type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file";
+export type ProjectSlug = "prumo" | "organizador-de-arquivos" | "procfacil" | "sistema-inspecao-digital" | "controle-calibracao" | "dashboard-operacional";
+type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file" | "layers" | "link" | "lock";
 
 export const projects: { slug: ProjectSlug; label: string; icon: IconName; summary: string }[] = [
+  { slug: "prumo", label: "Prumo", icon: "layers", summary: "Sistema web em produção para gestão de equipe remota: linha de produção com gargalo em tempo real, desempenho individual e uma arquitetura de plataformas-irmãs separadas." },
   { slug: "organizador-de-arquivos", label: "Organizador de Arquivos", icon: "folder", summary: "Aplicação desktop desenvolvida em Python para organizar arquivos administrativos por categoria, com opções de simulação e backup antes da execução." },
   { slug: "procfacil", label: "ProcFácil", icon: "document", summary: "Aplicação desktop em Python para cruzar informações de diferentes planilhas, identificar correspondências e gerar uma base consolidada pronta para conferência." },
   { slug: "sistema-inspecao-digital", label: "Sistema de Inspeção Digital", icon: "clipboard", summary: "Solução projetada para apoiar a inspeção final de chicotes elétricos automotivos, transformando uma rotina de qualidade em um fluxo digital guiado, padronizado e rastreável." },
@@ -32,6 +33,9 @@ const paths: Record<IconName, React.ReactNode> = {
   report: <><path d="M6 3h12v18H6Z"/><path d="M9 8h6M9 12h6M9 16h4"/></>,
   check: <><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></>,
   file: <path d="M6 3h8l4 4v14H6ZM14 3v5h5"/>,
+  layers: <><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></>,
+  link: <><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><path d="M8 12h8"/></>,
+  lock: <><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></>,
 };
 
 function Icon({ name, size = 21 }: { name: IconName; size?: number }) {
@@ -69,6 +73,76 @@ function AccordionSection({ number, title, defaultOpen, sectionClassName, childr
       <div className={sectionClassName ? `accordion-panel-inner ${sectionClassName}` : "accordion-panel-inner"}>{children}</div>
     </div>
   </section>;
+}
+
+function LiveDemoBox() {
+  return <a className="project-live-demo" href="https://prumo.cleberbatistapro.com.br" target="_blank" rel="noreferrer">
+    <span className="project-live-dot" aria-hidden="true" />
+    <div>
+      <strong>No ar agora — não é maquete</strong>
+      <p>prumo.cleberbatistapro.com.br · login demo com 3 cargos, senha única <code>Prumo@123</code></p>
+    </div>
+    <Icon name="link" size={17} />
+  </a>;
+}
+
+function PrumoCaseStudy() {
+  const technologies = ["Cloudflare Pages", "Cloudflare Functions", "Cloudflare D1 (SQLite)", "TypeScript", "PBKDF2 / Web Crypto", "SQL puro, sem ORM", "HTML/CSS/JS sem framework"];
+  const skills = ["Arquitetura de sistemas", "Segurança e RBAC", "Modelagem de banco de dados", "Design de produto", "Gestão de pessoas remotas", "Documentação técnica", "Deploy e infraestrutura"];
+  const before = ["Ferramentas genéricas de tarefa", "Métricas que viram ranking", "Nenhuma trilha de auditoria", "Um sistema, um ponto único de falha"];
+  const after = [["Linha de produção", "Gargalo identificado sozinho"], ["Desempenho individual", "Comparado só com a própria média"], ["Auditoria", "Todo acesso registrado, imutável"], ["Plataformas-irmãs", "Uma cai, a outra continua no ar"]];
+
+  return <>
+    <header className="project-intro">
+      <span className="project-eyebrow">Arquitetura de sistemas e gestão remota</span>
+      <h2>Prumo</h2>
+      <p>Sistema operacional de uma equipe remota orientada a resultado: torna o trabalho visível pelo processo — não pela vigilância. Autenticação real, controle de acesso por cargo checado no servidor, auditoria imutável e duas plataformas-irmãs que se falam só por contrato de API.</p>
+      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="layers" size={17}/>Arquitetura multi-serviço</span><span><Icon name="desktop" size={17}/>Aplicação web em produção</span></div>
+    </header>
+
+    <LiveDemoBox />
+
+    <div className="project-summary-grid">
+      <SummaryCard icon="warning" title="Problema">Ferramentas de gestão remota tratam controle de processo e vigilância de pessoas como a mesma coisa — e toda métrica individual vira ranking, não assistência.</SummaryCard>
+      <SummaryCard icon="gear" title="Solução">Um sistema com tese própria: controle total sobre prazo e fluxo, liberdade total sobre como e quando a pessoa entrega — com cada indicador comparado só com o histórico dela mesma.</SummaryCard>
+      <SummaryCard icon="chart" title="Resultado">Dois serviços de verdade em produção, com banco próprio cada um, autenticação real e uma arquitetura testada derrubando uma das partes de propósito para provar o isolamento de falhas.</SummaryCard>
+    </div>
+
+    <AccordionSection number="01" title="O desafio" defaultOpen sectionClassName="project-challenge">
+      <div><p>A maioria das ferramentas de gestão de equipe remota resolve o mesmo problema do mesmo jeito: um quadro de tarefas, um relatório de produtividade, e pronto. O efeito colateral raramente é discutido — quando toda métrica vira comparação entre colegas, a ferramenta deixa de medir processo e passa a vigiar pessoa.</p><p>O ponto de partida do Prumo foi outro: como usar a mesma rastreabilidade de um processo de controle de qualidade industrial — onde eu atuei por anos — na rotina de uma equipe remota, sem transformar isso em vigilância.</p></div>
+      <aside className="project-scenario"><h4>Cenário de partida</h4><div><Icon name="eye"/><p><strong>Vigilância disfarçada de gestão</strong>Ferramentas que rastreiam a pessoa, não o processo.</p></div><div><Icon name="target"/><p><strong>Métrica vira ranking</strong>Comparação entre colegas em vez de com a própria evolução.</p></div><div><Icon name="warning"/><p><strong>Um sistema, uma falha</strong>Um bug numa função qualquer derruba a operação inteira.</p></div></aside>
+    </AccordionSection>
+
+    <AccordionSection number="02" title="A arquitetura projetada" sectionClassName="project-solution">
+      <div className="project-section-copy"><p>Desenhei o Prumo como duas plataformas-irmãs de verdade — Fluxo (o trabalho visível) e Agenda (a primeira ferramenta plugada) — cada uma com banco de dados próprio e deploy próprio, conversando só por um contrato de API protegido por chave compartilhada. Nenhuma conhece as tripas da outra; se uma cai, a outra continua respondendo.</p></div>
+      <div className="project-feature-grid"><FeatureCard icon="layers" title="Plataformas separadas">Banco e deploy próprios por serviço — isolamento de falhas de verdade, não só no papel.</FeatureCard><FeatureCard icon="lock" title="RBAC no servidor">Cada permissão checada dentro da própria função de backend, nunca só escondida atrás de um botão.</FeatureCard><FeatureCard icon="shield" title="Auditoria imutável">Todo login, acesso negado e ação sensível grava uma linha que nunca é editada nem apagada.</FeatureCard><FeatureCard icon="link" title="Contrato de API">A única porta entre as plataformas — testada derrubando uma das duas de propósito.</FeatureCard></div>
+    </AccordionSection>
+
+    <AccordionSection number="03" title="Como funciona">
+      <div className="project-section-copy"><p>A jornada foi desenhada para se contar sozinha, sem precisar de manual: quem entra entende a tese antes de logar, e vê o RBAC funcionando na prática ao trocar de cargo.</p></div>
+      <ol className="project-process"><li><span>01</span><h4>Entrar</h4><p>Login real com hash de senha (PBKDF2) e sessão por cookie seguro.</p></li><li><span>02</span><h4>Ver o gargalo</h4><p>A linha de produção destaca sozinha onde o trabalho está empacado.</p></li><li><span>03</span><h4>Assistir, não cobrar</h4><p>A corrente da tarefa mostra quem está com ela e sugere apoio, não punição.</p></li><li><span>04</span><h4>Medir com justiça</h4><p>Desempenho individual comparado só com a própria média da pessoa.</p></li></ol>
+    </AccordionSection>
+
+    <AccordionSection number="04" title="Segurança antes de qualquer coisa">
+      <div className="project-security"><Icon name="shield" size={34}/><div><p>Nada no Prumo assume que a tela é suficiente. Toda regra de permissão é verificada de novo no servidor, mesmo que a interface já esconda o botão — testei isso na prática chamando a API diretamente como um cargo sem permissão, e o servidor bloqueou corretamente.</p><div className="project-checks"><span><Icon name="check" size={18}/>Hash de senha com salt único por pessoa</span><span><Icon name="check" size={18}/>Sessão em cookie HttpOnly, nunca acessível por script</span><span><Icon name="check" size={18}/>Toda tentativa negada vira linha de auditoria</span></div></div></div>
+    </AccordionSection>
+
+    <AccordionSection number="05" title="Resultado em produção">
+      <div className="project-section-copy"><p>Números reais do estado atual do sistema, não estimativa.</p></div>
+      <div className="project-metrics"><article><strong>2</strong><span>plataformas em produção</span><p>Fluxo e Agenda, cada uma com banco e deploy próprios.</p></article><article><strong>7</strong><span>blocos de arquitetura fechados</span><p>Autenticação, RBAC, auditoria, desempenho, landing, integração e acabamento.</p></article><article><strong>0</strong><span>dados sensíveis reais</span><p>Ambiente de demonstração, cargos e senha únicos para avaliação.</p></article></div>
+    </AccordionSection>
+
+    <AccordionSection number="06" title="Antes e depois">
+      <div className="project-comparison"><article className="before"><header><div><strong>Ferramenta genérica</strong><p>O padrão do mercado de gestão remota.</p></div><Icon name="warning"/></header><ul>{before.map(item => <li key={item}><Icon name="file" size={16}/><span>{item}</span></li>)}</ul></article><article className="after"><header><div><strong>Prumo</strong><p>Controle pelo processo, não pela pessoa.</p></div><Icon name="check"/></header><ul>{after.map(([feature, detail]) => <li key={feature}><Icon name="layers" size={16}/><span>{feature}</span><small>{detail}</small></li>)}</ul></article></div>
+    </AccordionSection>
+
+    <AccordionSection number="07" title="Tecnologias e competências">
+      <div className="project-section-copy"><p>O projeto exigiu decidir, não só implementar: cada escolha de stack teve um porquê documentado, incluindo os limites técnicos aceitos conscientemente.</p></div>
+      <div className="project-skills-grid"><article><h4>Tecnologias utilizadas</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
+    </AccordionSection>
+
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Arquitetura, segurança e visão de gestão, na mesma peça.</h3><p>O Prumo demonstra minha capacidade de sair do problema operacional (gestão remota sem virar vigilância) até a decisão técnica mais fina (por que RBAC é checado no servidor, por que dois bancos separados) — sem perder de vista que o sistema existe para servir gente, não para controlar gente. É a combinação entre visão de processos, segurança e arquitetura que pretendo levar para uma equipe, em uma oportunidade CLT ou PJ.</p></div></section>
+  </>;
 }
 
 function OrganizerCaseStudy() {
@@ -397,6 +471,7 @@ function DashboardCaseStudy() {
 }
 
 const caseStudies: Record<ProjectSlug, () => React.ReactNode> = {
+  "prumo": PrumoCaseStudy,
   "organizador-de-arquivos": OrganizerCaseStudy,
   "procfacil": ProcFacilCaseStudy,
   "sistema-inspecao-digital": InspectionCaseStudy,
