@@ -51,7 +51,7 @@ export default function HomePrumoFeature() {
         <div className="home-prumo-copy-top">
           <span className="home-prumo-badge"><span className="home-prumo-dot" aria-hidden="true" />Projeto em destaque · no ar agora</span>
           <h2 id="home-prumo-title">Prumo: o trabalho remoto <em>visível pelo processo</em> — não pela vigilância.</h2>
-          <p>Um sistema completo, em produção, que arquitetei do zero: linha de produção com gargalo em tempo real, desempenho individual sem ranking entre colegas, e uma arquitetura de plataformas-irmãs isoladas — não é mockup, é código rodando de verdade.</p>
+          <p>Sistema em produção que arquitetei do zero: gargalo em tempo real, desempenho sem ranking entre colegas e plataformas-irmãs isoladas — não é mockup, é código rodando de verdade.</p>
         </div>
         <div className="home-prumo-actions">
           <a className="home-primary-action" href="https://prumo.cleberbatistapro.com.br" target="_blank" rel="noreferrer">Ver a demonstração ao vivo <span aria-hidden="true">→</span></a>
