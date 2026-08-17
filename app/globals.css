@@ -73,13 +73,13 @@ button { font:inherit; }
 .home-prumo-section { position:relative; z-index:1; padding:78px 0; background:transparent; }
 .home-prumo-shell { position:relative; z-index:1; width:min(1280px,calc(100% - 64px)); margin:0 auto; display:grid; grid-template-columns:minmax(0,460px) minmax(0,1fr); gap:56px; align-items:center; }
 .home-prumo-copy { display:block; }
-.home-prumo-badge { width:max-content; min-height:32px; display:inline-flex; align-items:center; gap:9px; margin-bottom:28px; padding:0 14px; border:1px solid rgba(127,224,201,.3); border-radius:999px; color:#8fe9d6; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; background:rgba(127,224,201,.07); }
+.home-prumo-badge { width:max-content; min-height:32px; display:inline-flex; align-items:center; gap:9px; margin-bottom:34px; padding:0 14px; border:1px solid rgba(127,224,201,.3); border-radius:999px; color:#8fe9d6; font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; background:rgba(127,224,201,.07); }
 .home-prumo-dot { width:7px; height:7px; border-radius:50%; background:#3ee6b8; box-shadow:0 0 0 0 rgba(62,230,184,.55); animation:live-pulse 2s ease-out infinite; }
 @media (prefers-reduced-motion:reduce){ .home-prumo-dot{ animation:none } }
 .home-prumo-copy h2 { margin:0; color:#f5f7f6; font-size:clamp(34px,2.8vw,43px); line-height:1.23; font-weight:430; letter-spacing:-.04em; }
 .home-prumo-copy h2 em { color:#7fe0c9; font-style:normal; }
-.home-prumo-copy>p { margin:38px 0 0; max-width:430px; color:#aab4b6; font-size:14px; line-height:1.72; }
-.home-prumo-actions { display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:44px; }
+.home-prumo-copy>p { margin:54px 0 0; max-width:430px; color:#aab4b6; font-size:14px; line-height:1.72; }
+.home-prumo-actions { display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:54px; }
 .home-prumo-slides { position:relative; overflow:hidden; border:1px solid transparent; border-radius:16px; background:linear-gradient(145deg,rgba(22,24,26,.94),rgba(11,12,14,.96)) padding-box,conic-gradient(from var(--cta-angle),rgba(255,255,255,.08),rgba(32,199,183,.42) 30%,rgba(56,189,248,.36) 60%,rgba(255,255,255,.08)) border-box; box-shadow:0 30px 70px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05); animation:home-cta-border 10s linear infinite; }
 .home-prumo-slides-chrome { display:flex; gap:6px; padding:11px 14px; background:rgba(255,255,255,.03); border-bottom:1px solid rgba(255,255,255,.08); }
 .home-prumo-slides-chrome span { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.14); }
