@@ -23,7 +23,9 @@ function HomeIcon({ name, size = 22 }: { name: HomeIconName; size?: number }) {
 }
 
 export default function Home() {
-  return <div className="about-page" id="inicio">
+  return <div className="about-page home-bg-fx" id="inicio">
+    <div className="home-bg-glow" aria-hidden="true"/>
+    <div className="home-bg-grid" aria-hidden="true"><div className="home-bg-grid-cols"><div/><div/><div/><div/></div></div>
     <ScrollReveal/>
     <HomeNavbar/>
     <main>

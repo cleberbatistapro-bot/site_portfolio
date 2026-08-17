@@ -1,23 +1,48 @@
-type FeatIconName = "layers" | "lock" | "shield" | "chart" | "link";
+"use client";
 
-const featIconPaths: Record<FeatIconName, React.ReactNode> = {
-  layers: <><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></>,
-  lock: <><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></>,
-  shield: <><path d="M12 3 4 6v5c0 5 3.4 8.2 8 10 4.6-1.8 8-5 8-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></>,
-  chart: <><path d="M4 20V10M10 20V5M16 20v-8M22 20V2"/></>,
-  link: <><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><path d="M8 12h8"/></>,
-};
+import { useEffect, useState } from "react";
 
-function FeatIcon({ name, size = 18 }: { name: FeatIconName; size?: number }) {
-  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{featIconPaths[name]}</svg>;
-}
-
-const highlights: { icon: FeatIconName; title: string; text: string }[] = [
-  { icon: "layers", title: "Duas plataformas de verdade", text: "Fluxo e Agenda — banco e deploy próprios, conversando só por contrato de API." },
-  { icon: "lock", title: "RBAC checado no servidor", text: "Cada permissão verificada de novo no backend, nunca só escondida atrás de um botão." },
-  { icon: "shield", title: "Auditoria imutável", text: "Todo acesso, permitido ou negado, vira um registro que nunca é apagado." },
-  { icon: "chart", title: "Régua da própria média", text: "Desempenho individual comparado só com o histórico da pessoa — nunca ranking." },
+const slides: { src: string; alt: string }[] = [
+  { src: "/project-media/prumo-trilha-producao.png", alt: "Trilha de Produção do Prumo, com o gargalo destacado em vermelho na etapa Revisão" },
+  { src: "/project-media/prumo-login.png", alt: "Tela de login do Prumo, com autenticação real" },
+  { src: "/project-media/prumo-modal-tarefa.png", alt: "Modal da corrente da tarefa, mostrando quem está com ela agora" },
+  { src: "/project-media/prumo-desempenho.png", alt: "Desempenho Individual do Prumo, indicadores comparados só com a própria média" },
+  { src: "/project-media/prumo-desempenho-graficos.png", alt: "Gráficos de desempenho individual ao longo de 6 meses" },
 ];
+
+function HomePrumoSlides() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = setInterval(() => setIndex(i => (i + 1) % slides.length), 6500);
+    return () => clearInterval(id);
+  }, []);
+
+  return <div className="home-prumo-slides" role="group" aria-label="Capturas de tela do Prumo em produção">
+    <div className="home-prumo-slides-chrome" aria-hidden="true"><span/><span/><span/></div>
+    <div className="home-prumo-slides-stage">
+      {slides.map((slide, i) => <img
+        key={slide.src}
+        src={slide.src}
+        alt={i === index ? slide.alt : ""}
+        aria-hidden={i === index ? undefined : true}
+        className={i === index ? "is-active" : ""}
+        loading={i === 0 ? "eager" : "lazy"}
+      />)}
+    </div>
+    <div className="home-prumo-slides-dots">
+      {slides.map((slide, i) => <button
+        key={slide.src}
+        type="button"
+        className={i === index ? "is-active" : ""}
+        aria-label={`Ver captura ${i + 1} de ${slides.length}`}
+        aria-current={i === index}
+        onClick={() => setIndex(i)}
+      />)}
+    </div>
+  </div>;
+}
 
 export default function HomePrumoFeature() {
   return <section className="home-prumo-section reveal" aria-labelledby="home-prumo-title">
@@ -31,12 +56,7 @@ export default function HomePrumoFeature() {
           <a className="home-text-link" href="/projetos/prumo/">Ler o estudo de caso completo <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div className="home-prumo-grid">
-        {highlights.map(item => <article key={item.title} className="home-prumo-card">
-          <span className="home-prumo-card-icon"><FeatIcon name={item.icon} /></span>
-          <div><h3>{item.title}</h3><p>{item.text}</p></div>
-        </article>)}
-      </div>
+      <HomePrumoSlides/>
     </div>
   </section>;
 }
