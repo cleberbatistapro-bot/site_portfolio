@@ -46,6 +46,14 @@ function ProjectVideo({ src, label }: { src: string; label: string }) {
   return <video className="project-video" src={src} controls autoPlay muted playsInline preload="metadata" aria-label={label} />;
 }
 
+function ProjectScreenshot({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
+  return <figure className="project-screenshot">
+    <div className="project-screenshot-chrome" aria-hidden="true"><span/><span/><span/></div>
+    <img src={src} alt={alt} loading="lazy" />
+    {caption && <figcaption>{caption}</figcaption>}
+  </figure>;
+}
+
 function ProjectImageCompare({ before, after }: { before: { src: string; alt: string }; after: { src: string; alt: string } }) {
   return <div className="project-image-compare">
     <figure><img src={before.src} alt={before.alt} loading="lazy" /><figcaption><Icon name="warning" size={15}/>Antes</figcaption></figure>
@@ -102,6 +110,12 @@ function PrumoCaseStudy() {
 
     <LiveDemoBox />
 
+    <ProjectScreenshot
+      src="/project-media/prumo-trilha-producao.png"
+      alt="Tela da Trilha de Produção do Prumo: quadro com as etapas Fila, Execução, Revisão e Entregue, gargalo destacado em vermelho na etapa Revisão com 5 tarefas paradas"
+      caption="A Trilha de Produção, em produção — o gargalo aparece sozinho, sem precisar perguntar a ninguém."
+    />
+
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Ferramentas de gestão remota tratam controle de processo e vigilância de pessoas como a mesma coisa — e toda métrica individual vira ranking, não assistência.</SummaryCard>
       <SummaryCard icon="gear" title="Solução">Um sistema com tese própria: controle total sobre prazo e fluxo, liberdade total sobre como e quando a pessoa entrega — com cada indicador comparado só com o histórico dela mesma.</SummaryCard>
@@ -120,7 +134,12 @@ function PrumoCaseStudy() {
 
     <AccordionSection number="03" title="Como funciona">
       <div className="project-section-copy"><p>A jornada foi desenhada para se contar sozinha, sem precisar de manual: quem entra entende a tese antes de logar, e vê o RBAC funcionando na prática ao trocar de cargo.</p></div>
-      <ol className="project-process"><li><span>01</span><h4>Entrar</h4><p>Login real com hash de senha (PBKDF2) e sessão por cookie seguro.</p></li><li><span>02</span><h4>Ver o gargalo</h4><p>A linha de produção destaca sozinha onde o trabalho está empacado.</p></li><li><span>03</span><h4>Assistir, não cobrar</h4><p>A corrente da tarefa mostra quem está com ela e sugere apoio, não punição.</p></li><li><span>04</span><h4>Medir com justiça</h4><p>Desempenho individual comparado só com a própria média da pessoa.</p></li></ol>
+      <ol className="project-process">
+        <li><span>01</span><img className="project-process-shot" src="/project-media/prumo-login.png" alt="Tela de login do Prumo" loading="lazy"/><h4>Entrar</h4><p>Login real com hash de senha (PBKDF2) e sessão por cookie seguro.</p></li>
+        <li><span>02</span><img className="project-process-shot" src="/project-media/prumo-trilha-producao.png" alt="Linha de produção com o gargalo destacado" loading="lazy"/><h4>Ver o gargalo</h4><p>A linha de produção destaca sozinha onde o trabalho está empacado.</p></li>
+        <li><span>03</span><img className="project-process-shot" src="/project-media/prumo-modal-tarefa.png" alt="Modal da corrente da tarefa, mostrando quem está com ela agora" loading="lazy"/><h4>Assistir, não cobrar</h4><p>A corrente da tarefa mostra quem está com ela e sugere apoio, não punição.</p></li>
+        <li><span>04</span><img className="project-process-shot" src="/project-media/prumo-desempenho-graficos.png" alt="Gráficos do Desempenho Individual comparando a pessoa só com a própria média" loading="lazy"/><h4>Medir com justiça</h4><p>Desempenho individual comparado só com a própria média da pessoa.</p></li>
+      </ol>
     </AccordionSection>
 
     <AccordionSection number="04" title="Segurança antes de qualquer coisa">

@@ -45,3 +45,4 @@ next-env.d.ts
 # fontes locais grava um caminho absoluto de sistema de arquivos no
 # @font-face em vez de uma URL relativa, então nunca deve ser versionado.
 /.vinext/
+tsconfig.tsbuildinfo
