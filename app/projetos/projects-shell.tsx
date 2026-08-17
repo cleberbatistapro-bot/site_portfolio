@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 export type ProjectSlug = "prumo" | "organizador-de-arquivos" | "procfacil" | "sistema-inspecao-digital" | "controle-calibracao" | "dashboard-operacional";
 type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file" | "layers" | "link" | "lock";
@@ -46,10 +47,39 @@ function ProjectVideo({ src, label }: { src: string; label: string }) {
   return <video className="project-video" src={src} controls autoPlay muted playsInline preload="metadata" aria-label={label} />;
 }
 
+function ZoomableImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = prevOverflow; };
+  }, [open]);
+
+  return <>
+    <button type="button" className="zoomable-image-trigger" onClick={() => setOpen(true)} aria-label={`Ampliar imagem: ${alt}`}>
+      <img src={src} alt={alt} loading="lazy" className={className} />
+      <span className="zoomable-image-hint" aria-hidden="true"><Icon name="search" size={15}/></span>
+    </button>
+    {open && createPortal(
+      <div className="lightbox-overlay" role="dialog" aria-modal="true" aria-label={alt} onClick={() => setOpen(false)}>
+        <button type="button" className="lightbox-close" onClick={() => setOpen(false)} aria-label="Fechar imagem ampliada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <img src={src} alt={alt} onClick={(e) => e.stopPropagation()} />
+      </div>,
+      document.body
+    )}
+  </>;
+}
+
 function ProjectScreenshot({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
   return <figure className="project-screenshot">
     <div className="project-screenshot-chrome" aria-hidden="true"><span/><span/><span/></div>
-    <img src={src} alt={alt} loading="lazy" />
+    <ZoomableImage src={src} alt={alt} />
     {caption && <figcaption>{caption}</figcaption>}
   </figure>;
 }
@@ -135,10 +165,10 @@ function PrumoCaseStudy() {
     <AccordionSection number="03" title="Como funciona">
       <div className="project-section-copy"><p>A jornada foi desenhada para se contar sozinha, sem precisar de manual: quem entra entende a tese antes de logar, e vê o RBAC funcionando na prática ao trocar de cargo.</p></div>
       <ol className="project-process">
-        <li><span>01</span><img className="project-process-shot" src="/project-media/prumo-login.png" alt="Tela de login do Prumo" loading="lazy"/><h4>Entrar</h4><p>Login real com hash de senha (PBKDF2) e sessão por cookie seguro.</p></li>
-        <li><span>02</span><img className="project-process-shot" src="/project-media/prumo-trilha-producao.png" alt="Linha de produção com o gargalo destacado" loading="lazy"/><h4>Ver o gargalo</h4><p>A linha de produção destaca sozinha onde o trabalho está empacado.</p></li>
-        <li><span>03</span><img className="project-process-shot" src="/project-media/prumo-modal-tarefa.png" alt="Modal da corrente da tarefa, mostrando quem está com ela agora" loading="lazy"/><h4>Assistir, não cobrar</h4><p>A corrente da tarefa mostra quem está com ela e sugere apoio, não punição.</p></li>
-        <li><span>04</span><img className="project-process-shot" src="/project-media/prumo-desempenho-graficos.png" alt="Gráficos do Desempenho Individual comparando a pessoa só com a própria média" loading="lazy"/><h4>Medir com justiça</h4><p>Desempenho individual comparado só com a própria média da pessoa.</p></li>
+        <li><span>01</span><ZoomableImage className="project-process-shot" src="/project-media/prumo-login.png" alt="Tela de login do Prumo"/><h4>Entrar</h4><p>Login real com hash de senha (PBKDF2) e sessão por cookie seguro.</p></li>
+        <li><span>02</span><ZoomableImage className="project-process-shot" src="/project-media/prumo-trilha-producao.png" alt="Linha de produção com o gargalo destacado"/><h4>Ver o gargalo</h4><p>A linha de produção destaca sozinha onde o trabalho está empacado.</p></li>
+        <li><span>03</span><ZoomableImage className="project-process-shot" src="/project-media/prumo-modal-tarefa.png" alt="Modal da corrente da tarefa, mostrando quem está com ela agora"/><h4>Assistir, não cobrar</h4><p>A corrente da tarefa mostra quem está com ela e sugere apoio, não punição.</p></li>
+        <li><span>04</span><ZoomableImage className="project-process-shot" src="/project-media/prumo-desempenho-graficos.png" alt="Gráficos do Desempenho Individual comparando a pessoa só com a própria média"/><h4>Medir com justiça</h4><p>Desempenho individual comparado só com a própria média da pessoa.</p></li>
       </ol>
     </AccordionSection>
 
