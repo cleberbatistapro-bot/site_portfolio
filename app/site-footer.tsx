@@ -57,6 +57,7 @@ export default function SiteFooter() {
 
     <div className="site-footer-bottom">
       <p>© 2026 Cleber Batista. Todos os direitos reservados.</p>
+      <a href="/privacidade/">Política de Privacidade</a>
     </div>
   </footer>;
 }
