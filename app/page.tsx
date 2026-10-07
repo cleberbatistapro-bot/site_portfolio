@@ -36,11 +36,11 @@ export default function Home() {
           <div className="home-hero-copy">
             <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Processos · Automação · Soluções Operacionais · IA Aplicada</span>
             <h1 id="home-hero-title" className="reveal" style={{ transitionDelay: "130ms" }}>
-              <span className="home-title-line">Transformo processos manuais </span>
-              <span className="home-title-line">em soluções <em>automatizadas </em></span>
+              <span className="home-title-line">Transformo processos administrativos </span>
+              <span className="home-title-line">manuais em soluções <em>automatizadas </em></span>
               <span className="home-title-line"><em>e inteligentes.</em></span>
             </h1>
-            <p className="reveal" style={{ transitionDelay: "200ms" }}>Encontro a ineficiência, redesenho o fluxo e construo a solução que elimina o trabalho manual e acelera decisões</p>
+            <p className="reveal" style={{ transitionDelay: "200ms" }}>Encontro a ineficiência, redesenho o fluxo e construo a solução que elimina o trabalho manual e repetitivo e acelera decisões</p>
             <div className="home-meta reveal" style={{ transitionDelay: "270ms" }} aria-label="Informações profissionais">
               <span><HomeIcon name="pin" size={17}/>Piracaia — SP</span>
               <span><HomeIcon name="monitor" size={17}/>Disponível para trabalho 100% remoto</span>
