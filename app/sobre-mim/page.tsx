@@ -74,17 +74,17 @@ function ProfileSection() {
       <aside className="profile-side">
         <div className="portrait" aria-label="Foto profissional de Cleber Batista"><img src="/cleber-perfil.png" alt="Cleber Batista"/></div>
         <div className="facts">
-          <div className="fact"><span><Icon name="briefcase"/></span><p><strong>Atuação</strong>Processos · Automação · Soluções Operacionais · IA Aplicada</p></div>
+          <div className="fact"><span><Icon name="briefcase"/></span><p><strong>Atuação</strong>Automação de Processos Administrativos · IA Aplicada</p></div>
           <div className="fact"><span><Icon name="monitor"/></span><p><strong>Modelo de trabalho</strong>Remoto</p></div>
           <div className="fact"><span><Icon name="clock"/></span><p><strong>Experiência profissional</strong>20+ anos</p></div>
           <div className="fact"><span><Icon name="pin"/></span><p><strong>Localização</strong>Piracaia — SP, Brasil</p></div>
         </div>
       </aside>
       <div className="profile-copy">
-        <h3>Transformo processos manuais em soluções <em>automatizadas e inteligentes.</em></h3>
-        <p>Sou um profissional com mais de 20 anos de experiência no mercado de trabalho, com uma trajetória construída em diferentes áreas, incluindo operações administrativas, qualidade, empreendedorismo, desenvolvimento de soluções digitais e automação de processos.</p>
-        <p>Essa diversidade me deu uma visão ampla de negócio e, principalmente, a capacidade de identificar problemas operacionais, organizar processos e transformar atividades manuais e repetitivas em fluxos mais simples, estruturados e eficientes.</p>
-        <p>Hoje, uno minha experiência administrativa ao uso de dados, Python, automação e Inteligência Artificial para reduzir tarefas repetitivas, melhorar a organização das informações e apoiar decisões com mais clareza.</p>
+        <h3>Transformo processos administrativos manuais em soluções <em>automatizadas e inteligentes.</em></h3>
+        <p>Automatizo processos administrativos. Nos meus projetos, o que eu fazia à mão em 1 hora passou a levar 35 segundos (500 arquivos organizados) e 5 minutos (6 planilhas cruzadas), e um relatório de vendas de 2 a 4 horas passou a levar 45 segundos.</p>
+        <p>Tenho mais de 20 anos de experiência em atendimento, operações, indústria, qualidade e negócio próprio. Na qualidade automotiva, vi de perto onde os processos travam: retrabalho, registro manual e falta de rastreabilidade.</p>
+        <p>Hoje uno essa experiência a Python, n8n, SQL e IA para automatizar tarefas repetitivas, organizar informações e apoiar decisões com mais clareza. Trabalho em quatro etapas: entender o problema, organizar o processo, construir a solução e testar e documentar.</p>
         <p>Meu perfil combina visão de processos, capacidade analítica, organização, autonomia e foco em resultados, sempre buscando utilizar tecnologia de forma prática para resolver problemas reais do dia a dia.</p>
         <div className="subsection differential-section"><h3 className="section-title">Meus principais diferenciais</h3><div className="differentials">{differentiators.map(([icon,label]) => <MiniCard key={label} icon={icon} title={label}/>)}</div></div>
       </div>
@@ -95,16 +95,16 @@ function ProfileSection() {
 
 function TrajectorySection() {
   const timeline: [IconName, string, string][] = [
-    ["briefcase", "Empreendedorismo e Gestão", "Fundador e gestor de empresa própria, responsável por toda operação do negócio, vendas, marketing e relacionamento com clientes."],
-    ["chart", "Marketing Digital e Vendas", "Atuação com tráfego pago, criação de sites, estratégias digitais e processos comerciais focados em geração de resultados."],
+    ["briefcase", "Empreendedorismo e Gestão", "Fundei e administrei a Cyber Net (lan house), de 2012 a 2014, e respondi sozinho por toda a operação: atendimento, infraestrutura de TI, compras, caixa e custos."],
+    ["chart", "Marketing Digital e Desenvolvimento Web", "De 2020 a 2022, tráfego pago e estruturação de processos de vendas online, com análise de métricas. De 2023 a 2024, desenvolvimento de sites em WordPress, Elementor e Crocoblock."],
     ["shield", "Segurança e Monitoramento", "Experiência em monitoramento de sistemas e gestão de equipes, com foco em processos, disciplina e confiabilidade."],
-    ["value", "Indústria Automotiva e Qualidade", "Atuação com qualidade, documentação, rastreabilidade e melhoria contínua de processos em ambiente industrial e sob pressão."],
-    ["gear", "Operações Administrativas e Automação", "Consolidação da experiência em rotinas administrativas, análise de processos e automação para eliminar tarefas manuais e aumentar a eficiência."],
+    ["value", "Indústria Automotiva e Qualidade", "Na COFAT: 6.000+ módulos de PPAP, 1.000+ estudos de capabilidade, 50+ análises de MSA, calibração de 200 instrumentos e 5 auditorias."],
+    ["gear", "Automação de Processos Administrativos", "Na COFAT, desenhei 3 soluções de automação dentro da Qualidade (Inspeção Digital, Controle de Calibração e Doc Audit). Hoje automatizo processos administrativos em projetos próprios."],
   ];
   return <>
     <span className="eyebrow">Minha trajetória</span>
     <div className="trajectory-grid">
-      <div className="opening-copy"><h3>Mais de 20 anos de experiência profissional, construindo uma trajetória versátil em diferentes setores e contextos.</h3><p>Minha carreira é marcada pela diversidade de áreas e desafios, o que me deu uma visão ampla do negócio e a capacidade de me adaptar rapidamente, entender processos em profundidade e propor melhorias que realmente fazem diferença no dia a dia das operações.</p><div className="feature-quote"><Icon name="quote" size={30}/><p>Cada experiência me trouxe aprendizados e ferramentas que uso hoje para transformar processos e gerar valor.</p></div></div>
+      <div className="opening-copy"><h3>Mais de 20 anos em diferentes setores, hoje focados em automação de processos administrativos.</h3><p>Passei por negócio próprio, marketing digital, desenvolvimento web e indústria automotiva. Na COFAT, cresci de operador a Analista de Qualidade Pleno em cerca de 9 meses e migrei para a automação dentro da Qualidade.</p><div className="feature-quote"><Icon name="quote" size={30}/><p>Cada experiência me trouxe aprendizados e ferramentas que uso hoje para transformar processos e gerar valor.</p></div></div>
       <div className="timeline">{timeline.map(([icon,title,copy]) => <article key={title} className="timeline-item"><span><Icon name={icon}/></span><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div>
     </div>
     <QuoteBar icon="target">Uma trajetória sólida e versátil que me permite conectar pessoas, processos e tecnologia para criar soluções práticas e eficientes em ambientes remotos.</QuoteBar>
@@ -113,21 +113,21 @@ function TrajectorySection() {
 
 function WorkSection() {
   const steps: [IconName, string, string, string][] = [
-    ["search", "01", "Entendo o cenário", "Analiso processos, rotinas e dados para compreender o funcionamento atual e identificar problemas e oportunidades de melhoria."],
-    ["organize", "02", "Organizo e padronizo", "Estruturo informações, crio padrões e documentações claras para reduzir retrabalho, erros e dependências."],
-    ["code", "03", "Automatizo tarefas", "Desenvolvo soluções com Python e outras ferramentas para eliminar tarefas manuais e acelerar processos."],
-    ["improve", "04", "Gero valor e melhorias", "Transformo dados em insights, acompanho resultados e promovo melhorias contínuas nos processos e operações."],
+    ["search", "01", "Entender o problema", "Mapeio como o processo funciona hoje, onde ele trava e meço quanto tempo ele leva à mão."],
+    ["organize", "02", "Organizar o processo", "Defino fluxo, critérios e informações, com padrões e documentação clara para reduzir retrabalho e erros."],
+    ["code", "03", "Construir a solução", "Desenvolvo com Python, n8n, SQL e IA, com validação humana. Exemplo: 500 arquivos organizados em 35 segundos, em vez de 1 hora."],
+    ["improve", "04", "Testar e documentar", "Valido, ajusto e registro o que foi feito, comparando o tempo antes e depois. Exemplo: 6 planilhas cruzadas em 5 minutos, em vez de 1 hora."],
   ];
   const principles: [IconName,string,string][] = [
-    ["target","Foco em resultados","Trabalho com objetivo claro: resolver problemas e gerar valor para o negócio."],
+    ["target","Foco em resultados","Trabalho com objetivo claro e meço o resultado: o tempo antes e depois de cada solução."],
     ["shield","Qualidade e confiabilidade","Atenção aos detalhes, validações e testes para entregar soluções seguras e consistentes."],
-    ["user","Autonomia e responsabilidade","Organizo meu trabalho, cumpro prazos e entrego com comprometimento e proatividade."],
+    ["user","Autonomia e responsabilidade","Organizo meu trabalho, cumpro prazos e entrego com comprometimento."],
     ["message","Comunicação clara","Explico ideias e resultados de forma simples, alinhando expectativas e facilitando decisões."],
     ["refresh","Melhoria contínua","Busco sempre aprender, evoluir e aplicar novas soluções para tornar processos melhores."],
     ["lock","Confidencialidade","Respeito informações sensíveis e atuo com ética, discrição e segurança de dados."],
   ];
   return <>
-    <span className="eyebrow">Como eu trabalho</span><h3 className="hero-copy">Análise, organização e automação para transformar processos em <em>resultados.</em></h3><p className="lead">Meu trabalho começa entendendo o negócio e os processos de ponta a ponta. A partir daí, identifico gargalos, padronizo rotinas, automatizo tarefas e organizo informações para gerar clareza, eficiência e suporte à tomada de decisão.</p>
+    <span className="eyebrow">Como eu trabalho</span><h3 className="hero-copy">Análise, organização e automação para transformar processos administrativos em <em>resultados medidos</em>.</h3><p className="lead">Meu trabalho começa entendendo o processo de ponta a ponta e medindo quanto tempo ele leva à mão. A partir daí, identifico gargalos, padronizo rotinas e automatizo tarefas, comparando o antes e o depois.</p>
     <div className="subsection"><h3 className="section-title">Como atuo na prática</h3><div className="steps">{steps.map(([icon,num,title,copy]) => <article className="step" key={num}><span className="step-icon"><Icon name={icon} size={25}/></span><strong>{num}</strong><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <div className="subsection"><h3 className="section-title">Princípios que guiam meu trabalho</h3><div className="card-grid three">{principles.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <QuoteBar>Uso tecnologia de forma prática para simplificar o trabalho, aumentar a eficiência e apoiar decisões com informações organizadas e confiáveis.</QuoteBar>
@@ -138,9 +138,9 @@ function ProcessSection() {
   const pillars: [IconName,string,string][] = [
     ["value","Foco no valor","Entendo o que gera valor para o cliente interno ou externo e priorizo o que move o negócio."],
     ["integrated","Visão integrada","Analiso o processo de forma completa, considerando pessoas, atividades, dados, regras e sistemas."],
-    ["warning","Identificação de gargalos","Encontro pontos de atraso, retrabalho, excessos, riscos e falhas que limitam a produtividade."],
+    ["warning","Identificação de gargalos","Encontro atrasos, retrabalho e falhas. Ex.: cruzar 6 planilhas à mão levava 1 hora."],
     ["target","Simplicidade intencional","Busco a forma mais simples e clara de fazer, reduzindo complexidade e dependências."],
-    ["chart","Dados e decisão","Uso dados reais para entender o comportamento do processo e apoiar decisões assertivas."],
+    ["chart","Dados e decisão","Meço o tempo do processo antes e depois de automatizar e uso esses dados para decidir."],
   ];
   const traits: [IconName,string,string][] = [
     ["clarity","Clareza","Todos entendem o fluxo, as regras e o seu papel no processo."],
@@ -151,22 +151,22 @@ function ProcessSection() {
     ["improve","Melhoria contínua","Processo monitorado, medido e evoluído de forma constante."],
   ];
   return <>
-    <span className="eyebrow">Visão de processos</span><h3 className="hero-copy">Transformo processos complexos em fluxos <em>simples, claros e eficientes.</em></h3><p className="lead">Vejo o processo como a conexão entre pessoas, atividades, dados e sistemas que gera valor para o negócio.<br/>Minha visão é identificar o que realmente importa, eliminar o que não agrega e criar um fluxo que funcione de ponta a ponta com clareza, previsibilidade e controle.</p>
+    <span className="eyebrow">Visão de processos</span><h3 className="hero-copy">Transformo processos administrativos complexos em <em>fluxos simples, claros e eficientes</em>.</h3><p className="lead">Vejo o processo como a conexão entre pessoas, atividades, dados e sistemas que gera valor para o negócio.<br/>Minha visão é identificar o que realmente importa, eliminar o que não agrega e criar um fluxo que funcione de ponta a ponta com clareza, previsibilidade e controle.</p>
     <div className="subsection"><h3 className="section-title">Pilares da minha visão de processos</h3><div className="card-grid five">{pillars.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <div className="subsection"><h3 className="section-title">O que caracteriza um processo bem estruturado</h3><div className="card-grid three">{traits.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
-    <QuoteBar>Processos bem desenhados geram organização, reduzem custos, aumentam a produtividade e liberam tempo para o que realmente impulsiona o negócio.</QuoteBar>
+    <QuoteBar>Processos bem desenhados reduzem custos e liberam tempo para o que impulsiona o negócio: nos meus projetos, tarefas de até 4 horas passaram a levar segundos ou minutos.</QuoteBar>
   </>;
 }
 
 function TechSection() {
   const tools = [
-    { icon: "python" as IconName, title: "Python", subtitle: "Automação, integração e análise de dados.", items: ["Automação de rotinas repetitivas", "Manipulação e tratamento de dados", "Geração de relatórios e arquivos", "Integração de sistemas e APIs"] },
-    { icon: "excel" as IconName, title: "Excel Avançado", subtitle: "Análise, organização e modelagem de dados.", items: ["Fórmulas avançadas e matrizes", "Tabelas dinâmicas e dashboards", "Modelos e controles inteligentes", "Validações e análises robustas"] },
-    { icon: "ai" as IconName, title: "Inteligência Artificial", subtitle: "Apoio à decisão e ganho de eficiência.", items: ["Análise de dados com IA", "Geração de textos e resumos", "Classificação e extração de informações", "IA aplicada à automação de processos"] },
+    { icon: "python" as IconName, title: "Python, n8n e SQL", subtitle: "Automação, integração e análise de dados.", items: ["Organizador: 500 arquivos em 35 segundos", "PROC Fácil: 6 planilhas em 5 minutos", "Automação de fluxos com n8n", "Consultas em SQL (PostgreSQL)"] },
+    { icon: "excel" as IconName, title: "Excel Avançado", subtitle: "Análise, organização e modelagem de dados.", items: ["Fórmulas avançadas, PROCV e PROCX", "Tabelas dinâmicas e dashboards", "Análise de MSA e capabilidade na indústria", "Validações e análises robustas"] },
+    { icon: "ai" as IconName, title: "Inteligência Artificial", subtitle: "Desenvolvimento assistido por IA, com validação humana.", items: ["Desenvolvimento assistido por IA (Claude Code)", "Análise de dados com IA", "Requisitos antes do código (Spec-Driven)", "Validação humana em cada entrega"] },
   ];
-  const value = [["gear","Automatizo tarefas repetitivas","Elimino processos manuais e atividades operacionais de baixo valor."],["database","Organizo e transformo dados em informação","Estruturo dados de diferentes fontes para gerar clareza e apoio à decisão."],["target","Gero indicadores que importam","Crio dashboards e relatórios que mostram o que realmente precisa ser acompanhado."]] as [IconName,string,string][];
+  const value = [["gear","Automatizo tarefas repetitivas","Tarefas de 1 a 4 horas à mão passam a levar segundos ou minutos."],["database","Organizo e transformo dados em informação","Estruturo dados de diferentes fontes para gerar clareza e apoio à decisão."],["target","Gero indicadores que importam","Crio dashboards que mostram o que precisa ser acompanhado: um relatório de vendas em 45 segundos, em vez de 2 a 4 horas."]] as [IconName,string,string][];
   return <>
-    <span className="eyebrow">Tecnologia aplicada</span><h3 className="hero-copy">Tecnologia é a ferramenta que potencializa <em>resultados reais e sustentáveis.</em></h3><p className="lead">Utilizo tecnologia de forma estratégica para transformar dados em informações, automatizar tarefas, gerar indicadores e apoiar decisões que melhoram processos e impulsionam o desempenho do negócio.</p>
+    <span className="eyebrow">Tecnologia aplicada</span><h3 className="hero-copy">Tecnologia é a ferramenta que potencializa resultados reais e <em>mensuráveis</em>.</h3><p className="lead">Utilizo tecnologia de forma estratégica para transformar dados em informações, automatizar tarefas, gerar indicadores e apoiar decisões que melhoram processos e impulsionam o desempenho do negócio.</p>
     <div className="subsection"><h3 className="section-title">Ferramentas que aplico no dia a dia</h3><div className="tool-grid">{tools.map(tool => <article className="tool-card" key={tool.title}><span className="tool-icon"><Icon name={tool.icon} size={29}/></span><h4>{tool.title}</h4><p>{tool.subtitle}</p><ul>{tool.items.map(item => <li key={item}>{item}</li>)}</ul></article>)}</div></div>
     <div className="subsection"><h3 className="section-title">Como aplico tecnologia para gerar valor</h3><div className="card-grid three value-grid">{value.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <QuoteBar>Tecnologia não é o fim. É o meio que uso para simplificar processos, organizar informações e apoiar decisões que geram resultados.</QuoteBar>
@@ -176,8 +176,8 @@ function TechSection() {
 function ObjectiveSection() {
   const contributions: [IconName,string,string][] = [
     ["process","Processos e fluxos","Estruturar rotinas, responsabilidades e fluxos para tornar a operação mais clara e eficiente."],
-    ["integrated","Operações e backoffice","Organizar informações, controles e atividades que sustentam o funcionamento do negócio."],
-    ["robot","Automação e dados","Utilizar Python e Inteligência Artificial para eliminar tarefas repetitivas e acelerar decisões."],
+    ["integrated","Rotinas administrativas e backoffice","Organizar informações, controles e atividades administrativas que sustentam o funcionamento do negócio."],
+    ["robot","Automação e dados","Utilizar Python, n8n, SQL e IA para eliminar tarefas repetitivas e acelerar decisões."],
   ];
   const environment: [IconName,string,string][] = [
     ["shield","Organização","Processos bem definidos e informações confiáveis para decisões melhores."],
@@ -187,7 +187,7 @@ function ObjectiveSection() {
     ["monitor","Tecnologia","Ambiente que valoriza o uso prático da tecnologia para melhorar processos e apoiar resultados."],
   ];
   return <>
-    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco resolver problemas de processo com <em>automação e IA aplicada.</em></h3><p className="lead">Meu objetivo é atuar em uma posição remota em processos, automação, operações ou melhoria contínua, aplicando tecnologia para eliminar trabalho manual e apoiar decisões.</p>
+    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco resolver problemas de processos administrativos com <em>automação e IA aplicada</em>.</h3><p className="lead">Meu objetivo é atuar como Analista de Processos ou Analista de Automação, em uma posição remota (CLT ou PJ), aplicando tecnologia para eliminar trabalho manual administrativo e apoiar decisões.</p>
     <div className="subsection"><h3 className="section-title">Onde posso contribuir</h3><div className="card-grid three contribution-grid">{contributions.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <div className="subsection"><h3 className="section-title">O ambiente em que quero atuar</h3><div className="environment-list">{environment.map(([icon,title,copy]) => <article key={title}><Icon name={icon}/><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <QuoteBar>Quero usar experiência, visão de processos e tecnologia para tornar o trabalho administrativo mais simples, confiável e eficiente.</QuoteBar>
