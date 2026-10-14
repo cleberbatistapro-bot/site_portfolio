@@ -36,8 +36,8 @@ const homeProjects: HomeProject[] = [
     kind: "files",
     label: "Organizador de Arquivos",
     image: "/home-projects/organizador.webp",
-    category: "Automação de processos",
-    summary: "Automação que transforma arquivos dispersos em uma estrutura padronizada — sem trabalho manual repetido.",
+    category: "AUTOMAÇÃO DE PROCESSOS ADMINISTRATIVOS",
+    summary: "Organiza 500 arquivos por tipo em 35 segundos. À mão eu levava 1 hora: 99% menos tempo.",
     problem: "Arquivos acumulados, nomes inconsistentes e dificuldade para localizar informações.",
     solution: "Organização automática por categorias, aplicação de regras e registro das ações realizadas.",
     tags: ["Python", "Processos", "Organização de dados"],
@@ -53,7 +53,7 @@ const homeProjects: HomeProject[] = [
     label: "ProcFácil",
     image: "/home-projects/procfacil.webp",
     category: "Consolidação e qualidade de dados",
-    summary: "Planilhas relacionadas reunidas em uma base única, com regras visíveis e pendências preparadas para conferência.",
+    summary: "Cruza 6 planilhas por uma coluna em comum e faz os cálculos em 5 minutos. À mão, com PROCV e PROCX, eu levava 1 hora.",
     problem: "Informações distribuídas em arquivos diferentes exigem buscas, fórmulas e validações manuais.",
     solution: "Cruzamento guiado de planilhas, escolha das chaves e geração de uma base consolidada.",
     tags: ["Python", "Excel", "Qualidade de dados"],
@@ -66,10 +66,10 @@ const homeProjects: HomeProject[] = [
   {
     id: "dashboard",
     kind: "analytics",
-    label: "Dashboard Operacional",
+    label: "Dashtop",
     image: "/home-projects/dashboard.webp",
     category: "Análise de dados",
-    summary: "Dados administrativos transformados em indicadores visuais para facilitar o acompanhamento da operação.",
+    summary: "Transforma a planilha de vendas em dashboard em 45 segundos. Montar no Excel levava de 2 a 4 horas.",
     problem: "Planilhas e controles separados tornam padrões, comparações e desvios menos visíveis.",
     solution: "Importação, mapeamento e organização dos dados em uma visão operacional centralizada.",
     tags: ["Dados", "Indicadores", "Visualização"],
@@ -82,10 +82,10 @@ const homeProjects: HomeProject[] = [
   {
     id: "inspecao",
     kind: "checklist",
-    label: "Sistema de Inspeção",
+    label: "Sistema de Inspeção Digital",
     image: "/home-projects/inspecao.webp",
     category: "Qualidade e rastreabilidade",
-    summary: "Um fluxo digital para orientar inspeções, padronizar critérios e manter os registros de qualidade organizados.",
+    summary: "Inspeção com campos obrigatórios, sem rasura e rastreável. Desenhei o protótipo para 8 linhas de produção, e a empresa aprovou.",
     problem: "Registros dispersos e conferências manuais dificultam a padronização e a consulta do histórico.",
     solution: "Inspeção estruturada por etapas, registro digital dos critérios e identificação de não conformidades.",
     tags: ["Qualidade", "Processos", "Rastreabilidade"],
@@ -101,7 +101,7 @@ const homeProjects: HomeProject[] = [
     label: "Controle de Calibração",
     image: "/home-projects/calibracao.webp",
     category: "Controle documental",
-    summary: "Instrumentos, prazos e certificados centralizados para favorecer o acompanhamento e a rastreabilidade.",
+    summary: "Desenhei o sistema que transforma a planilha de Excel em alerta de vencimento, status e certificado de cada instrumento.",
     problem: "Controles separados aumentam a dificuldade para acompanhar validades, status e documentos.",
     solution: "Cadastro centralizado, sinalização de vencimentos e manutenção do histórico de calibração.",
     tags: ["Qualidade", "Prazos", "Documentação"],
@@ -162,8 +162,8 @@ export default function HomeProjects() {
         <div className="home-projects-intro reveal">
           <header className="home-projects-heading">
             <span className="home-projects-badge"><ProjectIcon kind="files" size={14}/>Projetos aplicados</span>
-            <h2 id="home-projects-title">Soluções que destravam <br/>processos e <em>automatizam <br/>o trabalho.</em></h2>
-            <p>Projetos reais onde identifiquei o problema, redesenhei o processo e construí a automação.</p>
+            <h2 id="home-projects-title">Tarefas de 1 a 4 horas que agora levam <em>segundos ou minutos</em>.</h2>
+            <p>Do problema à solução: projetos reais em que redesenhei o processo. Tempos comparados ao que eu fazia à mão.</p>
           </header>
           <nav className="home-projects-menu" aria-label="Projetos em destaque" role="tablist">
             {homeProjects.map((item, index) => <button

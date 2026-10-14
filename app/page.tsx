@@ -6,10 +6,11 @@ import HomeContact from "./home-contact";
 import HomeNavbar from "./home-navbar";
 import ScrollReveal from "./scroll-reveal";
 
-type HomeIconName = "pin" | "monitor" | "briefcase" | "integrated" | "download" | "user" | "chart";
+type HomeIconName = "pin" | "clock" | "monitor" | "briefcase" | "integrated" | "download" | "user" | "chart";
 
 const homeIconPaths: Record<HomeIconName, React.ReactNode> = {
   pin: <><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></>,
+  clock: <><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></>,
   monitor: <><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></>,
   briefcase: <><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3M3 12h18M10 12v2h4v-2"/></>,
   integrated: <><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></>,
@@ -36,13 +37,13 @@ export default function Home() {
           <div className="home-hero-copy">
             <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Processos · Automação · Soluções Operacionais · IA Aplicada</span>
             <h1 id="home-hero-title" className="reveal" style={{ transitionDelay: "130ms" }}>
-              <span className="home-title-line">Transformo processos administrativos </span>
-              <span className="home-title-line">manuais em soluções <em>automatizadas </em></span>
-              <span className="home-title-line"><em>e inteligentes.</em></span>
+              <span className="home-title-line">Transformo até 4 horas de trabalho </span>
+              <span className="home-title-line">manual em 45 segundos com soluções </span>
+              <span className="home-title-line"><em>automatizadas e inteligentes.</em></span>
             </h1>
-            <p className="reveal" style={{ transitionDelay: "200ms" }}>Encontro a ineficiência, redesenho o fluxo e construo a solução que elimina o trabalho manual e repetitivo e acelera decisões</p>
+            <p className="reveal" style={{ transitionDelay: "200ms" }}>Analista de Processos | Analista de Automação, com foco em automação de processos administrativos. Resultados medidos nos meus projetos, comparados ao que eu fazia à mão na minha rotina de trabalho.</p>
             <div className="home-meta reveal" style={{ transitionDelay: "270ms" }} aria-label="Informações profissionais">
-              <span><HomeIcon name="pin" size={17}/>Piracaia — SP</span>
+              <span><HomeIcon name="clock" size={17}/>20+ anos de experiência</span>
               <span><HomeIcon name="monitor" size={17}/>Disponível para trabalho 100% remoto</span>
               <span><HomeIcon name="briefcase" size={17}/>CLT ou PJ</span>
             </div>
