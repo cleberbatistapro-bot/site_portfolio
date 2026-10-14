@@ -316,14 +316,14 @@ function InspectionCaseStudy() {
   const before = ["Checklist impresso", "Anotações manuais", "Consulta em arquivos físicos", "Informações distribuídas"];
   const after = [["Identificação", "Item e inspetor"], ["Verificações", "Critérios guiados"], ["Não conformidades", "Registro estruturado"], ["Histórico", "Consulta centralizada"]];
   const technologies = ["Figma", "Wireframes", "Fluxos de processo", "Dados estruturados"];
-  const skills = ["Qualidade", "Mapeamento de processos", "Rastreabilidade", "Levantamento de requisitos", "UX operacional", "Confidencialidade"];
+  const skills = ["Qualidade", "Mapeamento de processos", "Rastreabilidade", "Levantamento de requisitos", "UX operacional", "Confidencialidade", "Digitalização de processos"];
 
   return <>
     <header className="project-intro">
-      <span className="project-eyebrow">Qualidade e rastreabilidade</span>
+      <span className="project-eyebrow">DIGITALIZAÇÃO DE PROCESSOS E RASTREABILIDADE</span>
       <h2>Sistema de Inspeção Digital</h2>
-      <p>Solução projetada para apoiar a inspeção final de chicotes elétricos automotivos, transformando uma rotina de qualidade em um fluxo digital guiado, padronizado e rastreável.</p>
-      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto conceitual</span><span><Icon name="clipboard" size={17}/>Processos de qualidade</span><span><Icon name="desktop" size={17}/>Interface para tablet</span></div>
+      <p>Protótipo que desenhei para a inspeção final de chicotes elétricos automotivos em 8 linhas de produção: do checklist em papel para um fluxo digital guiado, padronizado e rastreável. Aprovado pela empresa e em desenvolvimento pelo TI quando saí.</p>
+      <div className="project-meta"><span><Icon name="award" size={17}/>Protótipo aprovado</span><span><Icon name="clipboard" size={17}/>Processos de qualidade</span><span><Icon name="desktop" size={17}/>Interface para tablet</span></div>
     </header>
 
     <ProjectImageCompare
@@ -332,13 +332,13 @@ function InspectionCaseStudy() {
     />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Registros dispersos e conferências manuais podem dificultar a padronização da inspeção e a consulta posterior das informações.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Checklist em papel e registros dispersos: campo em branco, rasura e histórico difícil de consultar. Cada inspeção levava 7 minutos à mão.</SummaryCard>
       <SummaryCard icon="gear" title="Solução projetada">Fluxo digital que apresenta os critérios de forma estruturada e orienta o registro de cada etapa da inspeção.</SummaryCard>
-      <SummaryCard icon="target" title="Objetivo">Favorecer organização, rastreabilidade e consistência no preenchimento, preservando o histórico para futuras consultas.</SummaryCard>
+      <SummaryCard icon="target" title="Objetivo">Campos obrigatórios, sem rasura e com histórico consultável. Tempo por inspeção estimado em cerca de 3 minutos, contra 7 à mão.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O contexto operacional" defaultOpen sectionClassName="project-challenge">
-      <div><p>A inspeção final é uma etapa importante para verificar se o produto atende aos critérios definidos antes da sua liberação. No contexto estudado, o inspetor precisa identificar o item, conferir diferentes pontos dimensionais e visuais, registrar o que foi encontrado e sinalizar possíveis não conformidades.</p><p>Quando esse processo depende de checklists em papel e registros distribuídos, o preenchimento pode variar, a localização do histórico exige mais esforço e a consolidação das informações de qualidade se torna menos prática.</p></div>
+      <div><p>A inspeção final é uma etapa importante para verificar se o produto atende aos critérios definidos antes da sua liberação. No contexto estudado, o inspetor precisa identificar o item, conferir diferentes pontos dimensionais e visuais, registrar o que foi encontrado e sinalizar possíveis não conformidades. Na minha rotina de trabalho, cada inspeção levava 7 minutos à mão, em 8 linhas de produção.</p><p>Quando esse processo depende de checklists em papel e registros distribuídos, o preenchimento pode variar, a localização do histórico exige mais esforço e a consolidação das informações de qualidade se torna menos prática.</p></div>
       <aside className="project-scenario"><h4>Cenário analisado</h4><div><Icon name="clipboard"/><p><strong>Critérios de inspeção</strong>Diferentes verificações precisam seguir uma sequência clara.</p></div><div><Icon name="file"/><p><strong>Registros dispersos</strong>Informações podem ficar separadas em formulários e arquivos.</p></div><div><Icon name="search"/><p><strong>Consulta do histórico</strong>Recuperar uma inspeção anterior pode exigir busca manual.</p></div></aside>
     </AccordionSection>
 
@@ -356,9 +356,9 @@ function InspectionCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O sistema foi pensado para tornar as informações obrigatórias e os critérios visíveis durante a execução. Isso favorece registros mais consistentes, mantém o vínculo entre item, inspetor e resultado e facilita a recuperação do histórico.</p><div className="project-checks"><span><Icon name="check" size={18}/>Sequência de inspeção orientada</span><span><Icon name="check" size={18}/>Critérios e limites apresentados na tela</span><span><Icon name="check" size={18}/>Registro associado ao item inspecionado</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Informação organizada para a qualidade">
-      <div className="project-section-copy"><p>A proposta concentra os elementos essenciais da inspeção sem declarar resultados de produção ainda não medidos.</p></div>
-      <div className="project-metrics"><article><strong>01</strong><span>fluxo guiado</span><p>Etapas visíveis do início à conclusão.</p></article><article><strong>✓</strong><span>critérios estruturados</span><p>Referências e campos apresentados de forma consistente.</p></article><article><strong>↺</strong><span>histórico consultável</span><p>Registros organizados para futuras verificações.</p></article></div>
+    <AccordionSection number="05" title="Resultado e status do projeto">
+      <div className="project-section-copy"><p>O tempo de 7 minutos foi medido na rotina manual. Os 3 minutos são uma estimativa minha para o fluxo digital, ainda sem medição em produção.</p></div>
+      <div className="project-metrics"><article><strong>7 → ~3 min</strong><span>por inspeção, do papel para o fluxo digital</span><p>O tempo de 3 minutos é estimado.</p></article><article><strong>8</strong><span>linhas de produção</span><p>Escopo para o qual o fluxo foi desenhado.</p></article><article><strong>✓</strong><span>aprovado pela empresa</span><p>Em desenvolvimento pelo TI quando saí.</p></article></div>
     </AccordionSection>
 
     <AccordionSection number="06" title="Antes e depois proposto">
@@ -375,7 +375,7 @@ function InspectionCaseStudy() {
       <div className="project-skills-grid"><article><h4>Ferramentas e métodos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Qualidade, processos e tecnologia aplicados ao mesmo problema.</h3><p>Este projeto demonstra minha capacidade de identificar uma oportunidade de melhoria em uma rotina industrial e transformá-la em um fluxo digital claro, organizado e rastreável. A proposta une visão de processo, cuidado com a informação e foco na experiência de quem executa a atividade — competências que posso aplicar em equipes de qualidade, processos, operações ou tecnologia, em oportunidades CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Qualidade, processos e tecnologia aplicados ao mesmo problema.</h3><p>Identifiquei uma oportunidade de melhoria em uma rotina de papel que levava 7 minutos por inspeção, desenhei o fluxo digital para 8 linhas de produção e a empresa aprovou o protótipo. A proposta une visão de processo, cuidado com a informação e foco em quem executa a atividade: competências que levo para equipes de processos, operações ou tecnologia, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
