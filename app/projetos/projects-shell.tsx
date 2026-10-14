@@ -198,26 +198,26 @@ function OrganizerCaseStudy() {
   const before = ["relatorio_final_v2.pdf", "planilha_dados.xlsx", "foto_evento_01.jpg", "apresentacao.pptx", "backup_2024.zip", "documento_antigo.docx"];
   const after = [["Documentos", "7 arquivos"], ["Planilhas", "5 arquivos"], ["Imagens", "4 arquivos"], ["Apresentações", "3 arquivos"], ["Compactados", "2 arquivos"]];
   const technologies = ["Python", "Pathlib", "Shutil", "Tkinter"];
-  const skills = ["Análise de processos", "Organização", "Automação", "Tratamento de arquivos", "Experiência do usuário", "Testes e validação"];
+  const skills = ["Análise de processos", "Organização", "Automação de processos administrativos", "Tratamento de arquivos", "Experiência do usuário", "Testes e validação"];
 
   return <>
     <header className="project-intro">
-      <span className="project-eyebrow">Automação de processos</span>
+      <span className="project-eyebrow">AUTOMAÇÃO DE PROCESSOS ADMINISTRATIVOS</span>
       <h2>Organizador de Arquivos</h2>
-      <p>Aplicação desktop desenvolvida em Python para organizar arquivos administrativos por categoria, com opções de simulação e backup antes da execução.</p>
-      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
+      <p>Aplicação desktop em Python que organiza arquivos administrativos por categoria, com simulação e backup antes de executar. 500 arquivos em 35 segundos; à mão eu levava 1 hora.</p>
+      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
     <ProjectVideo src="/project-videos/organizador.mp4" label="Vídeo de apresentação do Organizador de Arquivos" />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Arquivos de diferentes formatos acumulados na mesma pasta, sem padrão de organização e difíceis de localizar.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Pastas administrativas com arquivos de vários formatos e sem padrão. Organizar 500 arquivos à mão levava 1 hora.</SummaryCard>
       <SummaryCard icon="gear" title="Solução">Automação que identifica os formatos e distribui os arquivos em pastas por categoria, seguindo regras definidas.</SummaryCard>
-      <SummaryCard icon="chart" title="Resultado">Na demonstração, 21 arquivos foram processados e organizados, sem nenhum formato não reconhecido.</SummaryCard>
+      <SummaryCard icon="chart" title="Resultado">500 arquivos organizados em 35 segundos, contra 1 hora à mão. Redução de 99% no tempo.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio" defaultOpen sectionClassName="project-challenge">
-      <div><p>Pastas administrativas frequentemente reúnem documentos, planilhas, imagens, apresentações, PDFs e arquivos compactados sem uma estrutura definida. A organização manual exige conferir cada item, criar pastas e mover os arquivos individualmente — uma rotina repetitiva, sujeita a erros e difícil de manter.</p><p>O projeto partiu desse problema operacional concreto: criar uma forma simples de classificar arquivos, preservar os dados originais e apresentar um resultado verificável ao usuário.</p></div>
+      <div><p>Pastas administrativas frequentemente reúnem documentos, planilhas, imagens, apresentações, PDFs e arquivos compactados sem uma estrutura definida. A organização manual exige conferir cada item, criar pastas e mover os arquivos individualmente: uma rotina repetitiva, sujeita a erros e difícil de manter. Na minha rotina de trabalho, organizar 500 arquivos desse jeito levava 1 hora.</p><p>O projeto partiu desse problema operacional concreto: criar uma forma simples de classificar arquivos, preservar os dados originais e apresentar um resultado verificável ao usuário.</p></div>
       <aside className="project-scenario"><h4>Cenário inicial</h4><div><Icon name="folder"/><p><strong>Arquivos misturados</strong>Diferentes tipos armazenados na mesma pasta.</p></div><div><Icon name="search"/><p><strong>Organização manual</strong>Classificação individual, arquivo por arquivo.</p></div><div><Icon name="warning"/><p><strong>Risco operacional</strong>Maior chance de movimentação incorreta ou perda de referência.</p></div></aside>
     </AccordionSection>
 
@@ -235,9 +235,9 @@ function OrganizerCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>A aplicação prioriza a previsibilidade. O usuário pode simular a organização e gerar uma cópia de segurança antes de confirmar qualquer movimentação.</p><div className="project-checks"><span><Icon name="check" size={18}/>Prévia antes das alterações</span><span><Icon name="check" size={18}/>Cópia de segurança opcional</span><span><Icon name="check" size={18}/>Arquivos não reconhecidos preservados</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado da demonstração">
-      <div className="project-section-copy"><p>Dados observados no teste apresentado, sem estimativas de produtividade ou resultados comerciais.</p></div>
-      <div className="project-metrics"><article><strong>21</strong><span>arquivos processados</span><p>Total identificado na pasta de teste.</p></article><article><strong>21</strong><span>arquivos organizados</span><p>Todos direcionados para suas categorias.</p></article><article><strong>0</strong><span>não reconhecidos</span><p>Nenhum formato ficou sem classificação.</p></article></div>
+    <AccordionSection number="05" title="Resultado medido">
+      <div className="project-section-copy"><p>Medi com 500 arquivos no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 21 arquivos.</p></div>
+      <div className="project-metrics"><article><strong>35 s</strong><span>para organizar 500 arquivos</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>99%</strong><span>menos tempo</span><p>De 1 hora para 35 segundos.</p></article></div>
     </AccordionSection>
 
     <AccordionSection number="06" title="Antes e depois">
@@ -249,7 +249,7 @@ function OrganizerCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias utilizadas</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Tecnologia aplicada para resolver um problema operacional real.</h3><p>Este projeto demonstra minha capacidade de observar uma rotina, transformar necessidades em regras claras e desenvolver uma solução prática, segura e testável. É a combinação entre experiência administrativa, visão de processos e tecnologia aplicada que pretendo levar para uma equipe, em uma oportunidade CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Tecnologia aplicada para resolver um problema operacional real.</h3><p>Observei uma rotina que me tomava 1 hora, transformei em regras claras e desenvolvi uma solução segura, com simulação e backup: 500 arquivos em 35 segundos. É essa combinação de visão de processos e tecnologia aplicada que levo para uma equipe, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
