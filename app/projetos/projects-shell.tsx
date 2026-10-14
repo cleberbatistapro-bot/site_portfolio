@@ -134,8 +134,8 @@ function PrumoCaseStudy() {
     <header className="project-intro">
       <span className="project-eyebrow">Arquitetura de sistemas e gestão remota</span>
       <h2>Prumo</h2>
-      <p>Sistema operacional de uma equipe remota orientada a resultado: torna o trabalho visível pelo processo — não pela vigilância. Autenticação real, controle de acesso por cargo checado no servidor, auditoria imutável e duas plataformas-irmãs que se falam só por contrato de API.</p>
-      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="layers" size={17}/>Arquitetura multi-serviço</span><span><Icon name="desktop" size={17}/>Aplicação web em produção</span></div>
+      <p>Sistema web para acompanhar equipe remota pelo processo, não pela vigilância: o gargalo aparece em tempo real, o desempenho é comparado só com o histórico de cada pessoa e a permissão por cargo é checada no servidor. 2 plataformas com banco próprio e 3 perfis de acesso.</p>
+      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="layers" size={17}/>Arquitetura multi-serviço</span><span><Icon name="desktop" size={17}/>Demo no ar, com dados fictícios</span></div>
     </header>
 
     <LiveDemoBox />
@@ -149,7 +149,7 @@ function PrumoCaseStudy() {
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Ferramentas de gestão remota tratam controle de processo e vigilância de pessoas como a mesma coisa — e toda métrica individual vira ranking, não assistência.</SummaryCard>
       <SummaryCard icon="gear" title="Solução">Um sistema com tese própria: controle total sobre prazo e fluxo, liberdade total sobre como e quando a pessoa entrega — com cada indicador comparado só com o histórico dela mesma.</SummaryCard>
-      <SummaryCard icon="chart" title="Resultado">Dois serviços de verdade em produção, com banco próprio cada um, autenticação real e uma arquitetura testada derrubando uma das partes de propósito para provar o isolamento de falhas.</SummaryCard>
+      <SummaryCard icon="chart" title="Resultado">2 serviços no ar, cada um com banco próprio, e 3 perfis de acesso com permissão checada no servidor. Derrubei um dos serviços de propósito para provar que o outro continua respondendo.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio" defaultOpen sectionClassName="project-challenge">
@@ -176,9 +176,9 @@ function PrumoCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>Nada no Prumo assume que a tela é suficiente. Toda regra de permissão é verificada de novo no servidor, mesmo que a interface já esconda o botão — testei isso na prática chamando a API diretamente como um cargo sem permissão, e o servidor bloqueou corretamente.</p><div className="project-checks"><span><Icon name="check" size={18}/>Hash de senha com salt único por pessoa</span><span><Icon name="check" size={18}/>Sessão em cookie HttpOnly, nunca acessível por script</span><span><Icon name="check" size={18}/>Toda tentativa negada vira linha de auditoria</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado em produção">
+    <AccordionSection number="05" title="Resultado no ar">
       <div className="project-section-copy"><p>Números reais do estado atual do sistema, não estimativa.</p></div>
-      <div className="project-metrics"><article><strong>2</strong><span>plataformas em produção</span><p>Fluxo e Agenda, cada uma com banco e deploy próprios.</p></article><article><strong>7</strong><span>blocos de arquitetura fechados</span><p>Autenticação, RBAC, auditoria, desempenho, landing, integração e acabamento.</p></article><article><strong>0</strong><span>dados sensíveis reais</span><p>Ambiente de demonstração, cargos e senha únicos para avaliação.</p></article></div>
+      <div className="project-metrics"><article><strong>2</strong><span>plataformas no ar</span><p>Fluxo e Agenda, cada uma com banco e deploy próprios.</p></article><article><strong>3</strong><span>perfis de acesso</span><p>A permissão é checada no servidor: ao trocar de cargo, muda o que a pessoa consegue fazer.</p></article><article><strong>0</strong><span>dados sensíveis reais</span><p>Ambiente de demonstração, com cargos e senha únicos para avaliação.</p></article></div>
     </AccordionSection>
 
     <AccordionSection number="06" title="Antes e depois">
@@ -190,7 +190,7 @@ function PrumoCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias utilizadas</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Arquitetura, segurança e visão de gestão, na mesma peça.</h3><p>O Prumo demonstra minha capacidade de sair do problema operacional (gestão remota sem virar vigilância) até a decisão técnica mais fina (por que RBAC é checado no servidor, por que dois bancos separados) — sem perder de vista que o sistema existe para servir gente, não para controlar gente. É a combinação entre visão de processos, segurança e arquitetura que pretendo levar para uma equipe, em uma oportunidade CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Arquitetura, segurança e visão de gestão, na mesma peça.</h3><p>O Prumo mostra como eu parto de um problema operacional (acompanhar equipe remota sem virar vigilância) e chego à decisão técnica: permissão checada no servidor, dois bancos separados, auditoria imutável. É essa combinação de visão de processos, segurança e arquitetura que eu levo para uma equipe, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
