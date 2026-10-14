@@ -213,7 +213,7 @@ function OrganizerCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
-    <ResultBlock title="Resultado medido" note="Medi com 500 arquivos no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 21 arquivos." highlight><article><strong>35 s</strong><span>para organizar 500 arquivos</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>99%</strong><span>menos tempo</span><p>De 1 hora para 35 segundos.</p></article></ResultBlock>
+    <ResultBlock title="Resultado medido" note="Medi com 500 arquivos no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo em 'Antes e depois' usa 21 arquivos." highlight><article><strong>35 s</strong><span>para organizar 500 arquivos</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>99%</strong><span>menos tempo</span><p>De 1 hora para 35 segundos.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/organizador.mp4" label="Vídeo de apresentação do Organizador de Arquivos" />
 
@@ -270,7 +270,7 @@ function ProcFacilCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
-    <ResultBlock title="Resultado medido" note="Medi com 6 planilhas no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 3 planilhas." highlight><article><strong>5 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>92%</strong><span>menos tempo</span><p>De 1 hora para 5 minutos.</p></article></ResultBlock>
+    <ResultBlock title="Resultado medido" note="Medi com 6 planilhas no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo em 'Antes e depois' usa 3 planilhas." highlight><article><strong>5 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>92%</strong><span>menos tempo</span><p>De 1 hora para 5 minutos.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/proc-facil.mp4" label="Vídeo de apresentação do ProcFácil" />
 
