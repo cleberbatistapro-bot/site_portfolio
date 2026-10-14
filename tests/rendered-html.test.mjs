@@ -44,7 +44,7 @@ test("renders development preview metadata", async () => {
   assert.match(html, /Testar e documentar/i);
   assert.match(html, /Vamos conversar sobre uma/i);
   assert.match(html, /contato@cleberbatistapro\.com\.br/i);
-  assert.match(html, /Processos, automação e IA aplicados/i);
+  assert.match(html, /Automação de processos administrativos e IA aplicada para resolver problemas reais/i);
   assert.doesNotMatch(html, /CNPJ/i);
 });
 
