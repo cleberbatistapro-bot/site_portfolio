@@ -7,12 +7,12 @@ export type ProjectSlug = "prumo" | "organizador-de-arquivos" | "procfacil" | "s
 type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "award" | "python" | "desktop" | "play" | "warning" | "gear" | "chart" | "search" | "eye" | "shield" | "report" | "check" | "file" | "layers" | "link" | "lock";
 
 export const projects: { slug: ProjectSlug; label: string; icon: IconName; summary: string }[] = [
-  { slug: "prumo", label: "Prumo", icon: "layers", summary: "Sistema web em produção para gestão de equipe remota: linha de produção com gargalo em tempo real, desempenho individual e uma arquitetura de plataformas-irmãs separadas." },
-  { slug: "organizador-de-arquivos", label: "Organizador de Arquivos", icon: "folder", summary: "Aplicação desktop desenvolvida em Python para organizar arquivos administrativos por categoria, com opções de simulação e backup antes da execução." },
-  { slug: "procfacil", label: "ProcFácil", icon: "document", summary: "Aplicação desktop em Python para cruzar informações de diferentes planilhas, identificar correspondências e gerar uma base consolidada pronta para conferência." },
-  { slug: "sistema-inspecao-digital", label: "Sistema de Inspeção Digital", icon: "clipboard", summary: "Solução projetada para apoiar a inspeção final de chicotes elétricos automotivos, transformando uma rotina de qualidade em um fluxo digital guiado, padronizado e rastreável." },
-  { slug: "controle-calibracao", label: "Controle de Calibração", icon: "target", summary: "Solução projetada para centralizar o controle de instrumentos de medição, acompanhar prazos de calibração e tornar as informações mais organizadas, rastreáveis e fáceis de consultar." },
-  { slug: "dashboard-operacional", label: "Dashboard Operacional", icon: "chart", summary: "Solução desenvolvida para receber dados de planilhas, organizar os campos e transformá-los em indicadores visuais que facilitam o acompanhamento da operação e a identificação de desvios." },
+  { slug: "prumo", label: "Prumo", icon: "layers", summary: "Sistema web no ar, construído do zero, para acompanhar equipes remotas pelo processo, sem vigilância: gargalo em tempo real, desempenho individual e 3 perfis de acesso. Demo com dados fictícios." },
+  { slug: "organizador-de-arquivos", label: "Organizador de Arquivos", icon: "folder", summary: "Aplicação desktop em Python que organiza arquivos administrativos por categoria, com simulação e backup antes de executar. 500 arquivos em 35 segundos; à mão eu levava 1 hora." },
+  { slug: "procfacil", label: "ProcFácil", icon: "document", summary: "Aplicação desktop em Python que cruza várias planilhas por uma coluna em comum, faz cálculos e gera uma base pronta para conferência. 6 planilhas em 5 minutos; à mão eu levava 1 hora." },
+  { slug: "sistema-inspecao-digital", label: "Sistema de Inspeção Digital", icon: "clipboard", summary: "Protótipo que desenhei para a inspeção final de chicotes elétricos em 8 linhas de produção: campos obrigatórios, sem rasura, rastreável. Aprovado pela empresa e em desenvolvimento pelo TI quando saí." },
+  { slug: "controle-calibracao", label: "Controle de Calibração", icon: "target", summary: "Protótipo que desenhei para transformar a planilha de Excel de controle de calibração em um sistema, com alerta de vencimento, status e certificado de cada instrumento." },
+  { slug: "dashboard-operacional", label: "Dashtop", icon: "chart", summary: "Recebe a planilha de vendas, mapeia as colunas e entrega o dashboard em 45 segundos, com indicadores para acompanhar a operação e identificar desvios. Montar no Excel levava de 2 a 4 horas." },
 ];
 
 const paths: Record<IconName, React.ReactNode> = {
@@ -549,7 +549,7 @@ export default function ProjectsShell({ activeSlug }: { activeSlug: ProjectSlug 
   return <div className="about-page projects-page" id="projetos">
     <NavHeader/>
     <main className="projects-container">
-      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Soluções desenvolvidas para organizar processos, reduzir tarefas manuais e transformar necessidades operacionais em ferramentas práticas.</p></header>
+      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Soluções para organizar processos e reduzir tarefas manuais. Nos meus testes, tarefas de 1 a 4 horas à mão passaram a levar segundos ou minutos.</p></header>
       <div className="projects-layout">
         <ProjectsSidebar activeSlug={activeSlug}/>
         <section className="project-detail-card" aria-live="polite"><div className="content-transition"><CaseStudy/></div></section>
@@ -563,7 +563,7 @@ export function ProjectsIndex() {
   return <div className="about-page projects-page" id="projetos">
     <NavHeader/>
     <main className="projects-container">
-      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Soluções desenvolvidas para organizar processos, reduzir tarefas manuais e transformar necessidades operacionais em ferramentas práticas.</p></header>
+      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Soluções para organizar processos e reduzir tarefas manuais. Nos meus testes, tarefas de 1 a 4 horas à mão passaram a levar segundos ou minutos.</p></header>
       <div className="projects-layout">
         <ProjectsSidebar/>
         <section className="project-detail-card" aria-live="polite">
