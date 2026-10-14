@@ -529,7 +529,7 @@ const caseStudies: Record<ProjectSlug, () => React.ReactNode> = {
 };
 
 function NavHeader() {
-  return <header className="site-navbar"><div className="site-navbar-inner"><a className="site-brand" href="/#inicio" aria-label="Cleber Batista — Página inicial">CLEBER BATISTA</a><nav className="site-nav-links" aria-label="Navegação principal"><a className="site-nav-link" href="/#inicio">Página Inicial</a><a className="site-nav-link" href="/sobre-mim/">Sobre Mim</a><a className="site-nav-link active" href="/projetos/" aria-current="page">Projetos</a><a className="site-nav-link" href="/contatos/">Contatos</a></nav><div className="navbar-actions"><a className="navbar-cv-button" href="/curriculo-cleber-batista.pdf" download>Baixar Currículo</a></div></div></header>;
+  return <header className="site-navbar"><div className="site-navbar-inner"><a className="site-brand" href="/#inicio" aria-label="Cleber Batista — Página inicial">CLEBER BATISTA</a><nav className="site-nav-links" aria-label="Navegação principal"><a className="site-nav-link" href="/#inicio">Página Inicial</a><a className="site-nav-link" href="/sobre-mim/">Sobre Mim</a><a className="site-nav-link active" href="/projetos/" aria-current="page">Projetos</a><a className="site-nav-link" href="/contatos/">Contatos</a></nav><div className="navbar-actions"><a className="navbar-cv-button" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download>Baixar Currículo</a></div></div></header>;
 }
 
 function ProjectsSidebar({ activeSlug }: { activeSlug?: ProjectSlug }) {

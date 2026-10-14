@@ -52,7 +52,7 @@ export default function ContactPage() {
           <a className="site-nav-link" href="/projetos/">Projetos</a>
           <a className="site-nav-link active" href="/contatos/" aria-current="page">Contatos</a>
         </nav>
-        <div className="navbar-actions"><a className="navbar-cv-button" href="/curriculo-cleber-batista.pdf" download>Baixar Currículo</a></div>
+        <div className="navbar-actions"><a className="navbar-cv-button" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download>Baixar Currículo</a></div>
       </div>
     </header>
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
 
           <div className="contact-guidance"><Icon name="info" size={25}/><p>Ao entrar em contato, informe o nome da empresa, a vaga e o regime (CLT ou PJ).</p></div>
 
-          <a className="contact-cv-button" href="/curriculo-cleber-batista.pdf" download><Icon name="document" size={20}/><span>Baixar currículo</span><Icon name="arrow" size={19}/></a>
+          <a className="contact-cv-button" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download><Icon name="document" size={20}/><span>Baixar currículo</span><Icon name="arrow" size={19}/></a>
         </div>
 
         <section className="contact-panel" aria-labelledby="channels-title">

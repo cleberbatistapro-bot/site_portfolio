@@ -55,7 +55,7 @@ function Icon({ name, size = 22 }: { name: IconName; size?: number }) {
 }
 
 function CvButton() {
-  return <a className="cv-button" href="/curriculo-cleber-batista.pdf" download aria-label="Baixar meu currículo"><Icon name="download" size={18}/><span>Baixar meu currículo</span></a>;
+  return <a className="cv-button" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download aria-label="Baixar meu currículo"><Icon name="download" size={18}/><span>Baixar meu currículo</span></a>;
 }
 
 function QuoteBar({ children, icon = "quote" }: { children: React.ReactNode; icon?: IconName }) {
@@ -249,7 +249,7 @@ export default function Home() {
           <a className="site-nav-link" href="/projetos/">Projetos</a>
           <a className="site-nav-link" href="/contatos/">Contatos</a>
         </nav>
-        <div className="navbar-actions"><a className="navbar-cv-button" href="/curriculo-cleber-batista.pdf" download>Baixar Currículo</a></div>
+        <div className="navbar-actions"><a className="navbar-cv-button" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download>Baixar Currículo</a></div>
       </div>
     </header>
     <main className="page-container" id="sobre-mim-content">

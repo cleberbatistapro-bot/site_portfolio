@@ -9,7 +9,7 @@ export default function PrivacyPage() {
           <a className="site-nav-link" href="/projetos/">Projetos</a>
           <a className="site-nav-link" href="/contatos/">Contatos</a>
         </nav>
-        <div className="navbar-actions"><a className="navbar-cv-button" href="/curriculo-cleber-batista.pdf" download>Baixar Currículo</a></div>
+        <div className="navbar-actions"><a className="navbar-cv-button" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download>Baixar Currículo</a></div>
       </div>
     </header>
 
