@@ -122,5 +122,5 @@ test("serves the professional contact page", async () => {
   const html = await response.text();
   assert.match(html, /<title>Contato profissional \| Cleber Batista<\/title>/i);
   assert.match(html, /contato@cleberbatistapro\.com\.br/i);
-  assert.match(html, /Tem uma oportunidade compatível com meu perfil\?/i);
+  assert.match(html, /Tem uma vaga de Analista de Processos ou Analista de Automação\?/i);
 });

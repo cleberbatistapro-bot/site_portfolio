@@ -60,13 +60,13 @@ export default function ContactPage() {
       <section className="contact-layout" aria-labelledby="contact-title">
         <div className="contact-copy">
           <span className="contact-eyebrow">Contato profissional</span>
-          <h1 id="contact-title">Tem uma oportunidade compatível com meu perfil?</h1>
-          <p>Estou disponível para vagas 100% remotas em processos, automação, operações e melhoria contínua, em regime CLT ou PJ.</p>
-          <p>Tenho interesse em funções que envolvam organização de informações, qualidade, melhoria de rotinas, indicadores ou automação aplicada ao trabalho administrativo.</p>
+          <h1 id="contact-title">Tem uma vaga de Analista de Processos ou Analista de Automação?</h1>
+          <p>Estou disponível para vagas 100% remotas, em CLT ou PJ, com foco em automação de processos administrativos. Nos meus projetos, tarefas de 1 a 4 horas à mão passaram a levar de 35 segundos a 5 minutos.</p>
+          <p>Atuo com organização de informações, melhoria de rotinas e indicadores, e uso Python, SQL e n8n para automatizar o trabalho administrativo.</p>
 
-          <div className="contact-guidance"><Icon name="info" size={25}/><p>Ao entrar em contato, informe o nome da empresa, a vaga e um breve contexto da oportunidade.</p></div>
+          <div className="contact-guidance"><Icon name="info" size={25}/><p>Ao entrar em contato, informe o nome da empresa, a vaga e o regime (CLT ou PJ).</p></div>
 
-          <a className="contact-cv-button" href="/curriculo-cleber-batista.pdf" download><Icon name="document" size={20}/><span>Acessar currículo</span><Icon name="arrow" size={19}/></a>
+          <a className="contact-cv-button" href="/curriculo-cleber-batista.pdf" download><Icon name="document" size={20}/><span>Baixar currículo</span><Icon name="arrow" size={19}/></a>
         </div>
 
         <section className="contact-panel" aria-labelledby="channels-title">
@@ -79,8 +79,6 @@ export default function ContactPage() {
               <span className="contact-channel-action">{channel.action}<Icon name="arrow" size={18}/></span>
             </a>)}
           </div>
-
-          <div className="contact-panel-note"><Icon name="shield" size={27}/><p>Ao entrar em contato, informe o nome da empresa, a vaga e um breve contexto da oportunidade.</p></div>
         </section>
       </section>
 
