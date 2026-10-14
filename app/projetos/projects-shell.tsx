@@ -459,22 +459,22 @@ function DashboardCaseStudy() {
 
   return <>
     <header className="project-intro">
-      <span className="project-eyebrow">Análise de dados e apoio à gestão</span>
-      <h2>Dashboard Operacional</h2>
-      <p>Solução desenvolvida para receber dados de planilhas, organizar os campos e transformá-los em indicadores visuais que facilitam o acompanhamento da operação e a identificação de desvios.</p>
-      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="chart" size={17}/>Análise operacional</span><span><Icon name="desktop" size={17}/>Aplicação web</span></div>
+      <span className="project-eyebrow">AUTOMAÇÃO DE RELATÓRIOS E ANÁLISE DE DADOS</span>
+      <h2>Dashtop</h2>
+      <p>Aplicação web que recebe a planilha de vendas, mapeia as colunas e entrega o dashboard em 45 segundos, com indicadores para acompanhar a operação e identificar desvios. Montar no Excel levava de 2 a 4 horas.</p>
+      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="chart" size={17}/>Análise operacional</span><span><Icon name="desktop" size={17}/>Aplicação web</span></div>
     </header>
 
-    <ProjectVideo src="/project-videos/dashboard.mp4" label="Vídeo de apresentação do Dashboard Operacional" />
+    <ProjectVideo src="/project-videos/dashboard.mp4" label="Vídeo de apresentação do Dashtop" />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Dados distribuídos em planilhas e controles separados dificultam acompanhar indicadores e compreender o cenário operacional.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Dados distribuídos em planilhas e controles separados. Montar o dashboard no Excel levava de 2 a 4 horas.</SummaryCard>
       <SummaryCard icon="gear" title="Solução">Fluxo que importa a planilha, identifica sua categoria, confirma o mapeamento dos campos e gera um painel visual.</SummaryCard>
-      <SummaryCard icon="target" title="Objetivo">Centralizar as informações e tornar comparações, padrões e desvios mais claros para apoiar a análise e a decisão.</SummaryCard>
+      <SummaryCard icon="target" title="Objetivo">Dashboard pronto em 45 segundos, contra 2 a 4 horas no Excel, com comparações, padrões e desvios claros para apoiar a decisão.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio dos dados dispersos" defaultOpen sectionClassName="project-challenge">
-      <div><p>Muitas operações possuem os dados necessários, mas eles estão armazenados em planilhas criadas para registros do dia a dia, não para análise. Colunas, totais, observações e gráficos acabam misturados, enquanto diferentes versões do arquivo tornam a atualização e a comparação menos confiáveis.</p><p>O desafio do projeto foi transformar essa base em uma sequência compreensível: reconhecer o contexto dos dados, relacionar as colunas aos indicadores necessários e apresentar somente as informações úteis para o acompanhamento.</p></div>
+      <div><p>Muitas operações possuem os dados necessários, mas eles estão armazenados em planilhas criadas para registros do dia a dia, não para análise. Colunas, totais, observações e gráficos acabam misturados, enquanto diferentes versões do arquivo tornam a atualização e a comparação menos confiáveis. Na minha rotina de trabalho, montar esse dashboard no Excel levava de 2 a 4 horas.</p><p>O desafio do projeto foi transformar essa base em uma sequência compreensível: reconhecer o contexto dos dados, relacionar as colunas aos indicadores necessários e apresentar somente as informações úteis para o acompanhamento.</p></div>
       <aside className="project-scenario"><h4>Cenário inicial</h4><div><Icon name="document"/><p><strong>Dados fragmentados</strong>Informações operacionais distribuídas em controles distintos.</p></div><div><Icon name="search"/><p><strong>Análise manual</strong>Filtros, fórmulas e gráficos precisam ser refeitos a cada atualização.</p></div><div><Icon name="warning"/><p><strong>Leitura pouco clara</strong>Padrões e desvios ficam escondidos entre muitas linhas e colunas.</p></div></aside>
     </AccordionSection>
 
@@ -492,9 +492,9 @@ function DashboardCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O projeto não transforma qualquer coluna em gráfico automaticamente. Antes de gerar o dashboard, o usuário confere os campos obrigatórios e pode ajustar o mapeamento sugerido. Essa etapa mantém as regras da análise visíveis e reduz o risco de interpretar uma coluna incorreta.</p><div className="project-checks"><span><Icon name="check" size={18}/>Campos obrigatórios identificados</span><span><Icon name="check" size={18}/>Sugestões revisáveis pelo usuário</span><span><Icon name="check" size={18}/>Mapeamento confirmado antes do painel</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Informação organizada para análise">
-      <div className="project-section-copy"><p>O dashboard financeiro demonstrativo reúne três perspectivas complementares, sem atribuir ganhos operacionais ainda não medidos.</p></div>
-      <div className="project-metrics"><article><strong>◎</strong><span>indicadores principais</span><p>Receita, despesa e saldo apresentados em destaque.</p></article><article><strong>↗</strong><span>evolução temporal</span><p>Comparação dos resultados ao longo dos períodos.</p></article><article><strong>≡</strong><span>composição dos dados</span><p>Distribuição por centro de custo e tipo de conta.</p></article></div>
+    <AccordionSection number="05" title="Resultado medido">
+      <div className="project-section-copy"><p>Medi com uma planilha de vendas no meu projeto. O tempo no Excel vem da minha rotina de trabalho anterior. O dashboard financeiro mostrado na demonstração é só um exemplo.</p></div>
+      <div className="project-metrics"><article><strong>45 s</strong><span>para gerar o dashboard</span><p>Tempo medido na aplicação, da planilha enviada ao painel pronto.</p></article><article><strong>2 a 4 h</strong><span>o mesmo dashboard montado no Excel</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>+99%</strong><span>menos tempo</span><p>De 2 a 4 horas para 45 segundos.</p></article></div>
     </AccordionSection>
 
     <AccordionSection number="06" title="Recursos para investigação">
@@ -515,7 +515,7 @@ function DashboardCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias e recursos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados brutos transformados em uma visão útil para a operação.</h3><p>Este projeto demonstra minha capacidade de compreender uma fonte de dados, estruturar campos e indicadores e apresentar informações de forma clara para quem precisa acompanhar resultados. A solução conecta análise de dados, processos administrativos e apoio à decisão — competências relevantes para equipes de dados, operações, processos ou administração, em oportunidades CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados brutos transformados em uma visão útil para a operação.</h3><p>Parti de um trabalho que levava de 2 a 4 horas no Excel e desenvolvi uma aplicação que entrega o dashboard em 45 segundos, com o mapeamento dos campos confirmado pelo usuário antes de gerar o painel. A solução conecta análise de dados, processos administrativos e apoio à decisão: competências que levo para equipes de processos, operações ou administração, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 

@@ -11,7 +11,7 @@ O site é voltado a recrutadores, gestores e empresas interessados em contratar 
 - A página inicial foi concluída com cinco dobras: Hero, Projetos, Competências, Como trabalho e Contato.
 - A seção de Projetos da página inicial ganhou navegação por cards e troca automática suave entre os projetos, mantendo interação manual por clique.
 - A página `/projetos/` foi estruturada como uma página completa de estudos de caso, com menu lateral e cinco projetos.
-- Foram adicionados e refinados os projetos ProcFácil, Sistema de Inspeção Digital, Sistema de Controle de Calibração e Dashboard Operacional, além do Organizador de Arquivos.
+- Foram adicionados e refinados os projetos ProcFácil, Sistema de Inspeção Digital, Sistema de Controle de Calibração e Dashtop, além do Organizador de Arquivos.
 - O projeto “Mini CRM Administrativo” foi removido do portfólio e não deve ser reinserido sem solicitação explícita.
 - A página `/sobre-mim/` foi concluída no padrão aprovado, com menu lateral e conteúdo profissional.
 - A página `/contatos/` foi concluída sem formulário de mensagem, usando somente LinkedIn, e-mail e WhatsApp.
@@ -41,7 +41,7 @@ Projetos atualmente apresentados:
 2. ProcFácil
 3. Sistema de Inspeção Digital
 4. Sistema de Controle de Calibração
-5. Dashboard Operacional
+5. Dashtop
 
 ## 4. Rotas que ainda não existem
 
