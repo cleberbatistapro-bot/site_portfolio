@@ -113,6 +113,13 @@ function AccordionSection({ number, title, defaultOpen, sectionClassName, childr
   </section>;
 }
 
+function ResultBlock({ title, note, highlight, children }: { title: string; note: string; highlight?: boolean; children: React.ReactNode }) {
+  return <section className={highlight ? "result-block has-win" : "result-block"}>
+    <div className="result-block-top"><span className="project-eyebrow">{title}</span><p>{note}</p></div>
+    <div className="project-metrics">{children}</div>
+  </section>;
+}
+
 function LiveDemoBox() {
   return <a className="project-live-demo" href="https://prumo.cleberbatistapro.com.br" target="_blank" rel="noreferrer">
     <span className="project-live-dot" aria-hidden="true" />
@@ -137,6 +144,8 @@ function PrumoCaseStudy() {
       <p>Sistema web para acompanhar equipe remota pelo processo, não pela vigilância: o gargalo aparece em tempo real, o desempenho é comparado só com o histórico de cada pessoa e a permissão por cargo é checada no servidor. 2 plataformas com banco próprio e 3 perfis de acesso.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="layers" size={17}/>Arquitetura multi-serviço</span><span><Icon name="desktop" size={17}/>Demo no ar, com dados fictícios</span></div>
     </header>
+
+    <ResultBlock title="Resultado no ar" note="Números reais do estado atual do sistema, não estimativa."><article><strong>2</strong><span>plataformas no ar</span><p>Fluxo e Agenda, cada uma com banco e deploy próprios.</p></article><article><strong>3</strong><span>perfis de acesso</span><p>A permissão é checada no servidor: ao trocar de cargo, muda o que a pessoa consegue fazer.</p></article><article><strong>0</strong><span>dados sensíveis reais</span><p>Ambiente de demonstração, com cargos e senha únicos para avaliação.</p></article></ResultBlock>
 
     <LiveDemoBox />
 
@@ -176,16 +185,12 @@ function PrumoCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>Nada no Prumo assume que a tela é suficiente. Toda regra de permissão é verificada de novo no servidor, mesmo que a interface já esconda o botão — testei isso na prática chamando a API diretamente como um cargo sem permissão, e o servidor bloqueou corretamente.</p><div className="project-checks"><span><Icon name="check" size={18}/>Hash de senha com salt único por pessoa</span><span><Icon name="check" size={18}/>Sessão em cookie HttpOnly, nunca acessível por script</span><span><Icon name="check" size={18}/>Toda tentativa negada vira linha de auditoria</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado no ar">
-      <div className="project-section-copy"><p>Números reais do estado atual do sistema, não estimativa.</p></div>
-      <div className="project-metrics"><article><strong>2</strong><span>plataformas no ar</span><p>Fluxo e Agenda, cada uma com banco e deploy próprios.</p></article><article><strong>3</strong><span>perfis de acesso</span><p>A permissão é checada no servidor: ao trocar de cargo, muda o que a pessoa consegue fazer.</p></article><article><strong>0</strong><span>dados sensíveis reais</span><p>Ambiente de demonstração, com cargos e senha únicos para avaliação.</p></article></div>
-    </AccordionSection>
 
-    <AccordionSection number="06" title="Antes e depois">
+    <AccordionSection number="05" title="Antes e depois">
       <div className="project-comparison"><article className="before"><header><div><strong>Ferramenta genérica</strong><p>O padrão do mercado de gestão remota.</p></div><Icon name="warning"/></header><ul>{before.map(item => <li key={item}><Icon name="file" size={16}/><span>{item}</span></li>)}</ul></article><article className="after"><header><div><strong>Prumo</strong><p>Controle pelo processo, não pela pessoa.</p></div><Icon name="check"/></header><ul>{after.map(([feature, detail]) => <li key={feature}><Icon name="layers" size={16}/><span>{feature}</span><small>{detail}</small></li>)}</ul></article></div>
     </AccordionSection>
 
-    <AccordionSection number="07" title="Tecnologias e competências">
+    <AccordionSection number="06" title="Tecnologias e competências">
       <div className="project-section-copy"><p>O projeto exigiu decidir, não só implementar: cada escolha de stack teve um porquê documentado, incluindo os limites técnicos aceitos conscientemente.</p></div>
       <div className="project-skills-grid"><article><h4>Tecnologias utilizadas</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
@@ -207,6 +212,8 @@ function OrganizerCaseStudy() {
       <p>Aplicação desktop em Python que organiza arquivos administrativos por categoria, com simulação e backup antes de executar. 500 arquivos em 35 segundos; à mão eu levava 1 hora.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
+
+    <ResultBlock title="Resultado medido" note="Medi com 500 arquivos no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 21 arquivos." highlight><article><strong>35 s</strong><span>para organizar 500 arquivos</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>99%</strong><span>menos tempo</span><p>De 1 hora para 35 segundos.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/organizador.mp4" label="Vídeo de apresentação do Organizador de Arquivos" />
 
@@ -235,16 +242,12 @@ function OrganizerCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>A aplicação prioriza a previsibilidade. O usuário pode simular a organização e gerar uma cópia de segurança antes de confirmar qualquer movimentação.</p><div className="project-checks"><span><Icon name="check" size={18}/>Prévia antes das alterações</span><span><Icon name="check" size={18}/>Cópia de segurança opcional</span><span><Icon name="check" size={18}/>Arquivos não reconhecidos preservados</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado medido">
-      <div className="project-section-copy"><p>Medi com 500 arquivos no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 21 arquivos.</p></div>
-      <div className="project-metrics"><article><strong>35 s</strong><span>para organizar 500 arquivos</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>99%</strong><span>menos tempo</span><p>De 1 hora para 35 segundos.</p></article></div>
-    </AccordionSection>
 
-    <AccordionSection number="06" title="Antes e depois">
+    <AccordionSection number="05" title="Antes e depois">
       <div className="project-comparison"><article className="before"><header><div><strong>Antes</strong><p>Arquivos misturados e sem padrão.</p></div><Icon name="warning"/></header><ul>{before.map((file) => <li key={file}><Icon name="file" size={16}/><span>{file}</span></li>)}</ul></article><article className="after"><header><div><strong>Depois</strong><p>Arquivos separados por categoria.</p></div><Icon name="check"/></header><ul>{after.map(([folder, count]) => <li key={folder}><Icon name="folder" size={16}/><span>{folder}</span><small>{count}</small></li>)}</ul></article></div>
     </AccordionSection>
 
-    <AccordionSection number="07" title="Tecnologias e competências">
+    <AccordionSection number="06" title="Tecnologias e competências">
       <div className="project-section-copy"><p>O projeto combina implementação técnica com análise de uma rotina administrativa real.</p></div>
       <div className="project-skills-grid"><article><h4>Tecnologias utilizadas</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
@@ -266,6 +269,8 @@ function ProcFacilCaseStudy() {
       <p>Aplicação desktop em Python que cruza várias planilhas por uma coluna em comum, faz cálculos e gera uma base pronta para conferência. 6 planilhas em 5 minutos; à mão eu levava 1 hora.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
+
+    <ResultBlock title="Resultado medido" note="Medi com 6 planilhas no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 3 planilhas." highlight><article><strong>5 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>92%</strong><span>menos tempo</span><p>De 1 hora para 5 minutos.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/proc-facil.mp4" label="Vídeo de apresentação do ProcFácil" />
 
@@ -294,16 +299,12 @@ function ProcFacilCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O ProcFácil não esconde as diferenças entre as fontes. Antes de salvar, a prévia destaca os registros sem correspondência e informa quantas linhas precisam de atenção. No arquivo final, essas ocorrências também são mantidas em uma aba específica.</p><div className="project-checks"><span><Icon name="check" size={18}/>Arquivos originais preservados</span><span><Icon name="check" size={18}/>Prévia do resultado consolidado</span><span><Icon name="check" size={18}/>Pendências separadas para revisão</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado medido">
-      <div className="project-section-copy"><p>Medi com 6 planilhas no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 3 planilhas.</p></div>
-      <div className="project-metrics"><article><strong>5 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>92%</strong><span>menos tempo</span><p>De 1 hora para 5 minutos.</p></article></div>
-    </AccordionSection>
 
-    <AccordionSection number="06" title="Antes e depois">
+    <AccordionSection number="05" title="Antes e depois">
       <div className="project-comparison"><article className="before"><header><div><strong>Antes</strong><p>Informações distribuídas em arquivos separados.</p></div><Icon name="warning"/></header><ul>{sources.map(file => <li key={file}><Icon name="file" size={16}/><span>{file}</span></li>)}</ul></article><article className="after"><header><div><strong>Depois</strong><p>Um arquivo estruturado para análise e conferência.</p></div><Icon name="check"/></header><ul>{output.map(([sheet, count]) => <li key={sheet}><Icon name="document" size={16}/><span>Aba {sheet}</span><small>{count}</small></li>)}</ul></article></div>
     </AccordionSection>
 
-    <AccordionSection number="07" title="Tecnologias e competências">
+    <AccordionSection number="06" title="Tecnologias e competências">
       <div className="project-section-copy"><p>Mais do que unir arquivos, o projeto exigiu pensar em regras de relacionamento, exceções e clareza para quem precisa conferir o resultado.</p></div>
       <div className="project-skills-grid"><article><h4>Tecnologias e formatos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
@@ -325,6 +326,8 @@ function InspectionCaseStudy() {
       <p>Protótipo que desenhei para a inspeção final de chicotes elétricos automotivos em 8 linhas de produção: do checklist em papel para um fluxo digital guiado, padronizado e rastreável. Aprovado pela empresa e em desenvolvimento pelo TI quando saí.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Protótipo aprovado</span><span><Icon name="clipboard" size={17}/>Processos de qualidade</span><span><Icon name="desktop" size={17}/>Interface para tablet</span></div>
     </header>
+
+    <ResultBlock title="Resultado e status do projeto" note="O tempo de 7 minutos foi medido na rotina manual. Os 3 minutos são uma estimativa minha para o fluxo digital, ainda sem medição em produção."><article><strong>7 → ~3 min</strong><span>por inspeção, do papel para o fluxo digital</span><p>O tempo de 3 minutos é estimado.</p></article><article><strong>8</strong><span>linhas de produção</span><p>Escopo para o qual o fluxo foi desenhado.</p></article><article><strong>✓</strong><span>aprovado pela empresa</span><p>Em desenvolvimento pelo TI quando saí.</p></article></ResultBlock>
 
     <ProjectImageCompare
       before={{ src: "/project-media/inspecao-antes.png", alt: "Checklist de inspeção em papel, com medições e critérios preenchidos manualmente" }}
@@ -356,21 +359,17 @@ function InspectionCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O sistema foi pensado para tornar as informações obrigatórias e os critérios visíveis durante a execução. Isso favorece registros mais consistentes, mantém o vínculo entre item, inspetor e resultado e facilita a recuperação do histórico.</p><div className="project-checks"><span><Icon name="check" size={18}/>Sequência de inspeção orientada</span><span><Icon name="check" size={18}/>Critérios e limites apresentados na tela</span><span><Icon name="check" size={18}/>Registro associado ao item inspecionado</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado e status do projeto">
-      <div className="project-section-copy"><p>O tempo de 7 minutos foi medido na rotina manual. Os 3 minutos são uma estimativa minha para o fluxo digital, ainda sem medição em produção.</p></div>
-      <div className="project-metrics"><article><strong>7 → ~3 min</strong><span>por inspeção, do papel para o fluxo digital</span><p>O tempo de 3 minutos é estimado.</p></article><article><strong>8</strong><span>linhas de produção</span><p>Escopo para o qual o fluxo foi desenhado.</p></article><article><strong>✓</strong><span>aprovado pela empresa</span><p>Em desenvolvimento pelo TI quando saí.</p></article></div>
-    </AccordionSection>
 
-    <AccordionSection number="06" title="Antes e depois proposto">
+    <AccordionSection number="05" title="Antes e depois proposto">
       <div className="project-section-copy"><p>Comparação conceitual entre a rotina baseada em registros dispersos e a estrutura digital projetada.</p></div>
       <div className="project-comparison"><article className="before"><header><div><strong>Antes</strong><p>Processo apoiado em registros manuais e separados.</p></div><Icon name="warning"/></header><ul>{before.map(item => <li key={item}><Icon name="file" size={16}/><span>{item}</span></li>)}</ul></article><article className="after"><header><div><strong>Depois proposto</strong><p>Fluxo guiado e informações centralizadas.</p></div><Icon name="check"/></header><ul>{after.map(([step, detail]) => <li key={step}><Icon name="clipboard" size={16}/><span>{step}</span><small>{detail}</small></li>)}</ul></article></div>
     </AccordionSection>
 
-    <AccordionSection number="07" title="Confidencialidade na apresentação">
+    <AccordionSection number="06" title="Confidencialidade na apresentação">
       <div className="project-security"><Icon name="shield" size={34}/><div><p>As telas do portfólio utilizam exclusivamente dados fictícios. Códigos de peças, nomes, números de série, registros e especificações foram criados apenas para demonstrar a lógica da solução, sem expor informações de empresas ou produtos reais.</p><div className="project-checks"><span><Icon name="check" size={18}/>Identificadores fictícios</span><span><Icon name="check" size={18}/>Especificações demonstrativas</span><span><Icon name="check" size={18}/>Nenhum dado produtivo real</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="08" title="Ferramentas e competências">
+    <AccordionSection number="07" title="Ferramentas e competências">
       <div className="project-section-copy"><p>O projeto conecta conhecimento de processos industriais, qualidade, documentação e organização de dados.</p></div>
       <div className="project-skills-grid"><article><h4>Ferramentas e métodos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
@@ -392,6 +391,8 @@ function CalibrationCaseStudy() {
       <p>Protótipo que desenhei para transformar a planilha de Excel de controle de calibração em um sistema: cadastro dos instrumentos, alerta de vencimento, status e certificado de cada um no mesmo painel.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Protótipo próprio</span><span><Icon name="target" size={17}/>Gestão da qualidade</span><span><Icon name="desktop" size={17}/>Interface web</span></div>
     </header>
+
+    <ResultBlock title="O que o painel entrega" note="Protótipo desenhado por mim, sem medição de resultado. Aqui entram só as capacidades do sistema."><article><strong>1</strong><span>painel único</span><p>Prazos, status e certificado de cada instrumento no mesmo lugar.</p></article><article><strong>↺</strong><span>histórico preservado</span><p>Atualizações mantidas para futuras consultas.</p></article><article><strong>◎</strong><span>status centralizado</span><p>Situação dos instrumentos apresentada de forma consolidada.</p></article></ResultBlock>
 
     <ProjectImageCompare
       before={{ src: "/project-media/calibracao-antes.png", alt: "Planilha de controle de calibração com status vencido, atenção e ok misturados" }}
@@ -423,26 +424,22 @@ function CalibrationCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O painel foi pensado para não depender apenas da leitura de datas. A situação de cada instrumento é apresentada por status, permitindo diferenciar o que está no prazo, o que exige atenção e o que já está vencido.</p><div className="project-checks"><span><Icon name="check" size={18}/>Visão dos próximos vencimentos</span><span><Icon name="check" size={18}/>Status atualizado por instrumento</span><span><Icon name="check" size={18}/>Calendário para planejamento das calibrações</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="O que o painel entrega">
-      <div className="project-section-copy"><p>Protótipo desenhado por mim, sem medição de resultado. Aqui entram só as capacidades do sistema.</p></div>
-      <div className="project-metrics"><article><strong>1</strong><span>painel único</span><p>Prazos, status e certificado de cada instrumento no mesmo lugar.</p></article><article><strong>↺</strong><span>histórico preservado</span><p>Atualizações mantidas para futuras consultas.</p></article><article><strong>◎</strong><span>status centralizado</span><p>Situação dos instrumentos apresentada de forma consolidada.</p></article></div>
-    </AccordionSection>
 
-    <AccordionSection number="06" title="Antes e depois proposto">
+    <AccordionSection number="05" title="Antes e depois proposto">
       <div className="project-section-copy"><p>Comparação conceitual entre o acompanhamento manual em planilha e a estrutura centralizada do sistema.</p></div>
       <div className="project-comparison"><article className="before"><header><div><strong>Antes</strong><p>Controle distribuído e dependente de conferências manuais.</p></div><Icon name="warning"/></header><ul>{before.map(item => <li key={item}><Icon name="file" size={16}/><span>{item}</span></li>)}</ul></article><article className="after"><header><div><strong>Depois proposto</strong><p>Informações organizadas por função e prioridade.</p></div><Icon name="check"/></header><ul>{after.map(([area, detail]) => <li key={area}><Icon name="target" size={16}/><span>{area}</span><small>{detail}</small></li>)}</ul></article></div>
     </AccordionSection>
 
-    <AccordionSection number="07" title="Exemplo de rastreabilidade">
+    <AccordionSection number="06" title="Exemplo de rastreabilidade">
       <div className="project-section-copy"><p>Todos os identificadores abaixo são fictícios e servem somente para demonstrar a estrutura das informações.</p></div>
       <div className="project-comparison"><article><header><div><strong>Instrumento</strong><p>Cadastro e localização</p></div><Icon name="target"/></header><ul><li><Icon name="clipboard" size={16}/><span>CAL-FIC-018</span><small>Paquímetro digital</small></li><li><Icon name="file" size={16}/><span>Patrimônio PAT-FIC-204</span><small>Laboratório A</small></li></ul></article><article className="after"><header><div><strong>Calibração</strong><p>Status e documentação</p></div><Icon name="check"/></header><ul><li><Icon name="document" size={16}/><span>Certificado CERT-FIC-087</span><small>Documento demonstrativo</small></li><li><Icon name="chart" size={16}/><span>A vencer</span><small>Prioridade sinalizada</small></li></ul></article></div>
     </AccordionSection>
 
-    <AccordionSection number="08" title="Confidencialidade na apresentação">
+    <AccordionSection number="07" title="Confidencialidade na apresentação">
       <div className="project-security"><Icon name="shield" size={34}/><div><p>Os códigos, patrimônios, certificados, fabricantes, datas, responsáveis e locais apresentados no portfólio são fictícios. A demonstração preserva integralmente dados de empresas e instrumentos reais.</p><div className="project-checks"><span><Icon name="check" size={18}/>Cadastros fictícios</span><span><Icon name="check" size={18}/>Datas e documentos demonstrativos</span><span><Icon name="check" size={18}/>Nenhuma informação empresarial real</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="09" title="Ferramentas e competências">
+    <AccordionSection number="08" title="Ferramentas e competências">
       <div className="project-section-copy"><p>O projeto conecta gestão de informações, controle documental, rastreabilidade e prevenção de falhas operacionais.</p></div>
       <div className="project-skills-grid"><article><h4>Ferramentas e métodos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
@@ -464,6 +461,8 @@ function DashboardCaseStudy() {
       <p>Aplicação web que recebe a planilha de vendas, mapeia as colunas e entrega o dashboard em 45 segundos, com indicadores para acompanhar a operação e identificar desvios. Montar no Excel levava de 2 a 4 horas.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="chart" size={17}/>Análise operacional</span><span><Icon name="desktop" size={17}/>Aplicação web</span></div>
     </header>
+
+    <ResultBlock title="Resultado medido" note="Medi com uma planilha de vendas no meu projeto. O tempo no Excel vem da minha rotina de trabalho anterior. O dashboard financeiro mostrado na demonstração é só um exemplo." highlight><article><strong>45 s</strong><span>para gerar o dashboard</span><p>Tempo medido na aplicação, da planilha enviada ao painel pronto.</p></article><article><strong>2 a 4 h</strong><span>o mesmo dashboard montado no Excel</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>+99%</strong><span>menos tempo</span><p>De 2 a 4 horas para 45 segundos.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/dashboard.mp4" label="Vídeo de apresentação do Dashtop" />
 
@@ -492,25 +491,21 @@ function DashboardCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O projeto não transforma qualquer coluna em gráfico automaticamente. Antes de gerar o dashboard, o usuário confere os campos obrigatórios e pode ajustar o mapeamento sugerido. Essa etapa mantém as regras da análise visíveis e reduz o risco de interpretar uma coluna incorreta.</p><div className="project-checks"><span><Icon name="check" size={18}/>Campos obrigatórios identificados</span><span><Icon name="check" size={18}/>Sugestões revisáveis pelo usuário</span><span><Icon name="check" size={18}/>Mapeamento confirmado antes do painel</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado medido">
-      <div className="project-section-copy"><p>Medi com uma planilha de vendas no meu projeto. O tempo no Excel vem da minha rotina de trabalho anterior. O dashboard financeiro mostrado na demonstração é só um exemplo.</p></div>
-      <div className="project-metrics"><article><strong>45 s</strong><span>para gerar o dashboard</span><p>Tempo medido na aplicação, da planilha enviada ao painel pronto.</p></article><article><strong>2 a 4 h</strong><span>o mesmo dashboard montado no Excel</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>+99%</strong><span>menos tempo</span><p>De 2 a 4 horas para 45 segundos.</p></article></div>
-    </AccordionSection>
 
-    <AccordionSection number="06" title="Recursos para investigação">
+    <AccordionSection number="05" title="Recursos para investigação">
       <div className="project-feature-grid"><FeatureCard icon="search" title="Filtros por período">Permitem analisar janelas de tempo predefinidas ou personalizadas.</FeatureCard><FeatureCard icon="target" title="Filtros por categoria">Refinam a leitura por centro de custo e tipo de conta.</FeatureCard><FeatureCard icon="eye" title="Dados detalhados">Mantêm as linhas que deram origem aos indicadores disponíveis para conferência.</FeatureCard><FeatureCard icon="report" title="Saídas para compartilhamento">A interface oferece opções de relatório e exportação dos dados analisados.</FeatureCard></div>
     </AccordionSection>
 
-    <AccordionSection number="07" title="Antes e depois">
+    <AccordionSection number="06" title="Antes e depois">
       <div className="project-section-copy"><p>Comparação entre uma base criada para registro manual e uma visão preparada para acompanhamento operacional.</p></div>
       <div className="project-comparison"><article className="before"><header><div><strong>Antes</strong><p>Dados misturados e análise dependente de trabalho manual.</p></div><Icon name="warning"/></header><ul>{before.map(item => <li key={item}><Icon name="file" size={16}/><span>{item}</span></li>)}</ul></article><article className="after"><header><div><strong>Depois</strong><p>Fluxo estruturado da importação até a análise.</p></div><Icon name="check"/></header><ul>{after.map(([stage, detail]) => <li key={stage}><Icon name="chart" size={16}/><span>{stage}</span><small>{detail}</small></li>)}</ul></article></div>
     </AccordionSection>
 
-    <AccordionSection number="08" title="Dados protegidos na apresentação">
+    <AccordionSection number="07" title="Dados protegidos na apresentação">
       <div className="project-security"><Icon name="shield" size={34}/><div><p>Os valores, períodos, centros de custo, categorias e registros apresentados no portfólio são fictícios ou demonstrativos. Nenhuma informação confidencial de empresas reais é utilizada para explicar o funcionamento da solução.</p><div className="project-checks"><span><Icon name="check" size={18}/>Valores demonstrativos</span><span><Icon name="check" size={18}/>Categorias genéricas</span><span><Icon name="check" size={18}/>Nenhuma base empresarial real</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="09" title="Tecnologias e competências">
+    <AccordionSection number="08" title="Tecnologias e competências">
       <div className="project-section-copy"><p>O projeto combina tratamento de dados, definição de regras e comunicação visual voltada para o acompanhamento da operação.</p></div>
       <div className="project-skills-grid"><article><h4>Tecnologias e recursos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
