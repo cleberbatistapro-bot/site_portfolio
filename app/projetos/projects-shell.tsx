@@ -257,31 +257,31 @@ function ProcFacilCaseStudy() {
   const sources = ["clientes.xlsx", "pagamentos.xlsx", "pedidos.xlsx"];
   const output = [["Unificado", "6 registros"], ["Pendências", "4 linhas sinalizadas"]];
   const technologies = ["Python", "Excel", "XLS / XLSX / CSV", "Aplicação desktop"];
-  const skills = ["Consolidação de dados", "Definição de regras", "Qualidade de dados", "Tratamento de exceções", "Experiência do usuário", "Validação de resultados"];
+  const skills = ["Consolidação de dados", "Definição de regras", "Qualidade de dados", "Tratamento de exceções", "Experiência do usuário", "Validação de resultados", "Automação de processos administrativos"];
 
   return <>
     <header className="project-intro">
-      <span className="project-eyebrow">Consolidação e qualidade de dados</span>
+      <span className="project-eyebrow">AUTOMAÇÃO ADMINISTRATIVA E QUALIDADE DE DADOS</span>
       <h2>ProcFácil</h2>
-      <p>Aplicação desktop em Python para cruzar informações de diferentes planilhas, identificar correspondências e gerar uma base consolidada pronta para conferência.</p>
-      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto autoral</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
+      <p>Aplicação desktop em Python que cruza várias planilhas por uma coluna em comum, faz cálculos e gera uma base pronta para conferência. 6 planilhas em 5 minutos; à mão eu levava 1 hora.</p>
+      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
     <ProjectVideo src="/project-videos/proc-facil.mp4" label="Vídeo de apresentação do ProcFácil" />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Dados relacionados distribuídos em várias planilhas, exigindo buscas, fórmulas e conferências manuais.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Dados distribuídos em várias planilhas, com buscas, fórmulas e conferências manuais. Cruzar 6 planilhas à mão levava 1 hora.</SummaryCard>
       <SummaryCard icon="gear" title="Solução">Fluxo guiado para escolher arquivos, definir chaves e colunas e consolidar as informações em uma única base.</SummaryCard>
-      <SummaryCard icon="chart" title="Resultado">Na demonstração, três planilhas foram cruzadas em seis registros, com quatro linhas sinalizadas para conferência.</SummaryCard>
+      <SummaryCard icon="chart" title="Resultado">6 planilhas cruzadas em 5 minutos, contra 1 hora à mão. Redução de 92% no tempo, com as pendências sinalizadas.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio" defaultOpen sectionClassName="project-challenge">
-      <div><p>Rotinas administrativas frequentemente dependem de informações que estão separadas em diferentes arquivos: uma planilha contém os clientes, outra os pagamentos e uma terceira os pedidos. Para montar uma visão única, é necessário procurar identificadores, aplicar fórmulas, copiar colunas e conferir os resultados manualmente.</p><p>Além do tempo operacional, o processo exige atenção especial aos registros que não aparecem em todas as bases. Se essas diferenças não forem identificadas, a planilha final pode parecer completa mesmo contendo lacunas importantes.</p></div>
+      <div><p>Rotinas administrativas frequentemente dependem de informações que estão separadas em diferentes arquivos: uma planilha contém os clientes, outra os pagamentos e uma terceira os pedidos. Para montar uma visão única, é necessário procurar identificadores, aplicar fórmulas, copiar colunas e conferir os resultados manualmente. Na minha rotina de trabalho, cruzar 6 planilhas desse jeito, com PROCV, PROCX e colunas reorganizadas, levava 1 hora, e às vezes o computador travava no meio.</p><p>Além do tempo operacional, o processo exige atenção especial aos registros que não aparecem em todas as bases. Se essas diferenças não forem identificadas, a planilha final pode parecer completa mesmo contendo lacunas importantes.</p></div>
       <aside className="project-scenario"><h4>Cenário inicial</h4><div><Icon name="document"/><p><strong>Planilhas separadas</strong>Clientes, pagamentos e pedidos em arquivos diferentes.</p></div><div><Icon name="search"/><p><strong>Cruzamento manual</strong>Uso repetitivo de buscas, fórmulas e conferências.</p></div><div><Icon name="warning"/><p><strong>Correspondências incompletas</strong>Registros ausentes em uma ou mais fontes de dados.</p></div></aside>
     </AccordionSection>
 
     <AccordionSection number="02" title="A solução desenvolvida" sectionClassName="project-solution">
-      <div className="project-section-copy"><p>Desenvolvi uma aplicação que conduz o usuário por três etapas. Primeiro, ele seleciona duas ou mais planilhas. Depois, escolhe a aba, a coluna-chave e quais campos de cada arquivo devem entrar no resultado. Por fim, o sistema cruza os dados, apresenta uma prévia e permite salvar a planilha consolidada.</p></div>
+      <div className="project-section-copy"><p>Desenvolvi uma aplicação que conduz o usuário por três etapas. Primeiro, ele seleciona duas ou mais planilhas. Depois, escolhe a aba, a coluna-chave e quais campos de cada arquivo devem entrar no resultado. Por fim, o sistema cruza os dados, faz cálculos (soma, subtração, multiplicação, divisão e porcentagem), apresenta uma prévia e permite salvar a planilha consolidada.</p></div>
       <div className="project-feature-grid"><FeatureCard icon="document" title="Múltiplos arquivos">Seleção de duas ou mais planilhas nos formatos XLSX, XLS ou CSV.</FeatureCard><FeatureCard icon="target" title="Chave configurável">Definição do identificador em comum para relacionar os registros.</FeatureCard><FeatureCard icon="clipboard" title="Colunas selecionáveis">Escolha dos campos que realmente devem compor o resultado.</FeatureCard><FeatureCard icon="warning" title="Pendências visíveis">Linhas sem correspondência são destacadas para conferência.</FeatureCard></div>
     </AccordionSection>
 
@@ -294,9 +294,9 @@ function ProcFacilCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O ProcFácil não esconde as diferenças entre as fontes. Antes de salvar, a prévia destaca os registros sem correspondência e informa quantas linhas precisam de atenção. No arquivo final, essas ocorrências também são mantidas em uma aba específica.</p><div className="project-checks"><span><Icon name="check" size={18}/>Arquivos originais preservados</span><span><Icon name="check" size={18}/>Prévia do resultado consolidado</span><span><Icon name="check" size={18}/>Pendências separadas para revisão</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Resultado da demonstração">
-      <div className="project-section-copy"><p>Dados observados no teste apresentado com as planilhas de clientes, pagamentos e pedidos.</p></div>
-      <div className="project-metrics"><article><strong>3</strong><span>planilhas selecionadas</span><p>Três fontes relacionadas no mesmo fluxo.</p></article><article><strong>6</strong><span>registros consolidados</span><p>Chaves reunidas na prévia e no arquivo final.</p></article><article><strong>4</strong><span>linhas com pendências</span><p>Correspondências incompletas destacadas para revisão.</p></article></div>
+    <AccordionSection number="05" title="Resultado medido">
+      <div className="project-section-copy"><p>Medi com 6 planilhas no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo da seção seguinte usa 3 planilhas.</p></div>
+      <div className="project-metrics"><article><strong>5 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>92%</strong><span>menos tempo</span><p>De 1 hora para 5 minutos.</p></article></div>
     </AccordionSection>
 
     <AccordionSection number="06" title="Antes e depois">
@@ -308,7 +308,7 @@ function ProcFacilCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias e formatos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados consolidados com regras claras e pendências visíveis.</h3><p>O ProcFácil demonstra minha capacidade de entender uma rotina administrativa baseada em planilhas, transformar o processo em uma sequência lógica e desenvolver uma ferramenta que facilita o trabalho sem eliminar a conferência humana. O resultado combina organização, rastreabilidade e tratamento transparente das exceções — competências relevantes para equipes administrativas, de processos e dados em oportunidades CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados consolidados com regras claras e pendências visíveis.</h3><p>Parti de uma rotina de planilhas que levava 1 hora, transformei em uma sequência lógica e desenvolvi uma ferramenta que faz o mesmo em 5 minutos, sem eliminar a conferência humana: as pendências ficam visíveis e os arquivos originais, preservados. Rastreabilidade e tratamento transparente das exceções são o que levo para equipes administrativas e de processos, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
