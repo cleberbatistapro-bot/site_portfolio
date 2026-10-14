@@ -383,14 +383,14 @@ function CalibrationCaseStudy() {
   const before = ["Planilha extensa", "Datas conferidas manualmente", "Certificados em locais separados", "Status sem visão consolidada"];
   const after = [["Instrumentos", "Cadastro centralizado"], ["Calendário", "Prazos visíveis"], ["Documentos", "Certificados vinculados"], ["Histórico", "Registros rastreáveis"]];
   const technologies = ["Figma", "Wireframes", "Fluxos de processo", "Dados estruturados"];
-  const skills = ["Gestão da qualidade", "Controle documental", "Rastreabilidade", "Mapeamento de processos", "Prevenção de riscos", "UX administrativa"];
+  const skills = ["Gestão da qualidade", "Controle documental", "Rastreabilidade", "Mapeamento de processos", "Prevenção de riscos", "UX administrativa", "Digitalização de processos"];
 
   return <>
     <header className="project-intro">
-      <span className="project-eyebrow">Controle documental e qualidade</span>
+      <span className="project-eyebrow">DIGITALIZAÇÃO DE PROCESSOS E CONTROLE DOCUMENTAL</span>
       <h2>Controle de Calibração</h2>
-      <p>Solução projetada para centralizar o controle de instrumentos de medição, acompanhar prazos de calibração e tornar as informações mais organizadas, rastreáveis e fáceis de consultar.</p>
-      <div className="project-meta"><span><Icon name="award" size={17}/>Projeto conceitual</span><span><Icon name="target" size={17}/>Gestão da qualidade</span><span><Icon name="desktop" size={17}/>Interface web</span></div>
+      <p>Protótipo que desenhei para transformar a planilha de Excel de controle de calibração em um sistema: cadastro dos instrumentos, alerta de vencimento, status e certificado de cada um no mesmo painel.</p>
+      <div className="project-meta"><span><Icon name="award" size={17}/>Protótipo próprio</span><span><Icon name="target" size={17}/>Gestão da qualidade</span><span><Icon name="desktop" size={17}/>Interface web</span></div>
     </header>
 
     <ProjectImageCompare
@@ -399,9 +399,9 @@ function CalibrationCaseStudy() {
     />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Planilhas extensas e registros separados dificultam acompanhar vencimentos, documentos e o histórico dos instrumentos.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Planilha extensa, datas conferidas à mão e certificados em arquivos separados: risco de um vencimento passar sem atenção.</SummaryCard>
       <SummaryCard icon="gear" title="Solução projetada">Painel centralizado para cadastrar instrumentos, visualizar prazos, atualizar status e manter os registros organizados.</SummaryCard>
-      <SummaryCard icon="target" title="Objetivo">Favorecer o controle das calibrações e reduzir o risco de perda de prazos ou informações importantes para a qualidade.</SummaryCard>
+      <SummaryCard icon="target" title="Objetivo">Mostrar quais instrumentos vencem e em quantos dias, com status e certificado no mesmo lugar, sem depender de filtro e cor na planilha.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O contexto de controle" defaultOpen sectionClassName="project-challenge">
@@ -423,9 +423,9 @@ function CalibrationCaseStudy() {
       <div className="project-security"><Icon name="shield" size={34}/><div><p>O painel foi pensado para não depender apenas da leitura de datas. A situação de cada instrumento é apresentada por status, permitindo diferenciar o que está no prazo, o que exige atenção e o que já está vencido.</p><div className="project-checks"><span><Icon name="check" size={18}/>Visão dos próximos vencimentos</span><span><Icon name="check" size={18}/>Status atualizado por instrumento</span><span><Icon name="check" size={18}/>Calendário para planejamento das calibrações</span></div></div></div>
     </AccordionSection>
 
-    <AccordionSection number="05" title="Controle estruturado para a qualidade">
-      <div className="project-section-copy"><p>A apresentação demonstra capacidades da solução, sem atribuir indicadores de desempenho ainda não medidos.</p></div>
-      <div className="project-metrics"><article><strong>✓</strong><span>prazos visíveis</span><p>Datas e prioridades reunidas no mesmo painel.</p></article><article><strong>↺</strong><span>histórico preservado</span><p>Atualizações mantidas para futuras consultas.</p></article><article><strong>◎</strong><span>status centralizado</span><p>Situação dos instrumentos apresentada de forma consolidada.</p></article></div>
+    <AccordionSection number="05" title="O que o painel entrega">
+      <div className="project-section-copy"><p>Protótipo desenhado por mim, sem medição de resultado. Aqui entram só as capacidades do sistema.</p></div>
+      <div className="project-metrics"><article><strong>1</strong><span>painel único</span><p>Prazos, status e certificado de cada instrumento no mesmo lugar.</p></article><article><strong>↺</strong><span>histórico preservado</span><p>Atualizações mantidas para futuras consultas.</p></article><article><strong>◎</strong><span>status centralizado</span><p>Situação dos instrumentos apresentada de forma consolidada.</p></article></div>
     </AccordionSection>
 
     <AccordionSection number="06" title="Antes e depois proposto">
@@ -447,7 +447,7 @@ function CalibrationCaseStudy() {
       <div className="project-skills-grid"><article><h4>Ferramentas e métodos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Visibilidade e rastreabilidade para apoiar decisões de qualidade.</h3><p>Este projeto demonstra minha capacidade de analisar um controle administrativo crítico, organizar requisitos e transformar informações dispersas em um fluxo de acompanhamento mais claro. A proposta combina visão de processos, qualidade de dados e atenção a prazos — competências aplicáveis a equipes de qualidade, processos, operações ou administração, em oportunidades CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Visibilidade e rastreabilidade para apoiar decisões de qualidade.</h3><p>Peguei um controle crítico que vivia em planilha de Excel, levantei o que ele precisava mostrar e desenhei o sistema: prazos, status e certificados no mesmo painel. A proposta combina visão de processos, qualidade de dados e atenção a prazos: competências que levo para equipes de processos, operações ou administração, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
