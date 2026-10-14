@@ -48,7 +48,7 @@ export default function Home() {
             </div>
             <div className="home-actions reveal" style={{ transitionDelay: "330ms" }}>
               <a className="home-primary-action" href="/projetos/"><HomeIcon name="integrated" size={18}/>Ver projetos aplicados <span aria-hidden="true">→</span></a>
-              <a className="home-secondary-action" href="/curriculo-cleber-batista.pdf" download><HomeIcon name="download" size={18}/>Baixar currículo</a>
+              <a className="home-secondary-action" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download><HomeIcon name="download" size={18}/>Baixar currículo</a>
             </div>
             <a className="home-text-link reveal" style={{ transitionDelay: "390ms" }} href="/sobre-mim/">Conhecer minha trajetória <span aria-hidden="true">→</span></a>
           </div>
