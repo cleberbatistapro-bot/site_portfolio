@@ -82,7 +82,7 @@ function ProfileSection() {
       </aside>
       <div className="profile-copy">
         <h3>Transformo processos administrativos manuais em soluções <em>automatizadas e inteligentes.</em></h3>
-        <p>Automatizo processos administrativos. Nos meus projetos, o que eu fazia à mão em 1 hora passou a levar 35 segundos (500 arquivos organizados) e 5 minutos (6 planilhas cruzadas), e um relatório de vendas de 2 a 4 horas passou a levar 45 segundos.</p>
+        <p>Automatizo processos administrativos. Nos meus projetos, o que eu fazia à mão em 1 hora passou a levar 35 segundos (500 arquivos organizados), 1h–1h30 passou a levar 5–10 min (6 planilhas cruzadas) e 2–4 h passou a levar 12 s (dashboard, da planilha ao resultado). O tempo manual vem da minha rotina; o tempo com a ferramenta foi medido por mim.</p>
         <p>Tenho mais de 20 anos de experiência em atendimento, operações, indústria, qualidade e negócio próprio. Na qualidade automotiva, vi de perto onde os processos travam: retrabalho, registro manual e falta de rastreabilidade.</p>
         <p>Hoje uno essa experiência a Python, n8n, SQL e IA para automatizar tarefas repetitivas, organizar informações e apoiar decisões com mais clareza. Trabalho em quatro etapas: entender o problema, organizar o processo, construir a solução e testar e documentar.</p>
         <p>Meu perfil combina visão de processos, capacidade analítica, organização, autonomia e foco em resultados, sempre buscando utilizar tecnologia de forma prática para resolver problemas reais do dia a dia.</p>
@@ -99,7 +99,7 @@ function TrajectorySection() {
     ["chart", "Marketing Digital e Desenvolvimento Web", "De 2020 a 2022, tráfego pago e estruturação de processos de vendas online, com análise de métricas. De 2023 a 2024, desenvolvimento de sites em WordPress, Elementor e Crocoblock."],
     ["shield", "Segurança e Monitoramento", "Experiência em monitoramento de sistemas e gestão de equipes, com foco em processos, disciplina e confiabilidade."],
     ["value", "Indústria Automotiva e Qualidade", "Na COFAT: 6.000+ módulos de PPAP, 1.000+ estudos de capabilidade, 50+ análises de MSA, calibração de 200 instrumentos e 5 auditorias."],
-    ["gear", "Automação de Processos Administrativos", "Na COFAT, desenhei 3 soluções de automação dentro da Qualidade (Inspeção Digital, Controle de Calibração e Doc Audit). Hoje automatizo processos administrativos em projetos próprios."],
+    ["gear", "Automação de Processos Administrativos", "Na Cofat, desenhei 3 soluções de automação para a rotina da qualidade: Inspeção Digital, Controle de Calibração e Doc Audit. A Inspeção Digital foi aprovada e repassada para a TI. Hoje automatizo processos administrativos em projetos próprios."],
   ];
   return <>
     <span className="eyebrow">Minha trajetória</span>
@@ -116,7 +116,7 @@ function WorkSection() {
     ["search", "01", "Entender o problema", "Analiso o processo inteiro: como ele funciona hoje, onde ele trava e onde gera retrabalho."],
     ["organize", "02", "Organizar o processo", "Redesenho o fluxo quando preciso e defino critérios e informações, com padrões e documentação clara para reduzir retrabalho e erros."],
     ["code", "03", "Construir a solução", "Desenvolvo com Python, n8n, SQL e IA, com validação humana. Exemplo: 500 arquivos organizados em 35 segundos, em vez de 1 hora."],
-    ["improve", "04", "Testar e documentar", "Valido, ajusto e registro o que foi feito, comparando o tempo antes e depois. Exemplo: 6 planilhas cruzadas em 5 minutos, em vez de 1 hora."],
+    ["improve", "04", "Testar e documentar", "Valido, ajusto e registro o que foi feito, comparando o tempo antes e depois. Exemplo: 6 planilhas cruzadas em 5–10 min, em vez de 1h–1h30."],
   ];
   const principles: [IconName,string,string][] = [
     ["target","Foco em resultados","Trabalho com objetivo claro e meço o resultado: o tempo antes e depois de cada solução."],
@@ -138,7 +138,7 @@ function ProcessSection() {
   const pillars: [IconName,string,string][] = [
     ["value","Foco no valor","Entendo o que gera valor para o cliente interno ou externo e priorizo o que move o negócio."],
     ["integrated","Visão integrada","Analiso o processo de forma completa, considerando pessoas, atividades, dados, regras e sistemas."],
-    ["warning","Identificação de gargalos","Encontro atrasos, retrabalho e falhas. Ex.: cruzar 6 planilhas à mão levava 1 hora."],
+    ["warning","Identificação de gargalos","Encontro atrasos, retrabalho e falhas. Ex.: cruzar 6 planilhas à mão levava 1h–1h30."],
     ["target","Simplicidade intencional","Busco a forma mais simples e clara de fazer, reduzindo complexidade e dependências."],
     ["chart","Dados e decisão","Meço o tempo do processo antes e depois de automatizar e uso esses dados para decidir."],
   ];
@@ -160,11 +160,11 @@ function ProcessSection() {
 
 function TechSection() {
   const tools = [
-    { icon: "python" as IconName, title: "Python, n8n e SQL", subtitle: "Automação, integração e análise de dados.", items: ["Organizador: 500 arquivos em 35 segundos", "PROC Fácil: 6 planilhas em 5 minutos", "Automação de fluxos com n8n", "Consultas em SQL (PostgreSQL)"] },
+    { icon: "python" as IconName, title: "Python, n8n e SQL", subtitle: "Automação, integração e análise de dados.", items: ["Organizador: 500 arquivos em 35 segundos", "PROC Fácil: 6 planilhas em 5–10 min", "Automação de fluxos com n8n", "Consultas em SQL (PostgreSQL)"] },
     { icon: "excel" as IconName, title: "Excel Avançado", subtitle: "Análise, organização e modelagem de dados.", items: ["Fórmulas avançadas, PROCV e PROCX", "Tabelas dinâmicas e dashboards", "Análise de MSA e capabilidade na indústria", "Validações e análises robustas"] },
     { icon: "ai" as IconName, title: "Inteligência Artificial", subtitle: "Desenvolvimento assistido por IA, com validação humana.", items: ["Desenvolvimento assistido por IA (Claude Code)", "Análise de dados com IA", "Requisitos antes do código (Spec-Driven)", "Validação humana em cada entrega"] },
   ];
-  const value = [["gear","Automatizo tarefas repetitivas","Tarefas de 1 a 4 horas à mão passam a levar segundos ou minutos."],["database","Organizo e transformo dados em informação","Estruturo dados de diferentes fontes para gerar clareza e apoio à decisão."],["target","Gero indicadores que importam","Crio dashboards que mostram o que precisa ser acompanhado: um relatório de vendas em 45 segundos, em vez de 2 a 4 horas."]] as [IconName,string,string][];
+  const value = [["gear","Automatizo tarefas repetitivas","Tarefas de 1 a 4 horas à mão passam a levar segundos ou minutos."],["database","Organizo e transformo dados em informação","Estruturo dados de diferentes fontes para gerar clareza e apoio à decisão."],["target","Gero indicadores que importam","Crio dashboards que mostram o que precisa ser acompanhado: um dashboard em 12 s, em vez de 2–4 h."]] as [IconName,string,string][];
   return <>
     <span className="eyebrow">Tecnologia aplicada</span><h3 className="hero-copy">Tecnologia é a ferramenta que potencializa resultados reais e <em>mensuráveis</em>.</h3><p className="lead">Utilizo tecnologia de forma estratégica para transformar dados em informações, automatizar tarefas, gerar indicadores e apoiar decisões que melhoram processos e impulsionam o desempenho do negócio.</p>
     <div className="subsection"><h3 className="section-title">Ferramentas que aplico no dia a dia</h3><div className="tool-grid">{tools.map(tool => <article className="tool-card" key={tool.title}><span className="tool-icon"><Icon name={tool.icon} size={29}/></span><h4>{tool.title}</h4><p>{tool.subtitle}</p><ul>{tool.items.map(item => <li key={item}>{item}</li>)}</ul></article>)}</div></div>
@@ -187,7 +187,7 @@ function ObjectiveSection() {
     ["monitor","Tecnologia","Ambiente que valoriza o uso prático da tecnologia para melhorar processos e apoiar resultados."],
   ];
   return <>
-    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco resolver problemas de processos administrativos com <em>automação e IA aplicada</em>.</h3><p className="lead">Meu objetivo é atuar como Analista de Processos ou Analista de Automação, em uma posição remota (CLT ou PJ), aplicando tecnologia para eliminar trabalho manual administrativo e apoiar decisões.</p>
+    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco resolver problemas de processos administrativos com <em>automação e IA aplicada</em>.</h3><p className="lead">Meu objetivo é atuar como Analista de Processos ou Analista de Automação, em uma posição remota (CLT ou PJ), aplicando tecnologia para eliminar trabalho manual administrativo e apoiar decisões. Busco uma vaga remota como Analista de Processos e Automação (CLT ou PJ), para identificar processos manuais e construir a automação que os elimina.</p>
     <div className="subsection"><h3 className="section-title">Onde posso contribuir</h3><div className="card-grid three contribution-grid">{contributions.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <div className="subsection"><h3 className="section-title">O ambiente em que quero atuar</h3><div className="environment-list">{environment.map(([icon,title,copy]) => <article key={title}><Icon name={icon}/><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <QuoteBar>Quero usar experiência, visão de processos e tecnologia para tornar o trabalho administrativo mais simples, confiável e eficiente.</QuoteBar>
