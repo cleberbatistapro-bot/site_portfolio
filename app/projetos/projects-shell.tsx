@@ -141,11 +141,11 @@ function PrumoCaseStudy() {
     <header className="project-intro">
       <span className="project-eyebrow">Arquitetura de sistemas e gestão remota</span>
       <h2>Prumo</h2>
-      <p>Sistema web para acompanhar equipe remota pelo processo, não pela vigilância: o gargalo aparece em tempo real, o desempenho é comparado só com o histórico de cada pessoa e a permissão por cargo é checada no servidor. 2 plataformas com banco próprio e 3 perfis de acesso.</p>
+      <p>Gestores de equipes remotas precisam enxergar prazos, fluxo e gargalos, mas o controle costuma virar vigilância sobre as pessoas. O Prumo é um sistema de operação para equipes remotas que torna o trabalho visível pelo processo, e não pela vigilância. Toda métrica aponta onde ajudar, nunca quem culpar. Arquitetei o sistema do zero, do problema da equipe à tela que o resolve.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="layers" size={17}/>Arquitetura multi-serviço</span><span><Icon name="desktop" size={17}/>Demo no ar, com dados fictícios</span></div>
     </header>
 
-    <ResultBlock title="Resultado no ar" note="Números reais do estado atual do sistema, não estimativa."><article><strong>2</strong><span>plataformas no ar</span><p>Fluxo e Agenda, cada uma com banco e deploy próprios.</p></article><article><strong>3</strong><span>perfis de acesso</span><p>A permissão é checada no servidor: ao trocar de cargo, muda o que a pessoa consegue fazer.</p></article><article><strong>0</strong><span>dados sensíveis reais</span><p>Ambiente de demonstração, com cargos e senha únicos para avaliação.</p></article></ResultBlock>
+    <ResultBlock title="Resultado no ar" note="Protótipo próprio com dados fictícios, sem resultado medido."><article><strong>2</strong><span>plataformas no ar</span><p>Fluxo e Agenda, cada uma com banco e deploy próprios.</p></article><article><strong>3</strong><span>perfis de acesso</span><p>A permissão é checada no servidor: ao trocar de cargo, muda o que a pessoa consegue fazer.</p></article><article><strong>0</strong><span>dados sensíveis reais</span><p>Ambiente de demonstração, com cargos e senha únicos para avaliação.</p></article></ResultBlock>
 
     <LiveDemoBox />
 
