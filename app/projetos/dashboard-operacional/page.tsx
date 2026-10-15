@@ -3,7 +3,7 @@ import { buildMetadata } from "../../seo";
 import ProjectsShell from "../projects-shell";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Dashtop | Análise de Dados | Cleber Batista",
+  title: "Dash Top | Análise de Dados | Cleber Batista",
   description: "Aplicação web que transforma planilhas em indicadores visuais para acompanhamento operacional e apoio à decisão. Projeto autoral de Cleber Batista.",
   path: "/projetos/dashboard-operacional/",
 });

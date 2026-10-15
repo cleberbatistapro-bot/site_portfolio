@@ -457,19 +457,19 @@ function DashboardCaseStudy() {
   return <>
     <header className="project-intro">
       <span className="project-eyebrow">AUTOMAÇÃO DE RELATÓRIOS E ANÁLISE DE DADOS</span>
-      <h2>Dashtop</h2>
-      <p>Aplicação web que recebe a planilha de vendas, mapeia as colunas e entrega o dashboard em 45 segundos, com indicadores para acompanhar a operação e identificar desvios. Montar no Excel levava de 2 a 4 horas.</p>
+      <h2>Dash Top</h2>
+      <p>Aplicação web que recebe a planilha, mapeia as colunas e entrega o dashboard em 12 segundos, com indicadores para acompanhar a operação e identificar desvios. Montar no Excel levava de 2 a 4 horas.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="chart" size={17}/>Análise operacional</span><span><Icon name="desktop" size={17}/>Aplicação web</span></div>
     </header>
 
-    <ResultBlock title="Resultado medido" note="Medi com uma planilha de vendas no meu projeto. O tempo no Excel vem da minha rotina de trabalho anterior. O dashboard financeiro mostrado na demonstração é só um exemplo." highlight><article><strong>45 s</strong><span>para gerar o dashboard</span><p>Tempo medido na aplicação, da planilha enviada ao painel pronto.</p></article><article><strong>2 a 4 h</strong><span>o mesmo dashboard montado no Excel</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>+99%</strong><span>menos tempo</span><p>De 2 a 4 horas para 45 segundos.</p></article></ResultBlock>
+    <ResultBlock title="Resultado medido" note="Tempo manual: minha rotina de analista. Os 12 s foram medidos em vídeo, do envio da planilha ao dashboard na tela (não inclui exportação em PDF)." highlight><article><strong>12 s</strong><span>para gerar o dashboard</span><p>Planilha de 754 linhas processada do início ao fim.</p></article><article><strong>2–4 h</strong><span>o mesmo dashboard montado no Excel</span><p>Tempo da minha rotina de analista.</p></article><article><strong>&gt;99%</strong><span>menos tempo</span><p>Melhor caso manual (2 h) contra 12 s.</p></article></ResultBlock>
 
-    <ProjectVideo src="/project-videos/dashboard.mp4" label="Vídeo de apresentação do Dashtop" />
+    <ProjectVideo src="/project-videos/dashboard.mp4" label="Vídeo de apresentação do Dash Top" />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Dados distribuídos em planilhas e controles separados. Montar o dashboard no Excel levava de 2 a 4 horas.</SummaryCard>
-      <SummaryCard icon="gear" title="Solução">Fluxo que importa a planilha, identifica sua categoria, confirma o mapeamento dos campos e gera um painel visual.</SummaryCard>
-      <SummaryCard icon="target" title="Objetivo">Dashboard pronto em 45 segundos, contra 2 a 4 horas no Excel, com comparações, padrões e desvios claros para apoiar a decisão.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Montar um dashboard à mão, a partir de uma planilha, levava de 2 a 4 horas na minha rotina de analista. O tempo inclui filtrar os dados, personalizar o visual e testar.</SummaryCard>
+      <SummaryCard icon="gear" title="Solução">Transforma a planilha em um dashboard pronto, sem montar gráfico nem fórmula manualmente. Ideal para uma reunião de última hora: em segundos você tem o dashboard pronto.</SummaryCard>
+      <SummaryCard icon="target" title="Objetivo">Dashboard pronto em 12 segundos, contra 2 a 4 horas no Excel, com comparações, padrões e desvios claros para apoiar a decisão.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio dos dados dispersos" defaultOpen sectionClassName="project-challenge">
@@ -510,7 +510,7 @@ function DashboardCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias e recursos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados brutos transformados em uma visão útil para a operação.</h3><p>Parti de um trabalho que levava de 2 a 4 horas no Excel e desenvolvi uma aplicação que entrega o dashboard em 45 segundos, com o mapeamento dos campos confirmado pelo usuário antes de gerar o painel. A solução conecta análise de dados, processos administrativos e apoio à decisão: competências que levo para equipes de processos, operações ou administração, em uma oportunidade CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados brutos transformados em uma visão útil para a operação.</h3><p>Parti de um trabalho que levava de 2 a 4 horas no Excel e desenvolvi uma aplicação que entrega o dashboard em 12 segundos, com o mapeamento dos campos confirmado pelo usuário antes de gerar o painel. A solução conecta análise de dados, processos administrativos e apoio à decisão: competências que levo para equipes de processos, operações ou administração, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
