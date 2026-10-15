@@ -37,7 +37,7 @@ const homeProjects: HomeProject[] = [
     label: "Organizador de Arquivos",
     image: "/home-projects/organizador.webp",
     category: "AUTOMAÇÃO DE PROCESSOS ADMINISTRATIVOS",
-    summary: "Organiza 500 arquivos por tipo em 35 segundos. À mão eu levava 1 hora: 99% menos tempo.",
+    summary: "1 h → 35 s · 500 arquivos organizados",
     problem: "Arquivos acumulados, nomes inconsistentes e dificuldade para localizar informações.",
     solution: "Organização automática por categorias, aplicação de regras e registro das ações realizadas.",
     tags: ["Python", "Processos", "Organização de dados"],
@@ -53,7 +53,7 @@ const homeProjects: HomeProject[] = [
     label: "ProcFácil",
     image: "/home-projects/procfacil.webp",
     category: "Consolidação e qualidade de dados",
-    summary: "Cruza 6 planilhas por uma coluna em comum e faz os cálculos em 5 minutos. À mão, com PROCV e PROCX, eu levava 1 hora.",
+    summary: "1h–1h30 → 5–10 min · 6 planilhas e 700 pedidos cruzados",
     problem: "Informações distribuídas em arquivos diferentes exigem buscas, fórmulas e validações manuais.",
     solution: "Cruzamento guiado de planilhas, escolha das chaves e geração de uma base consolidada.",
     tags: ["Python", "Excel", "Qualidade de dados"],
@@ -66,10 +66,10 @@ const homeProjects: HomeProject[] = [
   {
     id: "dashboard",
     kind: "analytics",
-    label: "Dashtop",
+    label: "Dash Top",
     image: "/home-projects/dashboard.webp",
     category: "Análise de dados",
-    summary: "Transforma a planilha de vendas em dashboard em 45 segundos. Montar no Excel levava de 2 a 4 horas.",
+    summary: "2–4 h → 12 s · dashboard pronto, da planilha ao resultado",
     problem: "Planilhas e controles separados tornam padrões, comparações e desvios menos visíveis.",
     solution: "Importação, mapeamento e organização dos dados em uma visão operacional centralizada.",
     tags: ["Dados", "Indicadores", "Visualização"],
@@ -163,7 +163,7 @@ export default function HomeProjects() {
           <header className="home-projects-heading">
             <span className="home-projects-badge"><ProjectIcon kind="files" size={14}/>Projetos aplicados</span>
             <h2 id="home-projects-title">Tarefas de 1 a 4 horas que agora levam <em>segundos ou minutos</em>.</h2>
-            <p>Do problema à solução: projetos reais em que redesenhei o processo. Tempos comparados ao que eu fazia à mão.</p>
+            <p>Projetos próprios, criados a partir de dores da minha rotina de analista. O tempo &quot;antes&quot; vem dessa rotina; o tempo &quot;depois&quot; foi medido por mim.</p>
           </header>
           <nav className="home-projects-menu" aria-label="Projetos em destaque" role="tablist">
             {homeProjects.map((item, index) => <button

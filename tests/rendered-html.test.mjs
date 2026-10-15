@@ -35,7 +35,7 @@ test("renders development preview metadata", async () => {
   assert.match(html, /organizar/i);
   assert.match(html, /processos/i);
   assert.match(html, /Ver projeto detalhado/i);
-  assert.match(html, /Dashtop/i);
+  assert.match(html, /Dash Top/i);
   assert.match(html, /Competências aplicadas/i);
   assert.match(html, /Conhecimento técnico/i);
   assert.match(html, /IA aplicada/i);

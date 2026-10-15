@@ -48,9 +48,9 @@ export default function HomePrumoFeature() {
   return <section className="home-prumo-section reveal" aria-labelledby="home-prumo-title">
     <div className="home-prumo-shell">
       <div className="home-prumo-copy">
-        <span className="home-prumo-badge"><span className="home-prumo-dot" aria-hidden="true" />Projeto em destaque · no ar agora</span>
+        <span className="home-prumo-badge"><span className="home-prumo-dot" aria-hidden="true" />Protótipo · no ar agora</span>
         <h2 id="home-prumo-title">Prumo: o trabalho remoto <em>visível pelo processo</em> — não pela vigilância.</h2>
-        <p>Sistema em produção que arquitetei do zero: gargalo em tempo real, desempenho sem ranking entre colegas e plataformas-irmãs isoladas — não é mockup, é código rodando de verdade.</p>
+        <p>Gestores de equipes remotas precisam enxergar prazos, fluxo e gargalos, mas o controle costuma virar vigilância sobre as pessoas. O Prumo é um sistema de operação para equipes remotas que torna o trabalho visível pelo processo, e não pela vigilância. Toda métrica aponta onde ajudar, nunca quem culpar. Arquitetei o sistema do zero, do problema da equipe à tela que o resolve.</p>
         <div className="home-prumo-actions">
           <a className="home-primary-action" href="https://prumo.cleberbatistapro.com.br" target="_blank" rel="noreferrer">Ver a demonstração ao vivo <span aria-hidden="true">→</span></a>
           <a className="home-text-link" href="/projetos/prumo/">Ler o estudo de caso completo <span aria-hidden="true">→</span></a>

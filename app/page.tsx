@@ -34,33 +34,32 @@ export default function Home() {
         </div>
         <div className="home-hero-inner">
           <div className="home-hero-copy">
-            <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Processos · Automação · IA Aplicada</span>
+            <span className="home-eyebrow reveal" style={{ transitionDelay: "60ms" }}>Aberto a vagas remotas · CLT ou PJ</span>
             <h1 id="home-hero-title" className="reveal" style={{ transitionDelay: "130ms" }}>
-              <span className="home-title-line">Transformo até 4 horas de trabalho </span>
-              <span className="home-title-line">manual em 45 segundos com soluções </span>
-              <span className="home-title-line"><em>automatizadas e inteligentes.</em></span>
+              <span className="home-title-line">Analista de Automação de </span>
+              <span className="home-title-line"><em>Processos Administrativos</em></span>
             </h1>
-            <p className="reveal" style={{ transitionDelay: "200ms" }}>Analista de Processos | Analista de Automação, com foco em automação de processos administrativos. Resultados medidos nos meus projetos, comparados ao que eu fazia à mão na minha rotina de trabalho.</p>
+            <p className="reveal" style={{ transitionDelay: "200ms" }}>Mapeio processos administrativos, encontro o que é manual e repetitivo e construo a automação que devolve horas às equipes. Resultados medidos em projetos próprios.</p>
             <div className="home-meta reveal" style={{ transitionDelay: "270ms" }} aria-label="Informações profissionais">
               <span><HomeIcon name="pin" size={17}/>Piracaia — SP</span>
               <span><HomeIcon name="monitor" size={17}/>Disponível para trabalho 100% remoto</span>
               <span><HomeIcon name="briefcase" size={17}/>CLT ou PJ</span>
             </div>
             <div className="home-actions reveal" style={{ transitionDelay: "330ms" }}>
-              <a className="home-primary-action" href="/projetos/"><HomeIcon name="integrated" size={18}/>Ver projetos aplicados <span aria-hidden="true">→</span></a>
+              <a className="home-primary-action" href="/projetos/"><HomeIcon name="integrated" size={18}/>Ver projetos <span aria-hidden="true">→</span></a>
               <a className="home-secondary-action" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download><HomeIcon name="download" size={18}/>Baixar currículo</a>
             </div>
             <a className="home-text-link reveal" style={{ transitionDelay: "390ms" }} href="/sobre-mim/">Conhecer minha trajetória <span aria-hidden="true">→</span></a>
           </div>
           <div className="home-proof-bar reveal" style={{ transitionDelay: "450ms" }} aria-label="Destaques profissionais">
-            <article><span className="home-proof-icon"><HomeIcon name="user" size={25}/></span><div><strong>20+ anos de experiência</strong><p>Atendimento, negócios, indústria e qualidade</p></div></article>
-            <article><span className="home-proof-icon"><HomeIcon name="chart" size={25}/></span><div><strong>Automação e dados</strong><p>Python, IA aplicada e análise para eliminar o manual</p></div></article>
-            <article><span className="home-proof-icon"><HomeIcon name="monitor" size={25}/></span><div><strong>Pronto para o trabalho remoto</strong><p>Autonomia, organização e comunicação</p></div></article>
+            <article><span className="home-proof-icon"><HomeIcon name="user" size={25}/></span><div><strong>Organizador de Arquivos: 1 h → 35 s</strong><p>500 arquivos organizados</p></div></article>
+            <article><span className="home-proof-icon"><HomeIcon name="chart" size={25}/></span><div><strong>Dash Top: 2–4 h → 12 s</strong><p>Dashboard pronto, da planilha ao resultado</p></div></article>
+            <article><span className="home-proof-icon"><HomeIcon name="monitor" size={25}/></span><div><strong>ProcFácil: 1h–1h30 → 5–10 min</strong><p>6 planilhas e 700 pedidos cruzados</p></div></article>
           </div>
         </div>
       </section>
-      <HomePrumoFeature/>
       <HomeProjects/>
+      <HomePrumoFeature/>
       <HomeCompetencies/>
       <HomeWorkflow/>
       <HomeContact/>
