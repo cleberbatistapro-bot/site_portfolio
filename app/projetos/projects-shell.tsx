@@ -213,14 +213,14 @@ function OrganizerCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
-    <ResultBlock title="Resultado medido" note="Medi com 500 arquivos no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo em 'Antes e depois' usa 21 arquivos." highlight><article><strong>35 s</strong><span>para organizar 500 arquivos</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>99%</strong><span>menos tempo</span><p>De 1 hora para 35 segundos.</p></article></ResultBlock>
+    <ResultBlock title="Resultado medido" note="O tempo manual é da minha rotina. Os 35 s foram medidos por mim em teste com 500 arquivos." highlight><article><strong>35 s</strong><span>para organizar 500 arquivos</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>99%</strong><span>menos tempo</span><p>De 1 hora para 35 segundos.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/organizador.mp4" label="Vídeo de apresentação do Organizador de Arquivos" />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Pastas administrativas com arquivos de vários formatos e sem padrão. Organizar 500 arquivos à mão levava 1 hora.</SummaryCard>
-      <SummaryCard icon="gear" title="Solução">Automação que identifica os formatos e distribui os arquivos em pastas por categoria, seguindo regras definidas.</SummaryCard>
-      <SummaryCard icon="chart" title="Resultado">500 arquivos organizados em 35 segundos, contra 1 hora à mão. Redução de 99% no tempo.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Manter o computador organizado, com cada arquivo na sua pasta, leva em média 1 hora à mão na minha rotina de analista. Sem essa rotina, o arquivo certo demora para ser achado e a produtividade cai.</SummaryCard>
+      <SummaryCard icon="gear" title="Solução">Separa os arquivos por pastas automaticamente e mantém a área de trabalho organizada. O arquivo desejado fica rápido de achar.</SummaryCard>
+      <SummaryCard icon="chart" title="Resultado">1 h → 35 s · −99% no tempo · 500 arquivos organizados por execução.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio" defaultOpen sectionClassName="project-challenge">
