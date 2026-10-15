@@ -266,22 +266,22 @@ function ProcFacilCaseStudy() {
     <header className="project-intro">
       <span className="project-eyebrow">AUTOMAÇÃO ADMINISTRATIVA E QUALIDADE DE DADOS</span>
       <h2>ProcFácil</h2>
-      <p>Aplicação desktop em Python que cruza várias planilhas por uma coluna em comum, faz cálculos e gera uma base pronta para conferência. 6 planilhas em 5 minutos; à mão eu levava 1 hora.</p>
+      <p>Aplicação desktop em Python que cruza várias planilhas por uma coluna em comum, faz cálculos e gera uma base pronta para conferência. 6 planilhas em 5–10 min; à mão eu levava 1h–1h30.</p>
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
-    <ResultBlock title="Resultado medido" note="Medi com 6 planilhas no meu projeto. O tempo à mão vem da minha rotina de trabalho anterior. O exemplo em 'Antes e depois' usa 3 planilhas." highlight><article><strong>5 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação.</p></article><article><strong>1 h</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina no trabalho anterior.</p></article><article><strong>92%</strong><span>menos tempo</span><p>De 1 hora para 5 minutos.</p></article></ResultBlock>
+    <ResultBlock title="Resultado medido" note="Projeto próprio. O tempo manual é da minha rotina. O tempo com a ferramenta foi medido por mim." highlight><article><strong>5–10 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação, com 700 pedidos.</p></article><article><strong>1h–1h30</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina de analista.</p></article><article><strong>−83%</strong><span>menos tempo</span><p>De 1h–1h30 para 5–10 min.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/proc-facil.mp4" label="Vídeo de apresentação do ProcFácil" />
 
     <div className="project-summary-grid">
-      <SummaryCard icon="warning" title="Problema">Dados distribuídos em várias planilhas, com buscas, fórmulas e conferências manuais. Cruzar 6 planilhas à mão levava 1 hora.</SummaryCard>
-      <SummaryCard icon="gear" title="Solução">Fluxo guiado para escolher arquivos, definir chaves e colunas e consolidar as informações em uma única base.</SummaryCard>
-      <SummaryCard icon="chart" title="Resultado">6 planilhas cruzadas em 5 minutos, contra 1 hora à mão. Redução de 92% no tempo, com as pendências sinalizadas.</SummaryCard>
+      <SummaryCard icon="warning" title="Problema">Cruzar 6 planilhas, com 700 pedidos, levava de 1h a 1h30 na minha rotina de analista. O tempo inclui cruzamento, tratamento dos dados e fórmulas.</SummaryCard>
+      <SummaryCard icon="gear" title="Solução">Cruza as planilhas pela coluna-chave e entrega o resultado pronto.</SummaryCard>
+      <SummaryCard icon="chart" title="Resultado">1h–1h30 → 5–10 min · −83% no tempo, comparando o pior caso dos dois lados · 6 planilhas · 700 pedidos por rodada.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio" defaultOpen sectionClassName="project-challenge">
-      <div><p>Rotinas administrativas frequentemente dependem de informações que estão separadas em diferentes arquivos: uma planilha contém os clientes, outra os pagamentos e uma terceira os pedidos. Para montar uma visão única, é necessário procurar identificadores, aplicar fórmulas, copiar colunas e conferir os resultados manualmente. Na minha rotina de trabalho, cruzar 6 planilhas desse jeito, com PROCV, PROCX e colunas reorganizadas, levava 1 hora, e às vezes o computador travava no meio.</p><p>Além do tempo operacional, o processo exige atenção especial aos registros que não aparecem em todas as bases. Se essas diferenças não forem identificadas, a planilha final pode parecer completa mesmo contendo lacunas importantes.</p></div>
+      <div><p>Rotinas administrativas frequentemente dependem de informações que estão separadas em diferentes arquivos: uma planilha contém os clientes, outra os pagamentos e uma terceira os pedidos. Para montar uma visão única, é necessário procurar identificadores, aplicar fórmulas, copiar colunas e conferir os resultados manualmente. Na minha rotina de trabalho, cruzar 6 planilhas desse jeito, com PROCV, PROCX e colunas reorganizadas, levava 1h–1h30, e às vezes o computador travava no meio.</p><p>Além do tempo operacional, o processo exige atenção especial aos registros que não aparecem em todas as bases. Se essas diferenças não forem identificadas, a planilha final pode parecer completa mesmo contendo lacunas importantes.</p></div>
       <aside className="project-scenario"><h4>Cenário inicial</h4><div><Icon name="document"/><p><strong>Planilhas separadas</strong>Clientes, pagamentos e pedidos em arquivos diferentes.</p></div><div><Icon name="search"/><p><strong>Cruzamento manual</strong>Uso repetitivo de buscas, fórmulas e conferências.</p></div><div><Icon name="warning"/><p><strong>Correspondências incompletas</strong>Registros ausentes em uma ou mais fontes de dados.</p></div></aside>
     </AccordionSection>
 
@@ -309,7 +309,7 @@ function ProcFacilCaseStudy() {
       <div className="project-skills-grid"><article><h4>Tecnologias e formatos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados consolidados com regras claras e pendências visíveis.</h3><p>Parti de uma rotina de planilhas que levava 1 hora, transformei em uma sequência lógica e desenvolvi uma ferramenta que faz o mesmo em 5 minutos, sem eliminar a conferência humana: as pendências ficam visíveis e os arquivos originais, preservados. Rastreabilidade e tratamento transparente das exceções são o que levo para equipes administrativas e de processos, em uma oportunidade CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Dados consolidados com regras claras e pendências visíveis.</h3><p>Parti de uma rotina de planilhas que levava 1h–1h30, transformei em uma sequência lógica e desenvolvi uma ferramenta que faz o mesmo em 5–10 min, sem eliminar a conferência humana: as pendências ficam visíveis e os arquivos originais, preservados. Rastreabilidade e tratamento transparente das exceções são o que levo para equipes administrativas e de processos, em uma oportunidade CLT ou PJ.</p></div></section>
   </>;
 }
 
