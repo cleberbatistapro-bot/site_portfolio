@@ -444,7 +444,7 @@ function CalibrationCaseStudy() {
       <div className="project-skills-grid"><article><h4>Ferramentas e métodos</h4><div>{technologies.map(item => <span key={item}>{item}</span>)}</div></article><article><h4>Competências demonstradas</h4><div>{skills.map(item => <span key={item}>{item}</span>)}</div></article></div>
     </AccordionSection>
 
-    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Visibilidade e rastreabilidade para apoiar decisões de qualidade.</h3><p>Peguei um controle crítico que vivia em planilha de Excel, levantei o que ele precisava mostrar e desenhei o sistema: prazos, status e certificados no mesmo painel. A proposta combina visão de processos, qualidade de dados e atenção a prazos: competências que levo para equipes de processos, operações ou administração, em uma oportunidade CLT ou PJ.</p></div></section>
+    <section className="project-section project-value"><Icon name="award" size={42}/><div><span className="project-eyebrow">Valor profissional</span><h3>Visibilidade e rastreabilidade para apoiar decisões de qualidade.</h3><p>Peguei um controle crítico que vivia em planilha de Excel, levantei o que ele precisava mostrar e desenhei o sistema: prazos, status e certificados no mesmo painel. A proposta combina visão de processos, qualidade de dados e atenção a prazos: competências que levo para equipes de processos, operações ou administração, em uma oportunidade CLT ou PJ. Este projeto nasceu da minha rotina de controle de instrumentos de calibração na qualidade.</p></div></section>
   </>;
 }
 
