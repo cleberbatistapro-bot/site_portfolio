@@ -113,8 +113,8 @@ function TrajectorySection() {
 
 function WorkSection() {
   const steps: [IconName, string, string, string][] = [
-    ["search", "01", "Entender o problema", "Mapeio como o processo funciona hoje, onde ele trava e meço quanto tempo ele leva à mão."],
-    ["organize", "02", "Organizar o processo", "Defino fluxo, critérios e informações, com padrões e documentação clara para reduzir retrabalho e erros."],
+    ["search", "01", "Entender o problema", "Analiso o processo inteiro: como ele funciona hoje, onde ele trava e onde gera retrabalho."],
+    ["organize", "02", "Organizar o processo", "Redesenho o fluxo quando preciso e defino critérios e informações, com padrões e documentação clara para reduzir retrabalho e erros."],
     ["code", "03", "Construir a solução", "Desenvolvo com Python, n8n, SQL e IA, com validação humana. Exemplo: 500 arquivos organizados em 35 segundos, em vez de 1 hora."],
     ["improve", "04", "Testar e documentar", "Valido, ajusto e registro o que foi feito, comparando o tempo antes e depois. Exemplo: 6 planilhas cruzadas em 5 minutos, em vez de 1 hora."],
   ];
@@ -127,7 +127,7 @@ function WorkSection() {
     ["lock","Confidencialidade","Respeito informações sensíveis e atuo com ética, discrição e segurança de dados."],
   ];
   return <>
-    <span className="eyebrow">Como eu trabalho</span><h3 className="hero-copy">Análise, organização e automação para transformar processos administrativos em <em>resultados medidos</em>.</h3><p className="lead">Meu trabalho começa entendendo o processo de ponta a ponta e medindo quanto tempo ele leva à mão. A partir daí, identifico gargalos, padronizo rotinas e automatizo tarefas, comparando o antes e o depois.</p>
+    <span className="eyebrow">Como eu trabalho</span><h3 className="hero-copy">Análise, organização e automação para transformar processos administrativos em <em>resultados medidos</em>.</h3><p className="lead">Meu trabalho começa entendendo o processo de ponta a ponta. A partir daí, identifico gargalos, redesenho o fluxo quando necessário, padronizo rotinas e automatizo tarefas, comparando o tempo antes e depois.</p>
     <div className="subsection"><h3 className="section-title">Como atuo na prática</h3><div className="steps">{steps.map(([icon,num,title,copy]) => <article className="step" key={num}><span className="step-icon"><Icon name={icon} size={25}/></span><strong>{num}</strong><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <div className="subsection"><h3 className="section-title">Princípios que guiam meu trabalho</h3><div className="card-grid three">{principles.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <QuoteBar>Uso tecnologia de forma prática para simplificar o trabalho, aumentar a eficiência e apoiar decisões com informações organizadas e confiáveis.</QuoteBar>
