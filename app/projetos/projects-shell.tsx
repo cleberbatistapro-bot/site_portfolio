@@ -9,10 +9,10 @@ type IconName = "folder" | "document" | "clipboard" | "target" | "users" | "awar
 export const projects: { slug: ProjectSlug; label: string; icon: IconName; summary: string }[] = [
   { slug: "prumo", label: "Prumo", icon: "layers", summary: "Sistema web no ar, construído do zero, para acompanhar equipes remotas pelo processo, sem vigilância: gargalo em tempo real, desempenho individual e 3 perfis de acesso. Demo com dados fictícios." },
   { slug: "organizador-de-arquivos", label: "Organizador de Arquivos", icon: "folder", summary: "Aplicação desktop em Python que organiza arquivos administrativos por categoria, com simulação e backup antes de executar. 500 arquivos em 35 segundos; à mão eu levava 1 hora." },
-  { slug: "procfacil", label: "ProcFácil", icon: "document", summary: "Aplicação desktop em Python que cruza várias planilhas por uma coluna em comum, faz cálculos e gera uma base pronta para conferência. 6 planilhas em 5 minutos; à mão eu levava 1 hora." },
+  { slug: "procfacil", label: "ProcFácil", icon: "document", summary: "Aplicação desktop em Python que cruza várias planilhas por uma coluna em comum, faz cálculos e gera uma base pronta para conferência. 6 planilhas em 5–10 min; à mão eu levava 1h–1h30." },
   { slug: "sistema-inspecao-digital", label: "Sistema de Inspeção Digital", icon: "clipboard", summary: "Protótipo que desenhei para a inspeção final de chicotes elétricos em 8 linhas de produção: campos obrigatórios, sem rasura, rastreável. Aprovado pela empresa e em desenvolvimento pelo TI quando saí." },
   { slug: "controle-calibracao", label: "Controle de Calibração", icon: "target", summary: "Protótipo que desenhei para transformar a planilha de Excel de controle de calibração em um sistema, com alerta de vencimento, status e certificado de cada instrumento." },
-  { slug: "dashboard-operacional", label: "Dashtop", icon: "chart", summary: "Recebe a planilha de vendas, mapeia as colunas e entrega o dashboard em 45 segundos, com indicadores para acompanhar a operação e identificar desvios. Montar no Excel levava de 2 a 4 horas." },
+  { slug: "dashboard-operacional", label: "Dash Top", icon: "chart", summary: "Recebe a planilha, mapeia as colunas e entrega o dashboard em 12 segundos, com indicadores para acompanhar a operação e identificar desvios. Montar no Excel levava de 2 a 4 horas." },
 ];
 
 const paths: Record<IconName, React.ReactNode> = {
@@ -544,7 +544,7 @@ export default function ProjectsShell({ activeSlug }: { activeSlug: ProjectSlug 
   return <div className="about-page projects-page" id="projetos">
     <NavHeader/>
     <main className="projects-container">
-      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Soluções para organizar processos e reduzir tarefas manuais. Nos meus testes, tarefas de 1 a 4 horas à mão passaram a levar segundos ou minutos.</p></header>
+      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Projetos próprios, criados a partir de dores da minha rotina de analista. O tempo &quot;antes&quot; vem dessa rotina; o tempo &quot;depois&quot; foi medido por mim, quando há medição.</p></header>
       <div className="projects-layout">
         <ProjectsSidebar activeSlug={activeSlug}/>
         <section className="project-detail-card" aria-live="polite"><div className="content-transition"><CaseStudy/></div></section>
@@ -558,7 +558,7 @@ export function ProjectsIndex() {
   return <div className="about-page projects-page" id="projetos">
     <NavHeader/>
     <main className="projects-container">
-      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Soluções para organizar processos e reduzir tarefas manuais. Nos meus testes, tarefas de 1 a 4 horas à mão passaram a levar segundos ou minutos.</p></header>
+      <header className="projects-heading"><span>Portfólio profissional</span><h1>Projetos aplicados</h1><p>Projetos próprios, criados a partir de dores da minha rotina de analista. O tempo &quot;antes&quot; vem dessa rotina; o tempo &quot;depois&quot; foi medido por mim, quando há medição.</p></header>
       <div className="projects-layout">
         <ProjectsSidebar/>
         <section className="project-detail-card" aria-live="polite">
