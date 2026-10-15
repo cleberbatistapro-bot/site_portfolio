@@ -64,7 +64,7 @@ export default function ContactPage() {
           <p>Estou disponível para vagas 100% remotas, em CLT ou PJ, com foco em automação de processos administrativos. Nos meus projetos, tarefas de 1 a 4 horas à mão passaram a levar de 35 segundos a 5 minutos.</p>
           <p>Atuo com organização de informações, melhoria de rotinas e indicadores, e uso Python, SQL e n8n para automatizar o trabalho administrativo.</p>
 
-          <div className="contact-guidance"><Icon name="info" size={25}/><p>Ao entrar em contato, informe o nome da empresa, a vaga e o regime (CLT ou PJ).</p></div>
+          <div className="contact-guidance"><Icon name="info" size={25}/><p>Se puder, conte a empresa, a vaga e um breve contexto. Assim respondo mais rápido.</p></div>
 
           <a className="contact-cv-button" href="/Cleber-Batista-Analista-de-Processos-e-Automacao.pdf" download><Icon name="document" size={20}/><span>Baixar currículo</span><Icon name="arrow" size={19}/></a>
         </div>
