@@ -115,7 +115,7 @@ function WorkSection() {
   const steps: [IconName, string, string, string][] = [
     ["search", "01", "Entender o problema", "Analiso o processo inteiro: como ele funciona hoje, onde ele trava e onde gera retrabalho."],
     ["organize", "02", "Organizar o processo", "Redesenho o fluxo quando preciso e defino critérios e informações, com padrões e documentação clara para reduzir retrabalho e erros."],
-    ["code", "03", "Construir a solução", "Desenvolvo com Python, n8n, SQL e IA, com validação humana. Exemplo: 500 arquivos organizados em 35 segundos, em vez de 1 hora."],
+    ["code", "03", "Construir a solução", "Defino a arquitetura e as regras de negócio. A implementação em Python é feita com o Claude Code, sob minha supervisão e validação. Exemplo: 500 arquivos organizados em 35 segundos, em vez de 1 hora."],
     ["improve", "04", "Testar e documentar", "Valido, ajusto e registro o que foi feito, comparando o tempo antes e depois. Exemplo: 6 planilhas cruzadas em 5–10 min, em vez de 1h–1h30."],
   ];
   const principles: [IconName,string,string][] = [
@@ -131,7 +131,6 @@ function WorkSection() {
     <div className="subsection"><h3 className="section-title">Como atuo na prática</h3><div className="steps">{steps.map(([icon,num,title,copy]) => <article className="step" key={num}><span className="step-icon"><Icon name={icon} size={25}/></span><strong>{num}</strong><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <div className="subsection"><h3 className="section-title">Princípios que guiam meu trabalho</h3><div className="card-grid three">{principles.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <QuoteBar>Uso tecnologia de forma prática para simplificar o trabalho, aumentar a eficiência e apoiar decisões com informações organizadas e confiáveis.</QuoteBar>
-    <p className="lead">Eu defino o problema, a arquitetura e as regras de negócio, supervisiono e valido os resultados. A implementação é feita com o Claude Code.</p>
   </>;
 }
 
