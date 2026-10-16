@@ -244,6 +244,7 @@ function OrganizerCaseStudy() {
 
 
     <AccordionSection number="05" title="Antes e depois">
+      <div className="project-section-copy"><p>Exemplo da demonstração (21 arquivos)</p></div>
       <div className="project-comparison"><article className="before"><header><div><strong>Antes</strong><p>Arquivos misturados e sem padrão.</p></div><Icon name="warning"/></header><ul>{before.map((file) => <li key={file}><Icon name="file" size={16}/><span>{file}</span></li>)}</ul></article><article className="after"><header><div><strong>Depois</strong><p>Arquivos separados por categoria.</p></div><Icon name="check"/></header><ul>{after.map(([folder, count]) => <li key={folder}><Icon name="folder" size={16}/><span>{folder}</span><small>{count}</small></li>)}</ul></article></div>
     </AccordionSection>
 
