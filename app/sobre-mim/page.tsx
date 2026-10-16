@@ -99,7 +99,7 @@ function TrajectorySection() {
     ["chart", "Marketing Digital e Desenvolvimento Web", "De 2020 a 2022, tráfego pago e estruturação de processos de vendas online, com análise de métricas. De 2023 a 2024, desenvolvimento de sites em WordPress, Elementor e Crocoblock."],
     ["shield", "Segurança e Monitoramento", "Experiência em monitoramento de sistemas e gestão de equipes, com foco em processos, disciplina e confiabilidade."],
     ["value", "Indústria Automotiva e Qualidade", "Na COFAT: 6.000+ módulos de PPAP, 1.000+ estudos de capabilidade, 50+ análises de MSA, calibração de 200 instrumentos e 5 auditorias."],
-    ["gear", "Automação de Processos Administrativos", "Na Cofat, desenhei 3 soluções de automação para a rotina da qualidade: Inspeção Digital, Controle de Calibração e Doc Audit. A Inspeção Digital foi aprovada e repassada para a TI. Hoje automatizo processos administrativos em projetos próprios."],
+    ["gear", "Automação de Processos Administrativos", "Na COFAT, desenhei 3 soluções de automação para a rotina da qualidade: Inspeção Digital, Controle de Calibração e Doc Audit. A Inspeção Digital foi aprovada e repassada para a TI. Hoje automatizo processos administrativos em projetos próprios."],
   ];
   return <>
     <span className="eyebrow">Minha trajetória</span>
@@ -187,7 +187,7 @@ function ObjectiveSection() {
     ["monitor","Tecnologia","Ambiente que valoriza o uso prático da tecnologia para melhorar processos e apoiar resultados."],
   ];
   return <>
-    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco resolver problemas de processos administrativos com <em>automação e IA aplicada</em>.</h3><p className="lead">Meu objetivo é atuar como Analista de Processos ou Analista de Automação, em uma posição remota (CLT ou PJ), aplicando tecnologia para eliminar trabalho manual administrativo e apoiar decisões. Busco uma vaga remota como Analista de Processos e Automação (CLT ou PJ), para identificar processos manuais e construir a automação que os elimina.</p>
+    <span className="eyebrow">Objetivo profissional</span><h3 className="hero-copy">Busco resolver problemas de processos administrativos com <em>automação e IA aplicada</em>.</h3><p className="lead">Meu objetivo é atuar como Analista de Processos ou Analista de Automação, em uma posição remota (CLT ou PJ), aplicando tecnologia para eliminar trabalho manual administrativo e apoiar decisões.</p>
     <div className="subsection"><h3 className="section-title">Onde posso contribuir</h3><div className="card-grid three contribution-grid">{contributions.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <div className="subsection"><h3 className="section-title">O ambiente em que quero atuar</h3><div className="environment-list">{environment.map(([icon,title,copy]) => <article key={title}><Icon name={icon}/><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <QuoteBar>Quero usar experiência, visão de processos e tecnologia para tornar o trabalho administrativo mais simples, confiável e eficiente.</QuoteBar>
