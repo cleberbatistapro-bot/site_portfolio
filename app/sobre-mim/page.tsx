@@ -131,6 +131,7 @@ function WorkSection() {
     <div className="subsection"><h3 className="section-title">Como atuo na prática</h3><div className="steps">{steps.map(([icon,num,title,copy]) => <article className="step" key={num}><span className="step-icon"><Icon name={icon} size={25}/></span><strong>{num}</strong><div><h4>{title}</h4><p>{copy}</p></div></article>)}</div></div>
     <div className="subsection"><h3 className="section-title">Princípios que guiam meu trabalho</h3><div className="card-grid three">{principles.map(([icon,title,copy]) => <MiniCard key={title} icon={icon} title={title}>{copy}</MiniCard>)}</div></div>
     <QuoteBar>Uso tecnologia de forma prática para simplificar o trabalho, aumentar a eficiência e apoiar decisões com informações organizadas e confiáveis.</QuoteBar>
+    <p className="lead">Eu defino o problema, a arquitetura e as regras de negócio, supervisiono e valido os resultados. A implementação é feita com o Claude Code.</p>
   </>;
 }
 
