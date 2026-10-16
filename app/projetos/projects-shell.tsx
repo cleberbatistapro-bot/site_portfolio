@@ -270,14 +270,14 @@ function ProcFacilCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="python" size={17}/>Python</span><span><Icon name="desktop" size={17}/>Aplicação desktop</span></div>
     </header>
 
-    <ResultBlock title="Resultado medido" note="Projeto próprio. O tempo manual é da minha rotina. O tempo com a ferramenta foi medido por mim." highlight><article><strong>5–10 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação, com 700 pedidos.</p></article><article><strong>1h–1h30</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina de analista.</p></article><article><strong>−83%</strong><span>menos tempo</span><p>De 1h–1h30 para 5–10 min.</p></article></ResultBlock>
+    <ResultBlock title="Resultado medido" note="Projeto próprio. O tempo manual é da minha rotina. O tempo com a ferramenta foi medido por mim." highlight><article><strong>5–10 min</strong><span>para cruzar 6 planilhas</span><p>Tempo medido na aplicação, com 700 pedidos.</p></article><article><strong>1h–1h30</strong><span>o mesmo trabalho à mão</span><p>Tempo da minha rotina de analista.</p></article><article><strong>−83%</strong><span>menos tempo</span><p>Comparando o menor tempo manual (1 h) com o maior tempo da ferramenta (10 min).</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/proc-facil.mp4" label="Vídeo de apresentação do ProcFácil" />
 
     <div className="project-summary-grid">
       <SummaryCard icon="warning" title="Problema">Cruzar 6 planilhas, com 700 pedidos, levava de 1h a 1h30 na minha rotina de analista. O tempo inclui cruzamento, tratamento dos dados e fórmulas.</SummaryCard>
       <SummaryCard icon="gear" title="Solução">Cruza as planilhas pela coluna-chave e entrega o resultado pronto.</SummaryCard>
-      <SummaryCard icon="chart" title="Resultado">1h–1h30 → 5–10 min · −83% no tempo, comparando o pior caso dos dois lados · 6 planilhas · 700 pedidos por rodada.</SummaryCard>
+      <SummaryCard icon="chart" title="Resultado">1h–1h30 → 5–10 min · −83% no tempo, comparando o menor tempo manual (1 h) com o maior tempo da ferramenta (10 min) · 6 planilhas · 700 pedidos por rodada.</SummaryCard>
     </div>
 
     <AccordionSection number="01" title="O desafio" defaultOpen sectionClassName="project-challenge">
@@ -462,7 +462,7 @@ function DashboardCaseStudy() {
       <div className="project-meta"><span><Icon name="award" size={17}/>Projeto próprio</span><span><Icon name="chart" size={17}/>Análise operacional</span><span><Icon name="desktop" size={17}/>Aplicação web</span></div>
     </header>
 
-    <ResultBlock title="Resultado medido" note="Tempo manual: minha rotina de analista. Os 12 s foram medidos em vídeo, do envio da planilha ao dashboard na tela (não inclui exportação em PDF)." highlight><article><strong>12 s</strong><span>para gerar o dashboard</span><p>Planilha de 754 linhas processada do início ao fim.</p></article><article><strong>2–4 h</strong><span>o mesmo dashboard montado no Excel</span><p>Tempo da minha rotina de analista.</p></article><article><strong>&gt;99%</strong><span>menos tempo</span><p>Melhor caso manual (2 h) contra 12 s.</p></article></ResultBlock>
+    <ResultBlock title="Resultado medido" note="Tempo manual: minha rotina de analista. Os 12 s foram medidos em vídeo, do envio da planilha ao dashboard na tela (não inclui exportação em PDF)." highlight><article><strong>12 s</strong><span>para gerar o dashboard</span><p>Planilha de 754 linhas processada do início ao fim.</p></article><article><strong>2–4 h</strong><span>o mesmo dashboard montado no Excel</span><p>Tempo da minha rotina de analista.</p></article><article><strong>&gt;99%</strong><span>menos tempo</span><p>Comparando o menor tempo manual (2 h) com os 12 s.</p></article></ResultBlock>
 
     <ProjectVideo src="/project-videos/dashboard.mp4" label="Vídeo de apresentação do Dash Top" />
 
