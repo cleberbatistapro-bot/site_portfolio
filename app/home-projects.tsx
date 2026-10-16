@@ -85,7 +85,7 @@ const homeProjects: HomeProject[] = [
     label: "Sistema de Inspeção Digital",
     image: "/home-projects/inspecao.webp",
     category: "Qualidade e rastreabilidade",
-    summary: "Inspeção com campos obrigatórios, sem rasura e rastreável. Desenhei o protótipo para 8 linhas de produção, e a empresa aprovou.",
+    summary: "Inspeção com campos obrigatórios, sem rasura e rastreável. Desenhei o protótipo, e a empresa aprovou.",
     problem: "Registros dispersos e conferências manuais dificultam a padronização e a consulta do histórico.",
     solution: "Inspeção estruturada por etapas, registro digital dos critérios e identificação de não conformidades.",
     tags: ["Qualidade", "Processos", "Rastreabilidade"],
