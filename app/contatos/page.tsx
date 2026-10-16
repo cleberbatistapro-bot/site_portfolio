@@ -62,7 +62,7 @@ export default function ContactPage() {
           <span className="contact-eyebrow">Contato profissional</span>
           <h1 id="contact-title">Tem uma vaga de Analista de Processos ou Analista de Automação?</h1>
           <p>Estou disponível para vagas 100% remotas, em CLT ou PJ, com foco em automação de processos administrativos. Nos meus projetos, tarefas de 1 a 4 horas à mão passaram a levar de 12 segundos a 10 minutos.</p>
-          <p>Atuo com organização de informações, melhoria de rotinas e indicadores, e uso Python, SQL e n8n para automatizar o trabalho administrativo.</p>
+          <p>Atuo com organização de informações, melhoria de rotinas e indicadores, e uso Python, SQL e IA para automatizar o trabalho administrativo.</p>
 
           <div className="contact-guidance"><Icon name="info" size={25}/><p>Se puder, conte a empresa, a vaga e um breve contexto. Assim respondo mais rápido.</p></div>
 

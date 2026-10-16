@@ -84,7 +84,7 @@ function ProfileSection() {
         <h3>Transformo processos administrativos manuais em soluções <em>automatizadas e inteligentes.</em></h3>
         <p>Automatizo processos administrativos. Nos meus projetos, o que eu fazia à mão em 1 hora passou a levar 35 segundos (500 arquivos organizados), 1h–1h30 passou a levar 5–10 min (6 planilhas cruzadas) e 2–4 h passou a levar 12 s (dashboard, da planilha ao resultado). O tempo manual vem da minha rotina; o tempo com a ferramenta foi medido por mim.</p>
         <p>Tenho mais de 20 anos de experiência em atendimento, operações, indústria, qualidade e negócio próprio. Na qualidade automotiva, vi de perto onde os processos travam: retrabalho, registro manual e falta de rastreabilidade.</p>
-        <p>Hoje uno essa experiência a Python, n8n, SQL e IA para automatizar tarefas repetitivas, organizar informações e apoiar decisões com mais clareza. Trabalho em quatro etapas: entender o problema, organizar o processo, construir a solução e testar e documentar.</p>
+        <p>Hoje uno essa experiência a Python, SQL e IA para automatizar tarefas repetitivas, organizar informações e apoiar decisões com mais clareza. Trabalho em quatro etapas: entender o problema, organizar o processo, construir a solução e testar e documentar.</p>
         <p>Meu perfil combina visão de processos, capacidade analítica, organização, autonomia e foco em resultados, sempre buscando utilizar tecnologia de forma prática para resolver problemas reais do dia a dia.</p>
         <div className="subsection differential-section"><h3 className="section-title">Meus principais diferenciais</h3><div className="differentials">{differentiators.map(([icon,label]) => <MiniCard key={label} icon={icon} title={label}/>)}</div></div>
       </div>
@@ -160,7 +160,7 @@ function ProcessSection() {
 
 function TechSection() {
   const tools = [
-    { icon: "python" as IconName, title: "Python, n8n e SQL", subtitle: "Automação, integração e análise de dados.", items: ["Organizador: 500 arquivos em 35 segundos", "PROC Fácil: 6 planilhas em 5–10 min", "Automação de fluxos com n8n", "Consultas em SQL (PostgreSQL)"] },
+    { icon: "python" as IconName, title: "Python e SQL", subtitle: "Automação, integração e análise de dados.", items: ["Organizador: 500 arquivos em 35 segundos", "PROC Fácil: 6 planilhas em 5–10 min", "Automação de fluxos com n8n (em formação)", "Consultas em SQL (PostgreSQL)"] },
     { icon: "excel" as IconName, title: "Excel Avançado", subtitle: "Análise, organização e modelagem de dados.", items: ["Fórmulas avançadas, PROCV e PROCX", "Tabelas dinâmicas e dashboards", "Análise de MSA e capabilidade na indústria", "Validações e análises robustas"] },
     { icon: "ai" as IconName, title: "Inteligência Artificial", subtitle: "Desenvolvimento assistido por IA, com validação humana.", items: ["Desenvolvimento assistido por IA (Claude Code)", "Análise de dados com IA", "Requisitos antes do código (Spec-Driven)", "Validação humana em cada entrega"] },
   ];
@@ -177,7 +177,7 @@ function ObjectiveSection() {
   const contributions: [IconName,string,string][] = [
     ["process","Processos e fluxos","Estruturar rotinas, responsabilidades e fluxos para tornar a operação mais clara e eficiente."],
     ["integrated","Rotinas administrativas e backoffice","Organizar informações, controles e atividades administrativas que sustentam o funcionamento do negócio."],
-    ["robot","Automação e dados","Utilizar Python, n8n, SQL e IA para eliminar tarefas repetitivas e acelerar decisões."],
+    ["robot","Automação e dados","Utilizar Python, SQL e IA para eliminar tarefas repetitivas e acelerar decisões."],
   ];
   const environment: [IconName,string,string][] = [
     ["shield","Organização","Processos bem definidos e informações confiáveis para decisões melhores."],
